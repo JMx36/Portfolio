@@ -5,9 +5,9 @@ const NavBar = () => {
 
     return (
     <nav className="NavBar">
-        <div className="NavBarLogo">Josh Castillo</div>
-        <div className="NavBarOptions">
-            {navBarOptions.map((option) => (<span> {option}</span>))}
+        <div className="NavBarLogo"><a href="index.html" className="LogoButton cursive-button yellow-hover">Josh Castillo</a></div>
+        <div className="NavBarOptions thin-white-text ">
+            {navBarOptions.map((option) => (<a href="index.html" className="NavBarButton yellow-hover"> {option}</a>))}
         </div>
 
     </nav>

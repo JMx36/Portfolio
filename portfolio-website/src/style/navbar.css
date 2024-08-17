@@ -1,0 +1,54 @@
+.NavBar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    background-image: var(--blue_gradient_color);
+    /* vh stands for viewport height */
+    min-height: 5vh; 
+    width: 100%;
+
+    margin: 0px auto;
+    color: white;
+}
+
+
+.NavBarLogo
+{
+    margin-left: var(--side_margin);
+    color: white;
+}
+
+.NavBarOptions 
+{
+    display: flex;
+    align-items: center;
+    margin-right: var(--side_margin);
+    margin-left: auto;
+}
+
+.NavBarButton
+{   
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none; /* overriding the a tag styling*/
+}
+
+.yellow-hover:hover
+{
+    color: #FFDF00;
+}
+
+.LogoButton
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.remove-underline
+{
+    text-decoration: none;
+}

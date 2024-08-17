@@ -1,0 +1,92 @@
+:root
+{
+    --main_font: "Work Sans";
+    --logo_font: "Pacifico";
+    --white_light_font_size: 20px;
+    --cursive_font_size: 36px;
+    --description_font_size: 20px;
+    --subtitle_font_size: 40px;
+    --normal_font_size: 24px;
+    --itatlic_font_size: 64px;
+}
+
+body
+{
+    background-color: white;
+    margin: 0px 0px;
+}
+
+.NavBar
+{
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to right, #0C7489, #0C7489 20%, #00B4D8 50%,  #02AACB 53%, #0C7489 70%);
+    width: 100%;
+    /* vh stands for viewport height */
+    height: 8vh; 
+    margin: 0px auto;
+}
+
+
+#Hero-Image
+{
+    width: 100%;
+    height: 92vh;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+.work-sans-light 
+{
+  font-family: var(--main_font);
+  font-optical-sizing: auto;
+  font-style: light;
+  font-size: var(--white_light_font_size);
+}
+
+.work-sans-semibold 
+{
+    font-family: var(--main_font);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--white_light_font_size);
+}
+
+.thin-white-text {
+    font-family: 'Work Sans';
+    font-size: 1.25rem; /* 20px */
+    font-weight: 300; 
+  }
+  
+  .italic-blue-title {
+    font-family: 'Work Sans';
+    font-size: 4rem; /* 64px */
+    font-weight: 700; 
+    font-style: italic;
+  }
+  
+  .cursive-button {
+    font-family: Pacifico;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 400; 
+  }
+  
+  .normal-text-medium {
+    font-family: 'Work Sans';
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600; 
+  }
+  
+  .description-text {
+    font-family: 'Work Sans';
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600; 
+  }
+  
+  .sub-title-text {
+    font-family: 'Work Sans';
+    font-size: 2.5rem; /* 40px */
+    font-weight: 600; 
+  }

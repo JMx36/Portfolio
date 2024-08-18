@@ -22,6 +22,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+
 }
 
 .about-title
@@ -33,7 +34,7 @@
 {
     position: absolute;
     height: 100%;
-    width: 65%;
+    width: 60%;
     background-color: #DAC21C;
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 43.96% 0%);
     z-index: 1; /* Lower z-index */
@@ -51,7 +52,7 @@
     top: 5%;
     left: 0%;
     overflow: hidden;
-    clip-path: ellipse(25% 45% at 30% 50%);
+    clip-path: ellipse(25% 45% at 27% 50%);
     background-color: rgb(173, 163, 163);
 }
 
@@ -71,40 +72,49 @@
 {
     display: flex;
     position: inherit;
-    margin-left: 1%;
-    margin-bottom: 7%;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    width: auto;
+    background-color: black;
 }
 
 .text-button
 {
     color: var(--dark-blue);
     text-decoration: none;
-    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: red;
+}
+
+.text-section
+{
+    position: relative;
+    min-height: 70%;
 }
 
 .brush-stroke
 {
     position: absolute;
-    width: 65vw;
+    width: 70vw;
     height: 70vh;
-    top: 15%;
-    left: 45%;
+    left: -20%;
     z-index: 2;
 }
 
 .about-description
 {
-    width: 85%;
-    height: 70%;
-    margin-top: 10%;
-    margin-left: 10%;
+    width: 95%;
+    height: 85%;
     text-align: left;
+    margin-top: 6%;
 }
 
 .logos-container
 {
     display: flex;
-    margin-left: 45%;
+    margin-left: 40%;
+    margin-top: 2%;
 }
 
 .logos-container a
@@ -114,7 +124,7 @@
 
 .about-me-logo-pictures
 {
-    width: 4vw;
-    height: 8vh;
+    width: 3.5vw;
+    height: 6.5vh;
     z-index: 3;
 }

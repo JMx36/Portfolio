@@ -1,13 +1,10 @@
 :root
 {
-    --main_font: "Work Sans";
-    --logo_font: "Pacifico";
-    --white_light_font_size: 20px;
-    --cursive_font_size: 36px;
-    --description_font_size: 20px;
-    --subtitle_font_size: 40px;
-    --normal_font_size: 24px;
-    --itatlic_font_size: 64px;
+    --dark-blue: #0C7489;
+    --bright-yellow: #FFDF00;
+    --dimmed-yellow: #BFB14A;
+    --title-blue: #119DA4;
+    --text-blue: #119DA4;
 
     --blue_gradient_color: linear-gradient(to right, #0C7489, #0C7489 20%, #00B4D8 50%,  #02AACB 53%, #0C7489 70%);
     --side_margin: 0.5%;
@@ -18,5 +15,6 @@ body
     background-color: white;
     margin: 0px 0px;
 }
+
 
 

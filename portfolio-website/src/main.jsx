@@ -5,6 +5,7 @@ import './style/index.css'
 import './style/navbar.css'
 import './style/hero.css'
 import './style/text.css'
+import './style/about.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

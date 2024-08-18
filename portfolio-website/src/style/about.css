@@ -1,0 +1,120 @@
+.about-me
+{
+    position: relative;
+    display: flex;
+    margin: 0px 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-left-section
+{
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.about-right-section
+{
+    position: inherit;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title
+{
+    text-align: center;
+}
+
+.about-shape
+{
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    background-color: #DAC21C;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 43.96% 0%);
+    z-index: 1; /* Lower z-index */
+}
+
+.blue-normal-text
+{
+    color: var(--text-blue);
+}
+
+.circle-mask {
+    position: inherit;
+    width: 70vw;
+    height: 100%;
+    top: 5%;
+    left: 0%;
+    overflow: hidden;
+    clip-path: ellipse(25% 45% at 30% 50%);
+    background-color: rgb(173, 163, 163);
+}
+
+.circle-mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.in-front
+{
+    position: inherit;
+    z-index: 3;
+}
+
+.about-text-buttons
+{
+    display: flex;
+    position: inherit;
+    margin-left: 1%;
+    margin-bottom: 7%;
+}
+
+.text-button
+{
+    color: var(--dark-blue);
+    text-decoration: none;
+    margin-left: 5rem;
+}
+
+.brush-stroke
+{
+    position: absolute;
+    width: 65vw;
+    height: 70vh;
+    top: 15%;
+    left: 45%;
+    z-index: 2;
+}
+
+.about-description
+{
+    width: 85%;
+    height: 70%;
+    margin-top: 10%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.logos-container
+{
+    display: flex;
+    margin-left: 45%;
+}
+
+.logos-container a
+{
+    margin-right: 5%;
+}
+
+.about-me-logo-pictures
+{
+    width: 4vw;
+    height: 8vh;
+    z-index: 3;
+}

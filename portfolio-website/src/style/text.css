@@ -26,19 +26,19 @@
     font-size: 4rem; /* 64px */
     font-weight: 700; 
     font-style: italic;
+    color: var(--title-blue);
   }
   
   .cursive-button {
     font-family: "Pacifico";
     font-size: 2.25rem; /* 36px */
     font-weight: 400; 
-    
   }
   
   .normal-text-medium {
     font-family: 'Work Sans';
     font-size: 1.5rem; /* 24px */
-    font-weight: 600; 
+    font-weight: 600;
   }
   
   .description-text {

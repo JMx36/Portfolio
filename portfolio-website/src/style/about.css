@@ -4,7 +4,7 @@
     display: flex;
     margin: 0px 0px;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
 }
 
@@ -14,27 +14,30 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    /* background-color: blue; */
 }
 
 .about-right-section
 {
     position: inherit;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-
 }
 
 .about-title
 {
     text-align: center;
+    margin-bottom: 3%;
+    color: var(--title-blue);
 }
 
 .about-shape
 {
     position: absolute;
     height: 100%;
-    width: 60%;
+    width: 63%;
     background-color: #DAC21C;
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 43.96% 0%);
     z-index: 1; /* Lower z-index */
@@ -45,14 +48,21 @@
     color: var(--text-blue);
 }
 
+.circle-container
+{
+    position: inherit;
+    height: 80%;
+    width: 100%;
+    margin-top: 10%;
+    /* background-color: red; */
+}
+
 .circle-mask {
     position: inherit;
-    width: 70vw;
+    width: 100%;
     height: 100%;
-    top: 5%;
-    left: 0%;
     overflow: hidden;
-    clip-path: ellipse(25% 45% at 27% 50%);
+    clip-path: ellipse(38% 47% at 40% 53%);
     background-color: rgb(173, 163, 163);
 }
 
@@ -73,28 +83,30 @@
     display: flex;
     position: inherit;
     margin-left: 3%;
-    margin-bottom: 3%;
-    margin-top: 1%;
+    margin-bottom: 8%;
+    /* background-color: violet; */
+    gap: 20%;
 }
 
 .text-button
 {
     color: var(--dark-blue);
     text-decoration: none;
-    margin-right: clamp(1.5rem, 4.5vw + 1rem, 7rem);
+    /* background-color: black; */
 }
 
 .text-section
 {
     position: relative;
-    min-height: 70%;
+    height: 75%;
+    /* background-color: red; */
 }
 
 .brush-stroke
 {
     position: absolute;
-    width: 70vw;
-    height: 70vh;
+    width: 70.5vw;
+    height: 100%;
     left: -20%;
     z-index: 2;
 }
@@ -102,7 +114,7 @@
 .about-description
 {
     width: 95%;
-    height: 85%;
+    height: 91%;
     text-align: left;
     margin-top: 6%;
 }
@@ -110,8 +122,11 @@
 .logos-container
 {
     display: flex;
-    margin-left: 40%;
-    margin-top: 2%;
+    align-items: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8%;
+    /* background-color: aqua; */
 }
 
 .logos-container a

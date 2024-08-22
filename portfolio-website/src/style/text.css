@@ -1,24 +1,13 @@
 :root
 {
-
-  --fs-title: clamp(2rem, 3.5vw + 1rem, 4rem);
-  --fs-subtitle: 1rem;
-  --fs-normal-medium: 0.8rem;
-  --fs-normal-small: 0.6rem;
-  --fs-cursive: 0.5rem;
+  --fs-title: clamp(2rem, 4.5vw + 1rem, 12rem);
+  --fs-subtitle: clamp(2rem, 1.5vw + 1rem, 5rem);
+  --fs-normal-medium: clamp(0.5rem, 0.8vw + 1rem, 5rem);
+  --fs-normal-small: clamp(0.2rem, 0.5vw + 1rem, 5rem);
+  --fs-cursive: clamp(0.1rem, 1.2vw + 1rem, 5rem);
+  --fs-normal-bigger: clamp(0.6rem, 0.9vw + 1rem, 6rem);
 }
 
-@media(min-width: 80em)
-{
-  :root
-  {
-    --fs-subtitle: 2.5rem;
-    --fs-normal-medium: 1.5rem;
-    --fs-normal-small: 1.25rem;
-    --fs-cursive: 2.5rem;
-  }
-  
-}
 
 .thin-white-text {
     font-family: 'Work Sans';
@@ -26,12 +15,11 @@
     font-weight: 300; 
   }
 
-.italic-blue-title {
+.italic-title {
   font-family: 'Work Sans';
   font-size: var(--fs-title); /* 64px */
   font-weight: 700; 
   font-style: italic;
-  color: var(--title-blue);
 }
 
 .cursive-button {
@@ -46,6 +34,13 @@
   font-weight: 600;
 }
 
+.normal-text-bigger
+{
+  font-family: 'Work Sans';
+  font-size: var(--fs-normal-bigger); /* 24px */
+  font-weight: 600;
+}
+
 .description-text {
   font-family: 'Work Sans';
   font-size: var(--fs-normal-small); /* 20px */
@@ -54,6 +49,23 @@
 
 .sub-title-text {
   font-family: 'Work Sans';
-  font-size: var(--fs-cursive); /* 40px */
+  font-size: var(--fs-subtitle); /* 40px */
   font-weight: 600; 
 }
+
+
+.bright-yellow-text
+{
+  color: var(--bright-yellow)
+}
+
+.dimmed-yellow-text
+{
+  color: var(--dimmed-yellow)
+}
+
+.lighter-blue-text
+{
+  color: var(--title-blue)
+}
+

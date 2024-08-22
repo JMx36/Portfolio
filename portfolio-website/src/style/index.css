@@ -5,7 +5,9 @@
     --dimmed-yellow: #BFB14A;
     --title-blue: #119DA4;
     --text-blue: #119DA4;
-
+    --background-blue: #13505B;
+    --lighter-background-blue: #039099;
+    --light-blue-edge: #90E0EF;
     --blue_gradient_color: linear-gradient(to right, #0C7489, #0C7489 20%, #00B4D8 50%,  #02AACB 53%, #0C7489 70%);
     --side_margin: 0.5%;
 }
@@ -15,6 +17,4 @@ body
     background-color: white;
     margin: 0px 0px;
 }
-
-
 

@@ -1,0 +1,308 @@
+.skills-section
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px;
+    width: 100%;
+    height: 250vh;
+    background-color: var(--background-blue);
+}
+
+.skills-section .header
+{
+    display: flex;
+    height: 10%; 
+    width: auto;
+    margin: 5% 5%;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text-padding
+{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.diamond-line
+{
+    position: relative;
+    width: 60%;
+    height: 4%;
+    background-color: var(--bright-yellow);
+}
+
+.diamond-line::before, 
+.diamond-line::after
+{
+    content:"";
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em; 
+    background-color: var(--bright-yellow); 
+}
+
+.diamond-line::before {
+    left: -5px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); 
+}
+
+.diamond-line::after {
+    right: -5px; 
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); 
+}
+
+.skills-description
+{
+    display: flex;
+    gap: 10%;
+    height: 25%;
+    margin: 5% 5%;
+    margin-top: 0%;
+}
+
+.description-box
+{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    background-color: var(--lighter-background-blue);
+    border: 0.3vw solid var(--light-blue-edge); /* Stroke color and width */
+    border-radius: 53px; /* Rounded corners */
+}
+
+.description-title
+{
+    color: white; 
+    margin-left: 5%;
+    margin-bottom: 0%;
+}
+
+.inside-text
+{
+    color: #D9D9D9;
+    margin: 5% 6.5%;
+    text-align: left;
+}
+
+.tech-and-tools
+{
+    height: 65%;
+    margin: 0% 5%;
+    /* background-color: black; */
+}
+
+.tech-and-tools .top-part
+{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20rem;
+}
+
+.caption
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.gears-box
+{
+    width: 20%;
+    height: 50%;
+    background-image: url("../assets/Images/Components/gear-group.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.x-flip
+{
+    transform: scaleX(-1);
+}
+
+.carousel-container
+{
+    --play-state: running;
+    width: 100%;
+    background-color: #BFB14A;
+    border-radius: 31px;
+    overflow: hidden;
+}
+
+.carousel-inner
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* transform: translateX(-120.7%); 
+    transform: translateX(-5%);  */
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    
+    0% 
+    {
+        transform: translateX(-5%);
+    }
+
+    100%
+    {
+        transform: translateX(-120.7%);
+    }
+}
+
+.carousel-paused
+{
+    animation-play-state: paused;
+}
+
+
+.logo-image
+{
+    height: 5%;
+    width: 5%;
+    /* background-color: white; */
+    margin-left: 2%;
+}
+
+.long-line
+{
+    width: 100%;
+}
+
+
+.logo-image-3
+{
+    height: 4.5%;
+    width: 4.2%;
+}
+
+.logo-image-4
+{
+    height: 8.5%;
+    width: 7.5%;
+    margin-left: 0.5%;
+}
+
+.logo-image-5
+{
+    margin-left: 0.5%;
+}
+
+.logo-image-5, .logo-image-6,
+.logo-image-7, .logo-image-8, .logo-image-9,
+.logo-image-10
+{
+    width: 10%;
+    height: 10%;
+}
+
+.logo-image-10, .logo-image-11
+{
+    margin-left: 0%;
+}
+
+.logo-image-8
+{
+    width: 15%;
+}
+
+.logo-image-11
+{
+    width: 7%;
+}
+
+.dropdowns-section
+{
+    margin-top: 5%;
+    height: 40%;
+    /* background-color: aqua; */
+}
+
+.dropdown-container
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dropdown-box
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #BFB14A;
+    height: 50%;
+    width: auto;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropdown-row
+{
+    height: 100%;
+}
+
+.dropdown-row-1
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 30%;
+}
+
+.dropdown-row-2
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+.dropdown-box-2
+{
+    width: 100%;
+    text-align: center;
+}
+
+.triangle-container
+{
+    position: absolute;
+    background-color: aqua;
+    top: 50%;
+    width: clamp(30px, 4vw + 1rem, 90px);
+    height: 50%;
+}
+
+.triangle
+{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-header
+{
+    margin: 5% 5%;
+    height: 10%;
+    width: 90%;
+    margin-bottom: 0%;
+}

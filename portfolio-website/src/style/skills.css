@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     margin: 0px 0px;
-    width: 100%;
-    height: 250vh;
+    max-width: 100%;
+    min-height: 100vh;
     background-color: var(--background-blue);
 }
 
@@ -12,7 +12,6 @@
 {
     display: flex;
     height: 10%; 
-    width: auto;
     margin: 5% 5%;
     margin-bottom: 1%;
     align-items: center;
@@ -29,7 +28,7 @@
 {
     position: relative;
     width: 60%;
-    height: 4%;
+    padding: 0.3rem;
     background-color: var(--bright-yellow);
 }
 
@@ -62,6 +61,8 @@
     height: 25%;
     margin: 5% 5%;
     margin-top: 0%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .description-box
@@ -224,8 +225,7 @@
 .dropdowns-section
 {
     margin-top: 5%;
-    height: 40%;
-    /* background-color: aqua; */
+    /* border: solid 10px wheat; */
 }
 
 .dropdown-container
@@ -233,54 +233,45 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    /* border: solid 10px black */
 }
 
 .dropdown-box
 {
-    position: relative;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
+    position: relative;
     color: white;
-    background-color: #BFB14A;
-    height: 50%;
-    width: auto;
-    justify-content: flex-start;
+    min-height: 50%;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    border: solid 10px red;
+    padding: 2%;
 }
 
 .dropdown-row
 {
-    height: 100%;
+    display: flex;
+    max-width: 100%;
+    border: solid 10px yellowgreen;
 }
 
 .dropdown-row-1
 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    gap: 30%;
+    
 }
 
 .dropdown-row-2
 {
-    display: flex;
     justify-content: center;
-}
-
-
-.dropdown-box-2
-{
-    width: 100%;
-    text-align: center;
 }
 
 .triangle-container
 {
     position: absolute;
-    background-color: aqua;
+    /* background-color: aqua; */
     top: 50%;
     width: clamp(30px, 4vw + 1rem, 90px);
     height: 50%;
@@ -302,7 +293,5 @@
 .bottom-header
 {
     margin: 5% 5%;
-    height: 10%;
     width: 90%;
-    margin-bottom: 0%;
 }

@@ -5,9 +5,11 @@ import Skills from './components/Skills.jsx'
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <Hero />
+    <div className="App">
+      <header>
+        <NavBar />  
+        <Hero />
+      </header>
       <About />
       <Skills />
     </div>

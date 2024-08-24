@@ -3,8 +3,8 @@
     position: relative;
     display: flex;
     margin: 0px 0px;
-    width: 100%;
-    height: 110vh;
+    max-width: 100%;
+    min-height: 120vh;
     overflow: hidden;
 }
 
@@ -14,16 +14,19 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    /* background-color: blue; */
+    max-width: 50%;
+    /* border: solid 10px blue; */
 }
 
 .about-right-section
 {
+    display: flex;
     position: inherit;
     width: 50%;
-    height: 100%;
-    display: flex;
+    max-width: 50%;
+    min-height: 100%;
     flex-direction: column;
+    /* border: solid 10px blue; */
 }
 
 .about-title
@@ -51,19 +54,20 @@
 .circle-container
 {
     position: inherit;
-    height: 80%;
     width: 100%;
+    height: 80%;
     margin-top: 10%;
-    /* background-color: red; */
+    /* border: solid 10px blue; */
 }
 
 .circle-mask {
     position: inherit;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     overflow: hidden;
-    clip-path: ellipse(38% 47% at 40% 53%);
+    clip-path: ellipse(39% 47% at 42% 53%);
     background-color: rgb(173, 163, 163);
+
 }
 
 .circle-mask img {
@@ -98,35 +102,62 @@
 .text-section
 {
     position: relative;
-    height: 75%;
-    /* background-color: red; */
+    height: 80%;
+    /* border: solid 10px yellowgreen; */
 }
 
-.brush-stroke
+.brush-stroke-container
 {
     position: absolute;
-    width: 70.5vw;
     height: 100%;
+    width: 120%;
     left: -20%;
     z-index: 2;
+    /* border: solid 10px red; */
+}
+
+.relative-container
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* border: solid 10px violet; */
+}
+
+.brush-stroke-img
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-container
+{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    height: 90%;
+    width: 83%;
+    /* border: solid 2px rgb(0, 255, 170); */
 }
 
 .about-description
 {
-    width: 95%;
-    height: 91%;
     text-align: left;
-    margin-top: 6%;
+    margin: 2% 2%;
+    /* border: solid 10px green; */
 }
 
 .logos-container
 {
+    padding-top: 1px;
+    /* border: solid 10px black; */
     display: flex;
     align-items: bottom;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8%;
-    /* background-color: aqua; */
+    margin-top: 1%;
+    margin-bottom: 10%
 }
 
 .logos-container a
@@ -140,3 +171,4 @@
     height: 6.5vh;
     z-index: 3;
 }
+

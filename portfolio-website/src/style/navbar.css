@@ -8,11 +8,12 @@
 
     background-image: var(--blue_gradient_color);
     /* vh stands for viewport height */
-    min-height: 5vh; 
+    flex: 0 0 20%;
+    overflow: hidden;
     width: 100%;
-
     margin: 0px auto;
     color: white;
+    /* border: solid 10px #FFDF00; */
 }
 
 

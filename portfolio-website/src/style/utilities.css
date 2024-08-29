@@ -1,0 +1,10 @@
+.make-clickable
+{
+    cursor: 'pointer';
+}
+
+
+.x-flip
+{
+    transform: scaleX(-1);
+}

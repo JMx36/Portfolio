@@ -2,6 +2,7 @@ import linked_in from "../assets/Images/Logos/linked_in.png"
 import mail from "../assets/Images/Logos/mail.png"
 import github from "../assets/Images/Logos/github.png"
 import brush_stroke from "../assets/Images/Logos/brush-stroke3.png"
+import {Link} from 'react-router-dom'
 
 const About = () => {
 

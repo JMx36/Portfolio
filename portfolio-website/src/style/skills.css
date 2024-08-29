@@ -20,8 +20,7 @@
 
 .title-text-padding
 {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 0% 7%;
 }
 
 .diamond-line
@@ -81,6 +80,7 @@
     color: white; 
     margin-left: 5%;
     margin-bottom: 0%;
+    margin-top: 5%;
 }
 
 .inside-text
@@ -101,7 +101,7 @@
 {
     display: flex;
     width: 100%;
-    height: 20%;
+    min-height: 20%;
     align-items: center;
     justify-content: center;
     font-size: 20rem;
@@ -111,23 +111,22 @@
 {
     color: white;
     text-align: center;
-    margin-bottom: 5%;
+    margin: 5% auto;
+    /* margin-bottom: 3%; */
+    width: 90%;
 }
 
 .gears-box
 {
     width: 20%;
-    height: 50%;
+    min-height: 200px;
     background-image: url("../assets/Images/Components/gear-group.png");
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
+    /* border: black 2px solid; */
 }
 
-.x-flip
-{
-    transform: scaleX(-1);
-}
 
 .carousel-container
 {
@@ -224,7 +223,7 @@
 
 .dropdowns-section
 {
-    margin-top: 5%;
+    margin-top: 2%;
     /* border: solid 10px wheat; */
 }
 
@@ -233,21 +232,19 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* border: solid 10px black */
+    /* border: solid 4px black */
 }
 
 .dropdown-box
 {
-    /* flex: 1; */
+    flex: 1;
     display: flex;
     flex-direction: column;
     position: relative;
     color: white;
     min-height: 50%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: solid 10px red;
+    align-items: flex-start;
+    /* border: solid 1px red; */
     padding: 2%;
 }
 
@@ -255,43 +252,38 @@
 {
     display: flex;
     max-width: 100%;
-    border: solid 10px yellowgreen;
+    /* border: solid 10px yellowgreen; */
 }
 
-.dropdown-row-1
+.dropdown-box-1
 {
-    
+    align-items: flex-end;
 }
 
-.dropdown-row-2
+.dropdown-box-2
 {
-    justify-content: center;
+    align-items: center;
 }
 
-.triangle-container
+.dropdown-title
 {
-    position: absolute;
-    /* background-color: aqua; */
-    top: 50%;
-    width: clamp(30px, 4vw + 1rem, 90px);
-    height: 50%;
+    position: relative;
+    /* border: solid black 2px; */
 }
 
 .triangle
 {
-    position: absolute;
-    height: 50%;
-    width: 100%;
-    top: 50%;
-    left: 0%;
+    height: clamp(10px, 2vh, 24px);
+    width: clamp(50px, 5vw, 78px);
+    margin: auto;
+    margin-top: 10px;
     clip-path: polygon(50% 100%, 100% 0, 0 0);
     background-color: white;
-    justify-content: center;
-    align-items: center;
 }
 
 .bottom-header
 {
-    margin: 5% 5%;
+    margin: 3% 5%;
     width: 90%;
+    margin-bottom: 6%;
 }

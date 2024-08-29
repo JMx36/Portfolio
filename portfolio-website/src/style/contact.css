@@ -1,0 +1,47 @@
+.contact-section
+{
+    max-width: 100%;
+    min-height: 50vh;
+    background-image: var(--blue_gradient_color);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section-title
+{
+    color: white;
+    margin: 1% 8%;
+    margin-top: 3%;
+    font-style: italic;
+}
+
+.contact-logos-container
+{
+    display: flex;
+    /* border: solid 1px black; */
+    margin: 0% 20%;
+    max-width: 100%;
+    justify-content: center;
+    gap: 5%;
+    text-align: center;
+}
+
+.name-section
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    /* border: solid 1px red; */
+}
+
+.contact-name
+{
+    margin-top: 0px;
+    /* border: blue 1px solid; */
+}
+
+.contact-photo-view
+{
+    min-height: 80%;
+    width: 100%;
+}

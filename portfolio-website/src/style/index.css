@@ -3,6 +3,7 @@
     --dark-blue: #0C7489;
     --bright-yellow: #FFDF00;
     --dimmed-yellow: #BFB14A;
+    --dimmer-yellow: #DAC21C;
     --title-blue: #119DA4;
     --text-blue: #119DA4;
     --background-blue: #13505B;
@@ -20,6 +21,6 @@ body
 
 .App
 {
-    border: solid 10px red
+    border: solid 1px red
 }
 

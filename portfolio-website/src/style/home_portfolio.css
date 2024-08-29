@@ -1,0 +1,166 @@
+.home-portfolio
+{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.home-portfolio-header
+{
+    display: flex;
+    color: var(--title-blue);
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+}
+
+.home-portfolio-title
+{
+    margin: 0% 4%;
+    background-image: url("../assets/Images/Components/background-title.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60%;
+    text-align: center;
+}
+
+.rectangle
+{
+    background-color: var(--dimmer-yellow);
+    padding: 1%;
+}
+
+.width-100per
+{
+    width: 100%;
+}
+
+.width-45per
+{
+    width: 45%;
+}
+
+.preview-container
+{
+    position: relative;
+    /* border: black 1px solid; */
+    margin: 5% auto;
+    height: 91.5%;
+    width: 85%;
+    margin-bottom: 0%;
+}
+
+.home-portfolio-section
+{
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    /* border: blue solid 1px; */
+    min-height: 70vh;
+    margin-bottom: 5%;
+}
+
+.image-box
+{
+    position: absolute;
+}
+
+.border-radius-54
+{
+    border-radius: 54px;
+}
+
+.width-50per
+{
+    width: 50%;
+}
+
+.height-100per
+{
+    height: 100%;
+}
+
+.slider-container
+{
+    display: flex;
+    flex-direction: column;
+    /* border: solid 2px rgb(0, 250, 196); */
+}
+
+.slider-image-container
+{
+    height: 85%;
+    width: 100%;
+    /* border: solid 2px black; */
+    display: flex;
+}
+
+.circle-buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    width: 20%;
+    /* border: solid 2px blue; */
+    gap: 4%;
+    margin: auto;
+    margin-bottom: 0%;
+}
+
+.home-portfolio-triangle-container
+{
+    position: relative;
+    margin: auto 0%;
+    width: 5%;
+    height: 20%;
+    /* border: solid 2px black; */
+}
+
+.circle
+{
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--light-blue-edge);
+}
+
+.home-portfolio-triangle
+{
+    position: absolute;
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    height: 30%;
+    width: 200%;
+    background-color: var(--light-blue-edge);
+    /* border: solid 2px blue */
+}
+
+
+.home-portfolio-section-title
+{
+    /* border: solid blue 1px; */
+    color: var(--title-blue);
+    text-align: center;
+}
+
+
+.home-portfolio-section-description
+{
+    display: flex;
+    flex-direction: column;
+    /* border: red solid 1px; */
+}
+
+.home-portfolio-section-text
+{
+    /* border: black solid 1px; */
+    text-align: justify;
+    flex: 1;
+    margin: 0% 3%;
+}
+
+.portfolio-bottom-header
+{
+    margin-bottom: 5%;
+}

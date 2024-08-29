@@ -13,6 +13,21 @@ import vscode from "../assets/Images/Logos/vscode.png"
 
 import React, { useState } from 'react';
 
+
+
+const LogoImage = ({setIsHovered, image, index, width="0%", height="0%", margin_left='2%'}) => {
+
+    return (
+        <img className=
+            {"logo-image logo-image-" + index} 
+            src={image}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            />
+    )
+}
+
+
 const Skills = () => {
 
     const descriptions = 
@@ -55,8 +70,7 @@ const Skills = () => {
             </div>
             <div className="tech-and-tools">
                 <div className="top-part">
-                    <div className="gears-box x-flip">
-                    </div>
+                    <div className="gears-box x-flip"></div>
                     <h2 className="bright-yellow-text sub-title-text title-text-padding">Technologies & Tools</h2>
                     <div className="gears-box"></div>
                 </div>
@@ -71,12 +85,7 @@ const Skills = () => {
                                     for (let i = 0; i < 2; i++) 
                                     {
                                         logos.map((image, index) => (
-                                            elements.push(<img className=
-                                                {"logo-image logo-image-" + (index % 12)} 
-                                                src={image}
-                                                onMouseEnter={() => setIsHovered(true)}
-                                                onMouseLeave={() => setIsHovered(false)}
-                                                />)
+                                            elements.push(<LogoImage setIsHovered={setIsHovered} image={image} index={index % 12} />)
                                         ));
                                     }
                                     return elements;  
@@ -97,12 +106,12 @@ const Skills = () => {
 
                                     dropdowns.map((dropdown, index) => {
                                             inside_elements.push(                                            
-                                                <div className={"dropdown-box dropdown-box" + index}>
-                                                    <div></div>
-                                                    <h2 className="dropdown-title normal-text-bigger ">{dropdown[0]}</h2>
-                                                    <div className="triangle-container">
+                                                <div className={"dropdown-box dropdown-box-" + index}>
+                                                    <h2 className="dropdown-title normal-text-bigger ">
+                                                        {dropdown[0]}
                                                         <div className="triangle"></div>
-                                                    </div>
+                                                    </h2>
+
                                                     {/* <p className="dropdown-info description-text">{dropdown[1]}</p> */}
                                                 </div>
                                             )

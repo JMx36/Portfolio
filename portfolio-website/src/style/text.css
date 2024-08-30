@@ -6,8 +6,8 @@
   --fs-normal-small: clamp(0.2rem, 0.5vw + 1rem, 5rem);
   --fs-cursive: clamp(0.1rem, 1.2vw + 1rem, 5rem);
   --fs-normal-bigger: clamp(0.6rem, 1.5vw + 1rem, 6rem);
+  --fs-32px: clamp(0.1rem, 1vw + 1rem, 5rem);
 }
-
 
 .thin-white-text {
     font-family: 'Work Sans';
@@ -26,6 +26,13 @@
   font-family: "Pacifico";
   font-size: var(--fs-cursive); /* 36px */
   font-weight: 400; 
+}
+
+.fs-32px
+{
+  font-family: 'Work Sans';
+  font-size: var(--fs-32px);
+  font-weight: 600;
 }
 
 .normal-text-medium {
@@ -53,7 +60,6 @@
   font-weight: 600; 
 }
 
-
 .bright-yellow-text
 {
   color: var(--bright-yellow)
@@ -68,4 +74,6 @@
 {
   color: var(--title-blue)
 }
+
+
 

@@ -43,16 +43,6 @@
     box-shadow: 0px 4px 5px gray;
 }
 
-.width-100per
-{
-    width: 100%;
-}
-
-.width-45per
-{
-    width: 45%;
-}
-
 .preview-container
 {
     position: relative;
@@ -76,21 +66,6 @@
 .image-box
 {
     position: absolute;
-}
-
-.border-radius-54
-{
-    border-radius: 54px;
-}
-
-.width-50per
-{
-    width: 50%;
-}
-
-.height-100per
-{
-    height: 100%;
 }
 
 .slider-container

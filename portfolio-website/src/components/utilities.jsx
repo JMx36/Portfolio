@@ -8,6 +8,7 @@ const Triangle = ({height, width, color="white", rotation="right", margin="", cl
     const down_triangle = "polygon(0 0, 100% 0%, 50% 100%)";
 
     let selected_triangle = right_triangle;
+
     if (rotation == "left") selected_triangle = left_triangle;
     else if (rotation == "up") selected_triangle = up_triangle;
     else if (rotation == "down") selected_triangle = down_triangle; 
@@ -19,20 +20,19 @@ const Triangle = ({height, width, color="white", rotation="right", margin="", cl
         clipPath: selected_triangle
     }
 
-    console.log(style);
     if (margin)
         rectangle_style["margin"] = margin;
     
     if (clickable)
         rectangle_style["cursor"] = "pointer";
-    
+
     if (clickable && func == null)
         console.log("You forgot to add a function to a clickable element");
     
     const combined_styles = {...rectangle_style, ...style}
 
     return (
-        <div className="triangle" style={combined_styles}></div>
+        <div className="triangle" style={combined_styles} onClick={clickable ? func : undefined}></div>
     )
 }
 

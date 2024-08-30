@@ -11,7 +11,7 @@ import unity from "../assets/Images/Logos/unity.png"
 import vs from "../assets/Images/Logos/vs.png"
 import vscode from "../assets/Images/Logos/vscode.png"
 import Triangle from "../components/utilities.jsx"
-
+import SkillsBox from "../components/SkillsBox.jsx"
 
 
 import React, { useState } from 'react';
@@ -26,7 +26,6 @@ const DropdownCategories = Object.freeze(
     }
 )
 
-
 class ImageInfo
 {
     constructor({image, width="5%", height="5%", margin_left="2%", image_category=""})
@@ -39,8 +38,7 @@ class ImageInfo
     }
 }
 
-
-const LogoImage = ({setIsHovered, image, index, width="", height="", margin_left=""}) => {
+export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
 
     const image_style = {};
 
@@ -49,7 +47,7 @@ const LogoImage = ({setIsHovered, image, index, width="", height="", margin_left
     if (margin_left != "") image_style["margin-left"] = margin_left;
 
     return (
-        <img className={"logo-image logo-image-" + index} 
+        <img className={"logo-image cursor-pointer logo-image-" + index} 
             src={image}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -58,17 +56,42 @@ const LogoImage = ({setIsHovered, image, index, width="", height="", margin_left
     )
 }
 
-const SkillsDropdown = ({title, index}) => {
-    return (
-        <div className={"dropdown-box dropdown-box-" + index}>
-            <h2 className="dropdown-title normal-text-bigger">
-                {title}
-                {/* <div className="triangle"></div> */}
-                <Triangle clickable={true} height="clamp(10px, 2vh, 24px)" width="clamp(50px, 5vw, 78px)" 
-                margin="auto" style={{marginTop: "10px"}} rotation="down"/>
-            </h2>
+const SkillsDropdown = ({title, index, category}) => {
 
-            {/* <p className="dropdown-info description-text">{dropdown[1]}</p> */}
+    const [isHovered, setIsHovered] = useState(false);
+    const [isClicked, setClicked] = useState(false);
+    const [isAnimationFinished, setAnimationFinished] = useState(false);
+
+    const handleClick = () => 
+    {
+        console.log("handleClick");
+        setClicked(!isClicked);
+    };
+
+    const handleAnimation = () =>
+    {
+        setAnimationFinished(true);
+    };
+
+
+    return (
+        <div className={"dropdown-box border-black dropdown-box-" + index}>
+            <div className={`${isClicked ? "skill-triangle-animation" : ""} border-red`}>
+                {
+                    isClicked ? <SkillsBox color="#BFB14A" title={title}/> :
+                    <h2 className={`dropdown-title normal-text-bigger `} style={{color: isHovered ? "#FFDF00" : "white"}} 
+                        onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                        {title}
+                    </h2>
+                }
+                <div onMouseEnter={() => setIsHovered(true)} 
+                    onMouseLeave={() => setIsHovered(false)} onAnimationEnd={handleAnimation}>
+                    <Triangle color={isHovered || isClicked? "#FFDF00" : "white"} clickable={true} height="clamp(10px, 2vh, 24px)" width="clamp(50px, 5vw, 78px)" 
+                    margin="auto" style={{marginTop: "10px"}} rotation={isAnimationFinished ?  "up" : "down"} func={handleClick}/>
+                </div>
+                
+            </div>
+
         </div>
     )
 }
@@ -103,10 +126,10 @@ const Skills = () => {
     const VisualStudio = new ImageInfo({ image: vs, width: "10%", height: "10%", margin_left: "0%", category: DropdownCategories.DeveloperTools});
     const VSCode = new ImageInfo({ image: vscode, width: "7%", margin_left: "0%", category: DropdownCategories.DeveloperTools });
 
-    const logos = [CLogo, CSharp, CPP, CSS, HTML, Python, Jira, GitHub, Unreal, Unity, VisualStudio, VSCode];
+    const logos = [CLogo, CSharp, CPP, CSS, HTML,Python, Jira, GitHub, Unreal, Unity, VisualStudio, VSCode];
                 
     const dropdowns = [[DropdownCategories.GameEngine, "STUFF"], [DropdownCategories.DeveloperTools, "STUFF"], 
-                [DropdownCategories.Production, "STUFF"]]
+                [DropdownCategories.Production, "STUFF"], [DropdownCategories.Languages, "STUFF"],]
 
     // States!
 
@@ -142,7 +165,7 @@ const Skills = () => {
                             (() => 
                                 {
                                     const elements = [];
-
+                                    // we want to repeat the images twice for carousel effect
                                     for (let i = 0; i < 2; i++) 
                                     {
                                         logos.map((image_info, index) => (  
@@ -156,6 +179,7 @@ const Skills = () => {
                                                  />)
                                         ));
                                     }
+
                                     return elements;  
                                 }
                             )()
@@ -172,6 +196,7 @@ const Skills = () => {
                                     const row_size = 2;
                                     let index_copy = 0;
 
+                                    // creates the rows and columns it needs
                                     dropdowns.map((dropdown, index) => {
                                             inside_elements.push(                                            
                                                 <SkillsDropdown title={dropdown[0]} index={index}/>
@@ -192,6 +217,7 @@ const Skills = () => {
                                         }
                                     )
 
+                                    // adds any left over elements to the container
                                     if (inside_elements.length > 0)
                                     {
                                         containers.push(

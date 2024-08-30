@@ -127,7 +127,6 @@
     /* border: black 2px solid; */
 }
 
-
 .carousel-container
 {
     --play-state: running;
@@ -209,6 +208,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 0px;
+    margin-top: 0px;
     /* border: solid black 2px; */
 }
 
@@ -217,19 +217,43 @@
     color: var(--bright-yellow);
 }
 
-/* .triangle
-{
-    height: clamp(10px, 2vh, 24px);
-    width: clamp(50px, 5vw, 78px);
-    margin: auto;
-    margin-top: 10px;
-    clip-path: polygon(50% 100%, 100% 0, 0 0);
-    background-color: white;
-} */
-
 .bottom-header
 {
     margin: 3% 5%;
     width: 90%;
     margin-bottom: 6%;
+}
+
+
+@keyframes triangle-animation{
+    0% 
+    {
+        min-height: 200px;
+    }
+
+    100%
+    {
+        min-height: 400px;
+    }
+}
+
+.skill-triangle-animation
+{
+    animation: triangle-animation 2s linear 0s 1;
+}
+
+.skills-box
+{
+    border-radius: 50px;
+    min-height: 200px;
+    min-width: 600px;
+}
+
+.skill-box-container
+{
+    margin: 0% 3%;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+
 }

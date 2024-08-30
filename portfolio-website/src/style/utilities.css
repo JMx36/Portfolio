@@ -8,3 +8,19 @@
 {
     transform: scaleX(-1);
 }
+
+
+.border-red
+{
+    border: solid 2px red
+}
+
+.border-blue
+{
+    border: solid 2px blue;
+}
+
+.border-black
+{
+    border: solid 3px black;
+}

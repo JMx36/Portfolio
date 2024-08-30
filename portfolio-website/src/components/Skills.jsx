@@ -58,11 +58,18 @@ const LogoImage = ({setIsHovered, image, index, width="", height="", margin_left
     )
 }
 
-const SkisllDropdown = ({}) => {
-
-
+const SkillsDropdown = ({title, index}) => {
     return (
-        <div></div>
+        <div className={"dropdown-box dropdown-box-" + index}>
+            <h2 className="dropdown-title normal-text-bigger">
+                {title}
+                {/* <div className="triangle"></div> */}
+                <Triangle clickable={true} height="clamp(10px, 2vh, 24px)" width="clamp(50px, 5vw, 78px)" 
+                margin="auto" style={{marginTop: "10px"}} rotation="down"/>
+            </h2>
+
+            {/* <p className="dropdown-info description-text">{dropdown[1]}</p> */}
+        </div>
     )
 }
 
@@ -167,14 +174,7 @@ const Skills = () => {
 
                                     dropdowns.map((dropdown, index) => {
                                             inside_elements.push(                                            
-                                                <div className={"dropdown-box dropdown-box-" + index}>
-                                                    <h2 className="dropdown-title normal-text-bigger ">
-                                                        {dropdown[0]}
-                                                        <div className="triangle"></div>
-                                                    </h2>
-
-                                                    {/* <p className="dropdown-info description-text">{dropdown[1]}</p> */}
-                                                </div>
+                                                <SkillsDropdown title={dropdown[0]} index={index}/>
                                             )
 
                                             if ((index + 1) % row_size == 0)

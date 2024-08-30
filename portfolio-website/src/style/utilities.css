@@ -3,12 +3,48 @@
     cursor: 'pointer';
 }
 
-
 .x-flip
 {
     transform: scaleX(-1);
 }
 
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+.margin-2per
+{
+    margin: 2%;
+}
+
+.border-radius-54
+{
+    border-radius: 54px;
+}
+
+.width-50per
+{
+    width: 50%;
+}
+
+.height-100per
+{
+    height: 100%;
+}
+
+.width-100per
+{
+    width: 100%;
+}
+
+.width-45per
+{
+    width: 45%;
+}
+
+
+/* Borders */
 
 .border-red
 {

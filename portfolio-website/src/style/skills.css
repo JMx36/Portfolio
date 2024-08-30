@@ -59,7 +59,7 @@
     gap: 10%;
     height: 25%;
     margin: 5% 5%;
-    margin-top: 0%;
+    margin-top: 2%;
     max-width: 100%;
     overflow: hidden;
 }
@@ -166,60 +166,11 @@
 }
 
 
-.logo-image
-{
-    height: 5%;
-    width: 5%;
-    /* background-color: white; */
-    margin-left: 2%;
-}
-
 .long-line
 {
     width: 100%;
 }
 
-
-.logo-image-3
-{
-    height: 4.5%;
-    width: 4.2%;
-}
-
-.logo-image-4
-{
-    height: 8.5%;
-    width: 7.5%;
-    margin-left: 0.5%;
-}
-
-.logo-image-5
-{
-    margin-left: 0.5%;
-}
-
-.logo-image-5, .logo-image-6,
-.logo-image-7, .logo-image-8, .logo-image-9,
-.logo-image-10
-{
-    width: 10%;
-    height: 10%;
-}
-
-.logo-image-10, .logo-image-11
-{
-    margin-left: 0%;
-}
-
-.logo-image-8
-{
-    width: 15%;
-}
-
-.logo-image-11
-{
-    width: 7%;
-}
 
 .dropdowns-section
 {
@@ -268,6 +219,7 @@
 .dropdown-title
 {
     position: relative;
+    overflow: hidden;
     /* border: solid black 2px; */
 }
 

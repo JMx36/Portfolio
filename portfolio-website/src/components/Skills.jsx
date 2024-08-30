@@ -10,20 +10,59 @@ import unreal from "../assets/Images/Logos/side_unreal_engine.png"
 import unity from "../assets/Images/Logos/unity.png"
 import vs from "../assets/Images/Logos/vs.png"
 import vscode from "../assets/Images/Logos/vscode.png"
+import Triangle from "../components/utilities.jsx"
+
+
 
 import React, { useState } from 'react';
 
 
+const DropdownCategories = Object.freeze(
+    {
+     GameEngine: "Game Engines", 
+     DeveloperTools: "Developer Tools", 
+     Production: "Production",
+     Languages: "Languages"
+    }
+)
 
-const LogoImage = ({setIsHovered, image, index, width="0%", height="0%", margin_left='2%'}) => {
+
+class ImageInfo
+{
+    constructor({image, width="5%", height="5%", margin_left="2%", image_category=""})
+    {
+        this.image = image;
+        this.width = width;
+        this.height = height;
+        this.margin_left = margin_left;
+        this.image_category= image_category;
+    }
+}
+
+
+const LogoImage = ({setIsHovered, image, index, width="", height="", margin_left=""}) => {
+
+    const image_style = {};
+
+    if (width != "") image_style["width"] = width;
+    if (height != "") image_style["height"] = height;
+    if (margin_left != "") image_style["margin-left"] = margin_left;
 
     return (
-        <img className=
-            {"logo-image logo-image-" + index} 
+        <img className={"logo-image logo-image-" + index} 
             src={image}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            style={image_style}
             />
+    )
+}
+
+const SkisllDropdown = ({}) => {
+
+
+    return (
+        <div></div>
     )
 }
 
@@ -43,9 +82,24 @@ const Skills = () => {
         ]
     ]
 
-    const logos = [c_logo, c_sharp, cpp, css, html, python, jira, github, unreal, unity, vs, vscode]
 
-    const dropdowns = [["Game Engines", "STUFF"], ["Developer Tools", "STUFF"], ["Teamwork/Organization/Productivity", "STUFF"]]
+    const CLogo = new ImageInfo({ image: c_logo, category: DropdownCategories.DeveloperTools});
+    const CSharp = new ImageInfo({ image: c_sharp, category: DropdownCategories.DeveloperTools});
+    const CPP = new ImageInfo({ image: cpp, category: DropdownCategories.DeveloperTools});
+    const CSS = new ImageInfo({ image: css, height: "4.5%", width: "4.2%", category: DropdownCategories.DeveloperTools});
+    const HTML = new ImageInfo({ image: html, height:"8.5%", width: "7.5%", margin_left: "0.5%", category: DropdownCategories.DeveloperTools});
+    const Python = new ImageInfo({ image: python, width: "10%", height: "10%", margin_left: "0.5%", category: DropdownCategories.DeveloperTools});
+    const Jira = new ImageInfo({ image: jira, width: "10%", height: "10%", category: DropdownCategories.ProductionTools});
+    const GitHub = new ImageInfo({ image: github, width: "10%", height: "10%", category: DropdownCategories.DeveloperTools});
+    const Unreal = new ImageInfo({ image: unreal, width: "15%", height: "10%", category: DropdownCategories.GameEngine});
+    const Unity = new ImageInfo({ image: unity, width: "10%", height: "10%", category: DropdownCategories.GameEngine });
+    const VisualStudio = new ImageInfo({ image: vs, width: "10%", height: "10%", margin_left: "0%", category: DropdownCategories.DeveloperTools});
+    const VSCode = new ImageInfo({ image: vscode, width: "7%", margin_left: "0%", category: DropdownCategories.DeveloperTools });
+
+    const logos = [CLogo, CSharp, CPP, CSS, HTML, Python, Jira, GitHub, Unreal, Unity, VisualStudio, VSCode];
+                
+    const dropdowns = [[DropdownCategories.GameEngine, "STUFF"], [DropdownCategories.DeveloperTools, "STUFF"], 
+                [DropdownCategories.Production, "STUFF"]]
 
     // States!
 
@@ -84,8 +138,15 @@ const Skills = () => {
 
                                     for (let i = 0; i < 2; i++) 
                                     {
-                                        logos.map((image, index) => (
-                                            elements.push(<LogoImage setIsHovered={setIsHovered} image={image} index={index % 12} />)
+                                        logos.map((image_info, index) => (  
+                                            elements.push(
+                                            <LogoImage setIsHovered={setIsHovered} 
+                                                image={image_info.image}
+                                                index={index % 12}      
+                                                width={image_info.width}
+                                                height={image_info.height}
+                                                margin_left={image_info.margin_left}
+                                                 />)
                                         ));
                                     }
                                     return elements;  

@@ -15,7 +15,7 @@ const HomePortfolio = () => {
         <div className="home-portfolio-header">
             <div className="rectangle width-45per"></div>
             <div className="home-portfolio-title">
-                <h1 className="italic-title title-text-padding">Portfolios</h1>
+                <h1 className="italic-title title-text-padding home-portfolio-title-text">Portfolios</h1>
             </div>
             <div className="rectangle width-45per"></div>
         </div>

@@ -8,27 +8,39 @@
 {
     display: flex;
     color: var(--title-blue);
-    max-width: 100%;
+    width: 100%;
+    min-height: 200px;
     justify-content: center;
     align-items: center;
-    margin: 2% auto;
+    margin: 5% auto;
+    margin-bottom: 1%;
+    /* border: solid 1px black; */
 }
 
 .home-portfolio-title
 {
-    margin: 0% 4%;
+    display: flex;
     background-image: url("../assets/Images/Components/background-title.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 60%;
-    text-align: center;
+    min-height: 250px;
+    margin: 0% 1%;
+    /* border: solid 1px red; */
+}
+
+.home-portfolio-title-text
+{
+    margin: auto auto;
+    /* border: solid 1px black; */
 }
 
 .rectangle
 {
     background-color: var(--dimmer-yellow);
     padding: 1%;
+    box-shadow: 0px 4px 5px gray;
 }
 
 .width-100per

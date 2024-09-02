@@ -31,7 +31,7 @@ const About = () => {
                 <div className="text-section">
                     <div className="brush-stroke-container">
                         <div className="relative-container">
-                            <img class="brush-stroke-img" src={brush_stroke} alt="brush stroke" />
+                            <img className="brush-stroke-img" src={brush_stroke} alt="brush stroke" />
                             <div className="text-container">
                                 <p className="about-description normal-text-medium blue-normal-text in-front">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 

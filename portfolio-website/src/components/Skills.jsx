@@ -10,7 +10,7 @@ import unreal from "../assets/Images/Logos/side_unreal_engine.png"
 import unity from "../assets/Images/Logos/unity.png"
 import vs from "../assets/Images/Logos/vs.png"
 import vscode from "../assets/Images/Logos/vscode.png"
-import Triangle from "../components/utilities.jsx"
+import {Triangle, LogoImage} from "../components/utilities.jsx"
 import SkillsBox from "../components/SkillsBox.jsx"
 
 
@@ -28,35 +28,19 @@ const DropdownCategories = Object.freeze(
 
 class ImageInfo
 {
-    constructor({image, width="5%", height="5%", margin_left="2%", image_category=""})
+    constructor({image, width="5%", height="5%", margin_left="2%", category=""})
     {
         this.image = image;
         this.width = width;
         this.height = height;
         this.margin_left = margin_left;
-        this.image_category= image_category;
+        this.category= category;
     }
 }
 
-export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
 
-    const image_style = {};
 
-    if (width != "") image_style["width"] = width;
-    if (height != "") image_style["height"] = height;
-    if (margin_left != "") image_style["margin-left"] = margin_left;
-
-    return (
-        <img className={"logo-image cursor-pointer logo-image-" + index} 
-            src={image}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={image_style}
-            />
-    )
-}
-
-const SkillsDropdown = ({title, index, category}) => {
+const SkillsDropdown = ({title, index, category, logos}) => {
 
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setClicked] = useState(false);
@@ -76,9 +60,9 @@ const SkillsDropdown = ({title, index, category}) => {
 
     return (
         <div className={"dropdown-box border-black dropdown-box-" + index}>
-            <div className={`${isClicked ? "skill-triangle-animation" : ""} border-red`}>
+            <div className={`border-red`}>
                 {
-                    isClicked ? <SkillsBox color="#BFB14A" title={title}/> :
+                    isClicked ? <SkillsBox animation="skill-triangle-animation" color="#BFB14A" title={title} logos={logos}/> :
                     <h2 className={`dropdown-title normal-text-bigger `} style={{color: isHovered ? "#FFDF00" : "white"}} 
                         onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                         {title}
@@ -87,13 +71,27 @@ const SkillsDropdown = ({title, index, category}) => {
                 <div onMouseEnter={() => setIsHovered(true)} 
                     onMouseLeave={() => setIsHovered(false)} onAnimationEnd={handleAnimation}>
                     <Triangle color={isHovered || isClicked? "#FFDF00" : "white"} clickable={true} height="clamp(10px, 2vh, 24px)" width="clamp(50px, 5vw, 78px)" 
-                    margin="auto" style={{marginTop: "10px"}} rotation={isAnimationFinished ?  "up" : "down"} func={handleClick}/>
+                    margin="auto" style={{marginTop: "10px"}} rotation={isClicked ?  "up" : "down"} func={handleClick}/>
                 </div>
                 
             </div>
 
         </div>
     )
+}
+
+
+const SearchDropdownImages = ({images_list, category}) => {
+
+    let category_images = [];
+    // console.log("Image list", images_list);
+    // console.log("Category", category);
+    for (const image of images_list) 
+    {
+        if (image.category === category) category_images.push(image);
+    }
+    // console.log(category_images);
+    return category_images;
 }
 
 
@@ -112,14 +110,13 @@ const Skills = () => {
         ]
     ]
 
-
-    const CLogo = new ImageInfo({ image: c_logo, category: DropdownCategories.DeveloperTools});
-    const CSharp = new ImageInfo({ image: c_sharp, category: DropdownCategories.DeveloperTools});
-    const CPP = new ImageInfo({ image: cpp, category: DropdownCategories.DeveloperTools});
-    const CSS = new ImageInfo({ image: css, height: "4.5%", width: "4.2%", category: DropdownCategories.DeveloperTools});
-    const HTML = new ImageInfo({ image: html, height:"8.5%", width: "7.5%", margin_left: "0.5%", category: DropdownCategories.DeveloperTools});
-    const Python = new ImageInfo({ image: python, width: "10%", height: "10%", margin_left: "0.5%", category: DropdownCategories.DeveloperTools});
-    const Jira = new ImageInfo({ image: jira, width: "10%", height: "10%", category: DropdownCategories.ProductionTools});
+    const CLogo = new ImageInfo({ image: c_logo, category: DropdownCategories.Languages});
+    const CSharp = new ImageInfo({ image: c_sharp, category: DropdownCategories.Languages});
+    const CPP = new ImageInfo({ image: cpp, category: DropdownCategories.Languages});
+    const CSS = new ImageInfo({ image: css, height: "4.5%", width: "4.2%", category: DropdownCategories.Languages});
+    const HTML = new ImageInfo({ image: html, height:"8.5%", width: "7.5%", margin_left: "0.5%", category: DropdownCategories.Languages});
+    const Python = new ImageInfo({ image: python, width: "10%", height: "10%", margin_left: "0.5%", category: DropdownCategories.Languages});
+    const Jira = new ImageInfo({ image: jira, width: "10%", height: "10%", category: DropdownCategories.Production});
     const GitHub = new ImageInfo({ image: github, width: "10%", height: "10%", category: DropdownCategories.DeveloperTools});
     const Unreal = new ImageInfo({ image: unreal, width: "15%", height: "10%", category: DropdownCategories.GameEngine});
     const Unity = new ImageInfo({ image: unity, width: "10%", height: "10%", category: DropdownCategories.GameEngine });
@@ -199,7 +196,8 @@ const Skills = () => {
                                     // creates the rows and columns it needs
                                     dropdowns.map((dropdown, index) => {
                                             inside_elements.push(                                            
-                                                <SkillsDropdown title={dropdown[0]} index={index}/>
+                                                <SkillsDropdown title={dropdown[0]} index={index} 
+                                                category={dropdown[0]} logos={SearchDropdownImages({images_list: logos, category: dropdown[0]})}/>
                                             )
 
                                             if ((index + 1) % row_size == 0)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Triangle = ({height, width, color="white", rotation="right", margin="", clickable=false, func=null, style={}}) => {
+export const Triangle = ({height, width, color="white", rotation="right", margin="", clickable=false, func=null, style={}}) => {
 
     const right_triangle = "polygon(0 0, 0 100%, 100% 50%)";
     const left_triangle = "polygon(100% 0, 100% 100%, 0% 50%)";
@@ -36,4 +36,21 @@ const Triangle = ({height, width, color="white", rotation="right", margin="", cl
     )
 }
 
-export default Triangle
+
+export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
+
+    const image_style = {};
+
+    if (width != "") image_style["width"] = width;
+    if (height != "") image_style["height"] = height;
+    if (margin_left != "") image_style["marginLeft"] = margin_left;
+
+    return (
+        <img className={"logo-image cursor-pointer logo-image-" + index} 
+            src={image}
+            onMouseEnter={setIsHovered === undefined ? undefined : () => setIsHovered(true)}
+            onMouseLeave={setIsHovered === undefined ? undefined : () => setIsHovered(false)}
+            style={image_style}
+            />
+    )
+}

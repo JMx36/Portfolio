@@ -6,14 +6,14 @@ const Contact = () => {
 
   const image_style = 
   {
-    height: '10%',
-    width: '20%'
+    width: '30%',
   }  
   
   const circulay_mask =
   {
     height: "100%",
-    width: "85%",
+    width: "90%",
+    
     backgroundImage: "url('path-to-your-image.jpg')", 
     backgroundSize: "cover",
     borderRadius: "50%", /* Makes the element circular */
@@ -27,14 +27,14 @@ const Contact = () => {
             <h1 className='text sub-title-text'>Contact Me</h1>
         </div>  
         <div className="contact-logos-container">
-            <img src={linked_in} alt="linkedIn" style={image_style} />
+            <img className="" src={linked_in} alt="linkedIn" style={image_style} />
             <div className="name-section">
                 <div className="contact-photo-view">
                   <div style={circulay_mask}></div>
                 </div>
                 <h3 className="contact-name cursive-button">Josh Castillo</h3>
             </div>
-            <img src={mail} alt="email" style={image_style}/>
+            <img className="" src={mail} alt="email" style={image_style}/>
         </div>
     </div>
   )

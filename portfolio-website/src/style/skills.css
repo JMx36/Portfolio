@@ -141,8 +141,9 @@
     display: flex;
     align-items: center;
     width: 100%;
-    /* transform: translateX(-120.7%); 
-    transform: translateX(-5%);  */
+    gap: 1%;
+    transform: translateX(-141%); 
+    transform: translateX(-5%); 
     animation: slide 10s linear infinite;
 }
 
@@ -155,7 +156,7 @@
 
     100%
     {
-        transform: translateX(-120.7%);
+        transform: translateX(-141%);
     }
 }
 
@@ -172,37 +173,42 @@
 .dropdowns-section
 {
     margin-top: 5%;    
-    /* border: solid 10px wheat; */
+    /* border: solid 2px wheat; */
 }
 
 .dropdown-container
 {
     display: flex;
     flex-direction: column;
-    height: 100%;
     overflow: hidden;
-    --heigh-container: 300px;
+    --heigh-container: 100%;
     /* border: solid 4px black */
 }
 
 .dropdown-box
 {
     flex: 1;
+
     display: flex;
     flex-direction: column;
+
     position: relative;
     color: white;
-    min-height: 50%;
     align-items: center;
-    /* border: solid 1px red; */
     padding: 2%;
+}
+
+.dropdown-box-container
+{
+    width: 100%;
+    text-align: center;
 }
 
 .dropdown-row
 {
     display: flex;
     max-width: 100%;
-    /* border: solid 10px yellowgreen; */
+    /* border: solid 2px yellowgreen; */
 }
 
 .dropdown-title
@@ -219,23 +225,15 @@
     color: var(--bright-yellow);
 }
 
-.bottom-header
-{
-    margin: 3% 5%;
-    width: 90%;
-    margin-bottom: 6%;
-}
-
-
 @keyframes triangle-animation{
     0% 
     {
-        height: 20px;
+        max-height: 10%;
     }
 
     100%
     {
-        height: var(--heigh-container);
+        max-height: var(--heigh-container);
     }
 }
 
@@ -247,13 +245,26 @@
 .skills-box
 {
     border-radius: 50px;
-    height: var(--heigh-container);
+}
+
+.images-container
+{
+    margin-top: 0px;
 }
 
 .skill-box-container
 {
-    margin: 0% 3%;
+    margin: 4% 5%;
     text-decoration: underline;
     text-decoration-color: black;
     text-decoration-thickness: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-header
+{
+    margin: 3% 5%;
+    width: 90%;
+    margin-bottom: 6%;
 }

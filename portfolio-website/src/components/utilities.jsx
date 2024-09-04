@@ -40,7 +40,7 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
 
     const image_style = {};
-
+    console.log(image, width, height);
     if (width != "") image_style["width"] = width;
     if (height != "") image_style["height"] = height;
     if (margin_left != "") image_style["marginLeft"] = margin_left;

@@ -60,3 +60,9 @@
 {
     border: solid 3px black;
 }
+
+.in-front
+{
+    position: inherit;
+    z-index: 3;
+}

@@ -12,28 +12,22 @@ const About = () => {
     return (
         <div className="about-me">
             <div className="about-shape"></div>
-            <div className="about-left-section">
-                <div className="in-front circle-container">
-                    <div className="in-front circle-mask">
-                        <img src="" alt="" />
+            <h1 className="about-title italic-title in-front">About Me</h1>
+            <div className="about-container in-front">
+                <div className="about-info-container">
+                    <div className="about-left-section">
+                        <div className="circle-container">
+                            <div className="circle-mask">
+                                <img src="" />
+                            </div>
+                        </div>
+                        
                     </div>
-                </div>
-                <div className="in-front about-text-buttons">
-                    {left_text_buttons.map((text) => (
-                        <a href="index.html" className="text-button cursive-button">{text}</a>
-                    )
-                )}              
-                </div>
-            </div>
-            
-            <div className="about-right-section">
-                <h1 className="about-title italic-title">About Me</h1>
-                <div className="text-section">
-                    <div className="brush-stroke-container">
-                        <div className="relative-container">
-                            <img className="brush-stroke-img" src={brush_stroke} alt="brush stroke" />
-                            <div className="text-container">
-                                <p className="about-description normal-text-medium blue-normal-text in-front">
+                    
+                    <div className="about-right-section">
+                        <div className="text-section" style={{backgroundImage: `url(${brush_stroke})`}}>
+                            <div className="about-description">
+                                <p className="normal-text-medium blue-normal-text in-front">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                                     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -46,16 +40,27 @@ const About = () => {
                                     mollit anim id est laborum.
                                 </p>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
 
-                <div className="logos-container">
-                    {right_buttons.map((image) => (
-                        <a href="index.html"><img className="about-me-logo-pictures in-front" src={image}/></a>
-                    ))}
+                <div className="about-info-buttons ">
+                    <div className="in-front about-text-buttons">
+                            {left_text_buttons.map((text) => (
+                                <a href="index.html" className="text-button cursive-button">{text}</a>
+                            )
+                        )}              
+                        </div>
+                    <div className="logos-container">
+                        {right_buttons.map((image) => (
+                            <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
+                        ))}
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }

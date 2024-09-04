@@ -2,31 +2,53 @@
 {
     position: relative;
     display: flex;
+    flex-direction: column;
     margin: 0px 0px;
     max-width: 100%;
     min-height: 120vh;
     overflow: hidden;
 }
 
-.about-left-section
+.about-shape
 {
-    position: inherit;
+    position: absolute;
+    min-height: 100%;
+    min-width: 63%;
+    max-width: 100%;
+    background-color: #DAC21C;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 43.96% 0%);
+    z-index: 1; /* Lower z-index */
+}
+
+.about-container
+{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    max-width: 50%;
-    /* border: solid 10px blue; */
+    margin-bottom: 5%;
+    flex: 1;
+}
+
+.about-info-buttons 
+{
+    display: flex;
+}
+
+.about-info-container
+{
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+}
+
+.about-left-section
+{
+    min-width: 40%;
 }
 
 .about-right-section
 {
     display: flex;
-    position: inherit;
-    width: 50%;
-    max-width: 50%;
-    min-height: 100%;
-    flex-direction: column;
-    /* border: solid 10px blue; */
+    flex: 1;
 }
 
 .about-title
@@ -36,16 +58,6 @@
     color: var(--title-blue);
 }
 
-.about-shape
-{
-    position: absolute;
-    height: 100%;
-    width: 63%;
-    background-color: #DAC21C;
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 43.96% 0%);
-    z-index: 1; /* Lower z-index */
-}
-
 .blue-normal-text
 {
     color: var(--text-blue);
@@ -53,43 +65,39 @@
 
 .circle-container
 {
-    position: inherit;
+    position: relative;
     width: 100%;
-    height: 80%;
-    margin-top: 10%;
-    /* border: solid 10px blue; */
+    height: 100%;
+    left: 4%;
 }
 
 .circle-mask {
-    position: inherit;
+    height: 100%;
     width: 100%;
-    min-height: 100%;
     overflow: hidden;
-    clip-path: ellipse(39% 47% at 42% 53%);
-    background-color: rgb(173, 163, 163);
-
+    clip-path: ellipse(50% 50% at 50% 50%);
+    background-color: #D9D9D9;
 }
 
 .circle-mask img {
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-.in-front
+.about-info-buttons
 {
-    position: inherit;
-    z-index: 3;
+    margin: 0% 1%;
+    margin-top: 3%;
 }
 
 .about-text-buttons
 {
     display: flex;
-    position: inherit;
-    margin-left: 3%;
-    margin-bottom: 8%;
-    /* background-color: violet; */
-    gap: 20%;
+    min-height: 10%;
+    min-width: 45%;
+    max-width: 50%;
+    justify-content: space-between;
 }
 
 .text-button
@@ -102,73 +110,101 @@
 .text-section
 {
     position: relative;
-    height: 80%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     /* border: solid 10px yellowgreen; */
-}
-
-.brush-stroke-container
-{
-    position: absolute;
-    height: 100%;
-    width: 120%;
-    left: -20%;
-    z-index: 2;
-    /* border: solid 10px red; */
-}
-
-.relative-container
-{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* border: solid 10px violet; */
-}
-
-.brush-stroke-img
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.text-container
-{
-    position: absolute;
-    top: 5%;
-    left: 15%;
-    height: 90%;
-    width: 83%;
-    /* border: solid 2px rgb(0, 255, 170); */
 }
 
 .about-description
 {
     text-align: left;
-    margin: 2% 2%;
+    margin: 5% 2%;
+    margin-left: 17%;
     /* border: solid 10px green; */
 }
 
 .logos-container
 {
-    padding-top: 1px;
-    /* border: solid 10px black; */
-    display: flex;
-    align-items: bottom;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    margin-bottom: 10%
+    margin-right: 17%;
+    max-width: 100%;
+    gap: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logos-container a
-{
-    margin-right: 5%;
-}
-
-.about-me-logo-pictures
+.about-logo-pictures
 {
     width: 3.5vw;
     height: 6.5vh;
+    max-width: 200px;
     z-index: 3;
+    display: block;
 }
 
+@media (max-width: 1000px) {
+    .about-info-container 
+    {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 100%;
+        min-height: 100%;
+    }
+
+    .about-left-section
+    {
+        height: 300px;
+        margin-bottom: 5%;
+    }
+
+    .circle-container
+    {
+        width: 70%;
+        left: 0%;
+        margin: auto;
+    }
+
+    .about-info-buttons
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logos-container, .about-info-buttons
+    {
+        margin: auto;
+    }
+
+    .about-text-buttons
+    {
+        display: flex;
+        /* width: 100%; */
+        gap: 10%;
+        min-width: 123%;
+        min-height: none;
+        max-width: none;
+        /* justify-content: space-evenly; */
+    }
+
+    .about-logo-pictures
+    {
+        width: 6.5vw;
+        height: 6.5vh;
+    }
+
+    .text-section
+    {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .about-description
+    {
+        margin: 5% 2%;
+    }
+}

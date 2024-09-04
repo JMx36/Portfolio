@@ -2,7 +2,7 @@
 {
   --fs-title: clamp(2rem, 4.5vw + 1rem, 12rem);
   --fs-subtitle: clamp(2rem, 2vw + 1rem, 5rem);
-  --fs-normal-medium: clamp(0.5rem, 0.8vw + 1rem, 5rem);
+  --fs-normal-medium: clamp(0.5rem, 0.6vw + 1rem, 5rem);
   --fs-normal-small: clamp(0.2rem, 0.5vw + 1rem, 5rem);
   --fs-cursive: clamp(0.1rem, 1.2vw + 1rem, 5rem);
   --fs-normal-bigger: clamp(0.6rem, 1.5vw + 1rem, 6rem);

@@ -1,5 +1,5 @@
 
-const ImagesPreview = ({images}) => {
+const ImagesPreview = ({height, width, images}) => {
 
     // probably need to check that there are only 3 images or only do the first three images
 
@@ -29,7 +29,7 @@ const ImagesPreview = ({images}) => {
 
 
     return (
-        <div className="preview-container">
+        <div className="image-preview" style={{height: {height}, width: {width}}}>
             {images.map((image, index) => (
                 <div className={`image-box border-radius-54`} style={box_style[index]}>
                     <img src={image} alt="" />

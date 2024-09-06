@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export const Triangle = ({height, width, color="white", rotation="right", margin="", clickable=false, func=null, style={}}) => {
 
@@ -40,7 +40,7 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
 
     const image_style = {};
-    console.log(image, width, height);
+    // console.log(image, width, height);
     if (width != "") image_style["width"] = width;
     if (height != "") image_style["height"] = height;
     if (margin_left != "") image_style["marginLeft"] = margin_left;
@@ -52,5 +52,34 @@ export const LogoImage = ({setIsHovered=undefined, image, index, width="", heigh
             onMouseLeave={setIsHovered === undefined ? undefined : () => setIsHovered(false)}
             style={image_style}
             />
+    )
+}
+
+export const Circle = ({height, width, color="white", radius="50%", margin="", 
+                        hover_func=undefined,  clickable=false, func=null, style={}}) => {
+
+    let rectangle_style = {
+        height: height,
+        width: width,
+        backgroundColor: color,
+        borderRadius: radius
+    }
+
+    if (margin)
+        rectangle_style["margin"] = margin;
+    
+    if (clickable)
+        rectangle_style["cursor"] = "pointer";
+
+    if (clickable && func == null)
+        console.log("You forgot to add a function to a clickable element");
+    
+    const combined_styles = {...rectangle_style, ...style}
+
+    return (
+        <div className="circle" style={combined_styles} onClick={clickable ? func : undefined}
+            onMouseEnter={hover_func === undefined ? undefined : () => hover_func(true)}
+            onMouseLeave={hover_func === undefined ? undefined : () => hover_func(false)}
+        > </div>
     )
 }

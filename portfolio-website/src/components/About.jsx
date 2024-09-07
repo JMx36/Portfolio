@@ -4,6 +4,8 @@ import github from "../assets/Images/Logos/github.png"
 import brush_stroke from "../assets/Images/Logos/brush-stroke3.png"
 import {Link} from 'react-router-dom'
 
+import React, { useState } from 'react';
+
 const About = () => {
 
     const left_text_buttons = ["See My Resume", "See My Portfolio"]
@@ -45,7 +47,6 @@ const About = () => {
 
                     </div>
                 </div>
-
                 <div className="about-info-buttons ">
                     <div className="in-front about-text-buttons">
                             {left_text_buttons.map((text) => (

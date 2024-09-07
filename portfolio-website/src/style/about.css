@@ -107,6 +107,11 @@
     /* background-color: black; */
 }
 
+.text-button:hover
+{
+    color: white;
+}
+
 .text-section
 {
     position: relative;

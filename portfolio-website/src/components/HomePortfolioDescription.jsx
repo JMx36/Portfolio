@@ -188,6 +188,9 @@ const Slider = ({images_lists, window_size=4}) =>
 
 const Description = ({title="Title", description="Description Text"}) =>
 {
+
+    const [text_color, SetColor] = useState("#13505B")
+
     return (
         <div className="home-portfolio-section-description width-50per">
             <div className="home-portfolio-section-title">
@@ -196,7 +199,9 @@ const Description = ({title="Title", description="Description Text"}) =>
             <div className="home-portfolio-section-text">
                 <p className='normal-text-medium'>{description}</p>
             </div>
-            
+            <p className='cursive-button cursor-pointer' style={{color: text_color, margin: "auto"}}
+                onMouseEnter={() => SetColor("#DAC21C")} onMouseLeave={() => SetColor("#13505B")}
+                >Check it out!</p>
         </div>
     )
 }

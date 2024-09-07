@@ -62,16 +62,6 @@
     overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-    .skills-description
-    {
-        max-width: 60%;
-        margin: 5% auto;
-        flex-direction: column;
-        gap: 4vh;
-    }
-}
-
 .description-box
 {
     flex: 1;
@@ -187,7 +177,6 @@
 .dropdowns-section
 {
     margin-top: 5%;    
-    /* border: solid 2px wheat; */
 }
 
 .dropdown-container
@@ -212,17 +201,10 @@
     padding: 2%;
 }
 
-.dropdown-box-container
-{
-    width: 100%;
-    text-align: center;
-}
-
 .dropdown-row
 {
     display: flex;
     max-width: 100%;
-    /* border: solid 2px yellowgreen; */
 }
 
 .dropdown-title
@@ -264,6 +246,9 @@
 .images-container
 {
     margin-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .skill-box-container
@@ -281,4 +266,16 @@
     margin: 3% 5%;
     width: 90%;
     margin-bottom: 6%;
+}
+
+
+
+@media (max-width: 1000px) {
+    .skills-description
+    {
+        max-width: 60%;
+        margin: 5% auto;
+        flex-direction: column;
+        gap: 4vh;
+    }
 }

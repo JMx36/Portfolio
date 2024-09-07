@@ -109,7 +109,7 @@
 
 .text-button:hover
 {
-    color: white;
+    color: black;
 }
 
 .text-section
@@ -174,16 +174,18 @@
         margin: auto;
     }
 
+
+    .logos-container, .about-info-buttons
+    {
+        margin: auto;
+    }
+
     .about-info-buttons
     {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .logos-container, .about-info-buttons
-    {
-        margin: auto;
+        margin-top: 2%;
     }
 
     .about-text-buttons
@@ -194,6 +196,7 @@
         min-width: 123%;
         min-height: none;
         max-width: none;
+        margin-bottom: 10%;
         /* justify-content: space-evenly; */
     }
 

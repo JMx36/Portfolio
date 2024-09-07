@@ -47,13 +47,13 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className="about-info-buttons ">
+                <div className="about-info-buttons">
                     <div className="in-front about-text-buttons">
                             {left_text_buttons.map((text) => (
                                 <a href="index.html" className="text-button cursive-button">{text}</a>
                             )
                         )}              
-                        </div>
+                    </div>
                     <div className="logos-container">
                         {right_buttons.map((image) => (
                             <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>

@@ -146,10 +146,11 @@ const Slider = ({images_lists, window_size=4}) =>
     }
 
     return (
-        <div className="slider-container width-50per">
-            <div className='slider-image-container' 
+        <div className="slider-container ">
+            <div className='slider-image-container' style={{}}
                         onMouseEnter={() => SetPreviewContainerHovered(true)}
-                        onMouseLeave={() => SetPreviewContainerHovered(false)}>
+                        onMouseLeave={() => SetPreviewContainerHovered(false)}
+                        >
                 {
                     currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%"}}></div> :
                     <Triangle width="5%" height="20%" color="#90E0EF" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
@@ -192,7 +193,7 @@ const Description = ({title="Title", description="Description Text"}) =>
     const [text_color, SetColor] = useState("#13505B")
 
     return (
-        <div className="home-portfolio-section-description width-50per">
+        <div className="home-portfolio-section-description">
             <div className="home-portfolio-section-title">
                 <h1 className='sub-title-text'>{title}</h1>
             </div>

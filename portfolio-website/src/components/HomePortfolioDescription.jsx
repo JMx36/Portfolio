@@ -54,7 +54,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
 
 const Slider = ({images_lists, window_size=4}) =>
 {
-
+    // initial check to make sure the window is a eligible size for 'images_lists'
     if (window_size > images_lists.length) 
     {
         window_size = container_length
@@ -69,16 +69,37 @@ const Slider = ({images_lists, window_size=4}) =>
     const [currentIndex, setCurrentIndex] = useState(middle_index);
     const [start_index, setStartIndex] = useState(w_starting_index);
     const [end_index, setEndIndex] = useState(w_end_index);
+    const [play_animation, PlayAnimation] = useState(false);
+    const [direction, SetDirection] = useState("none");
+    const [preview_container_hovered, SetPreviewContainerHovered] = useState(true);
+    // console.log("Current index", currentIndex);
+    // console.log("Start index", start_index);
+    // console.log("End index", end_index);
 
-    
-    console.log("Current index", currentIndex);
-    console.log("Start index", start_index);
-    console.log("End index", end_index);
+    const ResetAnimation = () =>
+    {
+        PlayAnimation(false); // Remove the animation class
+        setTimeout(() => {
+          PlayAnimation(true); // Re-add the animation class after a brief delay
+        }, 0); // Delay of 0ms allows the browser to reflow and reset
+    }
+
+    const EndAnimation = (e) => 
+    {
+        
+        if (e.animationName === `move_images_out_${direction}`)
+        {
+            PlayAnimation(false);
+            SetDirection("none");
+        }
+
+    }
 
     const HandleClick = (index, side="none") =>
     {
         if (index === currentIndex) return;        
 
+        SetDirection(index < currentIndex ? "left" : "right");
         setCurrentIndex(index);
         
         if (side === "left")
@@ -91,6 +112,12 @@ const Slider = ({images_lists, window_size=4}) =>
             setEndIndex(Math.min(images_lists.length - 1, end_index + window_size))
             setStartIndex(index);
         }
+
+        if (play_animation)
+            ResetAnimation();
+        else
+            PlayAnimation(true);
+
 
         console.log("Current index", currentIndex);
         console.log("Start index", start_index);
@@ -120,14 +147,30 @@ const Slider = ({images_lists, window_size=4}) =>
         <div className="slider-container width-50per">
             <div className='slider-image-container'>
                 {
-                    currentIndex === 0 ? <div style={{width: "5%", height:"20%"}}></div> :
+                    currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%"}}></div> :
                     <Triangle width="5%" height="20%" color="#90E0EF" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
                 }
-                <div className='preview-container'>
-                    <ImagesPreview height="100%" width="100%" images={images_lists}/>
+                <div className='preview-container' onAnimationEnd={EndAnimation} 
+                        onMouseEnter={() => SetPreviewContainerHovered(true)}
+                        onMouseLeave={() => SetPreviewContainerHovered(true)} >
+                    {console.log("Direction", direction)}
+                    <div className={`${play_animation ? `move-images-out-${direction}` : ''}`}
+                            style={{height: "100%", width: "100%", margin:"auto auto", display: "flex", gap: "40%"}}>
+                        {
+                            direction === "left" ? 
+                                <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/> 
+                                : ''
+                        }
+                        <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/>
+                        {
+                            direction === "right" ? 
+                                <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/> 
+                                : ''
+                        }
+                    </div>
                 </div>
                 {
-                    currentIndex === images_lists.length - 1 ? <div style={{width: "5%", height:"20%"}}></div> : 
+                    currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%"}}></div> : 
                     <Triangle width="5%" height="20%" color="#90E0EF" rotation="right" margin="auto 0%" clickable={true} func={HandleRightClick}/>
                 }
             </div>

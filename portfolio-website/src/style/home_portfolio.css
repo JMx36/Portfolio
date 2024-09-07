@@ -43,16 +43,6 @@
     box-shadow: 0px 4px 5px gray;
 }
 
-.preview-container
-{
-    position: relative;
-    /* border: black 1px solid; */
-    margin: 5% auto;
-    height: 91.5%;
-    width: 85%;
-    margin-bottom: 0%;
-}
-
 .home-portfolio-section
 {
     position: relative;
@@ -83,6 +73,23 @@
     display: flex;
 }
 
+.preview-container
+{
+    position: relative;
+    /* border: black 1px solid; */
+    display: flex;
+    margin: 5% auto;
+    height: 91.5%;
+    width: 85%;
+    margin-bottom: 0%;
+    overflow: hidden;
+
+    --animation-height: 60%;
+    --animation-width: 60%;
+    --images-gap: 40%;
+    --starting-xOffset: calc((100% + var(--images-gap)) * -1);
+}
+
 .circle-buttons
 {
     display: flex;
@@ -96,14 +103,6 @@
     margin-bottom: 0%;
 }
 
-.circle
-{
-    width: 20%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: var(--light-blue-edge);
-}
-
 
 .home-portfolio-section-title
 {
@@ -111,7 +110,6 @@
     color: var(--title-blue);
     text-align: center;
 }
-
 
 .home-portfolio-section-description
 {
@@ -131,4 +129,65 @@
 .portfolio-bottom-header
 {
     margin-bottom: 5%;
+}
+
+.move-images-out-right
+{
+    animation: move_images_out_right 0.6s linear 1;
+}
+
+.move-images-out-left
+{
+    animation: move_images_out_left 0.6s linear 1;
+}
+
+@keyframes move_images_out_left {
+    0% {
+        transform: translateX(var(--starting-xOffset));
+    }
+
+    10%
+    {
+        height: var(--animation-height);
+        width: var(--animation-width);
+        transform: translateX(var(--starting-xOffset));
+    }
+
+    90%
+    {
+        height: var(--animation-height);
+        width: var(--animation-width);
+        transform: translateX(0%);
+    }
+
+    100%
+    {
+        height: 100%;
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes move_images_out_right {
+    
+    10%
+    {
+        height: var(--animation-height);
+        width: var(--animation-width);
+        transform: translateX(0%);
+    }
+
+    90%
+    {
+        height: var(--animation-height);
+        width: var(--animation-width);
+        transform: translateX(calc(-1 * (100% + var(--images-gap))));
+    }
+
+    100%
+    {
+        height: 100%;
+        width: 100%;
+        transform: translateX(calc(-1 * (100% + var(--images-gap))));
+    }
 }

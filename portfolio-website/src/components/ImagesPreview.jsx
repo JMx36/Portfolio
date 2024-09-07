@@ -1,5 +1,5 @@
 
-const ImagesPreview = ({height, width, images}) => {
+const ImagesPreview = ({height, width, images, style={}}) => {
 
     // probably need to check that there are only 3 images or only do the first three images
 
@@ -27,9 +27,17 @@ const ImagesPreview = ({height, width, images}) => {
             left: '60%'
         }];
 
+    
+    const image_box_style = {
+        height: height, 
+        width: width, 
+        position: "relative",
+    }
+
+    const combined_styles = { ...image_box_style, ...style};
 
     return (
-        <div className="image-preview" style={{height: {height}, width: {width}}}>
+        <div className="image-preview" style={combined_styles}>
             {images.map((image, index) => (
                 <div className={`image-box border-radius-54`} style={box_style[index]}>
                     <img src={image} alt="" />

@@ -19,8 +19,8 @@ const HomePortfolio = () => {
             </div>
             <div className="rectangle width-45per"></div>
         </div>
-        <HomePortfolioDescription images={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} title={info[0][0]} description={info[1][1]}/>
-        <HomePortfolioDescription images={[1, 2, 3, 4, 5, 6]} title={info[1][0]} description={info[1][1]} swap={true}/>
+        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[0][0]} description={info[1][1]}/>
+        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[1][0]} description={info[1][1]} swap={true}/>
         <div className="portfolio-bottom-header width-100per">
             <div className="rectangle"></div>
         </div>

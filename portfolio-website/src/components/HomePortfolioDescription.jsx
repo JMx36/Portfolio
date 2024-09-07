@@ -57,7 +57,7 @@ const Slider = ({images_lists, window_size=4}) =>
     // initial check to make sure the window is a eligible size for 'images_lists'
     if (window_size > images_lists.length) 
     {
-        window_size = container_length
+        window_size = images_lists.length
     }
     
     const middle_index = (Math.floor((images_lists.length -1) / 2));
@@ -71,7 +71,8 @@ const Slider = ({images_lists, window_size=4}) =>
     const [end_index, setEndIndex] = useState(w_end_index);
     const [play_animation, PlayAnimation] = useState(false);
     const [direction, SetDirection] = useState("none");
-    const [preview_container_hovered, SetPreviewContainerHovered] = useState(true);
+    const [preview_container_hovered, SetPreviewContainerHovered] = useState(false);
+    const [selected_index, SetSelectedIndex] = useState(middle_index);
     // console.log("Current index", currentIndex);
     // console.log("Start index", start_index);
     // console.log("End index", end_index);
@@ -91,6 +92,7 @@ const Slider = ({images_lists, window_size=4}) =>
         {
             PlayAnimation(false);
             SetDirection("none");
+            SetSelectedIndex(currentIndex);
         }
 
     }
@@ -145,26 +147,27 @@ const Slider = ({images_lists, window_size=4}) =>
 
     return (
         <div className="slider-container width-50per">
-            <div className='slider-image-container'>
+            <div className='slider-image-container' 
+                        onMouseEnter={() => SetPreviewContainerHovered(true)}
+                        onMouseLeave={() => SetPreviewContainerHovered(false)}>
                 {
                     currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%"}}></div> :
                     <Triangle width="5%" height="20%" color="#90E0EF" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
                 }
-                <div className='preview-container' onAnimationEnd={EndAnimation} 
-                        onMouseEnter={() => SetPreviewContainerHovered(true)}
-                        onMouseLeave={() => SetPreviewContainerHovered(true)} >
-                    {console.log("Direction", direction)}
+                <div className='preview-container' onAnimationEnd={EndAnimation} >
+                    {/* {console.log("Current Index", currentIndex)}
+                    {console.log("Selected Index", selected_index)} */}
                     <div className={`${play_animation ? `move-images-out-${direction}` : ''}`}
                             style={{height: "100%", width: "100%", margin:"auto auto", display: "flex", gap: "40%"}}>
                         {
                             direction === "left" ? 
-                                <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/> 
+                                <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
                                 : ''
                         }
-                        <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/>
+                        <ImagesPreview height="100%" width="100%" images={images_lists[selected_index]} style={{flex: "0 0 100%"}}/>
                         {
                             direction === "right" ? 
-                                <ImagesPreview height="100%" width="100%" images={images_lists} style={{flex: "0 0 100%"}}/> 
+                                <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
                                 : ''
                         }
                     </div>

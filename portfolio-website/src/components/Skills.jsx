@@ -152,7 +152,7 @@ const Skills = () => {
             <div className="tech-and-tools">
                 <div className="top-part">
                     <div className="gears-box x-flip"></div>
-                    <h2 className="bright-yellow-text sub-title-text title-text-padding">Technologies & Tools</h2>
+                    <h2 className="bright-yellow-text sub-title-text">Technologies & Tools</h2>
                     <div className="gears-box"></div>
                 </div>
                 <p className="caption description-text">As a developer, I embrace the philosophy of continuous learning and versatility. I find joy in exploring and mastering various technologies. Here are some of the technologies I've had the pleasure of working with.</p>

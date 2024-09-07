@@ -11,7 +11,6 @@
 .skills-section .header
 {
     display: flex;
-    height: 10%; 
     margin: 5% 5%;
     margin-bottom: 1%;
     align-items: center;
@@ -92,39 +91,46 @@
 
 .tech-and-tools
 {
-    height: 65%;
+    /* height: 65%; */
     margin: 0% 5%;
-    /* background-color: black; */
 }
 
 .tech-and-tools .top-part
 {
     display: flex;
     width: 100%;
-    min-height: 20%;
+
     align-items: center;
     justify-content: center;
-    font-size: 20rem;
+    gap: 4%;
 }
 
 .caption
 {
     color: white;
     text-align: center;
-    margin: 5% auto;
-    /* margin-bottom: 3%; */
+    margin: 4% auto;
     width: 90%;
 }
 
 .gears-box
 {
-    width: 20%;
-    min-height: 200px;
+    width: 25%;
+    min-height: 10rem;
     background-image: url("../assets/Images/Components/gear-group.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: left;
     background-repeat: no-repeat;
     /* border: black 2px solid; */
+}
+
+@media (max-width: 1000px) {
+
+    .gears-box
+    {
+        min-height: 4rem;
+    }
+
 }
 
 .carousel-container

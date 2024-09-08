@@ -95,9 +95,9 @@
 {
     display: flex;
     min-height: 10%;
-    min-width: 45%;
-    max-width: 50%;
+    min-width: 40%;
     justify-content: space-between;
+    margin: auto;
 }
 
 .text-button
@@ -134,7 +134,7 @@
 .logos-container
 {
     margin-left: 15.5%;
-    margin-right: 25%;
+    margin-right: 23%;
     max-width: 100%;
     gap: 3%;
     display: flex;

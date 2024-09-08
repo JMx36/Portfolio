@@ -2,12 +2,14 @@ import linked_in from "../assets/Images/Logos/linked_in.png"
 import mail from "../assets/Images/Logos/mail.png"
 import github from "../assets/Images/Logos/github.png"
 import brush_stroke from "../assets/Images/Logos/brush-stroke3.png"
+import { useMediaQuery } from 'react-responsive';
 import {Link} from 'react-router-dom'
 
 import React, { useState } from 'react';
 
 const About = () => {
 
+    const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
     const left_text_buttons = ["See My Resume", "See My Portfolio"]
     const right_buttons = [linked_in, github, mail]
 
@@ -48,17 +50,34 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-info-buttons">
-                    <div className="in-front about-text-buttons">
-                            {left_text_buttons.map((text) => (
-                                <a href="index.html" className="text-button cursive-button">{text}</a>
-                            )
-                        )}              
-                    </div>
-                    <div className="logos-container">
-                        {right_buttons.map((image) => (
-                            <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
-                        ))}
-                    </div>
+                    {
+                        !isSmallerScreen ? 
+                            <div className="logos-container">
+                                {right_buttons.map((image) => (
+                                    <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
+                                ))}
+                            </div> :
+                                <div className="in-front about-text-buttons">
+                                        {left_text_buttons.map((text) => (
+                                            <a href="index.html" className="text-button cursive-button">{text}</a>
+                                        )
+                                    )}              
+                                </div>
+                    }
+                    {
+                        !isSmallerScreen ? 
+                            <div className="in-front about-text-buttons">
+                                    {left_text_buttons.map((text) => (
+                                        <a href="index.html" className="text-button cursive-button">{text}</a>
+                                    )
+                                )}              
+                            </div> : 
+                                <div className="logos-container">
+                                    {right_buttons.map((image) => (
+                                        <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
+                                    ))}
+                                </div> 
+                    }
                 </div>
             </div>
 

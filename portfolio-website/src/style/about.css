@@ -149,6 +149,8 @@
     max-width: 200px;
     z-index: 3;
     display: block;
+    border-radius: 50%;
+    background-color: white;
 }
 
 @media (max-width: 1000px) {

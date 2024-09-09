@@ -97,7 +97,6 @@
     min-height: 10%;
     min-width: 40%;
     justify-content: space-between;
-    margin: auto;
 }
 
 .text-button
@@ -134,7 +133,7 @@
 .logos-container
 {
     margin-left: 15.5%;
-    margin-right: 23%;
+    margin-right: 30%;
     max-width: 100%;
     gap: 3%;
     display: flex;
@@ -172,10 +171,10 @@
     .circle-container
     {
         width: 70%;
+        max-width: 300px;
         left: 0%;
         margin: auto;
     }
-
 
     .logos-container, .about-info-buttons
     {
@@ -187,7 +186,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 2%;
+        margin-top: 6%;
     }
 
     .about-text-buttons

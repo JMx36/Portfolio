@@ -10,6 +10,7 @@ import './style/skills.css'
 import './style/home_portfolio.css'
 import './style/contact.css'
 import './style/utilities.css'
+import './style/footer.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

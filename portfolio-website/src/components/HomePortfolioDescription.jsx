@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ImagesPreview from '../components/ImagesPreview.jsx'
-import {Triangle, Circle} from '../components/utilities.jsx'
+import { Triangle, Circle } from '../components/utilities.jsx'
 
 
 const CircleButton = ({index, func, color, side="none", width=12, height=70, hover_width=20, hover_height=100}) =>

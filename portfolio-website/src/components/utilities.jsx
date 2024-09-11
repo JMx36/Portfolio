@@ -37,7 +37,7 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 }
 
 
-export const LogoImage = ({setIsHovered=undefined, image, index, width="", height="", margin_left=""}) => {
+export const LogoImage = ({image, index, setIsHovered=undefined, width="", height="", margin_left=""}) => {
 
     const image_style = {};
     // console.log(image, width, height);
@@ -109,5 +109,27 @@ export const Rectangle = ({height, width, color="white", clickable=false,
                     onMouseLeave={hover_func === undefined ? undefined : () => hover_func(false)}
         >
         </div>
+    )
+}
+
+
+export const Button = ({text, radius="50px", text_color="black", color="black", logo=null, style={}}) => 
+{
+
+    const button_style = {
+        background: color,
+        color: text_color,
+        borderRadius: radius,
+        border: "none",
+        boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)"
+    }
+
+    const combined_styles = {...button_style, ...style}
+
+    return(
+        <button className='button-util cursive-button cursor-pointer' style={combined_styles}>
+            {logo === null ? '' : <img src={logo} />}
+            {text}
+        </button>
     )
 }

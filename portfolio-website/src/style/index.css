@@ -11,6 +11,7 @@
     --light-blue-edge: #90E0EF;
     --blue_gradient_color: linear-gradient(to right, #0C7489, #0C7489 20%, #00B4D8 50%,  #02AACB 53%, #0C7489 70%);
     --side_margin: 0.5%;
+    --title-side-margin: 3%;
 }
 
 body

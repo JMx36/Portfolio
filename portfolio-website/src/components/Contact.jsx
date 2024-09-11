@@ -1,43 +1,85 @@
 import React from 'react'
-import linked_in from "../assets/Images/Logos/linked_in.png"
 import mail from "../assets/Images/Logos/mail.png"
 import { useMediaQuery } from 'react-responsive';
+import { Button } from '../components/utilities.jsx'
+
+const ContactInputField = ({label, placeholder, background_color, useTextArea=false, style={}}) =>
+{
+
+  const label_style = 
+  {
+      color: "#119DA4",
+      fontSize: "24px"
+  }
+
+
+  const input_style = 
+  {
+    backgroundColor: background_color,
+    color: "white",
+    width: "600px",
+    borderRadius: "9px",
+    border: "none",
+    padding: "0.5rem",
+    fontWeight: "400"
+  }
+
+  return(
+    <div className='contact-input-field'>
+      <label className="normal-text-medium" for="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
+      {
+        useTextArea ? <textarea className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
+        <input className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>
+      }
+    </div>
+  )
+}
+
+
+const ContactLogoImage = ({image, title, info}) =>
+{
+  return(
+    <div className="contact-logo-image">
+          <img src={image} style={{width: "96px", height: "96px"}}/>
+          <div className="contact-logo-image-info">
+              <h2 className="fs-30px" style={{margin: "0"}}>{title}</h2>
+              <p className="normal-text-medium" style={{textAlign: "left", margin: "0"}}>{info}</p>
+          </div>
+    </div>
+  )
+  
+}
+
 
 const Contact = () => {
 
-  const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
-
-  const image_style = 
+  const button_style = 
   {
-    width: "30%"
-  }  
-  
-  const circulay_mask =
-  {
-    height: "100%",
-    width: "100%",
-    backgroundImage: "url('path-to-your-image.jpg')", 
-    backgroundSize: "cover",
-    borderRadius: "50%", /* Makes the element circular */
-    backgroundColor: "#D9D9D9",
-    margin: "5% auto"
+    display: "flex",
+    padding: "0.5rem 4.5rem",
+    margin: "auto",
+    marginTop: "2.5%"
   }
 
   return (
     <div className="contact-section"> 
         <div className="contact-section-title">
-            <h1 className='sub-title-text' style={{margin: "0"}}>Contact Me</h1>
+            <h1 className='italic-title' style={{ fontSize: "64px", margin: "0"}}>Get In Touch</h1>
         </div>  
-        <div className="contact-logos-container">
-            
-            <img className="" src={linked_in} alt="linkedIn" style={image_style} />
-            <div className="name-section">
-                <div className="contact-photo-view">
-                  <div style={circulay_mask}></div>
-                </div>
-                <h3 className="contact-name cursive-button">Josh Castillo</h3>
+        <div className="contact-info-container">
+          <div className="contact-logos-container">
+            <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
+            <ContactLogoImage image={mail} title="PHONE" info="(714)-276-7492"/>
+            <ContactLogoImage image={mail} title="LOCATION" info="CA, United States"/>
+          </div>
+          <div className='contact-input'>
+            <div className="contact-input-container">
+              <ContactInputField label="Email" placeholder="Enter your email address" background_color="black" />
+              <ContactInputField label="Subject" placeholder="Enter the subject of your email" background_color="black" />
+              <ContactInputField useTextArea={true} label="Message" placeholder="Enter your message (ex. Hi :) )" background_color="black" />
+              <Button text="Send" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={button_style}/>
             </div>
-            <img src={mail} alt="email" style={image_style}/>
+          </div>
         </div>
     </div>
   )

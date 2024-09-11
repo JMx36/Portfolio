@@ -1,9 +1,7 @@
-import linked_in from "../assets/Images/Logos/linked_in.png"
-import mail from "../assets/Images/Logos/mail.png"
-import github from "../assets/Images/Logos/github.png"
 import brush_stroke from "../assets/Images/Logos/brush-stroke3.png"
 import { useMediaQuery } from 'react-responsive';
 import {Link} from 'react-router-dom'
+import { Button } from '../components/utilities.jsx'
 
 import React, { useState } from 'react';
 
@@ -11,7 +9,6 @@ const About = () => {
 
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
     const left_text_buttons = ["See My Resume", "See My Portfolio"]
-    const right_buttons = [linked_in, github, mail]
 
     return (
         <div className="about-me">
@@ -29,54 +26,37 @@ const About = () => {
                     </div>
                     
                     <div className="about-right-section">
-                        <div className="text-section" style={{backgroundImage: `url(${brush_stroke})`}}>
-                            <div className="about-description">
-                                <p className="normal-text-medium blue-normal-text in-front">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                                    sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, 
-                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                                    mollit anim id est laborum.
-                                </p>
-                            </div>
-
+                        <div className="about-text-section">
+                            <p className="normal-text-medium in-front" style={{padding: "2rem", paddingTop: "0.5rem"}}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                                sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                                mollit anim id est laborum.
+                            </p>
+                            <Button text="Learn more about me" text_style="normal-text-medium" text_color="#D9D9D9" color="none" style={{
+                                        padding: "0",
+                                        paddingRight: "2rem",
+                                        paddingBottom: "1rem",
+                                        marginLeft: "auto",
+                                        marginRight: "0",
+                                        fontStyle: "italic",
+                                        boxShadow: "none"
+                                    }}/>
                         </div>
-
                     </div>
                 </div>
                 <div className="about-info-buttons">
                     {
-                        !isSmallerScreen ? 
-                            <div className="logos-container">
-                                {right_buttons.map((image) => (
-                                    <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
-                                ))}
-                            </div> :
-                                <div className="in-front about-text-buttons">
-                                        {left_text_buttons.map((text) => (
-                                            <a href="index.html" className="text-button cursive-button">{text}</a>
-                                        )
-                                    )}              
-                                </div>
-                    }
-                    {
-                        !isSmallerScreen ? 
-                            <div className="in-front about-text-buttons">
-                                    {left_text_buttons.map((text) => (
-                                        <a href="index.html" className="text-button cursive-button">{text}</a>
-                                    )
-                                )}              
-                            </div> : 
-                                <div className="logos-container">
-                                    {right_buttons.map((image) => (
-                                        <a href="index.html"><img className="about-logo-pictures in-front" src={image}/></a>
-                                    ))}
-                                </div> 
+                        left_text_buttons.map((text) => (
+                            <Button text={text} color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)"/>
+                        )
+                        )            
                     }
                 </div>
             </div>

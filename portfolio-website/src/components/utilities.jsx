@@ -113,7 +113,7 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 }
 
 
-export const Button = ({text, radius="50px", text_color="black", color="black", logo=null, style={}}) => 
+export const Button = ({text, text_style="cursive-button", radius="50px", text_color="black", color="black", logo=null, style={}}) => 
 {
 
     const button_style = {
@@ -130,7 +130,7 @@ export const Button = ({text, radius="50px", text_color="black", color="black", 
     const combined_styles = {...button_style, ...style}
 
     return(
-        <button className='button-util cursive-button cursor-pointer' style={combined_styles}>
+        <button className={`button-util ${text_style} cursor-pointer`} style={combined_styles}>
             {logo === null ? '' : <img src={logo} />}
             {text}
         </button>

@@ -55,9 +55,6 @@ const Contact = () => {
 
   const button_style = 
   {
-    display: "flex",
-    padding: "0.5rem 4.5rem",
-    margin: "auto",
     marginTop: "2.5%"
   }
 

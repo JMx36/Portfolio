@@ -117,11 +117,14 @@ export const Button = ({text, radius="50px", text_color="black", color="black", 
 {
 
     const button_style = {
+        display: "flex",
+        padding: "0.5rem 4.5rem",
         background: color,
         color: text_color,
         borderRadius: radius,
         border: "none",
-        boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)"
+        boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)",
+        margin: "auto"
     }
 
     const combined_styles = {...button_style, ...style}

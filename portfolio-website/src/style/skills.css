@@ -5,7 +5,6 @@
     margin: 0px 0px;
     max-width: 100%;
     min-height: 100vh;
-    background-color: var(--background-blue);
 }
 
 .skills-section .header
@@ -55,9 +54,24 @@
 .skills-description
 {
     display: flex;
-    gap: 10%;
-    margin: 5% 5%;
+    flex-direction: column;
+    color: var(--title-blue);
+    background-color: var(--background-blue);
+}
+
+.skills-description > h3
+{
+    margin: 0;
+    padding: 0;
     margin-top: 2%;
+    margin-left: var(--title-side-margin);
+}
+
+.skills-description .boxes-container
+{
+    display: flex;
+    gap: 3%;
+    margin: 5% 5%;
     max-width: 100%;
     overflow: hidden;
 }
@@ -67,9 +81,10 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: var(--lighter-background-blue);
-    border: 0.3vw solid var(--light-blue-edge); /* Stroke color and width */
-    border-radius: 53px; /* Rounded corners */
+    background-color: #02313A;
+    /* border: 0.3vw solid var(--light-blue-edge); */
+    border: 0.3vw solid white;
+    border-radius: 26px; /* Rounded corners */
 }
 
 .description-title
@@ -78,6 +93,7 @@
     margin-left: 5%;
     margin-bottom: 0%;
     margin-top: 5%;
+    padding: 2%;
 }
 
 .inside-text
@@ -85,6 +101,7 @@
     color: #D9D9D9;
     margin: 5% 6.5%;
     text-align: left;
+    padding: 2%;
 }
 
 .tech-and-tools

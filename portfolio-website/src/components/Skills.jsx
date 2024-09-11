@@ -134,21 +134,6 @@ const Skills = () => {
 
     return (
         <div className="skills-section">
-            <div className="header">
-                <div className="diamond-line medium-line"></div>
-                <h1 className="bright-yellow-text italic-title title-text-padding">Skills</h1>
-                <div className="diamond-line medium-line"></div>
-            </div>
-            <div className="skills-description">
-                {
-                    descriptions.map((info) => (
-                        <div className="description-box">
-                            <h3 className="description-title sub-title-text">{info[0]}</h3>
-                            <p className="description-text inside-text">{info[1]}</p>
-                        </div>
-                    ))
-                }
-            </div>
             <div className="tech-and-tools">
                 <div className="top-part">
                     <div className="gears-box x-flip"></div>
@@ -232,8 +217,19 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottom-header">
-                <div className="diamond-line long-line"></div>
+
+            <div className="skills-description">
+                <h3 className="italic-title">Experience with ...</h3>
+                <div className="boxes-container">
+                    {
+                        descriptions.map((info) => (
+                            <div className="description-box">
+                                <h3 className="description-title sub-title-text">{info[0]}</h3>
+                                <p className="description-text inside-text">{info[1]}</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

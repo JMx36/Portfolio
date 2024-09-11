@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ImagesPreview from '../components/ImagesPreview.jsx'
-import { Triangle, Circle } from '../components/utilities.jsx'
+import { Triangle, Circle, Button } from '../components/utilities.jsx'
 
 
 const CircleButton = ({index, func, color, side="none", width=12, height=70, hover_width=20, hover_height=100}) =>
@@ -31,19 +31,19 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
     if (add_left_button) 
     {
         console.log("Adding left button");
-        buttons.push(<CircleButton width={10} height={50} index={low_index - 1} side="left" func={click_func} color="#90E0EF"/>);
+        buttons.push(<CircleButton width={10} height={50} index={low_index - 1} side="left" func={click_func} color="#D9D9D9"/>);
     }
 
     for(let i = low_index; i <= high_index; i++)
     { 
-        const color = i == current_index ? "#FFDF00" : "#90E0EF";
+        const color = i == current_index ? "#119DA4" : "#D9D9D9";
         buttons.push(<CircleButton index={i} func={click_func} color={color}/>);
     }
 
     if (add_right_button) 
     {
         console.log("Adding right button");
-        buttons.push(<CircleButton width={10} height={50} index={high_index + 1} side="right" func={click_func} color="#90E0EF"/>);
+        buttons.push(<CircleButton width={10} height={50} index={high_index + 1} side="right" func={click_func} color="#D9D9D9"/>);
     }
 
     return (
@@ -153,7 +153,7 @@ const Slider = ({images_lists, window_size=4}) =>
                         >
                 {
                     currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%"}}></div> :
-                    <Triangle width="5%" height="20%" color="#90E0EF" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
+                    <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
                 }
                 <div className='preview-container' onAnimationEnd={EndAnimation} >
                     {/* {console.log("Current Index", currentIndex)}
@@ -175,7 +175,7 @@ const Slider = ({images_lists, window_size=4}) =>
                 </div>
                 {
                     currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%"}}></div> : 
-                    <Triangle width="5%" height="20%" color="#90E0EF" rotation="right" margin="auto 0%" clickable={true} func={HandleRightClick}/>
+                    <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto 0%" clickable={true} func={HandleRightClick}/>
                 }
             </div>
             <div className="circle-buttons width-50%">
@@ -190,8 +190,6 @@ const Slider = ({images_lists, window_size=4}) =>
 const Description = ({title="Title", description="Description Text"}) =>
 {
 
-    const [text_color, SetColor] = useState("#13505B")
-
     return (
         <div className="home-portfolio-section-description">
             <div className="home-portfolio-section-title">
@@ -200,9 +198,7 @@ const Description = ({title="Title", description="Description Text"}) =>
             <div className="home-portfolio-section-text">
                 <p className='normal-text-medium'>{description}</p>
             </div>
-            <p className='cursive-button cursor-pointer' style={{color: text_color, margin: "auto"}}
-                onMouseEnter={() => SetColor("#DAC21C")} onMouseLeave={() => SetColor("#13505B")}
-                >Check it out!</p>
+            <Button text="Explore Now" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={{marginTop: "5%"}}/>
         </div>
     )
 }

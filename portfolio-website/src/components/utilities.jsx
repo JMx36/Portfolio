@@ -113,26 +113,32 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 }
 
 
-export const Button = ({text, text_style="cursive-button", radius="50px", text_color="black", color="black", logo=null, style={}}) => 
+export const Button = ({text, text_style="cursive-button", radius="50px", text_color="black", 
+    color="black", logo=null, logo_style={}, words_style={}, style={}}) => 
 {
 
     const button_style = {
         display: "flex",
-        padding: "0.5rem 4.5rem",
         background: color,
         color: text_color,
         borderRadius: radius,
         border: "none",
         boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)",
-        margin: "auto"
+        margin: "auto",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0.5rem 4.5rem"
     }
 
-    const combined_styles = {...button_style, ...style}
+    const p_style = {
+        padding: "0%", 
+        margin: "0%"
+    }
 
     return(
-        <button className={`button-util ${text_style} cursor-pointer`} style={combined_styles}>
-            {logo === null ? '' : <img src={logo} />}
-            {text}
+        <button className={`button-util cursor-pointer`} style= {{...button_style, ...style}}>
+            {logo === null ? '' : <img src={logo} style={logo_style}/>}
+            <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
         </button>
     )
 }

@@ -106,8 +106,10 @@
 
 .tech-and-tools
 {
-    /* height: 65%; */
-    margin: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .tech-and-tools .top-part
@@ -117,12 +119,12 @@
 
     align-items: center;
     justify-content: center;
-    gap: 4%;
+    margin-top: 10%;
 }
 
 .caption
 {
-    color: white;
+    color: black;
     text-align: center;
     margin: 4% auto;
     width: 90%;
@@ -139,6 +141,13 @@
     /* border: black 2px solid; */
 }
 
+.skills-buttons-container
+{
+    display: flex;
+    margin: 10% auto;
+    margin-top: 3%;
+}
+
 @media (max-width: 1000px) {
 
     .gears-box
@@ -152,9 +161,9 @@
 {
     --play-state: running;
     width: 100%;
-    background-color: #BFB14A;
-    border-radius: 31px;
     overflow: hidden;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
 }
 
 .carousel-inner
@@ -184,11 +193,6 @@
 .carousel-paused
 {
     animation-play-state: paused;
-}
-
-.long-line
-{
-    width: 100%;
 }
 
 .dropdowns-section
@@ -284,7 +288,6 @@
     width: 90%;
     margin-bottom: 6%;
 }
-
 
 
 @media (max-width: 1000px) {

@@ -10,7 +10,9 @@ import unreal from "../assets/Images/TempLogos/unreal_processed.png"
 import unity from "../assets/Images/TempLogos/unity_processed.png"
 import vs from "../assets/Images/TempLogos/vs_processed.png"
 import vscode from "../assets/Images/TempLogos/vscode_processed.png"
-import {Triangle, LogoImage} from "../components/utilities.jsx"
+import se_icon from "../assets/Images/Logos/se-icon.svg"
+import game_dev_icon from "../assets/Images/Logos/game-dev-icon.svg"
+import {Triangle, LogoImage, Button} from "../components/utilities.jsx"
 import SkillsBox from "../components/SkillsBox.jsx"
 
 
@@ -132,13 +134,24 @@ const Skills = () => {
 
     const [isHovered, setIsHovered] = useState(false);
 
+    const button_logo_style =
+    {
+        width: "60px",
+        height: "60px",
+        marginRight: '2%',
+        display: "inline-block"
+    }
+
+    const words_style =
+    {
+        flexShrink: 0
+    }
+
     return (
         <div className="skills-section">
             <div className="tech-and-tools">
                 <div className="top-part">
-                    <div className="gears-box x-flip"></div>
-                    <h2 className="bright-yellow-text sub-title-text">Technologies & Tools</h2>
-                    <div className="gears-box"></div>
+                    <h2 className="dimmed-yellow-text italic-title" style={{padding: "0%", margin: "0%"}}>Technologies & Tools</h2>
                 </div>
                 <p className="caption description-text">As a developer, I embrace the philosophy of continuous learning and versatility. I find joy in exploring and mastering various technologies. Here are some of the technologies I've had the pleasure of working with.</p>
                 <div className="carousel-container">
@@ -168,54 +181,21 @@ const Skills = () => {
                         }
                     </div>
                 </div>
-                <div className="dropdowns-section">
-                    <div className="dropdown-container">
-                        {         
-                            (() =>
-                                {
-                                    let inside_elements = [];
-                                    const containers = []
-                                    const row_size = 2;
-                                    let index_copy = 0;
-
-                                    // creates the rows and columns it needs
-                                    dropdowns.map((dropdown, index) => {
-                                            inside_elements.push(                                            
-                                                <SkillsDropdown title={dropdown[0]} index={index} 
-                                                category={dropdown[0]} logos={SearchDropdownImages({images_list: logos, category: dropdown[0]})}/>
-                                            )
-
-                                            if ((index + 1) % row_size == 0)
-                                            {
-                                                containers.push(
-                                                    <div className={`dropdown-row dropdown-row-${index}`}> 
-                                                        {inside_elements}
-                                                    </div>
-                                                )
-
-                                                inside_elements = [];
-                                            }
-
-                                            index_copy = index;
-                                        }
-                                    )
-
-                                    // adds any left over elements to the container
-                                    if (inside_elements.length > 0)
-                                    {
-                                        containers.push(
-                                            <div className={`dropdown-row dropdown-row-${index_copy}`}> 
-                                                {inside_elements}
-                                            </div>
-                                        )
-                                    }
-
-                                    return containers;
-                                }
-                            )()
-                        }
-                    </div>
+                <p className="fs-32px" style={{padding: "0%", margin: "auto", marginTop: "5%"}}>Check out the tools I use as a</p>
+                <div className="skills-buttons-container fs-32px">
+                    <Button logo={se_icon} text="Software Developer" text_style="normal-text-medium" text_color="black"
+                        logo_style={button_logo_style} color="linear-gradient(90deg, #DAC21C 64%, #A59004 100%)" 
+                        words_style={{...words_style, height: "100%", width: "49%"}}
+                        style={{textAlign: "left",  width: "50%", padding: "0.5rem 1rem"
+                        }}/>
+                    <p className="fs-32px" style={{padding: "0%", margin: "auto 5%"}}>and</p>
+                    <Button logo={game_dev_icon} logo_style={button_logo_style} text="Game Developer" text_style="normal-text-medium" 
+                        text_color="black" color="linear-gradient(90deg, #DAC21C 64%, #A59004 100%)" 
+                        words_style={{...words_style, height: "100%", width: "49%"}}
+                        style={{textAlign: "left", width: "50%", padding: "0.5rem 1rem"
+                        }}/>
                 </div>
+
             </div>
 
             <div className="skills-description">

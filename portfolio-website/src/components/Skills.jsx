@@ -14,6 +14,7 @@ import se_icon from "../assets/Images/Logos/se-icon.svg"
 import game_dev_icon from "../assets/Images/Logos/game-dev-icon.svg"
 import {Triangle, LogoImage, Button} from "../components/utilities.jsx"
 import SkillsBox from "../components/SkillsBox.jsx"
+import DescriptionBoxes from "../components/DescriptionBoxes.jsx"
 
 
 import React, { useState } from 'react';
@@ -198,19 +199,7 @@ const Skills = () => {
 
             </div>
 
-            <div className="skills-description">
-                <h3 className="italic-title">Experience with ...</h3>
-                <div className="boxes-container">
-                    {
-                        descriptions.map((info) => (
-                            <div className="description-box">
-                                <h3 className="description-title sub-title-text">{info[0]}</h3>
-                                <p className="description-text inside-text">{info[1]}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
+            <DescriptionBoxes title="Experience with ... " descriptions={descriptions} />
         </div>
     )
 }

@@ -51,58 +51,6 @@
     transform: translateY(-50%) rotate(45deg); 
 }
 
-.skills-description
-{
-    display: flex;
-    flex-direction: column;
-    color: var(--title-blue);
-    background-color: var(--background-blue);
-}
-
-.skills-description > h3
-{
-    margin: 0;
-    padding: 0;
-    margin-top: 2%;
-    margin-left: var(--title-side-margin);
-}
-
-.skills-description .boxes-container
-{
-    display: flex;
-    gap: 3%;
-    margin: 5% 5%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.description-box
-{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: #02313A;
-    /* border: 0.3vw solid var(--light-blue-edge); */
-    border: 0.3vw solid white;
-    border-radius: 26px; /* Rounded corners */
-}
-
-.description-title
-{
-    color: white; 
-    margin-left: 5%;
-    margin-bottom: 0%;
-    margin-top: 5%;
-    padding: 2%;
-}
-
-.inside-text
-{
-    color: #D9D9D9;
-    margin: 5% 6.5%;
-    text-align: left;
-    padding: 2%;
-}
 
 .tech-and-tools
 {
@@ -298,4 +246,37 @@
         flex-direction: column;
         gap: 4vh;
     }
+}
+
+
+
+/* Description Boxes */
+
+
+.skills-description
+{
+    display: flex;
+    flex-direction: column;
+    color: var(--title-blue);
+    background-color: var(--background-blue);
+}
+
+.skills-description .boxes-container
+{
+    display: flex;
+    gap: 3%;
+    margin: 5% 5%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.description-box
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #02313A;
+    /* border: 0.3vw solid var(--light-blue-edge); */
+    border: 0.3vw solid white;
+    border-radius: 26px; /* Rounded corners */
 }

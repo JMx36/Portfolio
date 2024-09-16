@@ -154,7 +154,10 @@ const Skills = () => {
                 <div className="top-part">
                     <h2 className="dimmed-yellow-text italic-title" style={{padding: "0%", margin: "0%"}}>Technologies & Tools</h2>
                 </div>
-                <p className="caption description-text">As a developer, I embrace the philosophy of continuous learning and versatility. I find joy in exploring and mastering various technologies. Here are some of the technologies I've had the pleasure of working with.</p>
+                <p className="caption description-text">As a developer, 
+                    I embrace the philosophy of continuous learning and versatility. 
+                    I find joy in exploring and mastering various technologies. 
+                    Here are some of the technologies I've had the pleasure of working with.</p>
                 <div className="carousel-container">
                     <div className={`carousel-inner ${isHovered ? 'carousel-paused' : ''}`}>
                         {

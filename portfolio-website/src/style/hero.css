@@ -1,8 +1,7 @@
 .hero
 {
     position: relative;
-    /* border: solid 10px blue; */
-    flex: 1;
+    min-height: 87vh;
 }
 
 .hero-image
@@ -16,12 +15,4 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-header
-{
-    display: flex;
-    flex-direction: column;
-    min-height: 95vh;
-    /* border: solid 10px paleturquoise; */
 }

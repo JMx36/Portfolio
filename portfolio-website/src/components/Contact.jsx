@@ -26,7 +26,7 @@ const ContactInputField = ({label, placeholder, background_color, useTextArea=fa
 
   return(
     <div className='contact-input-field'>
-      <label className="normal-text-medium" for="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
+      <label className="normal-text-medium" htmlFor="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
       {
         useTextArea ? <textarea className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
         <input className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>

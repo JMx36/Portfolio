@@ -8,7 +8,7 @@ const DescriptionBoxes = ({title, descriptions, title_color="#119DA4", text_colo
         padding: 0,
         marginTop: "2%",
         marginLeft: "3%",
-        color: {title_color},
+        color: title_color,
         ...main_title_style,
     }
 

@@ -98,7 +98,8 @@ const SearchDropdownImages = ({images_list, category}) => {
 }
 
 
-const Skills = () => {
+const Skills = () => 
+{
 
     const descriptions = 
     [

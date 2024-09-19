@@ -1,5 +1,27 @@
 import React, { useState } from 'react';
-import c_logo from "../assets/Images/TempLogos/c_processed1.png"
+import c_logo from "../assets/Images/WhiteLogos/c.png"
+import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
+import cs_logo from "../assets/Images/WhiteLogos/cs.png"
+import python_logo from "../assets/Images/WhiteLogos/python.png"
+import github_logo from "../assets/Images/WhiteLogos/github.png"
+import gitkraken_logo from "../assets/Images/WhiteLogos/gitkraken.png"
+import html_logo from "../assets/Images/WhiteLogos/html.png"
+import unity_logo from "../assets/Images/WhiteLogos/unity.png"
+import unreal_logo from "../assets/Images/WhiteLogos/unreal.png"
+import vs_logo from "../assets/Images/WhiteLogos/vs.png"
+import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
+import jira_logo from "../assets/Images/WhiteLogos/jira.png"
+
+class ImageInfo
+{
+    constructor({image, width="50px", height="50px"})
+    {
+        this.image = image;
+        this.width = width;
+        this.height = height;
+    }
+}
+
 
 const Button = ({text, index, isOn, setIndex}) => 
 {
@@ -45,16 +67,16 @@ const Button = ({text, index, isOn, setIndex}) =>
 }
 
 
-const BlurCircleContent = ({isExpanded, content=[1, 2, 3, 5, 6, 7, 8, 9 ,10]}) => 
+const BlurCircleContent = ({isExpanded, content}) => 
 {
     return(
         <div style={{width: "100%", height: "100%", position: "relative"}}>
             <div className='blur-circle'></div>
             <div className='text'>
                 { isExpanded ? 
-                    content.map((item) => 
+                    content.map((logo_info) => 
                     (
-                        <img src={c_logo} alt="" />
+                        <img src={logo_info.image} alt="" style= {{display: "inline-block", width: logo_info.width}}/>
                     )
                     ) : ''
                 }
@@ -67,8 +89,26 @@ const BlurCircleContent = ({isExpanded, content=[1, 2, 3, 5, 6, 7, 8, 9 ,10]}) =
 
 const CircularSelector = () => {
    
-    const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"]
+    const CLogo = new ImageInfo({ image: c_logo});
+    const CSharp = new ImageInfo({ image: cs_logo});
+    const CPP = new ImageInfo({ image: cpp_logo});
+    const Gitkraken = new ImageInfo({ image: gitkraken_logo});
+    const Python = new ImageInfo({ image: python_logo});
+    const Jira = new ImageInfo({ image: jira_logo, width: "100px"});
+    const GitHub = new ImageInfo({ image: github_logo});
+    const Unreal = new ImageInfo({ image: unreal_logo, width: "100px"});
+    const Unity = new ImageInfo({ image: unity_logo, width: "100px"});
+    const VisualStudio = new ImageInfo({ image: vs_logo});
+    const VSCode = new ImageInfo({ image: vscode_logo});
 
+    const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
+    const logos = [
+        [Jira],
+        [Unreal, Unity],
+        [GitHub, Gitkraken],
+        [VisualStudio, VSCode],
+        [CLogo, CPP, CSharp, Python]
+    ];
     const [currentIndex, SetIndex] = useState(1);
 
     const selector_circle_style =
@@ -85,14 +125,14 @@ const CircularSelector = () => {
                     I find joy in exploring and mastering various technologies. 
                     Here are some of the technologies I've had the pleasure of working with.
                 </p>
-                <div className="circular-skills-container border-black">
+                <div className="circular-skills-container">
                     <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : ''}`} 
                         style={selector_circle_style}>
-                        <BlurCircleContent isExpanded={currentIndex >= 0}/>
+                        <BlurCircleContent isExpanded={currentIndex >= 0} content={logos[currentIndex]}/>
                     </div>
                     {
                         buttons_text.map((button_info, index) => (
-                            <div className={`absolute-center move-corner${index + 1}`}>
+                            <div className={`absolute-center move-corner${index + 1} move-corner${index + 1}-initial`}>
                                 <Button text={button_info} index={index} isOn={index === currentIndex} setIndex={SetIndex}/>
                             </div>
                         ))

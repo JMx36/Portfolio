@@ -102,6 +102,7 @@ const CircularSelector = () => {
     const VSCode = new ImageInfo({ image: vscode_logo});
 
     const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
+    // const buttons_text = ["Production"];
     const logos = [
         [Jira],
         [Unreal, Unity],
@@ -109,13 +110,36 @@ const CircularSelector = () => {
         [VisualStudio, VSCode],
         [CLogo, CPP, CSharp, Python]
     ];
-    const [currentIndex, SetIndex] = useState(1);
+    const [currentIndex, SetIndex] = useState(-1);
+    const [playCycle, SetPlayCycle] = useState(false);
+    const [pauseRotation, SetPauseRotation] = useState(false);
+    const [isCircleExpanded, SetIsCircleExpanded] = useState(false);
 
     const selector_circle_style =
     {
         height: "60%",
         width: "30%"
     }
+
+    const HandleButtonClick = (index) =>
+    {
+        SetIsCircleExpanded(false);
+        SetIndex(index);
+    }
+
+    const HandleEndAnimation = (e) => 
+    {
+        if (e.animationName === `expand-circle`)
+        {
+            SetIsCircleExpanded(true);
+        }
+
+        if (e.animationName === `move-corner5-initial`)
+        {
+            SetPlayCycle(true);
+        }
+    }
+
 
     return (
         <div className="circular-skills-section">
@@ -125,15 +149,26 @@ const CircularSelector = () => {
                     I find joy in exploring and mastering various technologies. 
                     Here are some of the technologies I've had the pleasure of working with.
                 </p>
-                <div className="circular-skills-container">
-                    <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : ''}`} 
+                <div className="circular-skills-container" onAnimationEnd={HandleEndAnimation}>
+                    <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : 
+                        !isCircleExpanded ? 'blur-circle-expand-anim' : ''}`} 
                         style={selector_circle_style}>
-                        <BlurCircleContent isExpanded={currentIndex >= 0} content={logos[currentIndex]}/>
+                        <BlurCircleContent isExpanded={isCircleExpanded} content={logos[currentIndex]}/>
                     </div>
                     {
                         buttons_text.map((button_info, index) => (
-                            <div className={`absolute-center move-corner${index + 1} move-corner${index + 1}-initial`}>
-                                <Button text={button_info} index={index} isOn={index === currentIndex} setIndex={SetIndex}/>
+                            <div className={`absolute-center move-corner${index + 1} 
+                                ${!playCycle ? `move-corner${index + 1}-initial` : `move-corner${index + 1}-cycle`}`}
+                                onMouseEnter={() => SetPauseRotation(true)}
+                                onMouseLeave={() => SetPauseRotation(false)}
+
+                                style = {
+                                    {
+                                        animationPlayState: pauseRotation || currentIndex >= 0 ? 'paused' : 'running'
+                                    }
+                                }
+                                >
+                                <Button text={button_info} index={index} isOn={index === currentIndex} setIndex={HandleButtonClick}/>
                             </div>
                         ))
                     }

@@ -1,27 +1,4 @@
 import React, { useState } from 'react';
-import c_logo from "../assets/Images/WhiteLogos/c.png"
-import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
-import cs_logo from "../assets/Images/WhiteLogos/cs.png"
-import python_logo from "../assets/Images/WhiteLogos/python.png"
-import github_logo from "../assets/Images/WhiteLogos/github.png"
-import gitkraken_logo from "../assets/Images/WhiteLogos/gitkraken.png"
-import html_logo from "../assets/Images/WhiteLogos/html.png"
-import unity_logo from "../assets/Images/WhiteLogos/unity.png"
-import unreal_logo from "../assets/Images/WhiteLogos/unreal.png"
-import vs_logo from "../assets/Images/WhiteLogos/vs.png"
-import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
-import jira_logo from "../assets/Images/WhiteLogos/jira.png"
-
-class ImageInfo
-{
-    constructor({image, width="50px", height="50px"})
-    {
-        this.image = image;
-        this.width = width;
-        this.height = height;
-    }
-}
-
 
 const Button = ({text, index, isOn, setIndex}) => 
 {
@@ -86,30 +63,8 @@ const BlurCircleContent = ({isExpanded, content}) =>
 }
 
 
+const CircularSelector = ({buttons_text, logos}) => {
 
-const CircularSelector = () => {
-   
-    const CLogo = new ImageInfo({ image: c_logo});
-    const CSharp = new ImageInfo({ image: cs_logo});
-    const CPP = new ImageInfo({ image: cpp_logo});
-    const Gitkraken = new ImageInfo({ image: gitkraken_logo});
-    const Python = new ImageInfo({ image: python_logo});
-    const Jira = new ImageInfo({ image: jira_logo, width: "100px"});
-    const GitHub = new ImageInfo({ image: github_logo});
-    const Unreal = new ImageInfo({ image: unreal_logo, width: "100px"});
-    const Unity = new ImageInfo({ image: unity_logo, width: "100px"});
-    const VisualStudio = new ImageInfo({ image: vs_logo});
-    const VSCode = new ImageInfo({ image: vscode_logo});
-
-    const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
-    // const buttons_text = ["Production"];
-    const logos = [
-        [Jira],
-        [Unreal, Unity],
-        [GitHub, Gitkraken],
-        [VisualStudio, VSCode],
-        [CLogo, CPP, CSharp, Python]
-    ];
     const [currentIndex, SetIndex] = useState(-1);
     const [playCycle, SetPlayCycle] = useState(false);
     const [pauseRotation, SetPauseRotation] = useState(false);
@@ -142,38 +97,30 @@ const CircularSelector = () => {
 
 
     return (
-        <div className="circular-skills-section">
-                <h2 className="lighter-blue-text italic-title" style={{margin: "5% auto"}}>Technologies & Tools</h2>
-                <p className="caption description-text">As a developer, 
-                    I embrace the philosophy of continuous learning and versatility. 
-                    I find joy in exploring and mastering various technologies. 
-                    Here are some of the technologies I've had the pleasure of working with.
-                </p>
-                <div className="circular-skills-container" onAnimationEnd={HandleEndAnimation}>
-                    <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : 
-                        !isCircleExpanded ? 'blur-circle-expand-anim' : ''}`} 
-                        style={selector_circle_style}>
-                        <BlurCircleContent isExpanded={isCircleExpanded} content={logos[currentIndex]}/>
-                    </div>
-                    {
-                        buttons_text.map((button_info, index) => (
-                            <div className={`absolute-center move-corner${index + 1} 
-                                ${!playCycle ? `move-corner${index + 1}-initial` : `move-corner${index + 1}-cycle`}`}
-                                onMouseEnter={() => SetPauseRotation(true)}
-                                onMouseLeave={() => SetPauseRotation(false)}
-
-                                style = {
-                                    {
-                                        animationPlayState: pauseRotation || currentIndex >= 0 ? 'paused' : 'running'
-                                    }
-                                }
-                                >
-                                <Button text={button_info} index={index} isOn={index === currentIndex} setIndex={HandleButtonClick}/>
-                            </div>
-                        ))
-                    }
+            <div className="circular-skills-container" onAnimationEnd={HandleEndAnimation}>
+                <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : 
+                    !isCircleExpanded ? 'blur-circle-expand-anim' : ''}`} 
+                    style={selector_circle_style}>
+                    <BlurCircleContent isExpanded={isCircleExpanded} content={logos[currentIndex]}/>
                 </div>
-        </div>
+                {
+                    buttons_text.map((button_info, index) => (
+                        <div className={`absolute-center move-corner${index + 1} 
+                            ${!playCycle ? `move-corner${index + 1}-initial` : `move-corner${index + 1}-cycle`}`}
+                            onMouseEnter={() => SetPauseRotation(true)}
+                            onMouseLeave={() => SetPauseRotation(false)}
+
+                            style = {
+                                {
+                                    animationPlayState: pauseRotation || currentIndex >= 0 ? 'paused' : 'running'
+                                }
+                            }
+                            >
+                            <Button text={button_info} index={index} isOn={index === currentIndex} setIndex={HandleButtonClick}/>
+                        </div>
+                    ))
+                }
+            </div>
     )
 }
 

@@ -1,0 +1,129 @@
+.portfolio-item
+{
+    display: flex;
+    flex-direction: column;
+    --container-margin: 5% 5%;
+}
+
+.portfolio-item  h1, h2, h3, h4, h5, h6, p
+{
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-item .title-section
+{
+    position: relative;
+}
+
+.portfolio-item .container
+{
+    display: flex;
+    margin: var(--container-margin);
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.portfolio-item .title-section .container .text-container
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 40%;
+    margin-right: auto;
+}
+
+.dark-overlay::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.347); /* Dark overlay with transparency */
+    z-index: 1;
+}
+
+
+/* Tasks Section */
+
+
+.tasks-section
+{
+    position: relative;
+    background-color: rgb(208, 204, 204);
+}
+
+.tasks-section .tasks-container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: var(--container-margin);
+}
+
+/* tasks left section */
+
+.tasks-section .left
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-right: auto;
+}
+
+.task-container .left h1
+{
+    margin-bottom: 10%;
+}
+
+.tasks-section .left .custom-list
+{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.tasks-section .left .custom-list li
+{
+    margin-bottom: 1%;
+}
+
+.tasks-section .left .custom-list li::before
+{
+    content: "> ";
+}
+
+.tasks-section .left .tasks-description
+{
+    margin-bottom: 2%;
+}
+
+/* tasks right section */
+
+.tasks-section .right
+{
+    width: 50%;
+}
+
+
+/* reflection */
+.tasks-section .reflection
+{
+    margin: var(--container-margin);
+}
+
+.tasks-section .reflection h1
+{
+    margin-bottom: 2%;
+}
+
+
+
+

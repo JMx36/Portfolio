@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import CircularSelector from '../components/CircularSelector.jsx';
 import DescriptionBoxes from '../components/DescriptionBoxes.jsx';
+import PortfolioItem from '../components/PortfolioItem.jsx';
+
+
 import c_logo from "../assets/Images/WhiteLogos/c.png"
 import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
 import cs_logo from "../assets/Images/WhiteLogos/cs.png"
@@ -70,11 +73,15 @@ const GamingSkills = () => {
                 Here are some of the technologies I've had the pleasure of working with.
             </p>
             <CircularSelector buttons_text={buttons_text} logos={logos}/>
-            <DescriptionBoxes title="Experience with ... " 
+            <DescriptionBoxes 
+                title="Experience with ... " 
                 title_color='#FFDF00'
                 box_background='#574D01'
                 background='#A59004'
-            descriptions={descriptions}/>
+                descriptions={descriptions}
+            />
+
+            <PortfolioItem />
         </div>
   )
 }

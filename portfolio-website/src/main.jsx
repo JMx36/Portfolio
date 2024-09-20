@@ -11,6 +11,7 @@ import './style/home_portfolio.css'
 import './style/contact.css'
 import './style/utilities.css'
 import './style/footer.css'
+import './style/gaming_portfolio.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

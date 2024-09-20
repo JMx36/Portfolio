@@ -26,10 +26,10 @@ const ContactInputField = ({label, placeholder, background_color, useTextArea=fa
 
   return(
     <div className='contact-input-field'>
-      <label className="normal-text-medium" htmlFor="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
+      <label className="work-sans-family fw-600 fs-24px" htmlFor="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
       {
-        useTextArea ? <textarea className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
-        <input className="normal-text-medium" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>
+        useTextArea ? <textarea className="work-sans-family fw-600 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
+        <input className="work-sans-family fw-600 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>
       }
     </div>
   )
@@ -42,8 +42,8 @@ const ContactLogoImage = ({image, title, info}) =>
     <div className="contact-logo-image">
           <img src={image} style={{width: "96px", height: "96px"}}/>
           <div className="contact-logo-image-info">
-              <h2 className="fs-30px" style={{margin: "0"}}>{title}</h2>
-              <p className="normal-text-medium" style={{textAlign: "left", margin: "0"}}>{info}</p>
+              <h2 className="fs-30px fw-600" style={{margin: "0"}}>{title}</h2>
+              <p className="work-sans-family fw-400 fs-24px" style={{textAlign: "left", margin: "0"}}>{info}</p>
           </div>
     </div>
   )
@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <div className="contact-section"> 
         <div className="contact-section-title">
-            <h1 className='italic-title' style={{ fontSize: "64px", margin: "0"}}>Get In Touch</h1>
+            <h1 className='italic work-sans-family fw-700 fs-64px' style={{margin: 0, padding: 0}}>Get In Touch</h1>
         </div>  
         <div className="contact-info-container">
           <div className="contact-logos-container">

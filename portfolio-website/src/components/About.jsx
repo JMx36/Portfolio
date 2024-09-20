@@ -13,7 +13,7 @@ const About = () => {
     return (
         <div className="about-me">
             {/* <div className="about-shape"></div> */}
-            <h1 className="about-title italic-title in-front">About Me</h1>
+            <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front">About Me</h1>
             <div className="about-container in-front">
                 <div className="about-info-container">
                     <div className="about-left-section">
@@ -27,7 +27,7 @@ const About = () => {
                     
                     <div className="about-right-section">
                         <div className="about-text-section">
-                            <p className="normal-text-medium in-front" style={{padding: "2rem", paddingTop: "0.5rem"}}>
+                            <p className="work-sans-family fw-600 fs-24px in-front" style={{padding: "2rem", paddingTop: "2rem"}}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -39,13 +39,12 @@ const About = () => {
                                 nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
                                 mollit anim id est laborum.
                             </p>
-                            <Button text="Learn more about me" text_style="normal-text-medium" text_color="#D9D9D9" color="none" style={{
+                            <Button text="Learn more about me" text_style="italic work-sans-family fw-600 fs-24px" text_color="#D9D9D9" color="none" style={{
                                         padding: "0",
                                         paddingRight: "2rem",
                                         paddingBottom: "1rem",
                                         marginLeft: "auto",
                                         marginRight: "0",
-                                        fontStyle: "italic",
                                         boxShadow: "none"
                                     }}/>
                         </div>

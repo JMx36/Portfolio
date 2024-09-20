@@ -6,7 +6,7 @@ const TaskDescription = ({task_title, tasks}) =>
     return (
         <div className='task-description'>
             <h3>{task_title}</h3>
-            <ul class="custom-list thin-white-text">
+            <ul class="custom-list work-sans-family fs-20px fw-300">
                 {tasks.map((task, index) => (
                     <li key={index}>{task}</li>  /* Use the index as a unique key */
                 ))}
@@ -28,15 +28,15 @@ const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ",
         <div className="portfolio-item">
             <div className='title-section dark-overlay'>
                 <div className='container to-front2'>
-                    <div className='text-container normal-text-bigger'>
+                    <div className='text-container fs-40px work-sans-family fw-600'>
                         <h2 style={{marginBottom: "10%"}}>QuickShot</h2>
-                        <p className='normal-text-medium'>Gameplay Engineer | Programming Lead</p>
-                        <p className='thin-white-text' style={{marginTop: "2%"}}>(Unity | PC)</p>
-                        <p className='thin-white-text' style={{marginTop: "2%", fontStyle: "italic"}}>
+                        <p className='work-sans-family fs-24px fw-600'>Gameplay Engineer | Programming Lead</p>
+                        <p className='work-sans-family fs-20px fw-300' style={{marginTop: "2%"}}>(Unity | PC)</p>
+                        <p className='work-sans-family fs-20px fw-300' style={{marginTop: "2%", fontStyle: "italic"}}>
                             A sniper free-for-all (FFA) game, where the sniper is inspired from Overwatch's character, Ana.
                         </p>
                         <Button text="Try it out!" 
-                                text_style={"normal-text-medium"} 
+                                text_style={"work-sans-family fs-24px fw-600"} 
                                 radius="10px"
                                 style={{color: "white", padding: "1rem 1rem", margin: "4% auto 0% auto"}}
 
@@ -51,7 +51,7 @@ const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ",
             <div className='tasks-section'>
                 <div className='task-container'>
                     <div className='container to-front2'>
-                        <div className='left description-text'>
+                        <div className='left fw-600 fs-20px work-sans-family'>
                             <h1>Gameplay Engineer</h1>
                             <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
                             <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
@@ -69,9 +69,9 @@ const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ",
                             </div>
                         </div>
                     </div>
-                    <div className='reflection normal-text-medium to-front2'>
-                        <h1 style={{fontStyle: "italic"}}>Thoughts</h1>
-                        <p className='thin-white-text'>From this project I have learned ...</p>
+                    <div className='reflection work-sans-family fs-24px fw-600 to-front2'>
+                        <h1 className='italic'>Thoughts</h1>
+                        <p className='work-sans-family fw-300 fs-20px'>From this project I have learned ...</p>
                     </div>
                 </div>
 

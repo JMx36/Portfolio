@@ -18,7 +18,7 @@ const HomePortfolio = () => {
     <div className="home-portfolio">
         <div className="home-portfolio-header">
             <div className="home-portfolio-title">
-                <h1 className="italic-title home-portfolio-title-text" style={
+                <h1 className="italic work-sans-family fw-700 fs-64px home-portfolio-title-text" style={
                     {   margin: "0", 
                         padding: "0",
                     }

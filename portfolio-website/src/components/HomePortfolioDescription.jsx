@@ -193,10 +193,10 @@ const Description = ({title="Title", description="Description Text"}) =>
     return (
         <div className="home-portfolio-section-description">
             <div className="home-portfolio-section-title">
-                <h1 className='sub-title-text'>{title}</h1>
+                <h1 className='work-sans-family fs-40px fw-600'>{title}</h1>
             </div>
             <div className="home-portfolio-section-text">
-                <p className='normal-text-medium'>{description}</p>
+                <p className='work-sans-family fs-24px fw-600'>{description}</p>
             </div>
             <Button text="Explore Now" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={{marginTop: "5%"}}/>
         </div>

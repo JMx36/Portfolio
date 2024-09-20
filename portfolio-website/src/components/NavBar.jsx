@@ -37,8 +37,8 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
                 style={isClosed ? {transform: "translateX(400px)"}: {}}
                  onAnimationEnd={HandleAnimationEnd}>
                 <Rectangle color="#DAC21C" style={{padding: rectangle_padding, marginTop: rectangle_margin}}/>
-                <div className="navbar-dropdown-options thin-white-text">
-                    {navBarOptions.map((option) => (<a href="index.html" className="navbar-button navbar-dropwdown-button  yellow-hover" style={{fontSize: "30px"}}> {option}</a>))}
+                <div className="navbar-dropdown-options fs-20px fw-300">
+                    {navBarOptions.map((option) => (<a href="index.html" className="navbar-button navbar-dropwdown-button yellow-hover" style={{fontSize: "30px"}}> {option}</a>))}
                 </div>
                 <Circle height={"60px"} width={"60px"} color="#0a515f" style={circle_style}>
                     <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
@@ -79,7 +79,7 @@ const NavBar = () => {
         <div className="NavBarLogo"><a href="index.html" className="LogoButton cursive-button yellow-hover">Josh Castillo</a></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
-                <div className="NavBarOptions thin-white-text ">
+                <div className="NavBarOptions fs-20px fw-300">
                     {navBarOptions.map((option) => (<a href="index.html" className="navbar-button yellow-hover"> {option}</a>))}
                 </div>
         }

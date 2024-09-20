@@ -28,6 +28,11 @@
   font-family: 'Work Sans';
 }
 
+.pacifico-family
+{
+  font-family: "Pacifico";
+}
+
 .fw-300
 {
   font-weight: 300;
@@ -48,11 +53,18 @@
   font-weight: 700;;
 }
 
-.thin-white-text {
-    font-family: 'Work Sans';
-    font-size: var(--fs-20px); /* 20px */
-    font-weight: 300; 
-  }
+.fs-20px
+{
+  font-family: 'Work Sans';
+  font-size: var(--fs-20px); /* 20px */
+}
+
+.thin-white-text
+{
+  font-family: 'Work Sans';
+  font-size: var(--fs-20px); /* 20px */
+  font-weight: 300; 
+}
 
 .italic-title {
   font-family: 'Work Sans';
@@ -87,15 +99,20 @@
   font-weight: 600;
 }
 
+.fs-30px
+{
+  font-size: var(--fs-30px); /* 30px */
+}
+
 .description-text {
   font-family: 'Work Sans';
-  font-size: var(--fs-30px); /* 20px */
+  font-size: var(--fs-20px); /* 20px */
   font-weight: 600; 
 }
 
 .sub-title-text {
   font-family: 'Work Sans';
-  font-size: var(--fs-20px); /* 40px */
+  font-size: var(--fs-40px); /* 40px */
   font-weight: 600; 
 }
 
@@ -104,6 +121,10 @@
   font-size: 1.875rem; /* 30px */
   font-weight: 600; 
 }
+
+
+
+
 
 .bright-yellow-text
 {

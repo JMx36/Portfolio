@@ -1,4 +1,3 @@
-import burgerIcon from "../assets/Images/TempLogos/burger_icon.png"
 import { useMediaQuery } from 'react-responsive';
 import React, { useState, useEffect} from 'react';
 import {Rectangle, Circle, Triangle} from "../components/utilities.jsx"

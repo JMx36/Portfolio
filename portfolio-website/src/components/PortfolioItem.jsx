@@ -1,11 +1,6 @@
 import React from 'react'
 import {Button} from "../components/utilities.jsx"
 
-
-const CalculatePositions = () => {
-
-}
-
 const TaskDescription = ({task_title, tasks}) =>
 {
     return (

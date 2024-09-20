@@ -29,13 +29,13 @@ const DescriptionBoxes = ({title, descriptions, title_color="#119DA4", text_colo
   
     return (
     <div className="skills-description" style={{backgroundColor: background}}>
-                <h3 className="italic-title" style={main_title}>{title}</h3>
+                <h3 className="italic fw-700 work-sans-family fs-64px" style={main_title}>{title}</h3>
                 <div className="boxes-container" style={{color: text_color}}>
                     {
                         descriptions.map((info) => (
                             <div className="description-box" style={{backgroundColor: box_background}}>
-                                <h3 className="sub-title-text" style={description_title}>{info[0]}</h3>
-                                <p className="description-text" style={inside_text}>{info[1]}</p>
+                                <h3 className="fw-600 fs-40px work-sans-family" style={description_title}>{info[0]}</h3>
+                                <p className="fw-600 fs-20px work-sans-family" style={inside_text}>{info[1]}</p>
                             </div>
                         ))
                     }

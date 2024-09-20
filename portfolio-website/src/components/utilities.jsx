@@ -113,7 +113,7 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 }
 
 
-export const Button = ({text, text_style="cursive-button", radius="50px", text_color="black", 
+export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="50px", text_color="black", 
     color="black", logo=null, logo_style={}, words_style={}, style={}}) => 
 {
 

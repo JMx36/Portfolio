@@ -64,21 +64,13 @@ const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ",
                         </div>
                         <div className='right'>
                             <div className='right-container'>
-                                <div class="">
-                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
-                                </div>
-                                <div class="">
-                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
-                                </div>
-                                <div class="">
-                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
-                                </div>
-                                <div class="">
-                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
-                                </div>
-                                <div class="">
-                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
-                                </div>
+                                {
+                                    images.map((image, index) => (
+                                        <div class="">
+                                            <img src={image} alt="Responsive GIF"/>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

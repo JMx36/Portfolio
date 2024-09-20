@@ -9,7 +9,6 @@
   --fs-64px: clamp(2rem, 4.5vw + 1rem, 12rem);
 }
 
-
 @media (min-width: 1000px)
 {
   :root
@@ -148,8 +147,6 @@
   font-size: 1.875rem; /* 30px */
   font-weight: 600; 
 }
-
-
 
 /* Color Text Classes */
 

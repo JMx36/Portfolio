@@ -76,7 +76,7 @@ const NavBar = () => {
 
     return (
     <nav className="NavBar">
-        <div className="NavBarLogo"><a href="index.html" className="LogoButton cursive-button yellow-hover">Josh Castillo</a></div>
+        <div className="NavBarLogo"><a href="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover">Josh Castillo</a></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
                 <div className="NavBarOptions fs-20px fw-300 work-sans-family">

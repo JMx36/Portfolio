@@ -25,6 +25,7 @@
     align-items: center;
     position: relative;
     color: white;
+    align-items: stretch;
 }
 
 .portfolio-item .title-section .container .text-container
@@ -109,9 +110,32 @@
 
 .tasks-section .right
 {
+    display: flex;
+    position: relative;
     width: 50%;
 }
 
+.tasks-section .right .right-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 2%;
+    margin: auto;
+}
+
+.tasks-section .right .right-container div
+{
+    box-sizing: border-box;
+    flex: 0 0 40%;
+    height: auto;
+    margin: auto;
+}
+
+.task-container .right img
+{
+    width: 100%;
+    height: auto;
+}
 
 /* reflection */
 .tasks-section .reflection

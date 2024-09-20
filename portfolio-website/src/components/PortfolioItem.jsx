@@ -2,9 +2,12 @@ import React from 'react'
 import {Button} from "../components/utilities.jsx"
 
 
+const CalculatePositions = () => {
+
+}
+
 const TaskDescription = ({task_title, tasks}) =>
 {
-
     return (
         <div className='task-description'>
             <h3>{task_title}</h3>
@@ -17,13 +20,14 @@ const TaskDescription = ({task_title, tasks}) =>
     )
 }
 
-
-const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ", tasks=[]}) => {
+const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ", tasks=[], images=[]}) => {
 
     tasks.push(["Destruction Strike Team Member", [
         "Was part of a core engineering effort to implement fine-grain destruction, a marquee feature for the title",
         "Destructible asset pipeline and rigid body optimization",
         "Improved client only clutter to assist with destructible atmosphere"]])
+
+    images.push("https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif")
 
     return (
         <div className="portfolio-item">
@@ -58,7 +62,25 @@ const PortfolioItem = ({youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ",
                             <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
                             <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
                         </div>
-                        <div className='right border-red'></div>
+                        <div className='right'>
+                            <div className='right-container'>
+                                <div class="">
+                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
+                                </div>
+                                <div class="">
+                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
+                                </div>
+                                <div class="">
+                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
+                                </div>
+                                <div class="">
+                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
+                                </div>
+                                <div class="">
+                                    <img src="https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif" alt="Responsive GIF"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='reflection normal-text-medium to-front2'>
                         <h1 style={{fontStyle: "italic"}}>Thoughts</h1>

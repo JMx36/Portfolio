@@ -66,8 +66,8 @@ const GamingSkills = () => {
 
     return (
         <div className='skills-section'>
-            <h2 className="lighter-blue-text italic-title" style={{margin: "5% auto"}}>Technologies & Tools</h2>
-            <p className="caption description-text">As a developer, 
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "5% auto"}}>Technologies & Tools</h2>
+            <p className="caption fs-20px fw-600 work-sans-family">As a developer, 
                 I embrace the philosophy of continuous learning and versatility. 
                 I find joy in exploring and mastering various technologies. 
                 Here are some of the technologies I've had the pleasure of working with.

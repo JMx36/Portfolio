@@ -55,7 +55,6 @@
 
 .fs-20px
 {
-  font-family: 'Work Sans';
   font-size: var(--fs-20px); /* 20px */
 }
 
@@ -64,6 +63,16 @@
   font-family: 'Work Sans';
   font-size: var(--fs-20px); /* 20px */
   font-weight: 300; 
+}
+
+.fs-64px
+{
+  font-size: var(--fs-64px); /* 64px */
+}
+
+.italic
+{
+  font-style: italic;
 }
 
 .italic-title {
@@ -84,6 +93,11 @@
   font-family: 'Work Sans';
   font-size: var(--fs-32px);
   font-weight: 600;
+}
+
+.fs-24px
+{
+  font-size: var(--fs-24px); /* 24px */
 }
 
 .normal-text-medium {
@@ -124,7 +138,7 @@
 
 
 
-
+/* Color Text Classes */
 
 .bright-yellow-text
 {

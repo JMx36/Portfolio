@@ -22,7 +22,7 @@ const Button = ({text, index, isOn, setIndex}) =>
     return(
         <div className="" style={{width: "100%", maxWidth: "200px", height: "100%", position: "relative", textAlign: "center"}}>
             
-            <span className="normal-text-medium cursor-pointer" style={
+            <span className="fw-600 fs-24px work-sans-family cursor-pointer" style={
                 {
                 display: "inline-block",
                 boxSizing: "border-box",

@@ -57,13 +57,6 @@
   font-size: var(--fs-20px); /* 20px */
 }
 
-.thin-white-text
-{
-  font-family: 'Work Sans';
-  font-size: var(--fs-20px); /* 20px */
-  font-weight: 300; 
-}
-
 .fs-64px
 {
   font-size: var(--fs-64px); /* 64px */
@@ -74,22 +67,9 @@
   font-style: italic;
 }
 
-.italic-title {
-  font-family: 'Work Sans';
-  font-size: var(--fs-64px); /* 64px */
-  font-weight: 700; 
-  font-style: italic;
-}
-
 .fs-36px
 {
   font-size: var(--fs-36px); /* 36px */
-}
-
-.cursive-button {
-  font-family: "Pacifico";
-  font-size: var(--fs-36px); /* 36px */
-  font-weight: 400; 
 }
 
 .fs-32px
@@ -102,22 +82,9 @@
   font-size: var(--fs-24px); /* 24px */
 }
 
-.normal-text-medium {
-  font-family: 'Work Sans';
-  font-size: var(--fs-24px); /* 24px */
-  font-weight: 600;
-}
-
 .fs-40px
 {
   font-size: var(--fs-40px); 
-}
-
-.normal-text-bigger
-{
-  font-family: 'Work Sans';
-  font-size: var(--fs-40px); 
-  font-weight: 600;
 }
 
 .fs-30px
@@ -125,21 +92,9 @@
   font-size: var(--fs-30px); /* 30px */
 }
 
-.description-text {
-  font-family: 'Work Sans';
-  font-size: var(--fs-20px); /* 20px */
-  font-weight: 600; 
-}
-
 .fs-40px
 {
   font-size: var(--fs-40px); /* 40px */
-}
-
-.sub-title-text {
-  font-family: 'Work Sans';
-  font-size: var(--fs-40px); /* 40px */
-  font-weight: 600; 
 }
 
 .fs-30px {

@@ -8,28 +8,30 @@ const ContactInputField = ({label, placeholder, background_color, useTextArea=fa
 
   const label_style = 
   {
+      display: "block",
       color: "#119DA4",
-      fontSize: "24px"
+      fontSize: "24px",
+      boxSizing: "border-box"
   }
-
 
   const input_style = 
   {
+    display: "block",
     backgroundColor: background_color,
     color: "white",
-    width: "600px",
+    width: "clamp(260px, 69vw, 600px)",
     borderRadius: "9px",
     border: "none",
     padding: "0.5rem",
-    fontWeight: "400"
+    boxSizing: "border-box"
   }
 
   return(
     <div className='contact-input-field'>
       <label className="work-sans-family fw-600 fs-24px" htmlFor="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
       {
-        useTextArea ? <textarea className="work-sans-family fw-600 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
-        <input className="work-sans-family fw-600 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>
+        useTextArea ? <textarea className="work-sans-family fw-400 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}></textarea> : 
+        <input className="work-sans-family fw-400 fs-24px" type="text" id={label} name={label} placeholder={placeholder} style={input_style}/>
       }
     </div>
   )
@@ -40,10 +42,10 @@ const ContactLogoImage = ({image, title, info}) =>
 {
   return(
     <div className="contact-logo-image">
-          <img src={image} style={{width: "96px", height: "96px"}}/>
-          <div className="contact-logo-image-info">
-              <h2 className="fs-30px fw-600" style={{margin: "0"}}>{title}</h2>
-              <p className="work-sans-family fw-400 fs-24px" style={{textAlign: "left", margin: "0"}}>{info}</p>
+          <img src={image}/>
+          <div className="contact-logo-image-info fs-24px">
+              <h2 className="work-sans-family fw-700" style={{margin: "0"}}>{title}</h2>
+              <p className="work-sans-family fw-400" style={{textAlign: "left", margin: "0"}}>{info}</p>
           </div>
     </div>
   )
@@ -64,11 +66,6 @@ const Contact = () => {
             <h1 className='italic work-sans-family fw-700 fs-64px' style={{margin: 0, padding: 0}}>Get In Touch</h1>
         </div>  
         <div className="contact-info-container">
-          <div className="contact-logos-container">
-            <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
-            <ContactLogoImage image={mail} title="PHONE" info="(714)-276-7492"/>
-            <ContactLogoImage image={mail} title="LOCATION" info="CA, United States"/>
-          </div>
           <div className='contact-input'>
             <div className="contact-input-container">
               <ContactInputField label="Email" placeholder="Enter your email address" background_color="black" />
@@ -76,6 +73,11 @@ const Contact = () => {
               <ContactInputField useTextArea={true} label="Message" placeholder="Enter your message (ex. Hi :) )" background_color="black" />
               <Button text="Send" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={button_style}/>
             </div>
+          </div>
+          <div className="contact-logos-container">
+            <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
+            <ContactLogoImage image={mail} title="PHONE" info="(714)-276-7492"/>
+            <ContactLogoImage image={mail} title="LOCATION" info="CA, United States"/>
           </div>
         </div>
     </div>

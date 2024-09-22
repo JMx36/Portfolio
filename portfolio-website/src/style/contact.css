@@ -10,18 +10,20 @@
 {
     color: var(--background-blue);
     margin: 5% var(--title-side-margin);
-    margin-bottom: 1%;
-    font-style: italic;
+    padding: 0;
+    margin-bottom: 3%;
 }
 
 .contact-info-container
 {
     display: flex;
+    margin-bottom: 5%;
+    justify-content: space-between;
+    align-items: center;
     margin: auto;
     margin-bottom: 5%;
-    gap: 10%;
-    justify-content: center;
-    align-items: center;
+    gap: 50px;
+    box-sizing: border-box;
 }
 
 .contact-logos-container
@@ -29,12 +31,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: auto;
 }
 
 .contact-logo-image
 {
     display: flex;
+    padding-right: 1rem;
+}
+
+.contact-logo-image img
+{
+    width: clamp(40px, 10vw, 96px);
 }
 
 .contact-logo-image-info
@@ -45,6 +52,7 @@
     margin: auto;
     margin-left: 2%;
     gap: 5px;
+    flex-shrink: 0;
 }
 
 .contact-input
@@ -54,11 +62,13 @@
 
 .contact-input-container
 {
+    
+    display: flex;
     background-color: var(--background-blue);
     border-radius: 9px;
-    display: flex;
     flex-direction: column;
-    padding: 5%;
+    box-sizing: border-box;
+    padding: 1.5rem;
     gap: 10px;
 }
 
@@ -68,12 +78,12 @@
     flex-direction: column;
     margin: auto;
     gap: 10px;
+    box-sizing: border-box;
 }
 
 .contact-input-field textarea
 {
-    min-width: 600px;
-    max-width: 600px;
+    width: clamp(200px, 60vw, 600px);
     min-height: 170px;
     height: 170px;
     border: none;
@@ -85,4 +95,30 @@
     border-color: white;
 }
 
+/* Make utitly class for displaying are meant to become columns so that you can reuse them or edit them all at once
+    You can apply this to toher css classes
+*/
 
+@media (max-width: 1200px) 
+{
+    .contact-info-container
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: clamp(260px, 65vw, 600px);
+    }
+
+    .contact-logos-container
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+    }
+
+    .contact-logo-image
+    {
+        /* flex: 1; */
+    }
+
+}

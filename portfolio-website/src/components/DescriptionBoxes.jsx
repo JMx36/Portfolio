@@ -13,17 +13,19 @@ const DescriptionBoxes = ({title, descriptions, title_color="#119DA4", text_colo
     }
 
     const description_title={
-        marginLeft: "5%",
-        marginBottom: "0%",
-        marginTop: "5%",
-        padding: "2%",
+
+        padding: "0rem",
+        paddingTop: "0rem",
+        marginBottom: "10%",
         ...inside_title_style
     }
 
     const inside_text = {
-        margin: "5% 6.5%",
+        margin: "0% auto",
         textAlign: "left",
-        padding: "2%",
+        padding: "0rem",
+        paddingBottom: "0rem",
+        paddingTop: "0",
         ...inside_text_style
     }
   
@@ -35,7 +37,7 @@ const DescriptionBoxes = ({title, descriptions, title_color="#119DA4", text_colo
                         descriptions.map((info) => (
                             <div className="description-box" style={{backgroundColor: box_background}}>
                                 <h3 className="fw-600 fs-40px work-sans-family" style={description_title}>{info[0]}</h3>
-                                <p className="fw-600 fs-20px work-sans-family" style={inside_text}>{info[1]}</p>
+                                <p className="fw-300 fs-24px work-sans-family" style={inside_text}>{info[1]}</p>
                             </div>
                         ))
                     }

@@ -62,7 +62,6 @@
 
 .contact-input-container
 {
-    
     display: flex;
     background-color: var(--background-blue);
     border-radius: 9px;
@@ -115,10 +114,4 @@
         flex-wrap: wrap;
         margin-bottom: 5%;
     }
-
-    .contact-logo-image
-    {
-        /* flex: 1; */
-    }
-
 }

@@ -1,4 +1,4 @@
-import brush_stroke from "../assets/Images/Logos/brush-stroke3.png"
+
 import { useMediaQuery } from 'react-responsive';
 import {Link} from 'react-router-dom'
 import { Button } from '../components/utilities.jsx'
@@ -8,13 +8,12 @@ import React, { useState } from 'react';
 const About = () => {
 
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
-    const left_text_buttons = ["See My Resume", "See My Portfolio"]
+    const left_text_buttons = [ "See My Portfolio", "See My Resume"]
 
     return (
-        <div className="about-me">
-            {/* <div className="about-shape"></div> */}
-            <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front">About Me</h1>
+        <div className="about-me">            
             <div className="about-container in-front">
+                <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front ">About Me</h1>
                 <div className="about-info-container">
                     <div className="about-left-section">
                         <div className="circle-container">
@@ -53,7 +52,8 @@ const About = () => {
                 <div className="about-info-buttons">
                     {
                         left_text_buttons.map((text) => (
-                            <Button text={text} color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)"/>
+                            <Button text={text} color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" 
+                              style={{minWidth: "300px"}}  />
                         )
                         )            
                     }

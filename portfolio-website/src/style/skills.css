@@ -46,17 +46,6 @@
     width: 90%;
 }
 
-.gears-box
-{
-    width: 25%;
-    min-height: 10rem;
-    background-image: url("../assets/Images/Components/gear-group.png");
-    background-size: 100% 100%;
-    background-position: left;
-    background-repeat: no-repeat;
-    /* border: black 2px solid; */
-}
-
 .skills-buttons-container
 {
     display: flex;
@@ -111,6 +100,8 @@
 
 
 @media (max-width: 700px) {
+
+
     .skills-description .boxes-container
     {
         flex-direction: column;

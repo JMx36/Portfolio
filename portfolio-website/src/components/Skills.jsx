@@ -138,8 +138,7 @@ const Skills = () =>
 
     const button_logo_style =
     {
-        width: "60px",
-        height: "60px",
+        width: "clamp(30px, 5vw, 60px)",
         marginRight: '2%',
         display: "inline-block"
     }

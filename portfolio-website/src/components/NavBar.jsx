@@ -6,6 +6,7 @@ import {Rectangle, Circle, Triangle} from "../components/utilities.jsx"
 const NavBarDropdown = ({navBarOptions, closing_func}) => 
 {
     const [isClosed, SetClicked] = useState(false);
+    const [isTriagHoverered, SetIsHovered] = useState(false);
 
     const rectangle_padding = "3px";
     const rectangle_margin = "10%";
@@ -42,7 +43,7 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
                 </div>
                 <Circle height={"60px"} width={"60px"} color="#0a515f" style={circle_style}>
                     <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
-                        func={() => SetClicked(true)}/> 
+                        func={() => SetClicked(true)} color={isTriagHoverered ? "#FFDF00" : "white"} hover_func={SetIsHovered}/> 
                 </Circle>
                 <Rectangle color="#DAC21C" style={{padding: rectangle_padding, marginBottom: rectangle_margin}}/>
             </div>
@@ -75,7 +76,7 @@ const NavBar = () => {
       }, [isSmallerScreen]); // Runs whenever isSmallerScreen changes
 
     return (
-    <nav className="NavBar">
+    <nav className="NavBar" style={isSmallerScreen ? {position: "fixed", top: 0, left: 0} : {}}>
         <div className="NavBarLogo"><a href="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover">Josh Castillo</a></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :

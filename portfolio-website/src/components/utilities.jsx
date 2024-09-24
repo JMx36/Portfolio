@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
-export const Triangle = ({height, width, color="white", rotation="right", margin="", clickable=false, func=null, style={}}) => {
+export const Triangle = ({height, width, color="white", rotation="right", margin="",
+    hover_func=undefined,  clickable=false, func=null, style={}}) => {
 
     const right_triangle = "polygon(0 0, 0 100%, 100% 50%)";
     const left_triangle = "polygon(100% 0, 100% 100%, 0% 50%)";
@@ -32,7 +33,11 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
     const combined_styles = {...triangle_style, ...style}
 
     return (
-        <div className="triangle" style={combined_styles} onClick={clickable ? func : undefined}></div>
+        <div className="triangle" style={combined_styles} onClick={clickable ? func : undefined}
+            onMouseEnter={hover_func === undefined ? undefined : () => hover_func(true)}
+            onMouseLeave={hover_func === undefined ? undefined : () => hover_func(false)}>
+
+            </div>
     )
 }
 

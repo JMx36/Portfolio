@@ -146,14 +146,14 @@ const Slider = ({images_lists, window_size=4}) =>
     }
 
     return (
-        <div className="slider-container ">
+        <div className="slider-container">
             <div className='slider-image-container' style={{}}
                         onMouseEnter={() => SetPreviewContainerHovered(true)}
                         onMouseLeave={() => SetPreviewContainerHovered(false)}
                         >
                 {
-                    currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%"}}></div> :
-                    <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto 0%" clickable={true} func={HandleLeftClick}/>
+                    currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
+                    <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>
                 }
                 <div className='preview-container' onAnimationEnd={EndAnimation} >
                     {/* {console.log("Current Index", currentIndex)}
@@ -174,8 +174,8 @@ const Slider = ({images_lists, window_size=4}) =>
                     </div>
                 </div>
                 {
-                    currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%"}}></div> : 
-                    <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto 0%" clickable={true} func={HandleRightClick}/>
+                    currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> : 
+                    <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto auto" clickable={true} func={HandleRightClick}/>
                 }
             </div>
             <div className="circle-buttons width-50%">
@@ -187,11 +187,10 @@ const Slider = ({images_lists, window_size=4}) =>
     )
 }
 
-const Description = ({title="Title", description="Description Text"}) =>
+const Description = ({title="Title", description="Description Text", side="right"}) =>
 {
-
     return (
-        <div className="home-portfolio-section-description">
+        <div className={`home-portfolio-section-description auto-${side}`}>
             <div className="home-portfolio-section-title">
                 <h1 className='work-sans-family fs-40px fw-600'>{title}</h1>
             </div>
@@ -208,7 +207,7 @@ const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", 
   return (
     <div className="home-portfolio-section">
         {!swap ? <Slider images_lists={images}/> : <Description title={title} description={description} /> }
-        {!swap ? <Description title={title} description={description} /> : <Slider images_lists={images}/>  }
+        {!swap ? <Description title={title} description={description} side='left'/> : <Slider images_lists={images}/>  }
     </div>
   )
 }

@@ -6,31 +6,33 @@ const ImagesPreview = ({height, width, images, style={}}) => {
     const box_style = [
         { 
             width: '45%',
-            height: '70%',
             backgroundColor: '#959494',
             zIndex: '1', 
-            top: '30%',
+            top: '31%',
+            aspectRatio: '1/1',
+            borderRadius: '17%'
         }, 
         { 
             width: '52%',
-            height: '80%',
             backgroundColor: '#503C3C',
             zIndex: '2', 
-            left: '23.5%'
+            left: '23.5%',
+            aspectRatio: '9/10',
+            borderRadius: '17%'
         }, 
         { 
             width: '40%',
-            height: '61%',
             backgroundColor: '#B8B5B5',
             zIndex: '1', 
-            top: '30%',
-            left: '60%'
+            top: '31%',
+            left: '60%',
+            aspectRatio: '1/1',
+            borderRadius: '17%'
         }];
 
     
     const image_box_style = {
-        height: height, 
-        width: width, 
+
         position: "relative",
     }
 
@@ -39,7 +41,7 @@ const ImagesPreview = ({height, width, images, style={}}) => {
     return (
         <div className="image-preview" style={combined_styles}>
             {images.map((image, index) => (
-                <div className={`image-box border-radius-54`} style={box_style[index]}>
+                <div className={`image-box`} style={box_style[index]}>
                     <img src={image} alt="" />
                 </div>
             ))}

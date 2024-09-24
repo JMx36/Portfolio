@@ -18,6 +18,16 @@
     margin: 2%;
 }
 
+.auto-left
+{
+    margin-left: auto;
+}
+
+.auto-right
+{
+    margin-right: auto;
+}
+
 .border-radius-54
 {
     border-radius: 54px;

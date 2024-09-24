@@ -2,6 +2,8 @@
 {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .home-portfolio-header
@@ -9,14 +11,8 @@
     display: flex;
     color: var(--title-blue);
     margin: 5% auto;
-    margin-left: var(--title-side-margin);
     margin-bottom: 5%;
     /* border: solid 1px black; */
-}
-
-.home-portfolio-title
-{
-    text-align: left;
 }
 
 .rectangle
@@ -36,7 +32,6 @@
     margin-bottom: 5%;
 }
 
-
 .image-box
 {
     position: absolute;
@@ -46,46 +41,46 @@
 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    margin: auto;
+    width: clamp(300px, 60vw, 600px);
+    aspect-ratio: 16/11;
 }
 
 .slider-image-container
 {
-    height: 85%;
-    width: 100%;
     display: flex;
+    width: 100%;
+    height: 84%;
+    margin: auto;
 }
 
 .preview-container
 {
     position: relative;
-    /* border: black 1px solid; */
     display: flex;
-    margin: 5% auto;
-    height: 91.5%;
+    height: 100%;
     width: 85%;
-    margin-bottom: 0%;
     overflow: hidden;
-
     --animation-height: 60%;
     --animation-width: 60%;
     --images-gap: 40%;
-    --starting-xOffset: calc((100% + var(--images-gap)) * -1);
+    --starting-xOffset: calc((100% + var(--images-gap)) * -1);  
+    justify-content: space-evenly;
 }
+
 
 .circle-buttons
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5%;
-    width: 20%;
+    height: 20px;
+    width: 100px;
     /* border: solid 2px blue; */
     gap: 4%;
-    margin: auto;
-    margin-bottom: 0%;
+    margin: auto auto;
+    margin-top: 0;
 }
-
 
 .home-portfolio-section-title
 {
@@ -175,20 +170,21 @@
     }
 }
 
-@media (max-width: 1000px)
+@media (max-width: 1080px)
 {
     .home-portfolio-section
     {
         flex-direction: column;
     }
 
-    .home-portfolio-section-description, .slider-container
+    .home-portfolio-section-description
     {
         width: 100%;
     }
 
     .slider-container
     {
-        height: clamp(400px, 80vh, 800px);
+        margin-top: 10%;
     }
+
 }

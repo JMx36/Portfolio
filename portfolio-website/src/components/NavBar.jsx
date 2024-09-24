@@ -54,11 +54,21 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
 
 const BurgerComponnet = ({click_func}) =>
 {
+    const [isHovered, SetIsHovered] = useState(false);
+
+    const line_style = 
+    {   
+        backgroundColor: isHovered ? "#FFDF00" : "white" 
+    }
+
     return (
-        <div className="burger-icon cursor-pointer" onClick={() => click_func(true)}>
-            <div className="line1"></div>
-            <div className="line2"></div>
-            <div className="line3"></div>
+        <div className="burger-icon cursor-pointer" onClick={() => click_func(true)}
+            onMouseEnter={() => SetIsHovered(true)}
+            onMouseLeave={() => SetIsHovered(false)}
+        >
+            <div className="line1" style={line_style}></div>
+            <div className="line2" style={line_style}></div>
+            <div className="line3" style={line_style}></div>
         </div>
     )
 

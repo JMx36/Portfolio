@@ -16,6 +16,15 @@
     position: relative;
 }
 
+.portfolio-item .title-section iframe
+{
+    width: clamp(200px, 50vw, 640px);
+    aspect-ratio: 16/9;
+    margin: auto;
+    margin-right: 0;
+    border: 0;
+}
+
 .portfolio-item .container
 {
     display: flex;
@@ -34,7 +43,6 @@
     flex-direction: column;
     box-sizing: border-box;
     max-width: 40%;
-    margin-right: auto;
 }
 
 .dark-overlay::before
@@ -80,7 +88,7 @@
 
 .task-container .left h1
 {
-    margin-bottom: 10%;
+    margin-bottom: calc(70% * .10);
 }
 
 .tasks-section .left .custom-list
@@ -148,6 +156,43 @@
     margin-bottom: 2%;
 }
 
+
+@media (max-width: 800px) 
+{
+    .title-section .container
+    {
+        flex-direction: column;
+    }
+
+    .portfolio-item .title-section .container .text-container
+    {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .portfolio-item .title-section iframe
+    {
+        margin-top: 5%;
+        margin-right: auto;
+    }
+
+    .tasks-section .container
+    {
+        flex-direction: column;
+    }
+
+    .tasks-section .left, .right
+    {
+        max-width: 100%;
+    }
+
+    .tasks-section .right
+    {
+        margin-top: 5%;
+        width: 100%;
+    }
+
+}
 
 
 

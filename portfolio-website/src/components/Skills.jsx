@@ -103,14 +103,14 @@ const Skills = () =>
 
     const descriptions = 
     [
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Collaboration",
+            "I have worked in various groups of different sizes, learning how to collaborate effectively with others, whether within my own role or across departments. I’ve gained valuable experience in maintaining constant communication with my team, especially when updating them on completed tasks. Additionally, writing code alongside other programmers has taught me how to ensure my work integrates smoothly with theirs."
         ],
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Agile Methodologies",
+            "I have been part of teams that utilized agile methodologies, such as Scrum, to manage product development. In these environments, I learned the importance of daily stand-ups and delivering work in a timely manner within sprints or other agile frameworks."
         ],
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Leading",
+            "I’ve had the privilege of serving as a team lead for several group projects. In these leadership roles, I refined my abilities not only as a programmer but also as a leader. As the programming lead, I was responsible for writing code that my team could build upon, as well as guiding the team in approaching programming tasks. I focused on ensuring our code was maintainable and scalable for future needs"
         ]
     ]
 

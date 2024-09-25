@@ -6,10 +6,10 @@ const HomePortfolio = () => {
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1080px)' });
 
     const info = [["Game Developer Projects", 
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aut.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aut.", 
+                    "Throughout my time at UCI, I’ve worked on a variety of game projects that have sharpened both my programming and game development skills. My experience ranges from creating single-player platformers to full-scale first-person multiplayer games. I’m currently collaborating with a team to develop a game in Unreal Engine 5, which will be added to my portfolio soon.", 
                         []],
                 ["Software Developer Projects",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aut.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aut.",
+                    "Although my software portfolio isn’t as extensive as my game development work, it still features key projects I’m proud of. This includes a class project where I built a small-scale search engine for UCI documents, as well as other AI-based projects. More projects will be added as I continue to develop and complete them.",
                     []
                 ]
     ]

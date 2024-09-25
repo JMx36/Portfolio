@@ -80,6 +80,11 @@
     box-sizing: border-box;
 }
 
+.contact-input-field input
+{
+    border: none;
+}
+
 .contact-input-field textarea
 {
     width: clamp(200px, 60vw, 600px);
@@ -89,9 +94,14 @@
     resize: vertical;
 }
 
-.contact-input-field input textarea:focus
+.contact-input-field textarea:focus
 {
-    border-color: white;
+    border: solid 2px white;
+}
+
+.contact-input-field input:focus
+{
+    border: solid 2px white;
 }
 
 /* Make utitly class for displaying are meant to become columns so that you can reuse them or edit them all at once

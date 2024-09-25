@@ -21,9 +21,9 @@ const ContactInputField = ({label, placeholder, background_color, useTextArea=fa
     color: "white",
     width: "clamp(260px, 69vw, 600px)",
     borderRadius: "9px",
-    border: "none",
     padding: "0.5rem",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    outline: "none"
   }
 
   return(

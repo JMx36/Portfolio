@@ -53,11 +53,8 @@ const BlurCircleContent = ({isExpanded, content}) =>
             <div className='blur-circle'></div>
             <div className='text'>
                 { isExpanded ? 
-                    content.map((logo_info) => 
-                    (
-                        <img src={logo_info.image} alt="" style= {{display: "inline-block", width: logo_info.width}}/>
-                    )
-                    ) : ''
+
+                    <img src={content.image} alt="" style= {{display: "inline-block", width: content.width}}/> : ''
                 }
             </div>
         </div>
@@ -65,7 +62,7 @@ const BlurCircleContent = ({isExpanded, content}) =>
 }
 
 
-const CircularSelector = ({buttons_text, logos}) => {
+const CircularSelector = ({buttons_text, logos, parent_index_func}) => {
 
     const [currentIndex, SetIndex] = useState(-1);
     const [playCycle, SetPlayCycle] = useState(false);
@@ -76,6 +73,7 @@ const CircularSelector = ({buttons_text, logos}) => {
     {
         SetIsCircleExpanded(false);
         SetIndex(index);
+        parent_index_func(index);
     }
 
     const HandleEndAnimation = (e) => 

@@ -43,7 +43,7 @@ const GamingSkills = () => {
 
     const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
     // const buttons_text = ["Production"];
-    const logos = [
+    const category_skills_logos = [
         [Jira],
         [Unreal, Unity],
         [GitHub, Gitkraken],
@@ -51,7 +51,13 @@ const GamingSkills = () => {
         [CLogo, CPP, CSharp, Python]
     ];
 
-    const display_logos = [Jira, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]
+    const circle_logos = [
+        Jira, Unity, GitHub, VSCode, Python
+    ]
+
+    const all_skills_logos = [Jira, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]
+
+    const [currentIndex, SetIndex] = useState(-1);
 
     const descriptions = 
     [
@@ -68,14 +74,14 @@ const GamingSkills = () => {
 
     return (
         <div className='skills-section'>
-            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "3% auto"}}>Technologies & Tools</h2>
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "5% auto"}}>Technologies & Tools</h2>
             <p className="caption fs-20px fw-600 work-sans-family">As a developer, 
                 I embrace the philosophy of continuous learning and versatility. 
                 I find joy in exploring and mastering various technologies. 
                 Here are some of the technologies I've had the pleasure of working with.
             </p>
-            <CircularSelector buttons_text={buttons_text} logos={logos}/>
-            <LogosDisplay logos={display_logos}/>
+            <CircularSelector buttons_text={buttons_text} logos={circle_logos} parent_index_func={SetIndex}/>
+            <LogosDisplay logos={currentIndex >= 0 ? category_skills_logos[currentIndex] : all_skills_logos}/>
             <DescriptionBoxes 
                 title="Experience with ... " 
                 title_color='#FFDF00'

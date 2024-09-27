@@ -9,7 +9,7 @@ const Box = ({image_info, index}) => {
 
   return(
     <div style={{display: "flex", width: "min(20vw, 100px)", aspectRatio: "1/1", backgroundColor: isHovered ? "#A59004" : "#025968", borderRadius: "10%",
-      boxShadow: isHovered ? hover_color : original_color}}
+      boxShadow: isHovered ? hover_color : original_color, position: "relative", transform: isHovered ? "translateY(-7%)" : 'none'}}
       
       onMouseEnter={() => SetHovered(true)} 
       onMouseLeave={() => SetHovered(false)}

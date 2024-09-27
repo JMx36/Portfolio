@@ -11,23 +11,25 @@ const Button = ({text, index, isOn, setIndex}) =>
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: "100%",
+        width: "clamp(100px, 10vw, 200px)",
         height: "100%",
         borderRadius: "50%",
         background: "#FFDF00",
-        filter: "blur(30px)",
+        filter: "blur(clamp(5px, 2vh, 30px)",
         zIndex: "-1"
     }
 
     return(
-        <div className="" style={{width: "100%", maxWidth: "200px", height: "100%", position: "relative", textAlign: "center"}}>
+        <div className="" style={{width: "100%", maxWidth: "clamp(100px, 30vw, 200px)", height: "100%", 
+            boxSizing: "border-box", 
+        position: "relative", textAlign: "center"}}>
             
             <span className="fw-600 fs-24px work-sans-family cursor-pointer" style={
                 {
                 display: "inline-block",
                 boxSizing: "border-box",
                 position: "relative", 
-                padding: "1rem 2rem",
+                padding: "1rem 1rem",
                 textShadow: isOn ? "" : "0px 3.5px 4px rgba(82, 82, 82, 0.63)",
             }} 
                 onClick={() => 
@@ -70,12 +72,6 @@ const CircularSelector = ({buttons_text, logos}) => {
     const [pauseRotation, SetPauseRotation] = useState(false);
     const [isCircleExpanded, SetIsCircleExpanded] = useState(false);
 
-    const selector_circle_style =
-    {
-        height: "60%",
-        width: "30%"
-    }
-
     const HandleButtonClick = (index) =>
     {
         SetIsCircleExpanded(false);
@@ -98,21 +94,22 @@ const CircularSelector = ({buttons_text, logos}) => {
 
     return (
             <div className="circular-skills-container" onAnimationEnd={HandleEndAnimation}>
+                {/* the cycle animation is dependent on the move-corner5-anim finishing */}
                 <div className={`selector-circle ${currentIndex < 0 ? 'blur-circle-idle-anim' : 
-                    !isCircleExpanded ? 'blur-circle-expand-anim' : ''}`} 
-                    style={selector_circle_style}>
+                    !isCircleExpanded ? 'blur-circle-expand-anim' : ''}`} >
                     <BlurCircleContent isExpanded={isCircleExpanded} content={logos[currentIndex]}/>
                 </div>
                 {
                     buttons_text.map((button_info, index) => (
-                        <div className={`absolute-center move-corner${index + 1} 
-                            ${!playCycle ? `move-corner${index + 1}-initial` : `move-corner${index + 1}-cycle`}`}
+                        <div className={`absolute-center move-corner${index + 1}
+                            ${!playCycle ? `move-corner${index + 1}-initial` : `move-corner${index + 1}-cycle`}`
+                        }
                             onMouseEnter={() => SetPauseRotation(true)}
                             onMouseLeave={() => SetPauseRotation(false)}
 
                             style = {
                                 {
-                                    animationPlayState: pauseRotation || currentIndex >= 0 ? 'paused' : 'running'
+                                    animationPlayState: pauseRotation || currentIndex >= 0 ? 'paused' : 'running',
                                 }
                             }
                             >

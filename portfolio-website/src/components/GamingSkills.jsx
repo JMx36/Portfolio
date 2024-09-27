@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CircularSelector from '../components/CircularSelector.jsx';
 import DescriptionBoxes from '../components/DescriptionBoxes.jsx';
 import PortfolioItem from '../components/PortfolioItem.jsx';
-
+import LogosDisplay from './LogosDisplay.jsx';
 
 import c_logo from "../assets/Images/WhiteLogos/c.png"
 import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
@@ -19,7 +19,7 @@ import jira_logo from "../assets/Images/WhiteLogos/jira.png"
 
 class ImageInfo
 {
-    constructor({image, width="50px", height="50px"})
+    constructor({image, width="clamp(20px, 10vw, 50px)", height="50px"})
     {
         this.image = image;
         this.width = width;
@@ -34,10 +34,10 @@ const GamingSkills = () => {
     const CPP = new ImageInfo({ image: cpp_logo});
     const Gitkraken = new ImageInfo({ image: gitkraken_logo});
     const Python = new ImageInfo({ image: python_logo});
-    const Jira = new ImageInfo({ image: jira_logo, width: "100px"});
+    const Jira = new ImageInfo({ image: jira_logo, width: "clamp(50px, 10vw, 100px)"});
     const GitHub = new ImageInfo({ image: github_logo});
-    const Unreal = new ImageInfo({ image: unreal_logo, width: "100px"});
-    const Unity = new ImageInfo({ image: unity_logo, width: "100px"});
+    const Unreal = new ImageInfo({ image: unreal_logo, width: "clamp(50px, 10vw, 100px)"});
+    const Unity = new ImageInfo({ image: unity_logo, width: "clamp(50px, 10vw, 100px)"});
     const VisualStudio = new ImageInfo({ image: vs_logo});
     const VSCode = new ImageInfo({ image: vscode_logo});
 
@@ -50,6 +50,8 @@ const GamingSkills = () => {
         [VisualStudio, VSCode],
         [CLogo, CPP, CSharp, Python]
     ];
+
+    const display_logos = [Jira, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]
 
     const descriptions = 
     [
@@ -66,13 +68,14 @@ const GamingSkills = () => {
 
     return (
         <div className='skills-section'>
-            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "5% auto"}}>Technologies & Tools</h2>
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "3% auto"}}>Technologies & Tools</h2>
             <p className="caption fs-20px fw-600 work-sans-family">As a developer, 
                 I embrace the philosophy of continuous learning and versatility. 
                 I find joy in exploring and mastering various technologies. 
                 Here are some of the technologies I've had the pleasure of working with.
             </p>
             <CircularSelector buttons_text={buttons_text} logos={logos}/>
+            <LogosDisplay logos={display_logos}/>
             <DescriptionBoxes 
                 title="Experience with ... " 
                 title_color='#FFDF00'
@@ -80,7 +83,7 @@ const GamingSkills = () => {
                 background='#A59004'
                 descriptions={descriptions}
             />
-
+            <h2 className='lighter-blue-text italic work-sans-family fs-64px fw-700' style={{margin: "5% auto"}}>Projects</h2>
             <PortfolioItem />
         </div>
   )

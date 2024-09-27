@@ -42,13 +42,17 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 }
 
 
-export const LogoImage = ({image, index, setIsHovered=undefined, width="", height="", margin_left=""}) => {
+export const LogoImage = ({image, index, setIsHovered=undefined, width="", height="", 
+        margin_left="", margin_right="", margin_bottom= "", margin_top=""}) => {
 
     const image_style = {};
     // console.log(image, width, height);
     if (width != "") image_style["width"] = width;
     if (height != "") image_style["height"] = height;
     if (margin_left != "") image_style["marginLeft"] = margin_left;
+    if (margin_right != "") image_style["marginRight"] = margin_right;
+    if (margin_top != "") image_style["marginTop"] = margin_top;
+    if (margin_bottom != "") image_style["marginBottom"] = margin_bottom;
 
     return (
         <img className={"logo-image cursor-pointer logo-image-" + index} 

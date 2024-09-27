@@ -8,7 +8,7 @@ const TaskDescription = ({task_title, tasks}) =>
     return (
         <div className='task-description'>
             <h3>{task_title}</h3>
-            <ul class="custom-list work-sans-family fs-20px fw-300">
+            <ul className="custom-list work-sans-family fs-20px fw-300">
                 {tasks.map((task, index) => (
                     <li key={index}>{task}</li>  /* Use the index as a unique key */
                 ))}
@@ -75,7 +75,7 @@ const PortfolioItem = ({title="", subTitle="", game_info="", description="",
                             <div className='right-container'>
                                 {
                                     images.map((image, index) => (
-                                        <div class="">
+                                        <div>
                                             <img src={image} alt="Responsive GIF"/>
                                         </div>
                                     ))

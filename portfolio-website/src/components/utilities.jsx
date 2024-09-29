@@ -136,13 +136,14 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         margin: "auto",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0.5rem 4.5rem",
+        padding: "1rem 1.5rem",
         boxSizing: "border-box"
     }
 
     const p_style = {
-        padding: "0%", 
-        margin: "0%"
+        padding: "0", 
+        margin: "0%",
+        lineHeight: "1"
     }
 
     return(

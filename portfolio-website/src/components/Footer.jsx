@@ -6,7 +6,7 @@ import { LogoImage } from './utilities'
 import { useMediaQuery } from 'react-responsive';
 
 
-const FooterLogos = () => {
+export const FooterLogos = () => {
 
     const image_width ="clamp(30px, 5vw, 43px)"
 

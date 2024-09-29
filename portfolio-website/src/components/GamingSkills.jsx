@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CircularSelector from '../components/CircularSelector.jsx';
 import DescriptionBoxes from '../components/DescriptionBoxes.jsx';
 import PortfolioItem from '../components/PortfolioItem.jsx';
-import LogosDisplay from './LogosDisplay.jsx';
+import LogosDisplay from '../components/LogosDisplay.jsx';
 
 import c_logo from "../assets/Images/WhiteLogos/c.png"
 import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"

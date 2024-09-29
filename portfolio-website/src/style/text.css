@@ -105,11 +105,11 @@
   font-size: var(--fs-40px); /* 40px */
 }
 
-.fs-30px {
+/* .fs-30px {
   font-family: 'Work Sans';
-  font-size: 1.875rem; /* 30px */
+  font-size: 1.875rem;
   font-weight: 600; 
-}
+} */
 
 /* Color Text Classes */
 

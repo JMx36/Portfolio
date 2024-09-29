@@ -86,7 +86,7 @@ const NavBar = () => {
       }, [isSmallerScreen]); // Runs whenever isSmallerScreen changes
 
     return (
-    <nav className="NavBar" style={isSmallerScreen ? {position: "fixed", top: 0, left: 0} : {}}>
+    <nav className="NavBar" style={isSmallerScreen && isDropdownOpen? {position: "fixed", top: 0, left: 0} : {}}>
         <div className="NavBarLogo"><a href="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover">Josh Castillo</a></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :

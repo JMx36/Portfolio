@@ -53,6 +53,7 @@ As I prepare to transition into the professional world, I’m excited to apply e
                                         marginRight: "0",
                                         boxShadow: "none"
                                     }}
+                                    hover_color='black'
                                     words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}
                                     />
                         </div>

@@ -197,7 +197,7 @@ const Description = ({title="Title", description="Description Text", side="right
             <div className="home-portfolio-section-text">
                 <p className='work-sans-family fs-24px fw-600'>{description}</p>
                 <Button text="Explore Now" color="none" style={{marginTop: "5%"}} hover_color="#28AAC1" text_color="black"
-                words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}/>
+                words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}}/>
             </div>
             
         </div>

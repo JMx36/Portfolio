@@ -31,14 +31,12 @@ const DropdownCategories = Object.freeze(
 
 class ImageInfo
 {
-    constructor({image, width="5%", height="5%", dropdown_width="10%", margin_left="2%", category=""})
+    constructor({image, width="clamp(20px, 20vw, 100px)", height="100px", margin_left="2%"})
     {
         this.image = image;
         this.width = width;
         this.height = height;
         this.margin_left = margin_left;
-        this.category= category;
-        this.dropdown_width = dropdown_width;
     }
 }
 
@@ -114,23 +112,20 @@ const Skills = () =>
         ]
     ]
 
-    const CLogo = new ImageInfo({ image: c_logo, width: "7%", category: DropdownCategories.Languages});
-    const CSharp = new ImageInfo({ image: c_sharp, width: "7%", category: DropdownCategories.Languages});
-    const CPP = new ImageInfo({ image: cpp, width: "7%", category: DropdownCategories.Languages});
-    const CSS = new ImageInfo({ image: css, dropdown_width: "7%", category: DropdownCategories.Languages});
-    const HTML = new ImageInfo({ image: html, dropdown_width: "7%", category: DropdownCategories.Languages});
-    const Python = new ImageInfo({ image: python, category: DropdownCategories.Languages});
-    const Jira = new ImageInfo({ image: jira, width: "15%", dropdown_width: "30%", category: DropdownCategories.Production});
-    const GitHub = new ImageInfo({ image: github, category: DropdownCategories.DeveloperTools});
-    const Unreal = new ImageInfo({ image: unreal, width: "15%", dropdown_width: "30%",category: DropdownCategories.GameEngine});
-    const Unity = new ImageInfo({ image: unity, width: "15%", dropdown_width: "30%", category: DropdownCategories.GameEngine });
-    const VisualStudio = new ImageInfo({ image: vs, width: "7%", category: DropdownCategories.DeveloperTools});
-    const VSCode = new ImageInfo({ image: vscode, width: "7%", category: DropdownCategories.DeveloperTools});
+    const CLogo = new ImageInfo({ image: c_logo});
+    const CSharp = new ImageInfo({ image: c_sharp});
+    const CPP = new ImageInfo({ image: cpp});
+    const CSS = new ImageInfo({ image: css});
+    const HTML = new ImageInfo({ image: html});
+    const Python = new ImageInfo({ image: python});
+    const Jira = new ImageInfo({ image: jira, width: "clamp(100px, 20vw, 150px)"});
+    const GitHub = new ImageInfo({ image: github});
+    const Unreal = new ImageInfo({ image: unreal, width: "clamp(100px, 20vw, 150px)"});
+    const Unity = new ImageInfo({ image: unity, width: "clamp(100px, 20vw, 150px)"});
+    const VisualStudio = new ImageInfo({ image: vs});
+    const VSCode = new ImageInfo({ image: vscode});
 
     const logos = [CLogo, CSharp, CPP, CSS, HTML,Python, Jira, GitHub, Unreal, Unity, VisualStudio, VSCode];
-                
-    const dropdowns = [[DropdownCategories.GameEngine, "STUFF"], [DropdownCategories.Production, "STUFF"], [DropdownCategories.DeveloperTools, "STUFF"], 
-                , [DropdownCategories.Languages, "STUFF"],]
 
     // States!
 

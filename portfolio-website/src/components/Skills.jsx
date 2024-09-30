@@ -140,7 +140,8 @@ const Skills = () =>
 
     const words_style =
     {
-        flexShrink: 0
+        flexShrink: 0,
+        lineHeight: "1.2"
     }
 
     return (
@@ -182,17 +183,18 @@ const Skills = () =>
                 </div>
                 <p className="fw-600 work-sans-family fs-32px" style={{padding: "0%", margin: "auto", marginTop: "5%"}}>Check out the tools I use as a</p>
                 <div className="skills-buttons-container fw-600 work-sans-family fs-32px">
-                    <Button logo={se_icon} text="Software Developer" text_style="work-sans-family fs-24px fw-600" text_color="black"
-                        logo_style={button_logo_style} color="linear-gradient(90deg, #DAC21C 64%, #A59004 100%)" 
-                        words_style={{...words_style, height: "100%", width: "49%"}}
-                        style={{textAlign: "left",  width: "50%", padding: "0.5rem 1rem"
-                        }}/>
-                    <p className="fw-600 work-sans-family fs-32px" style={{padding: "0%", margin: "auto 5%"}}>and</p>
-                    <Button logo={game_dev_icon} logo_style={button_logo_style} text="Game Developer" text_style="work-sans-family fs-24px fw-600" 
-                        text_color="black" color="linear-gradient(90deg, #DAC21C 64%, #A59004 100%)" 
-                        words_style={{...words_style, height: "100%", width: "49%"}}
-                        style={{textAlign: "left", width: "50%", padding: "0.5rem 1rem"
-                        }}/>
+                    <Button text="Software Developer" text_style="pacifico-family fs-30px fw-600" hover_color="#A59004"
+                        logo_style={button_logo_style} color="none" 
+                        words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
+                        text_color="black"
+                        style={{textAlign: "left", padding: "0", margin: 0, marginLeft: "auto"}}
+                        />
+                    <p className="fw-600 work-sans-family fs-32px">and</p>
+                    <Button logo_style={button_logo_style} text="Game Developer" text_style="pacifico-family fs-30px fw-600" 
+                        hover_color="#A59004" color="none" text_color="black"
+                        words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
+                        style={{textAlign: "left", padding: "0", margin: 0, marginRight: "auto"}}
+                        />
                 </div>
 
             </div>

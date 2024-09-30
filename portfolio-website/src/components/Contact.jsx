@@ -76,7 +76,9 @@ const Contact = () => {
               <ContactInputField label="Email" placeholder="Enter your email address" background_color="rgba(222, 221, 221, 0.5)" />
               <ContactInputField label="Subject" placeholder="Enter the subject of your email" background_color="rgba(222, 221, 221, 0.5)" />
               <ContactInputField useTextArea={true} label="Message" placeholder="Enter your message (ex. Hi :) )" background_color="rgba(222, 221, 221, 0.5)" />
-              <Button text="Send" color="none" style={button_style} text_color='white' words_style={{textShadow: "3px 2px 4px rgba(255, 255, 255, 40%)"}}/>
+              <Button text="Send" color="none" style={button_style} text_color='white'
+                hover_color='black'
+                words_style={{textShadow: "3px 2px 4px rgba(255, 255, 255, 40%)"}}/>
             </div>
           </div>
         </div>

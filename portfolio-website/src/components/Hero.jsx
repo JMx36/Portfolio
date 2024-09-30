@@ -99,9 +99,9 @@ const Hero = ({typewriter_text = []}) => {
               </div>
               <div className="hero-buttons-container to-front2">
                     <Button text="Resume" color="none" text_style="work-sans-family fs-30px fw-400"
-                            style={{color: "white", padding: "0"}} textStyle="work-sans-family" />
+                            style={{padding: "0"}} textStyle="work-sans-family"  text_color="white" hover_color="#119DA4"/>
                     <Button text="Portfolio" color="none" text_style="work-sans-family fs-30px fw-400"
-                            style={{color: "white", padding: "0"}}/>
+                            style={{padding: "0"}} hover_color="#119DA4" text_color="white"/>
               </div>
         </div>
     </div>

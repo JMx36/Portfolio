@@ -5,7 +5,7 @@
     flex-direction: column;
     margin: 0px 0px;
     max-width: 100%;
-    background: linear-gradient(180deg, #000000 0%, #046578 30%, #79BCC9 100%);;
+    background: linear-gradient(180deg, #000000 0%, #046578 50%, #79BCC9 100%);;
     overflow: hidden;
 }
 
@@ -95,8 +95,8 @@
     position: relative;
     color: white;
     border-radius: 25px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25%);
-    background-color: rgba(0, 0, 0, 40%);
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25%);
+    background-color: rgba(0, 0, 0, 40%); */
 }
 
 

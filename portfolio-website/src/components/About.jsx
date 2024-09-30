@@ -34,7 +34,7 @@ const About = () => {
                     </div>
                     
                     <div className="about-right-section">
-                        <div className="about-text-section">
+                        <div className="about-text-section ">
                             <p className="work-sans-family fw-300 fs-20px in-front" style={{padding: "2rem", paddingTop: "2rem"}}>
                             Hi, I’m Josh! I’m currently a senior at the University of California, Irvine, pursuing a double major in Computer Science and Game Development. I’m a dedicated individual with a passion for learning, programming, and creating solutions that make people’s lives easier and more enjoyable. Over the past three years, I’ve honed my programming skills, not only through practical experience but also by deepening my understanding of core concepts and theories.
 
@@ -45,7 +45,7 @@ Why did I choose to major in Game Development in addition to Computer Science? B
 As I prepare to transition into the professional world, I’m excited to apply everything I’ve learned—whether it’s building an app that improves the lives of millions or developing a game that millions of people will enjoy.
 
                             </p>
-                            <Button text="Learn more about me" text_style="italic work-sans-family fw-400 fs-20px" text_color="white" color="none" style={{
+                            <Button text="Learn more about me" text_style="italic work-sans-family fw-400 fs-20px to-front2" text_color="white" color="none" style={{
                                         padding: "0",
                                         paddingRight: "2rem",
                                         paddingBottom: "1rem",

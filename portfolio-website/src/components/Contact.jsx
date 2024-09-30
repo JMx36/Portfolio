@@ -9,7 +9,7 @@ const ContactInputField = ({label, placeholder, background_color, useTextArea=fa
   const label_style = 
   {
       display: "block",
-      color: "#119DA4",
+      color: "black",
       fontSize: "24px",
       boxSizing: "border-box"
   }
@@ -66,18 +66,18 @@ const Contact = () => {
             <h1 className='italic work-sans-family fw-700 fs-64px' style={{margin: 0, padding: 0}}>Get In Touch</h1>
         </div>  
         <div className="contact-info-container">
-          <div className='contact-input'>
-            <div className="contact-input-container">
-              <ContactInputField label="Email" placeholder="Enter your email address" background_color="black" />
-              <ContactInputField label="Subject" placeholder="Enter the subject of your email" background_color="black" />
-              <ContactInputField useTextArea={true} label="Message" placeholder="Enter your message (ex. Hi :) )" background_color="black" />
-              <Button text="Send" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={button_style}/>
-            </div>
-          </div>
           <div className="contact-logos-container">
             <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
             <ContactLogoImage image={mail} title="PHONE" info="(714)-276-7492"/>
             <ContactLogoImage image={mail} title="LOCATION" info="CA, United States"/>
+          </div>
+          <div className='contact-input'>
+            <div className="contact-input-container">
+              <ContactInputField label="Email" placeholder="Enter your email address" background_color="rgba(222, 221, 221, 0.5)" />
+              <ContactInputField label="Subject" placeholder="Enter the subject of your email" background_color="rgba(222, 221, 221, 0.5)" />
+              <ContactInputField useTextArea={true} label="Message" placeholder="Enter your message (ex. Hi :) )" background_color="rgba(222, 221, 221, 0.5)" />
+              <Button text="Send" color="none" style={button_style} text_color='white' words_style={{textShadow: "3px 2px 4px rgba(255, 255, 255, 40%)"}}/>
+            </div>
           </div>
         </div>
     </div>

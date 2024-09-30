@@ -1,28 +1,26 @@
 .contact-section
 {
     max-width: 100%;
-    background-color: var(--dimmer-yellow);
     display: flex;
     flex-direction: column;
 }
 
 .contact-section-title
 {
-    color: var(--background-blue);
+    color: var(--bright-yellow);
     margin: 5% var(--title-side-margin);
     padding: 0;
-    margin-bottom: 3%;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 60%);
 }
 
 .contact-info-container
 {
     display: flex;
-    margin-bottom: 5%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
     margin-bottom: 5%;
-    gap: 50px;
+    gap: clamp(20px, 10vw, 40px);
     box-sizing: border-box;
 }
 
@@ -48,7 +46,6 @@
 {
     display: flex;
     flex-direction: column;
-    color: var(--background-blue);
     margin: auto;
     margin-left: 2%;
     gap: 5px;
@@ -63,11 +60,9 @@
 .contact-input-container
 {
     display: flex;
-    background-color: var(--background-blue);
     border-radius: 9px;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 1.5rem;
     gap: 10px;
 }
 
@@ -83,6 +78,7 @@
 .contact-input-field input
 {
     border: none;
+    box-sizing: border-box;
 }
 
 .contact-input-field textarea
@@ -91,21 +87,28 @@
     min-height: 170px;
     height: 170px;
     border: none;
+    box-sizing: border-box;
     resize: vertical;
 }
 
-.contact-input-field textarea:focus
+.contact-input-field textarea:focus, input:focus
 {
-    border: solid 2px white;
+    /* border: solid 2px black; */
 }
 
-.contact-input-field input:focus
+/* .contact-input-field input:focus
 {
     border: solid 2px white;
+} */
+
+input::placeholder, 
+textarea::placeholder {
+  color: rgb(228, 225, 225); /* Customize the color */
+  opacity: 1; /* Optional: Ensure the color has full opacity */
 }
 
-/* Make utitly class for displaying are meant to become columns so that you can reuse them or edit them all at once
-    You can apply this to toher css classes
+/* Make utitly class for flex displaying column/row are meant to become columns so that you can reuse them or edit them all at once
+    You can apply this to other css classes
 */
 
 @media (max-width: 1200px) 
@@ -116,12 +119,12 @@
         justify-content: center;
         align-items: center;
         width: clamp(260px, 65vw, 600px);
+        margin-top: 4%;
     }
 
     .contact-logos-container
     {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 5%;
     }
 }

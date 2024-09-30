@@ -4,6 +4,7 @@ import mail from "../assets/Images/Logos/mail.png"
 import github from "../assets/Images/Logos/github.png"
 import { LogoImage } from './utilities'
 import { useMediaQuery } from 'react-responsive';
+import Contact from '../components/Contact.jsx';
 
 
 export const FooterLogos = () => {
@@ -27,6 +28,7 @@ const Footer = () => {
 
     return (
         <div className="footer">
+            <Contact />
             <div className='footer-container'>
                 {
                     isSmallerScreen ? 

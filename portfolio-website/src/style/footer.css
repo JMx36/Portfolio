@@ -1,22 +1,28 @@
 .footer
 {
     display: flex;
-    background: linear-gradient(90deg, #0C7489 24%, #90E0EF 52%, #0C7489 72%);
+    flex-direction: column;
+    background: linear-gradient(180deg, #79BCC9 0%, #046578 70%, #000000 100%);
 }
 
 .footer-container
 {
     margin: 1% 7%;
     display: flex;
-    width: 98%;
     justify-content: center;
     align-items: center;
+}
+
+.footer-container p
+{
+    color: white;
 }
 
 .footer-container h3
 {
     margin: auto;
     padding: 0;
+    color: white;
 }
 
 

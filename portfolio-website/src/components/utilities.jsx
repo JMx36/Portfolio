@@ -132,7 +132,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         color: text_color,
         borderRadius: radius,
         border: "none",
-        boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)",
+        // boxShadow: "2px 7px 4px 0px rgba(0, 0, 0, 25%)",
         margin: "auto",
         justifyContent: "center",
         alignItems: "center",
@@ -144,7 +144,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         padding: "0", 
         margin: "0%",
         lineHeight: "1",
-        textShadow: "3px 2px 4px rgba(255, 255, 255, 100%)"
+        textShadow: "3px 2px 4px rgba(255, 255, 255, 70%)"
     }
 
     return(

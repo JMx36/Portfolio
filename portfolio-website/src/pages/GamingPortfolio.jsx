@@ -9,7 +9,6 @@ const GamingPortfolio = () => {
     <>
         <Hero />
         <GamingSkills />
-        <Contact />
     </>
   )
 }

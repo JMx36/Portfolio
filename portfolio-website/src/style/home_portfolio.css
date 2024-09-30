@@ -9,7 +9,7 @@
 .home-portfolio-header
 {
     display: flex;
-    color: var(--background-blue);
+    color: var(--dimmed-yellow);
     margin: 5% auto;
     margin-bottom: 5%;
     /* border: solid 1px black; */

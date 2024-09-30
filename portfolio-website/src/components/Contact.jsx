@@ -44,7 +44,7 @@ const ContactLogoImage = ({image, title, info}) =>
     <div className="contact-logo-image">
           <img src={image}/>
           <div className="contact-logo-image-info fs-24px">
-              <h2 className="work-sans-family fw-700" style={{margin: "0"}}>{title}</h2>
+              <h2 className="work-sans-family fw-700 italic" style={{margin: "0"}}>{title}</h2>
               <p className="work-sans-family fw-400" style={{textAlign: "left", margin: "0"}}>{info}</p>
           </div>
     </div>

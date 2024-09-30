@@ -192,12 +192,14 @@ const Description = ({title="Title", description="Description Text", side="right
     return (
         <div className={`home-portfolio-section-description auto-${side}`}>
             <div className="home-portfolio-section-title">
-                <h1 className='work-sans-family fs-40px fw-600'>{title}</h1>
+                <h1 className='italic work-sans-family fs-40px fw-600'>{title}</h1>
             </div>
             <div className="home-portfolio-section-text">
                 <p className='work-sans-family fs-24px fw-600'>{description}</p>
+                <Button text="Explore Now" color="none" style={{marginTop: "5%"}}
+                words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}/>
             </div>
-            <Button text="Explore Now" color="linear-gradient(90deg, #119DA4 58%, #0C7489 100%)" style={{marginTop: "5%"}}/>
+            
         </div>
     )
 }

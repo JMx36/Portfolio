@@ -143,7 +143,8 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
     const p_style = {
         padding: "0", 
         margin: "0%",
-        lineHeight: "1"
+        lineHeight: "1",
+        textShadow: "3px 2px 4px rgba(255, 255, 255, 100%)"
     }
 
     return(

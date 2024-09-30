@@ -45,7 +45,25 @@
 .hero-buttons-container
 {
     display: flex;
-    gap: clamp(50px, 10vw, 100px)
+    gap: clamp(20px, 5vw, 100px)
+}
+
+
+.typewriter-effect .bar
+{
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
 }
 
 

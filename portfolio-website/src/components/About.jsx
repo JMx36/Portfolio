@@ -15,7 +15,7 @@ const About = () => {
             <div className="about-container in-front">
                 <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front ">About Me</h1>
                 <div className="about-info-container">
-                    <div className="about-left-section ">
+                    <div className="about-left-section">
                         <div className="circle-container">
                             <div className="circle-mask">
                                 <img src="" />
@@ -35,7 +35,7 @@ const About = () => {
                     
                     <div className="about-right-section">
                         <div className="about-text-section ">
-                            <p className="work-sans-family fw-300 fs-20px in-front" style={{padding: "2rem", paddingTop: "2rem"}}>
+                            <p className="work-sans-family fw-300 fs-20px in-front" style={{padding: "2rem"}}>
                             Hi, I’m Josh! I’m currently a senior at the University of California, Irvine, pursuing a double major in Computer Science and Game Development. I’m a dedicated individual with a passion for learning, programming, and creating solutions that make people’s lives easier and more enjoyable. Over the past three years, I’ve honed my programming skills, not only through practical experience but also by deepening my understanding of core concepts and theories.
 
 Through game jams and hackathons, I’ve learned the importance of teamwork and communication, collaborating with others to bring ideas to life. I value and strive to write clean, maintainable code that is easy to understand—a craft I find beautiful, like a piece of art

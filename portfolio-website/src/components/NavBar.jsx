@@ -22,18 +22,19 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
     {
         position: "absolute",
         top: "45%",
-        left: "-20px",
         display: "flex",
         alignItems: "center",
     }
 
     const triangle_style = 
     {
-        marginLeft: "10px"
+        position: "absolute",
+        top: "50%",
+        transform: "translateY(-50%)",
     }
 
     return (
-        <div className={`navbar-dropdown`} >
+        <div className={`navbar-dropdown`} style={{position: "fixed", right: 0, bottom: 0}}>
             <div className={`navbar-dropdown-container navbar-dropdown-${!isClosed ? "open" : "close"}`}
                 style={isClosed ? {transform: "translateX(400px)"}: {}}
                  onAnimationEnd={HandleAnimationEnd}>
@@ -41,10 +42,11 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
                 <div className="navbar-dropdown-options fs-20px fw-300 work-sans-family">
                     {navBarOptions.map((option) => (<a href="index.html" className="navbar-button navbar-dropwdown-button yellow-hover" style={{fontSize: "30px"}}> {option}</a>))}
                 </div>
-                <Circle height={"60px"} width={"60px"} color="#0a515f" style={circle_style}>
-                    <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
+                <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
                         func={() => SetClicked(true)} color={isTriagHoverered ? "#FFDF00" : "white"} hover_func={SetIsHovered}/> 
-                </Circle>
+                {/* <Circle height={"60px"} width={"60px"} color="#28AAC1" style={circle_style}>
+                    
+                </Circle> */}
                 <Rectangle color="#DAC21C" style={{padding: rectangle_padding, marginBottom: rectangle_margin}}/>
             </div>
         </div>
@@ -86,7 +88,7 @@ const NavBar = () => {
       }, [isSmallerScreen]); // Runs whenever isSmallerScreen changes
 
     return (
-    <nav className="NavBar" style={isSmallerScreen && isDropdownOpen? {position: "fixed", top: 0, left: 0} : {}}>
+    <nav className="NavBar">
         <div className="NavBarLogo"><a href="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover">Josh Castillo</a></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
@@ -96,6 +98,7 @@ const NavBar = () => {
         }
         {console.log(isDropdownOpen)}
         {isSmallerScreen && isDropdownOpen ? <NavBarDropdown navBarOptions={navBarOptions} closing_func={SetDropdownVisibility}/>: ''}
+
 
     </nav>
   )

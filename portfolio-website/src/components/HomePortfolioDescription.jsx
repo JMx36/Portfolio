@@ -187,7 +187,7 @@ const Slider = ({images_lists, window_size=4}) =>
     )
 }
 
-const Description = ({title="Title", description="Description Text", side="right"}) =>
+const Description = ({title="Title", description="Description Text", side="right", link="/index.html"}) =>
 {
     return (
         <div className={`home-portfolio-section-description auto-${side}`}>
@@ -197,7 +197,9 @@ const Description = ({title="Title", description="Description Text", side="right
             <div className="home-portfolio-section-text">
                 <p className='work-sans-family fs-24px fw-600'>{description}</p>
                 <Button text="Explore Now" color="none" style={{marginTop: "5%"}} hover_color="#28AAC1" text_color="black"
-                words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}}/>
+                words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}} isLink={true} 
+                link_to={link} link_type={"Link"}
+                />
             </div>
             
         </div>
@@ -205,11 +207,11 @@ const Description = ({title="Title", description="Description Text", side="right
 }
 
 
-const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false}) => {
+const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link=""}) => {
   return (
     <div className="home-portfolio-section">
-        {!swap ? <Slider images_lists={images}/> : <Description title={title} description={description} /> }
-        {!swap ? <Description title={title} description={description} side='left'/> : <Slider images_lists={images}/>  }
+        {!swap ? <Slider images_lists={images}/> : <Description title={title} description={description} link={link}/> }
+        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} /> }
     </div>
   )
 }

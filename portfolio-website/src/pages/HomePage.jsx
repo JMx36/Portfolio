@@ -4,13 +4,20 @@ import Hero from '../components/Hero.jsx';
 import About from '../components/About.jsx';
 import Skills from '../components/Skills.jsx';
 import HomePortfolio from '../components/HomePortfolio.jsx';
-import Contact from '../components/Contact.jsx';
+import { ButtonInfo } from '../components/utilities.jsx';
 
 
 const HomePage = () => {
+
+  const hero_typewrite_text = ["Game Engineer", "Software Engineer"]
+  const hero_buttons = [
+    new ButtonInfo({text: "Resume", isLink: true, link: "index.html", type: "aTag"}), 
+    new ButtonInfo({text: "Portfolio", isLink: true, link: "#Home-Portfolio", type: "aTag"})
+  ]
+
   return (
     <>
-        <Hero />
+        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons}/>
         <About />
         <Skills />
         <HomePortfolio />

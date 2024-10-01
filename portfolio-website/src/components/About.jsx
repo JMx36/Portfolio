@@ -1,19 +1,22 @@
 
 import { useMediaQuery } from 'react-responsive';
 import {Link} from 'react-router-dom'
-import { Button } from '../components/utilities.jsx'
+import { Button, ButtonInfo } from '../components/utilities.jsx'
 
 import React, { useState } from 'react';
 
 const About = () => {
 
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
-    const left_text_buttons = [ "Resume", "Portfolio"]
+    const left_text_buttons = [
+        new ButtonInfo({text: "Resume", isLink: true, link:"/index.html", type: "Link"}), 
+        new ButtonInfo({text: "Portfolio", isLink: true, link:"#Home-Portfolio", type: "aTag"})
+    ]
 
     return (
-        <div className="about-me">            
+        <div id="About" className="about-me">            
             <div className="about-container in-front">
-                <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front ">About Me</h1>
+                <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front">About Me</h1>
                 <div className="about-info-container">
                     <div className="about-left-section">
                         <div className="circle-container">
@@ -23,9 +26,10 @@ const About = () => {
                         </div>
                         <div className="about-info-buttons">
                         {
-                            left_text_buttons.map((text) => (
-                                <Button text={text} color="none" 
-                                style={{}} text_color='black' words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}/>
+                            left_text_buttons.map((info) => (
+                                <Button text={info.text} color="none" isLink={info.isLink}
+                                link_to={info.link} link_type={info.type} scroll_type="scroll"
+                                text_color='black' words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}/>
                             )
                             )            
                         }

@@ -19,6 +19,12 @@ body
 {
     background-color: white;
     margin: 0px 0px;
+
+}
+
+html
+{
+    /* scroll-behavior: smooth; */
 }
 
 .App

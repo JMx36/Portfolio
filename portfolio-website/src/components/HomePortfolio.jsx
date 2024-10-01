@@ -15,7 +15,7 @@ const HomePortfolio = () => {
     ]
   
     return (
-    <div className="home-portfolio">
+    <div id="Home-Portfolio" className="home-portfolio">
         <div className="home-portfolio-header">
             <div className="home-portfolio-title">
                 <h1 className="italic work-sans-family fw-700 fs-64px home-portfolio-title-text" style={
@@ -27,7 +27,8 @@ const HomePortfolio = () => {
             </div>
         </div>
 
-        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[0][0]} description={info[1][1]} swap={isSmallerScreen}/>
+        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9]]} 
+            title={info[0][0]} description={info[1][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
         <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[1][0]} description={info[1][1]} swap={true}/>
 
     </div>

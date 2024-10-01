@@ -1,10 +1,10 @@
 import { FooterLogos } from "../components/Footer.jsx"
-import { Button } from '../components/utilities.jsx'
+import { Button, LinkInfo } from '../components/utilities.jsx'
 
 import React, { useState, useEffect } from 'react'
 
 const TypewriterEffect = ({text, speed, text_className="work-sans-family fs-30px fw-300 to-front2", text_style={},
-        delete_delay = 1000, replay=true, done_func=undefined }) => {
+        delete_delay = 3000, replay=true, done_func=undefined }) => {
 
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true); // State to manage typing status
@@ -60,7 +60,7 @@ const TypewriterEffect = ({text, speed, text_className="work-sans-family fs-30px
       else
       {
         delayedTimeout = setTimeout(DeleteText
-          , 3000);
+          , delete_delay);
       }
 
       return () => {
@@ -79,29 +79,34 @@ const TypewriterEffect = ({text, speed, text_className="work-sans-family fs-30px
 };
 
 
-const Hero = ({typewriter_text = []}) => {  
+const Hero = ({title_text="Josh Castillo", typewriter_text = [], buttons_info = []}) => {  
 
-  typewriter_text.push("Game Engineer");
-  typewriter_text.push("Software Engineer");
+  // typewriter_text.push("Game Engineer");
+  // typewriter_text.push("Software Engineer");
+
+  // buttons_info.push(new ButtonInfo({text: "Resume", isLink: true, link: "index.html", type: "aTag"}))
+  // buttons_info.push(new ButtonInfo({text: "Portfolio", isLink: true, link: "#Home-Portfolio", type: "aTag"}))
 
   return (
     <div className="hero">
         <div className="hero-content to-front2 blur-background">
-              <h1 className="pacifico-family fw-400 fs-70px to-front2" style={{lineHeight: "1"}}>Josh Castillo</h1>
+              <h1 className="pacifico-family fw-400 fs-70px to-front2" style={{lineHeight: "1"}}>{title_text}</h1>
               <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
                 textAlign: "center"
               }}>
                 <TypewriterEffect text={typewriter_text} speed="100"/>
-                {/* <p className="work-sans-family fs-30px fw-300 to-front2" style={{marginTop: 0}}>Game & Software Engineer</p> */}
               </div>
               <div className="to-front2">
                 <FooterLogos/>
               </div>
               <div className="hero-buttons-container to-front2">
-                    <Button text="Resume" color="none" text_style="work-sans-family fs-30px fw-400"
-                            style={{padding: "0"}} textStyle="work-sans-family"  text_color="white" hover_color="#119DA4"/>
-                    <Button text="Portfolio" color="none" text_style="work-sans-family fs-30px fw-400"
-                            style={{padding: "0"}} hover_color="#119DA4" text_color="white"/>
+                  {
+                    buttons_info.map((info) => (
+                      <Button text={info.text} color="none" text_style="work-sans-family fs-30px fw-400"
+                            style={{padding: "0"}} textStyle="work-sans-family"  text_color="white" hover_color="#119DA4"
+                            isLink={info.isLink} link_to={info.link} link_type={info.type} />
+                    ))
+                  }
               </div>
         </div>
     </div>

@@ -61,7 +61,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-section"> 
+    <div id="Contact" className="contact-section"> 
         <div className="contact-section-title">
             <h1 className='italic work-sans-family fw-700 fs-64px' style={{margin: 0, padding: 0}}>Get In Touch</h1>
         </div>  

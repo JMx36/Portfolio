@@ -1,4 +1,31 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+
+export class LinkInfo
+{
+    constructor({text, link, type="Link", className='', style={}}) 
+    {
+        this.text = text;
+        this.link = link;
+        this.type = type;
+        this.className = className;
+        this.style = style;
+    }
+}
+
+
+export class ButtonInfo
+{
+  constructor({text, isLink = false, link = "", type = "none"})
+  {
+    this.text = text;
+    this.isLink = isLink;
+    this.link = link;
+    this.type = type;
+  }
+}
+
 
 export const Triangle = ({height, width, color="white", rotation="right", margin="",
     hover_func=undefined,  clickable=false, func=null, style={}}) => {
@@ -123,7 +150,8 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 
 
 export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="20px", text_color="black", 
-    color="black", logo=null, logo_style={}, words_style={}, style={}, hover_color="white"}) => 
+                        color="black", logo=null, logo_style={}, words_style={}, style={}, 
+                        hover_color="white", click_func=null, isLink=false, link_to="", link_type="", scroll_type="auto"}) => 
 {
 
     const [isHovered, SetIsHovered] = useState(false);
@@ -146,16 +174,69 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         padding: "0", 
         margin: "0%",
         lineHeight: "1",
-        textShadow: "3px 2px 4px rgba(255, 255, 255, 70%)"
+        textShadow: "3px 2px 4px rgba(255, 255, 255, 70%)",
+        textDecoration: "none",
+        color: "inherit"
     }
 
     return(
         <button className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
             onMouseEnter={() => SetIsHovered(true)} 
-            onMouseLeave={() => SetIsHovered(false)}    
+            onMouseLeave={() => SetIsHovered(false)} 
+            onMouseDown={() => click_func != null ? click_func() : ''}   
         >
             {logo === null ? '' : <img src={logo} style={logo_style}/>}
-            <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
+            {
+                isLink? <NavigationLink link={link_to} type={link_type} text={text} scroll_type={scroll_type}
+                    className={text_style} style={{...p_style, ...words_style}}/> :
+                <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
+            }
         </button>
     )
 }
+
+
+export const NavigationLink = ({text, link, type="Link", scroll_type="auto", className='', style={}}) => 
+{
+    const HandleScroll = () => 
+    {
+        if (scroll_type === 'scroll')
+            document.documentElement.style.scrollBehavior = 'smooth';
+        else
+            document.documentElement.style.scrollBehavior = 'auto';
+
+        console.log("HANDLING SCROLL")
+    }
+
+    return (
+        type === "Link" ? 
+            <Link to={link} className={className} style={style} onClick={HandleScroll}>{text}</Link>
+            : type === "aTag" ? 
+            <a href={link} style={{...style, textDecoration: "none"}} className={className} onClick={HandleScroll}>{text}</a> 
+            : type === "external" ? 
+            <a href={link} style={{...style, textDecoration: "none"}} className={className}>{text}</a> 
+            : ''
+    )
+}
+
+// Handles Scrolling after page loaded if needed 
+export const ScrollToTop = () => {
+    const {pathname, hash} = useLocation();
+  
+    useEffect(() => {
+        const elementId = location.hash.replace("#", ""); // Get the element ID
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        else
+        {
+            document.documentElement.style.scrollBehavior = 'auto';
+            window.scrollTo(0, 0); // Scroll to the top of the page
+        }
+        
+    }, [pathname, hash]); // Trigger scroll whenever the pathname changes
+  
+    return
+  }
+  

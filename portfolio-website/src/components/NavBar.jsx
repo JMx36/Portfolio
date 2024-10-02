@@ -102,7 +102,7 @@ const NavBar = () => {
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
                 <div className="NavBarOptions fs-20px fw-300 work-sans-family">
-                    {navBarOptions[pathname].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" text={option[0]} scroll_type='scroll'/>))}
+                    {navBarOptions[pathname ? "/index.html" : pathname].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" text={option[0]} scroll_type='scroll'/>))}
                 </div>
         }
         {console.log(isDropdownOpen)}

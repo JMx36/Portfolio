@@ -151,7 +151,8 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 
 export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="20px", text_color="black", 
                         color="black", logo=null, logo_style={}, words_style={}, style={}, 
-                        hover_color="white", click_func=null, isLink=false, link_to="", link_type="", scroll_type="auto"}) => 
+                        hover_color="white", click_func=null, type="button", 
+                        isLink=false, link_to="", link_type="", scroll_type="auto"}) => 
 {
 
     const [isHovered, SetIsHovered] = useState(false);
@@ -180,10 +181,15 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
     }
 
     return(
-        <button className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
+        <button type={type} className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
             onMouseEnter={() => SetIsHovered(true)} 
             onMouseLeave={() => SetIsHovered(false)} 
-            onMouseDown={() => click_func != null ? click_func() : ''}   
+            onMouseDown={(e) => 
+                {
+                    e.preventDefault();
+                    click_func != null ? click_func() : ''
+                }
+                }   
         >
             {logo === null ? '' : <img src={logo} style={logo_style}/>}
             {

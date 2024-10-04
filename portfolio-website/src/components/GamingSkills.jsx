@@ -4,17 +4,26 @@ import DescriptionBoxes from '../components/DescriptionBoxes.jsx';
 import PortfolioItem from '../components/PortfolioItem.jsx';
 import LogosDisplay from '../components/LogosDisplay.jsx';
 
+// Category Logos //
+import game_engine_icon from "../assets/Images/Categories/game-development-icon.svg"
+import dev_tools from "../assets/Images/Categories/dev-tools.svg"
+import production from "../assets/Images/Categories/production.svg"
+import prog_languages from "../assets/Images/Categories/prog-languages.svg"
+import version_control from "../assets/Images/Categories/version-control.svg"
+
+
+// Logos ///
 import c_logo from "../assets/Images/WhiteLogos/c.png"
 import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
 import cs_logo from "../assets/Images/WhiteLogos/cs.png"
 import python_logo from "../assets/Images/WhiteLogos/python.png"
 import github_logo from "../assets/Images/WhiteLogos/github.png"
 import gitkraken_logo from "../assets/Images/WhiteLogos/gitkraken.png"
-import unity_logo from "../assets/Images/WhiteLogos/unity.png"
-import unreal_logo from "../assets/Images/WhiteLogos/unreal.png"
+import unity_logo from "../assets/Images/WhiteLogos/unity_small.png"
+import unreal_logo from "../assets/Images/WhiteLogos/unreal_small.png"
 import vs_logo from "../assets/Images/WhiteLogos/vs.png"
 import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
-import jira_logo from "../assets/Images/WhiteLogos/jira.png"
+import jira_logo from "../assets/Images/WhiteLogos/jira_small.png"
 
 
 class ImageInfo
@@ -34,25 +43,30 @@ const GamingSkills = () => {
     const CPP = new ImageInfo({ image: cpp_logo});
     const Gitkraken = new ImageInfo({ image: gitkraken_logo});
     const Python = new ImageInfo({ image: python_logo});
-    const Jira = new ImageInfo({ image: jira_logo, width: "clamp(50px, 10vw, 100px)"});
+    const Jira = new ImageInfo({ image: jira_logo});
     const GitHub = new ImageInfo({ image: github_logo});
-    const Unreal = new ImageInfo({ image: unreal_logo, width: "clamp(50px, 10vw, 100px)"});
-    const Unity = new ImageInfo({ image: unity_logo, width: "clamp(50px, 10vw, 100px)"});
+    const Unreal = new ImageInfo({ image: unreal_logo});
+    const Unity = new ImageInfo({ image: unity_logo});
     const VisualStudio = new ImageInfo({ image: vs_logo});
     const VSCode = new ImageInfo({ image: vscode_logo});
 
+    const Game_Engine = new ImageInfo({ image: game_engine_icon});
+    const Dev_Tools = new ImageInfo({ image: dev_tools});
+    const Production = new ImageInfo({ image: production});
+    const Prog_Languages = new ImageInfo({ image: prog_languages});
+    const Version_Ctrl = new ImageInfo({ image: version_control});
+
     const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
-    // const buttons_text = ["Production"];
     const category_skills_logos = [
         [Jira],
-        [Unreal, Unity],
+        [Unity, Unreal],
         [GitHub, Gitkraken],
         [VisualStudio, VSCode],
         [CLogo, CPP, CSharp, Python]
     ];
 
     const circle_logos = [
-        Jira, Unity, GitHub, VSCode, Python
+        Production, Game_Engine, Version_Ctrl, Dev_Tools, Prog_Languages
     ]
 
     const all_skills_logos = [Jira, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]

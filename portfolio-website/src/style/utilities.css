@@ -81,3 +81,9 @@
 {
     z-index: 2;
 }
+
+
+.fill-white
+{
+    fill: white;
+}

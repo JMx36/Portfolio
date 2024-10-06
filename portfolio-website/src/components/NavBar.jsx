@@ -40,8 +40,9 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
                 style={isClosed ? {transform: "translateX(400px)"}: {}}
                  onAnimationEnd={HandleAnimationEnd}>
                 <Rectangle color="#DAC21C" style={{padding: rectangle_padding, marginTop: rectangle_margin}}/>
-                <div className="navbar-dropdown-options fs-20px fw-300 work-sans-family">
-                    {navBarOptions.map((option) => (<NavigationLink link={option[1]}  type={option[2]} className="navbar-button navbar-dropwdown-button yellow-hover" text={option[0]}/>))}
+                <div className="navbar-dropdown-options fs-32px fw-300 work-sans-family">
+                    {navBarOptions.map((option) => (<NavigationLink link={option[1]}  type={option[2]} className="navbar-button navbar-dropwdown-button yellow-hover" 
+                    content={<span onClick={() => SetClicked(true)}> {option[0]}</span>} scroll_type='scroll'/>))}
                 </div>
                 <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
                         func={() => SetClicked(true)} color={isTriagHoverered ? "#FFDF00" : "white"} hover_func={SetIsHovered}/> 
@@ -98,15 +99,16 @@ const NavBar = () => {
 
     return (
     <nav className="NavBar">
-        <div className="NavBarLogo"><NavigationLink link="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover" text="Josh Castillo"/></div>
+        <div className="NavBarLogo"><NavigationLink link="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover" content="Josh Castillo"/></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
                 <div className="NavBarOptions fs-20px fw-300 work-sans-family">
-                    {navBarOptions[pathname ? "/index.html" : pathname].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" text={option[0]} scroll_type='scroll'/>))}
+                    {navBarOptions[pathname ? pathname : "/index.html"].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" content={option[0]} 
+                    scroll_type="scroll"/>))}
                 </div>
         }
         {console.log(isDropdownOpen)}
-        {isSmallerScreen && isDropdownOpen ? <NavBarDropdown navBarOptions={navBarOptions} closing_func={SetDropdownVisibility}/>: ''}
+        {isSmallerScreen && isDropdownOpen ? <NavBarDropdown navBarOptions={navBarOptions[pathname ? pathname : "/index.html"]} closing_func={SetDropdownVisibility}/>: ''}
 
 
     </nav>

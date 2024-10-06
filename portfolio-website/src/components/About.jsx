@@ -1,6 +1,5 @@
 
 import { useMediaQuery } from 'react-responsive';
-import {Link} from 'react-router-dom'
 import { Button, ButtonInfo } from '../components/utilities.jsx'
 
 import React, { useState } from 'react';
@@ -8,8 +7,8 @@ import React, { useState } from 'react';
 const About = () => {
 
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
-    const [isReadingMore, SetIsReadingMore] = useState(false);
-    const maxSize = isSmallerScreen ? 600 : 2000;
+    const [isReadingMore, SetIsReadingMore] = useState(true);
+    const maxSize = isSmallerScreen || !isReadingMore ? 600 : 2000;
 
     const about_buttons = [
         new ButtonInfo({text: "Resume", isLink: true, link:"/index.html", type: "Link"}), 
@@ -36,8 +35,9 @@ As I prepare to transition into the professional world, I’m excited to apply e
                         {
                             about_buttons.map((info) => (
                                 <Button text={info.text} color="none" isLink={info.isLink}
-                                link_to={info.link} link_type={info.type} scroll_type="scroll"
-                                text_color='black' words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}/>
+                                link_to={info.link} link_type={info.type} scroll_type='scroll'
+                                text_color='black' words_style={{textShadow: "3px 2px 4px rgba(0, 0, 0, 50%)"}}
+                                />
                             )
                             )            
                         }

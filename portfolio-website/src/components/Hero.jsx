@@ -104,7 +104,7 @@ const Hero = ({title_text="Josh Castillo", typewriter_text = [], buttons_info = 
                     buttons_info.map((info) => (
                       <Button text={info.text} color="none" text_style="work-sans-family fs-30px fw-400"
                             style={{padding: "0"}} textStyle="work-sans-family"  text_color="white" hover_color="#119DA4"
-                            isLink={info.isLink} link_to={info.link} link_type={info.type} />
+                            isLink={info.isLink} link_to={info.link} link_type={info.type} scroll_type={info.scroll_type}/>
                     ))
                   }
               </div>

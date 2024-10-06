@@ -17,12 +17,13 @@ export class LinkInfo
 
 export class ButtonInfo
 {
-  constructor({text, isLink = false, link = "", type = "none"})
+  constructor({text, isLink = false, link = "", type = "none", scroll_type="auto"})
   {
     this.text = text;
     this.isLink = isLink;
     this.link = link;
     this.type = type;
+    this.scroll_type = scroll_type;
   }
 }
 
@@ -193,7 +194,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         >
             {logo === null ? '' : <img src={logo} style={logo_style}/>}
             {
-                isLink? <NavigationLink link={link_to} type={link_type} text={text} scroll_type={scroll_type}
+                isLink? <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
                     className={text_style} style={{...p_style, ...words_style}}/> :
                 <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
             }
@@ -202,25 +203,30 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
 }
 
 
-export const NavigationLink = ({text, link, type="Link", scroll_type="auto", className='', style={}}) => 
+export const NavigationLink = ({content, link, type="Link", scroll_type="auto", className='', style={}}) => 
 {
     const HandleScroll = () => 
     {
+        // console.log("HANDLING SCROLL")
         if (scroll_type === 'scroll')
+        {
             document.documentElement.style.scrollBehavior = 'smooth';
+            // console.log("Link Scroll");
+        }
         else
+        {
             document.documentElement.style.scrollBehavior = 'auto';
-
-        console.log("HANDLING SCROLL")
+            // console.log("Link teleport");
+        }
     }
 
     return (
         type === "Link" ? 
-            <Link to={link} className={className} style={style} onClick={HandleScroll}>{text}</Link>
+            <Link to={link} className={className} style={style} onClick={HandleScroll}>{content}</Link>
             : type === "aTag" ? 
-            <a href={link} style={{...style, textDecoration: "none"}} className={className} onClick={HandleScroll}>{text}</a> 
+            <a href={link} style={{...style, textDecoration: "none"}} className={className} onClick={HandleScroll}>{content}</a> 
             : type === "external" ? 
-            <a href={link} style={{...style, textDecoration: "none"}} className={className}>{text}</a> 
+            <a href={link} style={{...style, textDecoration: "none"}} className={className} target='_blank'>{content}</a> 
             : ''
     )
 }
@@ -228,19 +234,22 @@ export const NavigationLink = ({text, link, type="Link", scroll_type="auto", cla
 // Handles Scrolling after page loaded if needed 
 export const ScrollToTop = () => {
     const {pathname, hash} = useLocation();
-  
+    
+
     useEffect(() => {
+        // console.log("Scroll To Top");
         const elementId = location.hash.replace("#", ""); // Get the element ID
         const element = document.getElementById(elementId);
         if (element) {
+            // console.log("Scroll")
             element.scrollIntoView({ behavior: 'smooth' });
         }
         else
         {
-            document.documentElement.style.scrollBehavior = 'auto';
-            window.scrollTo(0, 0); // Scroll to the top of the page
+            // console.log("Teleport")
+            window.scrollTo({top: 0, behavior: "auto"}); // Scroll to the top of the page
         }
-        
+        // document.documentElement.style.scrollBehavior = 'auto';
     }, [pathname, hash]); // Trigger scroll whenever the pathname changes
   
     return

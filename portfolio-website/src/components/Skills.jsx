@@ -1,17 +1,16 @@
-import c_logo from "../assets/Images/TempLogos/c_processed.png"
-import c_sharp from "../assets/Images/TempLogos/cs_processed.png"
-import cpp from "../assets/Images/TempLogos/cpp_processed.png"
-import css from "../assets/Images/TempLogos/css_processed.png"
-import github from "../assets/Images/TempLogos/github_processed.png"
-import html from "../assets/Images/TempLogos/html_processed.png"
-import jira from "../assets/Images/TempLogos/jira_processed.png"
-import python from "../assets/Images/TempLogos/python_processed.png"
-import unreal from "../assets/Images/TempLogos/unreal_processed.png"
-import unity from "../assets/Images/TempLogos/unity_processed.png"
-import vs from "../assets/Images/TempLogos/vs_processed.png"
-import vscode from "../assets/Images/TempLogos/vscode_processed.png"
-import se_icon from "../assets/Images/Logos/se-icon.svg"
-import game_dev_icon from "../assets/Images/Logos/game-dev-icon.svg"
+import c_logo from "../assets/Images/WhiteLogos/c.png"
+import c_sharp from "../assets/Images/WhiteLogos/cs.png"
+import cpp from "../assets/Images/WhiteLogos/cpp.png"
+import css from "../assets/Images/WhiteLogos/css_small.png"
+import github from "../assets/Images/WhiteLogos/github.png"
+import html from "../assets/Images/WhiteLogos/html_small.png"
+import jira from "../assets/Images/WhiteLogos/jira_small.png"
+import python from "../assets/Images/WhiteLogos/python.png"
+import unreal from "../assets/Images/WhiteLogos/unreal_small.png"
+import unity from "../assets/Images/WhiteLogos/unity_small.png"
+import vs from "../assets/Images/WhiteLogos/vs.png"
+import vscode from "../assets/Images/WhiteLogos/vscode.png"
+
 import {Triangle, LogoImage, Button} from "../components/utilities.jsx"
 import SkillsBox from "../components/SkillsBox.jsx"
 import DescriptionBoxes from "../components/DescriptionBoxes.jsx"
@@ -31,7 +30,7 @@ const DropdownCategories = Object.freeze(
 
 class ImageInfo
 {
-    constructor({image, width="clamp(20px, 20vw, 100px)", height="100px", margin_left="2%"})
+    constructor({image, width="clamp(20px, 10vw, 100px)", height="auto", margin_left="2%"})
     {
         this.image = image;
         this.width = width;
@@ -115,13 +114,13 @@ const Skills = () =>
     const CLogo = new ImageInfo({ image: c_logo});
     const CSharp = new ImageInfo({ image: c_sharp});
     const CPP = new ImageInfo({ image: cpp});
-    const CSS = new ImageInfo({ image: css});
-    const HTML = new ImageInfo({ image: html});
+    const CSS = new ImageInfo({ image: css, width:"clamp(20px, 9vw, 90px)"});
+    const HTML = new ImageInfo({ image: html, width:"clamp(20px, 9vw, 90px)"});
     const Python = new ImageInfo({ image: python});
-    const Jira = new ImageInfo({ image: jira, width: "clamp(100px, 20vw, 150px)"});
+    const Jira = new ImageInfo({ image: jira});
     const GitHub = new ImageInfo({ image: github});
-    const Unreal = new ImageInfo({ image: unreal, width: "clamp(100px, 20vw, 150px)"});
-    const Unity = new ImageInfo({ image: unity, width: "clamp(100px, 20vw, 150px)"});
+    const Unreal = new ImageInfo({ image: unreal});
+    const Unity = new ImageInfo({ image: unity});
     const VisualStudio = new ImageInfo({ image: vs});
     const VSCode = new ImageInfo({ image: vscode});
 
@@ -155,7 +154,8 @@ const Skills = () =>
                     I find joy in exploring and mastering various technologies. 
                     Here are some of the technologies I've had the pleasure of working with.</p>
                 <div className="carousel-container">
-                    <div className={`carousel-inner ${isHovered ? 'carousel-paused' : ''}`}>
+                    <div style={{position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#A59004", filter: "blur(20px)"}}></div>
+                    <div className={`carousel-inner ${isHovered ? 'carousel-paused' : ''}`} >
                         {
                             (() => 
                                 {

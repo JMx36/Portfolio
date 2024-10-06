@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import mail from "../assets/Images/Logos/mail.png"
+import mail from "../assets/Images/Contact/email.svg"
+import location from "../assets/Images/Contact/location-pin.svg"
+import phone from "../assets/Images/Contact/phone.svg"
 import { useMediaQuery } from 'react-responsive';
 import { Button } from '../components/utilities.jsx'
 import emailjs from 'emailjs-com';
@@ -50,7 +52,9 @@ const ContactLogoImage = ({image, title, info}) =>
 {
   return(
     <div className="contact-logo-image">
-          <img src={image}/>
+          <div style={{display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "black", borderRadius: "50%", padding: "1rem"}}>
+            <img src={image}/> 
+          </div>
           <div className="contact-logo-image-info fs-24px">
               <h2 className="work-sans-family fw-700 italic" style={{margin: "0"}}>{title}</h2>
               <p className="work-sans-family fw-400" style={{textAlign: "left", margin: "0"}}>{info}</p>
@@ -128,8 +132,8 @@ const Contact = () => {
         <div className="contact-info-container">
           <div className="contact-logos-container">
             <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
-            <ContactLogoImage image={mail} title="PHONE" info="(714)-276-7492"/>
-            <ContactLogoImage image={mail} title="LOCATION" info="CA, United States"/>
+            <ContactLogoImage image={phone} title="PHONE" info="(714)-276-7492"/>
+            <ContactLogoImage image={location} title="LOCATION" info="CA, United States"/>
           </div>
           <div className='contact-input'>
             <form className="contact-input-container" onSubmit={SendEmail}>

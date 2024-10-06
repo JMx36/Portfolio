@@ -67,8 +67,9 @@
     width: 100%;
     margin-top: 2%;
     overflow: hidden;
-    border-top: solid 3px black;
-    border-bottom: solid 3px black;
+    /* border-top: solid 3px black; */
+    position: relative;
+    /* border-bottom: solid 3px black; */
 }
 
 .carousel-inner
@@ -80,7 +81,9 @@
     transform: translateX(-141%); 
     transform: translateX(-5%); 
     animation: slide 10s linear infinite;
+    padding: 1%;
 }
+
 
 @keyframes slide {
     

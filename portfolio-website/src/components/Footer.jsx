@@ -1,22 +1,26 @@
 import React from 'react'
-import linked_in from "../assets/Images/Logos/linked_in.png"
-import mail from "../assets/Images/Logos/mail.png"
-import github from "../assets/Images/Logos/github.png"
-import { LogoImage } from './utilities'
+
+import linked_in from "../assets/Images/Contact/linkedin.svg"
+import itch_io from "../assets/Images/Contact/itch-io.svg"
+import github from "../assets/Images/Contact/github.svg"
+import email from "../assets/Images/Contact/email.svg"
+
+
+import { LogoImage, NavigationLink } from './utilities'
 import { useMediaQuery } from 'react-responsive';
 import Contact from '../components/Contact.jsx';
 
 
 export const FooterLogos = () => {
 
-    const image_width ="clamp(30px, 5vw, 43px)"
-
+    const image_width ="clamp(20px, 2vw, 43px)"
+    
     return (
         <div className="footer-logo-container">
-            <LogoImage image={linked_in} width={image_width}/>
-            <LogoImage image={github} width={image_width}/>
-            <LogoImage image={linked_in} width={image_width}/>
-            <LogoImage image={mail} width={image_width}/>
+            <NavigationLink link="https://www.linkedin.com/in/joshcastillo36/" type="external" content={<LogoImage image={linked_in} width={image_width}/>}/>
+            <NavigationLink link="https://github.com/JMx36" type="external" content={<LogoImage image={github} width={image_width}/>}/>
+            <NavigationLink link="https://jm36.itch.io/" type="external" content={<LogoImage image={itch_io} width={image_width}/>}/>
+            <NavigationLink link="#Contact" type="aTag" scroll_type='scroll' content={<LogoImage image={email} width={image_width}/>}/>
         </div>
     )
 }
@@ -35,7 +39,7 @@ const Footer = () => {
                         <></>
                     : <p className='work-sans-family fs-20px fw-300'>© 2024. All Rights Reserved.</p>
                 }
-                <h3 className='pacifico-family fs-36px fw-400'>Josh Castillo</h3>
+                <h3 className='pacifico-family fs-36px fw-400' style={{margin: "0 auto", padding: 0, lineHeight: 1}}>Josh Castillo</h3>
                 <FooterLogos />
                 {
                     isSmallerScreen ? 

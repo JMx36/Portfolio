@@ -39,7 +39,7 @@
 
 .contact-logo-image img
 {
-    width: clamp(40px, 10vw, 96px);
+    width: clamp(40px, 7vw, 60px);
 }
 
 .contact-logo-image-info

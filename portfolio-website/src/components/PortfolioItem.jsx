@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from "../components/utilities.jsx"
+import jira from "../assets/TypeWriterEffectWartorn.gif"
 import { useMediaQuery } from 'react-responsive';
 
 
@@ -51,7 +52,12 @@ const PortfolioItem = ({title="", subTitle="", game_info="", description="",
         "Improved client only clutter to assist with destructible atmosphere"]])
 
     images.push("https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif")
-
+    images.push(jira)
+    images.push(jira)
+    images.push(jira)
+    images.push(jira)
+    
+    // images.push(jira)
     return (
         <div className="portfolio-item">
             <div className='title-section dark-overlay'>

@@ -127,7 +127,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 2%;
+    gap: clamp(0px, 10vw, 10px) 0px;
     margin: auto;
 }
 
@@ -142,7 +142,8 @@
 .task-container .right img
 {
     width: 100%;
-    height: auto;
+    display: block;
+    aspect-ratio: 16/9;
 }
 
 /* reflection */

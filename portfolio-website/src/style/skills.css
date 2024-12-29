@@ -271,7 +271,7 @@
 
 .blur-circle-expand-anim
 {
-    animation: expand-circle 0.7s linear 1;
+    animation: expand-circle 0.2s linear 1;
 }
 
 .move-corner1

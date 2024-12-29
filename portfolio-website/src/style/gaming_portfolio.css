@@ -18,7 +18,7 @@
 
 .portfolio-item .title-section iframe
 {
-    width: clamp(200px, 50vw, 640px);
+    width: clamp(300px, 50vw, 640px);
     aspect-ratio: 16/9;
     margin: auto;
     margin-right: 0;
@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: column;
     max-width: 50%;
-    margin-right: auto;
+    margin-right: 2%;
 }
 
 .task-container .left h1
@@ -127,8 +127,9 @@
 {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(0px, 10vw, 10px) 0px;
+    gap: clamp(5px, 10vw, 50px) 0px;
     margin: auto;
+    justify-content: space-around;
 }
 
 .tasks-section .right .right-container div
@@ -136,12 +137,12 @@
     box-sizing: border-box;
     flex: 0 0 40%;
     height: auto;
-    margin: auto;
+    margin: 0;
 }
 
 .task-container .right img
 {
-    width: 100%;
+    width: clamp(300px, 21vw, 600px);
     display: block;
     aspect-ratio: 16/9;
 }
@@ -192,6 +193,11 @@
         margin-top: 5%;
         width: 100%;
     }
+
+    .tasks-section .right .right-container
+{
+    justify-content: space-evenly;
+}
 
 }
 

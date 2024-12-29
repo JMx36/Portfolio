@@ -38,32 +38,15 @@ const GameTitleInfo = ({title, subTitle, game_info, description}) => {
     )
 }
 
-const PortfolioItem = ({title="", subTitle="", game_info="", description="", 
-        youtube_vid="https://www.youtube.com/embed/OQ1CwPhE8KQ", tasks=[], images=[]}) => {
-
-    title="Quickshot";
-    subTitle="Gameplay Engineer | Programming Lead";
-    game_info="(Unity | PC)";
-    description="A sniper free-for-all (FFA) game, where the sniper is inspired from Overwatch's character, Ana.";
-
-    tasks.push(["Destruction Strike Team Member", [
-        "Was part of a core engineering effort to implement fine-grain destruction, a marquee feature for the title",
-        "Destructible asset pipeline and rigid body optimization",
-        "Improved client only clutter to assist with destructible atmosphere"]])
-
-    images.push("https://i.makeagif.com/media/4-27-2017/Ov0nNw.gif")
-    images.push(jira)
-    images.push(jira)
-    images.push(jira)
-    images.push(jira)
-    
+const PortfolioItem = ({project}) => {
+       
     // images.push(jira)
     return (
         <div className="portfolio-item">
             <div className='title-section dark-overlay'>
                 <div className='container to-front2'>
-                        <GameTitleInfo title={title} subTitle={subTitle} game_info={game_info} description={description}/>
-                        <iframe src={youtube_vid}
+                        <GameTitleInfo title={project.title} subTitle={project["job-title"]} game_info={project.tools} description={project.description}/>
+                        <iframe src={project.trailer}
                             title="YouTube embed" allow="autoplay; fullscreen" allowFullScreen>
                         </iframe> 
                 </div>
@@ -73,14 +56,14 @@ const PortfolioItem = ({title="", subTitle="", game_info="", description="",
                     <div className='container to-front2'>
                         <div className='left fw-600 fs-20px work-sans-family'>
                             <h1>Gameplay Engineer</h1>
-                            <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
-                            <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
-                            <TaskDescription task_title={tasks[0][0]} tasks={tasks[0][1]}/>
+                            {project["jobs-section"].map((job, index) =>
+                                (<TaskDescription task_title={job.title} tasks={job.jobs}/>))
+                            }
                         </div>
                         <div className='right'>
                             <div className='right-container'>
                                 {
-                                    images.map((image, index) => (
+                                    project.gifs.map((image, index) => (
                                         <div>
                                             <img src={image} alt="Responsive GIF"/>
                                         </div>
@@ -91,7 +74,7 @@ const PortfolioItem = ({title="", subTitle="", game_info="", description="",
                     </div>
                     <div className='reflection work-sans-family fs-24px fw-600 to-front2'>
                         <h1 className='italic'>Thoughts</h1>
-                        <p className='work-sans-family fw-300 fs-20px'>From this project I have learned ...</p>
+                        <p className='work-sans-family fw-300 fs-20px'>{project.thoughts}</p>
                     </div>
                 </div>
 

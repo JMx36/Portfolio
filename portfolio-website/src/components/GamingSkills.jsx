@@ -25,6 +25,10 @@ import vs_logo from "../assets/Images/WhiteLogos/vs.png"
 import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
 import jira_logo from "../assets/Images/WhiteLogos/jira_small.png"
 
+// Tasks
+
+import projects from "../Information/game-portfolio-tasks.json"
+
 
 class ImageInfo
 {
@@ -104,7 +108,10 @@ const GamingSkills = () => {
                 descriptions={descriptions}
             />
             <h2 className='lighter-blue-text italic work-sans-family fs-64px fw-700' style={{margin: "5% auto"}}>Projects</h2>
-            <PortfolioItem />
+            {
+                projects.map((project, index) => (<PortfolioItem project={project}/>))
+            }
+           
         </div>
   )
 }

@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.377); /* Dark overlay with transparency */
+    background-color: rgba(0, 0, 0, 0.534); /* Dark overlay with transparency */
     z-index: 1;
 }
 
@@ -111,7 +111,7 @@
 
 .tasks-section .left .custom-list li::before
 {
-    content: "> ";
+    content: "- ";
 }
 
 .tasks-section .left .tasks-description

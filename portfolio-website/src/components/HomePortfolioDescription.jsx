@@ -4,7 +4,7 @@ import { Triangle, Circle, Button } from '../components/utilities.jsx'
 
 
 
-const CircleButton = ({index, func, color, side="none", width=12, height=70, hover_width=20, hover_height=100}) =>
+const CircleButton = ({index, func, color, side="none", width=15, height=70, hover_width=20, hover_height=100}) =>
 {
     const [isHovered, setIsHovered] = useState(false);
     
@@ -32,7 +32,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
     if (add_left_button) 
     {
         console.log("Adding left button");
-        buttons.push(<CircleButton width={10} height={50} index={low_index - 1} side="left" func={click_func} color="#D9D9D9"/>);
+        buttons.push(<CircleButton width={8} height={45} index={low_index - 1} side="left" func={click_func} color="#D9D9D9"/>);
     }
 
     for(let i = low_index; i <= high_index; i++)
@@ -44,7 +44,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
     if (add_right_button) 
     {
         console.log("Adding right button");
-        buttons.push(<CircleButton width={10} height={50} index={high_index + 1} side="right" func={click_func} color="#D9D9D9"/>);
+        buttons.push(<CircleButton width={8} height={45} index={high_index + 1} side="right" func={click_func} color="#D9D9D9"/>);
     }
 
     return (

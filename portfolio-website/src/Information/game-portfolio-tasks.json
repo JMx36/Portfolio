@@ -1,51 +1,185 @@
 [
     {
         "title": "Wartorn",
-        "trailer": "https://www.youtube.com/embed/OQ1CwPhE8KQ",
+        "trailer": "https://www.youtube.com/embed/014IEmJHhLc",
+        "job-title": "Gameplay Engineer | Programming Lead",
+        "tools": "(Unreal | PC)",
+        "description": "A narrative-driven game where players control a child separated from their parents during a war, exploring a ruined city to gather supplies and search for clues about their parents' whereabouts.",
+        "game-link": "https://dnajerab.itch.io/wartorn",
+
+        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "jobs-section": [
+            {
+                "title": "Dialogue System",
+                "jobs": [
+                    "Designed and developed a dynamic and flexible Dialogue System enabling writers and designers to create and modify dialogue sequences with ease, ensuring adaptability throughout the development process.",
+                    "Implemented support for Dialogue Trees to offer players meaningful choices and enhance player immersion.",
+                    "Collaborated closely with writers and designers to ensure the system exposed essential properties and options for them to create their compelling stories."
+                ]
+            },
+            {
+                "title": "Dialogue System's UI",
+                "jobs": [
+                    "Developed modular UI Components for diverse dialogue scenarios using Unreal Engine's UI framework (widgets, canvas, and text elements)."
+                ]
+            },
+            {
+                "title": "Visual Effects",
+                "jobs": [
+                    "Collaborated closely with VFX members to integrate and synchronize weapon and ability effects across the network, ensuring consistency and visual fidelity during gameplay."
+                ] 
+            }
+        ],
+    "gifs-section": 
+        [
+            {
+                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
+                "caption": "Fade in and fade out effect"
+            },
+            {
+                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn2.gif",
+                "caption": "Dialogue Tree showcase"
+            },
+            {
+                "gif": "src/assets/Projects/Wartorn/TypeWriterEffectWartorn.gif",
+                "caption": "TypeWriting Effect"
+            }               
+        ],
+
+        "thoughts": "This was my first Unreal Project where I got to learn the basics of Unreal. I got experience using Unreal's blueprint system, as well as their UI system. Although I had a small part in this project, I believe I was able to come up with a very flexible dialogue system that helped out the writers a lot."
+    },
+    {
+        "title": "QuickShot",
+        "trailer": "",
         "job-title": "Gameplay Engineer | Programming Lead",
         "tools": "(Unity | PC)",
-        "description": "A sniper free-for-all (FFA) game, where the sniper is inspired from Overwatch's character, Ana.",
-        "jobs-section":
-            [
-                {
-                    "title": "Dialogue System",
-                    "jobs": [
-                        "Designed and developed a dynamic and flexible Dialogue System enabling writers and designers to create and modify dialogue sequences with ease, ensuring adaptability throughout the development process.",
-                        "Implemented support for Dialogue Trees to offer players meaningful choices and enhance player immersion.",
-                        "Collaborated closely with writers and designers to ensure the system exposed essential properties and options for them to create their compelling stories."
-                    ]
-                },
-                {
-                    "title": "Dialogue System's UI",
-                    "jobs": [
-                        "Developed modular UI Components for diverse dialogue scenarios using Unreal Engine's UI framework (widgets, canvas, and text elements)."
-                    ]
-                },
-                {
-                    "title": "Visual Effects",
-                    "jobs": [
-                        "Created a typewriter effect for dialogue text to enhance immersion.",
-                        "Implemented smooth fade-in and fade-out animations for text boxes, improving overall aesthetic and readability."
-                    ] 
-                }
-            ],
+        "description": "A fast-paced multiplayer FPS where players use a sniper rifle, dash, and grapple hook to outmaneuver opponents and dominate the arena in free-for-all battles.",
+        "game-link": "https://dtrmgiraffe.itch.io/quickshot",
+
+        "title-background-image": "url('../src/assets/Projects/Quickshot/title-background.png')",
+        "task-section-background-color": "radial-gradient(circle closest-corner, #5A2C80, #35194B)",
+        "jobs-section": [
+            {
+                "title": "Weapon System",
+                "jobs": [
+                    "Developed a shooting system supporting both hit-scan and non-hit-scan modes.",
+                    "Implemented a mode-swapping feature, enabling seamless transitions between weapon types.",
+                    "Built a flexible weapon configuration system that allowed designers to adjust parameters like damage multipliers, fire rate, and swap time dynamically."
+                ]
+            },
+            {
+                "title": "Gameplay System",
+                "jobs": [
+                    "Developed a respawn system for managing players spawning within the maps.",
+                    "Created a data storage system to track and propagate essential player statistics across the network.",
+                    "Developed a modern lobby system where players could view their characters alongside others in real time."
+                ]
+            },
+            {
+                "title": "Network",
+                "jobs": [
+                    "Engineered systems to synchronize critical data (e.g., health, time, score, abilities, and shooting events) across all clients in the match.",
+                    "Created serialization methods to support the transmission of non-default data types over Photon’s networking framework.",
+                    "Developed backend functionality for a lobby system, enabling players to find and join active games or lobbies.",
+                    "Used Photon’s networking framework to balance the authority of the master client (server) over the other clients in the match."
+                ]
+            },
+            {
+                "title": "UI",
+                "jobs": [
+                    "Collaborated with UI designers to create a flexible system responsive to user input and game data, such as the scoreboard, main menu, health indicators, and final screens."
+                ]
+            },
+            {
+                "title": "Visual Effects",
+                "jobs": [
+                    "Collaborated closely with VFX members to integrate and synchronize weapon and ability effects across the network, ensuring consistency and visual fidelity during gameplay."
+                ]
+            }
+        ],
         "gifs-section": 
             [
                 {
-                    "gif": "src/assets/DialogueTreeWartorn.gif",
-                    "caption": "Fade in and fade out effect"
+                    "gif": "src/assets/Projects/Quickshot/JoiningLobby.gif",
+                    "caption": "Players joining lobbies already created/started"
                 },
                 {
-                    "gif": "src/assets/DialogueTreeWartorn2.gif",
-                    "caption": "Dialogue Tree showcase"
+                    "gif": "src/assets/Projects/Quickshot/LobbyPlayers.gif",
+                    "caption": "Players can create lobbies of their own that others can join"
                 },
                 {
-                    "gif": "src/assets/TypeWriterEffectWartorn.gif",
-                    "caption": "TypeWriting Effect"
+                    "gif": "src/assets/Projects/Quickshot/DashEffect.gif",
+                    "caption": "Dash Effect in first and third person view"
+                },
+                {
+                    "gif": "src/assets/Projects/Quickshot/HitScanProjectile.gif",
+                    "caption": "Hit-scan and Non-hit-scan modes showcase"
                 }               
             ],
-        "thoughts": "This was my first Unreal Project and although I had a small part on it I was able to learn the basics of Unreal and getting experience using Unreal's blueprint system."
+
+        "thoughts": "This was the first time I was working on a shooting game where I played a key role on its development. It was also in this project where I got to learn more about how networking in games work and how to tackle problems that come with it like latency and synchronization. I know there are still things left to do for this game, but I'm happy with what my team and I were able to accomplish with the time we were given to finish this project. I hope to be able to come back soon to this project and polish it enough to put up on steam for people to play (some people were asking for it ;) )."
+    },
+    {
+        "title": "DawnCore",
+        "trailer": "",
+        "job-title": "Gameplay Engineer | Programming Lead",
+        "tools": "(Unreal | PC)",
+        "description": "Need to do this ahhh",
+        "game-link": "https://dtrmgiraffe.itch.io/quickshot",
+
+        "title-background-image": "url('../src/assets/Projects/DawnCore/title-background.jpg')",
+        "task-section-background-color": "radial-gradient(circle closest-corner, #B09D74, #827455)",
+        "jobs-section": [
+            {
+                "title": "Software Engineering",
+                "jobs": [
+                    "Developed a detailed UML diagram that outlined the game's systems, providing a clear architectural guide for fellow programmers and ensuring consistent development across all features."
+                ]
+            },
+            {
+                "title": "Movement System",
+                "jobs": [
+                    "Designed and implemented a movement system capable of seamlessly transitioning between modes while preserving player momentum.",
+                    "Applied linear algebra to calculate movement vectors on angled slopes and curved walls, ensuring smooth and realistic traversal.",
+                    "Worked closely with designers to offer flexibility in configuring movement mechanics, including transitions and customizable settings tailored to gameplay needs."
+                ]
+            },
+            {
+                "title": "Health System",
+                "jobs": [
+                    "Built a robust health system supporting diverse mechanics, including healing and damage over time, invincibility modes, health regeneration, and handling simple respawning."
+                ]
+            },
+            {
+                "title": "“AI Director”",
+                "jobs": [
+                    "Developed an algorithm for procedurally spawning enemies in designated areas based on designer-defined metrics.",
+                    "Designed and developed a complex dynamic pacing algorithm to create peaks and valleys of “emotional intensity” for the player."
+                ]
+            }
+        ],
+        "gifs-section": 
+            [
+                {
+                    "gif": "src/assets/Projects/Quickshot/JoiningLobby.gif",
+                    "caption": "Players joining lobbies already created/started"
+                },
+                {
+                    "gif": "src/assets/Projects/Quickshot/LobbyPlayers.gif",
+                    "caption": "Players can create lobbies of their own that others can join"
+                },
+                {
+                    "gif": "src/assets/Projects/Quickshot/DashEffect.gif",
+                    "caption": "Dash Effect in first and third person view"
+                },
+                {
+                    "gif": "src/assets/Projects/Quickshot/HitScanProjectile.gif",
+                    "caption": "Hit-scan and Non-hit-scan modes showcase"
+                }               
+            ],
+
+        "thoughts": "Need to do this ahhhhh"
     }
-
-
+    
 ]

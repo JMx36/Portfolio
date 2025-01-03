@@ -6,8 +6,8 @@
   --fs-32px: 1.6rem;
   --fs-36px: 1.8rem;
   --fs-40px: 2rem; */
-  --fs-64px: clamp(3rem, 4.5vw + 1rem, 12rem);
-  --fs-70px: clamp(4rem, 6.5vw + 1rem, 12rem);
+  --fs-64px: clamp(3rem, 4.5vw + 1rem, 8rem);
+  --fs-70px: clamp(4rem, 6.5vw + 1rem, 8rem);
   font-size: 11px;
   --fs-20px: 1.25rem;
   --fs-24px: 1.5rem;

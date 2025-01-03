@@ -41,7 +41,7 @@ As I prepare to transition into the professional world, I’m excited to apply e
                             )
                             )            
                         }
-                </div>
+                        </div>
                         
                     </div>
                     

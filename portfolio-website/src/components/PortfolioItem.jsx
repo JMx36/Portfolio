@@ -1,7 +1,9 @@
 import React from 'react'
 import {Button} from "../components/utilities.jsx"
+import {Slider} from "../components/HomePortfolioDescription.jsx"
 import jira from "../assets/TypeWriterEffectWartorn.gif"
 import { useMediaQuery } from 'react-responsive';
+import VideoPreview from '../components/VideoPreview.jsx'
 
 
 const TaskDescription = ({task_title, tasks}) =>
@@ -63,11 +65,13 @@ const PortfolioItem = ({project}) => {
                         <div className='right'>
                             <div className='right-container'>
                                 {
-                                    project.gifs.map((image, index) => (
-                                        <div>
-                                            <img src={image} alt="Responsive GIF"/>
-                                        </div>
-                                    ))
+                                    // project.gifs.map((image, index) => (
+                                    //     <div>
+                                    //         <img src={image} alt="Responsive GIF"/>
+                                    //     </div>
+                                    // ))
+                                    <Slider images_lists={project["gifs-section"]} render={(index, gifsInfo) => <VideoPreview image={gifsInfo[index].gif} caption={gifsInfo[index].caption}/>}/>
+                                    // <div className='border-blac'></div>
                                 }
                             </div>
                         </div>

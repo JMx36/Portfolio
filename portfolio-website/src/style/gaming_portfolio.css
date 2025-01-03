@@ -120,31 +120,27 @@
 {
     display: flex;
     position: relative;
-    width: 50%;
+    /* width: 50%; */
+    margin: auto;
+    margin-right: 0;
 }
 
 .tasks-section .right .right-container
 {
     display: flex;
-    flex-wrap: wrap;
-    gap: clamp(5px, 10vw, 50px) 0px;
-    margin: auto;
-    justify-content: space-around;
-}
-
-.tasks-section .right .right-container div
-{
-    box-sizing: border-box;
-    flex: 0 0 40%;
-    height: auto;
-    margin: 0;
+    position: relative;
+    /* flex-wrap: wrap; */
+    /* gap: clamp(5px, 10vw, 50px) 0px; */
+    /* height: 500px; */
+    /* width: 100%;
+    height: 100%; */
 }
 
 .task-container .right img
 {
-    width: clamp(300px, 21vw, 600px);
+    /* width: 100%; */
     display: block;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
 }
 
 /* reflection */

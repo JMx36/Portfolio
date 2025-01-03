@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ImagesPreview from '../components/ImagesPreview.jsx'
 import { Triangle, Circle, Button } from '../components/utilities.jsx'
+
 
 
 const CircleButton = ({index, func, color, side="none", width=12, height=70, hover_width=20, hover_height=100}) =>
@@ -52,14 +53,16 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
 }
 
 
-const Slider = ({images_lists, window_size=4}) =>
+export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10000}) =>
 {
+
     // initial check to make sure the window is a eligible size for 'images_lists'
     if (window_size > images_lists.length) 
     {
         window_size = images_lists.length
     }
     
+    const last_index = images_lists.length - 1;
     const middle_index = (Math.floor((images_lists.length -1) / 2));
     const side_length = Math.floor(window_size / 2); // length of the sides from middle index to the edge of the window
     const w_starting_index = middle_index - side_length;
@@ -130,7 +133,12 @@ const Slider = ({images_lists, window_size=4}) =>
     const HandleSideClick = (side) => 
     {
         const movement = side === "left" ? -1 : 1;
-        const next_index = currentIndex + movement;
+        let next_index = currentIndex + movement;
+
+        // resets the index in the proper direction
+        if (next_index > last_index) next_index = 0;
+        if (next_index < 0) next_index = last_index;
+
         const next_side = next_index < start_index ? "left" : next_index > end_index ? "right" : "none";
         HandleClick(next_index, next_side);
     }
@@ -145,37 +153,56 @@ const Slider = ({images_lists, window_size=4}) =>
         HandleSideClick("left");
     }
 
+    // delay is in milliseconds
+
+    useEffect(() => 
+        {
+            const interval = setInterval(() => {
+                HandleSideClick("right");
+            }, delay);
+    
+            return () => clearInterval(interval);
+        }, [selected_index]);
+        
+
+
     return (
         <div className="slider-container">
-            <div className='slider-image-container' style={{}}
+            <div className='slider-image-container ' style={{}}
                         onMouseEnter={() => SetPreviewContainerHovered(true)}
                         onMouseLeave={() => SetPreviewContainerHovered(false)}
                         >
                 {
-                    currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
-                    <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>
+                    // currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
+                    // <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>
                 }
                 <div className='preview-container' onAnimationEnd={EndAnimation} >
                     {/* {console.log("Current Index", currentIndex)}
                     {console.log("Selected Index", selected_index)} */}
                     <div className={`${play_animation ? `move-images-out-${direction}` : ''}`}
-                            style={{height: "100%", width: "100%", margin:"auto auto", display: "flex", gap: "40%"}}>
+                            style={{margin:"auto", display: "flex", gap: "10%", boxSizing: "border-box"}}>
                         {
                             direction === "left" ? 
-                                <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
+                                // <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
+                                // <div style={{backgroundColor: "red"}}></div>
+                                render(currentIndex, images_lists)
                                 : ''
                         }
-                        <ImagesPreview height="100%" width="100%" images={images_lists[selected_index]} style={{flex: "0 0 100%"}}/>
+                        {/* <ImagesPreview height="100%" width="100%" images={images_lists[selected_index]} style={{flex: "0 0 100%"}}/> */}
+                        {render(selected_index, images_lists)}
+                        {/* <div style={{backgroundColor: "red"}}></div> */}
                         {
                             direction === "right" ? 
-                                <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
+                                // <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
+                                // <div style={{backgroundColor: "red"}}></div>
+                                render(currentIndex, images_lists)
                                 : ''
                         }
                     </div>
                 </div>
                 {
-                    currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> : 
-                    <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto auto" clickable={true} func={HandleRightClick}/>
+                    // currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> : 
+                    // <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto auto" clickable={true} func={HandleRightClick}/>
                 }
             </div>
             <div className="circle-buttons width-50%">
@@ -210,8 +237,8 @@ const Description = ({title="Title", description="Description Text", side="right
 const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link=""}) => {
   return (
     <div className="home-portfolio-section">
-        {!swap ? <Slider images_lists={images}/> : <Description title={title} description={description} link={link}/> }
-        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} /> }
+        {!swap ? <Slider images_lists={images} render={(index, image_list) => <ImagesPreview height="100%" width="100%" images={image_list[index]} style={{flex: "0 0 100%"}}/>}/> : <Description title={title} description={description} link={link}/> }
+        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview height="100%" width="100%" images={image_list[index]} style={{flex: "0 0 100%"}}/>}/> }
     </div>
   )
 }

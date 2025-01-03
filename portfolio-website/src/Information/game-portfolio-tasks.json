@@ -29,11 +29,20 @@
                     ] 
                 }
             ],
-        "gifs": 
+        "gifs-section": 
             [
-                "src/assets/DialogueTreeWartorn.gif",
-                "src/assets/DialogueTreeWartorn2.gif",
-                "src/assets/TypeWriterEffectWartorn.gif"
+                {
+                    "gif": "src/assets/DialogueTreeWartorn.gif",
+                    "caption": "Fade in and fade out effect"
+                },
+                {
+                    "gif": "src/assets/DialogueTreeWartorn2.gif",
+                    "caption": "Dialogue Tree showcase"
+                },
+                {
+                    "gif": "src/assets/TypeWriterEffectWartorn.gif",
+                    "caption": "TypeWriting Effect"
+                }               
             ],
         "thoughts": "This was my first Unreal Project and although I had a small part on it I was able to learn the basics of Unreal and getting experience using Unreal's blueprint system."
     }

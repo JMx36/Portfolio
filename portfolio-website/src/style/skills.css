@@ -14,6 +14,12 @@
     justify-content: center;
 }
 
+.skills-section h2
+{
+    padding: 0;
+    margin: 0;
+}
+
 .title-text-padding
 {
     margin: 0% 7%;
@@ -42,7 +48,8 @@
 {
     color: black;
     text-align: center;
-    margin: 2% 5%;
+    margin: 2% auto;
+    max-width: 1000px;
 }
 
 .skills-buttons-container
@@ -199,7 +206,7 @@
 .circular-skills-container
 {
     position: relative;
-    --radius: clamp(100px, 35vw, 200px);
+    --radius: clamp(100px, 35vw, 250px);
     height: calc((var(--radius) * 2) + 100px);
     --start-degree-angle: -90deg;
     --move-angle-factor: 72deg;
@@ -211,7 +218,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: max(180px, 15%);
+    width: clamp(100px, 60vw, 250px);
     aspect-ratio: 1/1;
 }
 
@@ -502,6 +509,6 @@
     }
     100%
     {
-        width: max(180px, 15%);
+        width: clamp(100px, 60vw, 250px);;
     }
 }

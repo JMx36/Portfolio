@@ -32,7 +32,7 @@ import projects from "../Information/game-portfolio-tasks.json"
 
 class ImageInfo
 {
-    constructor({image, width="clamp(20px, 10vw, 50px)", height="50px"})
+    constructor({image, width="clamp(20px, 10vw, 50px)", height="auto"})
     {
         this.image = image;
         this.width = width;
@@ -54,11 +54,11 @@ const GamingSkills = () => {
     const VisualStudio = new ImageInfo({ image: vs_logo});
     const VSCode = new ImageInfo({ image: vscode_logo});
 
-    const Game_Engine = new ImageInfo({ image: game_engine_icon});
-    const Dev_Tools = new ImageInfo({ image: dev_tools});
-    const Production = new ImageInfo({ image: production});
-    const Prog_Languages = new ImageInfo({ image: prog_languages});
-    const Version_Ctrl = new ImageInfo({ image: version_control});
+    const Game_Engine = new ImageInfo({ image: game_engine_icon, width: "clamp(20px, 20vw, 70px)"});
+    const Dev_Tools = new ImageInfo({ image: dev_tools, width: "clamp(20px, 20vw, 70px)"});
+    const Production = new ImageInfo({ image: production, width: "clamp(20px, 20vw, 70px)"});
+    const Prog_Languages = new ImageInfo({ image: prog_languages, width: "clamp(20px, 20vw, 70px)"});
+    const Version_Ctrl = new ImageInfo({ image: version_control, width: "clamp(20px, 20vw, 70px)"});
 
     const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
     const category_skills_logos = [
@@ -92,11 +92,8 @@ const GamingSkills = () => {
 
     return (
         <div className='skills-section'>
-            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "5% auto"}}>Technologies & Tools</h2>
-            <p className="caption fs-20px fw-600 work-sans-family">As a developer, 
-                I embrace the philosophy of continuous learning and versatility. 
-                I find joy in exploring and mastering various technologies. 
-                Here are some of the technologies I've had the pleasure of working with.
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "2% auto"}}>Technologies & Tools</h2>
+            <p className="caption fs-20px fw-600 work-sans-family" style={{margin: ""}}>As a game developer, I thrive on continuous learning and adaptability. I enjoy diving into diverse tools and technologies to bring creative visions to life. Below are some of the technologies I've worked with on my journey.
             </p>
             <CircularSelector buttons_text={buttons_text} logos={circle_logos} parent_index_func={SetIndex}/>
             <LogosDisplay logos={currentIndex >= 0 ? category_skills_logos[currentIndex] : all_skills_logos}/>

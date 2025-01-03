@@ -151,7 +151,7 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 
 
 export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="20px", text_color="black", 
-                        color="black", logo=null, logo_style={}, words_style={}, style={}, 
+                        color="black", logo=null, logo_style={}, words_style={}, style={}, textShadow="3px 2px 4px rgba(255, 255, 255, 70%)",
                         hover_color="white", click_func=null, type="button", 
                         isLink=false, link_to="", link_type="", scroll_type="auto"}) => 
 {
@@ -176,7 +176,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         padding: "0", 
         margin: "0%",
         lineHeight: "1",
-        textShadow: "3px 2px 4px rgba(255, 255, 255, 70%)",
+        textShadow: textShadow,
         textDecoration: "none",
         color: "inherit"
     }

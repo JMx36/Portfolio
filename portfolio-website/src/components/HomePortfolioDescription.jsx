@@ -176,7 +176,7 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
                     // currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
                     // <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>
                 }
-                <div className='preview-container' onAnimationEnd={EndAnimation} >
+                <div className='preview-container' style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}} onAnimationEnd={EndAnimation} >
                     {/* {console.log("Current Index", currentIndex)}
                     {console.log("Selected Index", selected_index)} */}
                     <div className={`${play_animation ? `move-images-out-${direction}` : ''}`}

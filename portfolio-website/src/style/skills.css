@@ -3,85 +3,93 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin: 5% 0%;
 }
 
-.skills-section .header
+/* .skills-section .header
 {
     display: flex;
     margin: 5% 5%;
     margin-bottom: 1%;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.title-text-padding
+/* .title-text-padding
 {
     margin: 0% 7%;
-}
+} */
 
 
 .tech-and-tools
 {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center; 
+    align-items: center;
 }
 
 .tech-and-tools .top-part
 {
     display: flex;
     width: 100%;
-
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
 }
 
 .caption
 {
     color: black;
     text-align: center;
-    margin: 2% auto;
-    max-width: 1000px;
+    margin: 0% 5%;
+    margin-top: max(30px, 5%);
+    margin-bottom: 0%;
+    max-width: 2000px;
 }
 
 .skills-buttons-container
 {
     display: flex;
+    margin: 0 auto;
     margin-top: 3%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    gap: 40px;
     box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
 }
 
 .skills-buttons-container p
 {
     padding: 0;
-    margin: 0% 5%;
+    margin: 0% 0%;
 }
 
 .carousel-container
 {
     --play-state: running;
     width: 100%;
-    margin-top: 2%;
+    margin-top: max(30px, 3%);
     overflow: hidden;
     /* border-top: solid 3px black; */
     position: relative;
     /* border-bottom: solid 3px black; */
 }
 
+.carousel-movement-container
+{
+    overflow: hidden;
+    /* width: 100%; */
+    max-width: 1600px;
+    margin: auto;
+}
+
 .carousel-inner
 {
     display: flex;
+    box-sizing: border-box;
     align-items: center;
-    width: 100%;
     gap: 1%;
-    transform: translateX(-141%); 
-    transform: translateX(-5%); 
-    animation: slide 10s linear infinite;
+    transform: translateX(-6%); 
+    animation: slide 5s linear infinite;
     padding: 1%;
 }
 
@@ -90,12 +98,12 @@
     
     0% 
     {
-        transform: translateX(-5%);
+        transform: translateX(-6%);
     }
 
     100%
     {
-        transform: translateX(-141%);
+        transform: translateX(-115%);
     }
 }
 
@@ -112,7 +120,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 
 
     .skills-description .boxes-container .description-box
@@ -126,7 +134,7 @@
     .skills-buttons-container
     {
         flex-direction: column;
-        margin-top: 4%;
+        margin-top: 10%;
     }
 
     .skills-buttons-container .button-util
@@ -136,7 +144,7 @@
 
     .skills-buttons-container p
     {
-        margin: 5% 0%;
+        margin: 0% auto;
     }
 }
 

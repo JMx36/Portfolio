@@ -30,7 +30,7 @@ const DropdownCategories = Object.freeze(
 
 class ImageInfo
 {
-    constructor({image, width="clamp(20px, 10vw, 100px)", height="auto", margin_left="2%"})
+    constructor({image, width="clamp(70px, 10vw, 100px)", height="auto", margin_left="2%"})
     {
         this.image = image;
         this.width = width;
@@ -114,8 +114,8 @@ const Skills = () =>
     const CLogo = new ImageInfo({ image: c_logo});
     const CSharp = new ImageInfo({ image: c_sharp});
     const CPP = new ImageInfo({ image: cpp});
-    const CSS = new ImageInfo({ image: css, width:"clamp(20px, 9vw, 90px)"});
-    const HTML = new ImageInfo({ image: html, width:"clamp(20px, 9vw, 90px)"});
+    const CSS = new ImageInfo({ image: css, width:"clamp(55px, 9vw, 90px)"});
+    const HTML = new ImageInfo({ image: html, width:"clamp(55px, 9vw, 90px)"});
     const Python = new ImageInfo({ image: python});
     const Jira = new ImageInfo({ image: jira});
     const GitHub = new ImageInfo({ image: github});
@@ -132,14 +132,14 @@ const Skills = () =>
 
     const button_logo_style =
     {
-        width: "clamp(30px, 5vw, 60px)",
+        // width: "clamp(30px, 5vw, 60px)",
         marginRight: '2%',
         display: "inline-block"
     }
 
     const words_style =
     {
-        flexShrink: 0,
+        flexShrink: "0",
         lineHeight: "1.2"
     }
 
@@ -149,52 +149,53 @@ const Skills = () =>
                 <div className="top-part">
                     <h2 className="dimmed-yellow-text italic work-sans-family fs-64px fw-700" style={{padding: "0%", margin: "0%"}}>Technologies & Tools</h2>
                 </div>
-                <p className="caption fs-20px fw-600 work-sans-family">As a developer, 
+                <p className="caption fs-36px fw-400 work-sans-family">As a developer, 
                     I embrace the philosophy of continuous learning and versatility. 
                     I find joy in exploring and mastering various technologies. 
                     Here are some of the technologies I've had the pleasure of working with.</p>
                 <div className="carousel-container">
                     <div style={{position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#A59004", filter: "blur(20px)"}}></div>
-                    <div className={`carousel-inner ${isHovered ? 'carousel-paused' : ''}`} >
-                        {
-                            (() => 
-                                {
-                                    const elements = [];
-                                    // we want to repeat the images twice for carousel effect
-                                    for (let i = 0; i < 2; i++) 
+                    <div className="carousel-movement-container">
+                        <div className={`carousel-inner ${isHovered ? 'carousel-paused' : ''}`} >
+                            {
+                                (() => 
                                     {
-                                        logos.map((image_info, index) => (  
-                                            elements.push(
-                                            <LogoImage setIsHovered={setIsHovered} 
-                                                image={image_info.image}
-                                                index={index % 12}      
-                                                width={image_info.width}
-                                                height={image_info.height}
-                                                margin_left={image_info.margin_left}
-                                                 />)
-                                        ));
-                                    }
+                                        const elements = [];
+                                        // we want to repeat the images twice for carousel effect
+                                        for (let i = 0; i < 2; i++) 
+                                        {
+                                            logos.map((image_info, index) => (  
+                                                elements.push(
+                                                <LogoImage setIsHovered={setIsHovered} 
+                                                    image={image_info.image}
+                                                    index={index % 12}      
+                                                    width={image_info.width}
+                                                    height={image_info.height}
+                                                    margin_left={image_info.margin_left}
+                                                    />)
+                                            ));
+                                        }
 
-                                    return elements;  
-                                }
-                            )()
-                        }
+                                        return elements;  
+                                    }
+                                )()
+                            }
+                        </div>
                     </div>
                 </div>
-                <p className="fw-600 work-sans-family fs-32px" style={{padding: "0%", margin: "auto", marginTop: "5%"}}>Check out the tools I use as a</p>
-                <div className="skills-buttons-container fw-600 work-sans-family fs-32px">
-                    <Button text="Software Developer" text_style="pacifico-family fs-30px fw-600" hover_color="#A59004"
+                <p className="fw-6\400 work-sans-family fs-32px" style={{padding: "0%", margin: "auto", marginTop: "max(30px, 3%)"}}>Check out the tools I use as a</p>
+                <div className="skills-buttons-container fw-400 work-sans-family fs-36px">
+                    <Button text="Software Developer" text_style="pacifico-family fs-36px " hover_color="#A59004"
                         logo_style={button_logo_style} color="none" 
                         words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
                         text_color="black"
-                        style={{textAlign: "left", padding: "0", margin: 0, marginLeft: "auto"}    
-                    }
+                        style={{minWidth: "max-content", textAlign: "left", padding: "0", marginRight: "0"}}
                         />
-                    <p className="fw-600 work-sans-family fs-32px">and</p>
-                    <Button logo_style={button_logo_style} text="Game Developer" text_style="pacifico-family fs-30px fw-600" 
+                    <p className="work-sans-family fs-36px">and</p>
+                    <Button logo_style={button_logo_style} text="Game Developer" text_style="pacifico-family fs-36px" 
                         hover_color="#A59004" color="none" text_color="black"
                         words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
-                        style={{textAlign: "left", padding: "0", margin: 0, marginRight: "auto"}}
+                        style={{minWidth: "max-content", textAlign: "left", padding: "0", margin: 0, marginRight: "auto"}}
                         isLink={true} link_to={"/gaming-portfolio"} link_type="Link"
                         />
                 </div>

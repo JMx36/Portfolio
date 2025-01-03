@@ -39,32 +39,36 @@
 
 .slider-container
 {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: clamp(300px, 60vw, 600px);
-    aspect-ratio: 16/11;
+    /* margin: auto; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* aspect-ratio: 16/9; */
+    /* max-width: 1000px; */
 }
 
 .slider-image-container
 {
+    box-sizing: border-box;
     display: flex;
-    width: 100%;
-    height: 84%;
-    margin: auto;
+    /* width: 100%; */
+
+    /* margin: auto; */
 }
 
 .preview-container
 {
     position: relative;
     display: flex;
-    height: 100%;
-    width: 85%;
+    /* height: 100%;
+    width: 100%; */
     overflow: hidden;
     --animation-height: 60%;
     --animation-width: 60%;
-    --images-gap: 40%;
-    --starting-xOffset: calc((100% + var(--images-gap)) * -1);  
+    --images-gap: calc(clamp(300px, 50vw, 800px) + 10%); /*this width comes from the width of the image right now but probably would have to be defined else where*/
+    --starting-xOffset: calc((var(--images-gap)) * -1);  
     justify-content: space-evenly;
 }
 
@@ -126,22 +130,22 @@
 
     10%
     {
-        height: var(--animation-height);
-        width: var(--animation-width);
+        /* height: var(--animation-height); */
+        /* width: var(--animation-width); */
         transform: translateX(var(--starting-xOffset));
     }
 
     90%
     {
-        height: var(--animation-height);
-        width: var(--animation-width);
+        /* height: var(--animation-height); */
+        /* width: var(--animation-width); */
         transform: translateX(0%);
     }
 
     100%
     {
-        height: 100%;
-        width: 100%;
+        /* height: 100%; */
+        /* width: 100%; */
         transform: translateX(0%);
     }
 }
@@ -150,23 +154,23 @@
     
     10%
     {
-        height: var(--animation-height);
-        width: var(--animation-width);
-        transform: translateX(0%);
+        /* height: var(--animation-height);
+        width: var(--animation-width); */
+        transform: translateX(0px);
     }
 
     90%
     {
-        height: var(--animation-height);
-        width: var(--animation-width);
-        transform: translateX(calc(-1 * (100% + var(--images-gap))));
+        /* height: var(--animation-height);
+        width: var(--animation-width); */
+        transform: translateX(calc(-1 * (var(--images-gap))));
     }
 
     100%
     {
-        height: 100%;
-        width: 100%;
-        transform: translateX(calc(-1 * (100% + var(--images-gap))));
+        /* height: 100%;
+        width: 100%; */
+        transform: translateX(calc(-1 * (var(--images-gap))));
     }
 }
 
@@ -184,7 +188,7 @@
 
     .slider-container
     {
-        margin-top: 10%;
+        /* margin-top: 10%; */
     }
 
 }

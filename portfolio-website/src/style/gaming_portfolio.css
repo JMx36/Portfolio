@@ -14,11 +14,15 @@
 .portfolio-item .title-section
 {
     position: relative;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portfolio-item .title-section iframe
 {
-    width: clamp(300px, 50vw, 640px);
+    width: clamp(300px, 50vw, 700px);
     aspect-ratio: 16/9;
     margin: auto;
     margin-right: 0;
@@ -35,6 +39,7 @@
     position: relative;
     color: white;
     align-items: stretch;
+
 }
 
 .portfolio-item .title-section .container .text-container
@@ -53,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.347); /* Dark overlay with transparency */
+    background-color: rgba(0, 0, 0, 0.377); /* Dark overlay with transparency */
     z-index: 1;
 }
 
@@ -64,7 +69,7 @@
 .tasks-section
 {
     position: relative;
-    background-color: rgb(208, 204, 204);
+    /* background-color: rgb(208, 204, 204); */
 }
 
 .tasks-section .tasks-container 
@@ -146,6 +151,7 @@
 /* reflection */
 .tasks-section .reflection
 {
+    color: white;
     margin: var(--container-margin);
 }
 

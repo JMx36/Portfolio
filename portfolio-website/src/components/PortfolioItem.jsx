@@ -51,9 +51,12 @@ const PortfolioItem = ({project}) => {
                 <div className='container to-front2'>
                         <GameTitleInfo title={project.title} subTitle={project["job-title"]} 
                         game_info={project.tools} description={project.description} btn_link={project["game-link"]}/>
-                        <iframe src={project.trailer}
+                        {
+                            project.trailer === "" ? "" : 
+                            <iframe src={project.trailer}
                             title="YouTube embed" allow="autoplay; fullscreen" allowFullScreen>
-                        </iframe> 
+                            </iframe> 
+                        }
                 </div>
             </div>
             <div className='tasks-section' style={{backgroundImage:  project["task-section-background-color"]}}>

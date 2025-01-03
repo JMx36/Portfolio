@@ -186,9 +186,13 @@
         width: 100%;
     }
 
-    .slider-container
+    .slider-container .preview-container
     {
-        /* margin-top: 10%; */
+        /*Need to rework this to make it more versatile and reusable*/
+        width: clamp(300px, 80vw, 800px) !important;
+        aspect-ratio: 16/10 !important;
+        --images-gap: calc(clamp(300px, 80vw, 800px) + 10%) !important; /*this width comes from the width of the image right now but probably would have to be defined else where*/
+        --starting-xOffset: calc((var(--images-gap)) * -1) !important;  
     }
 
 }

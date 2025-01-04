@@ -183,18 +183,12 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
                             style={{margin:"auto", display: "flex", gap: "10%", boxSizing: "border-box"}}>
                         {
                             direction === "left" ? 
-                                // <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
-                                // <div style={{backgroundColor: "red"}}></div>
                                 render(currentIndex, images_lists)
                                 : ''
                         }
-                        {/* <ImagesPreview height="100%" width="100%" images={images_lists[selected_index]} style={{flex: "0 0 100%"}}/> */}
                         {render(selected_index, images_lists)}
-                        {/* <div style={{backgroundColor: "red"}}></div> */}
                         {
                             direction === "right" ? 
-                                // <ImagesPreview height="100%" width="100%" images={images_lists[currentIndex]} style={{flex: "0 0 100%"}}/> 
-                                // <div style={{backgroundColor: "red"}}></div>
                                 render(currentIndex, images_lists)
                                 : ''
                         }
@@ -217,7 +211,7 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
 const Description = ({title="Title", description="Description Text", side="right", link="/index.html"}) =>
 {
     return (
-        <div className={`home-portfolio-section-description auto-${side}`}>
+        <div className={`home-portfolio-section-description`}>
             <div className="home-portfolio-section-title">
                 <h1 className='italic work-sans-family fs-40px fw-600'>{title}</h1>
             </div>
@@ -237,8 +231,10 @@ const Description = ({title="Title", description="Description Text", side="right
 const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link=""}) => {
   return (
     <div className="home-portfolio-section">
-        {!swap ? <Slider images_lists={images} render={(index, image_list) => <ImagesPreview height="100%" width="100%" images={image_list[index]} style={{flex: "0 0 100%"}}/>}/> : <Description title={title} description={description} link={link}/> }
-        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview height="100%" width="100%" images={image_list[index]} style={{flex: "0 0 100%"}}/>}/> }
+        {!swap ? <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> : <Description title={title} description={description} link={link}/> }
+        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> }
+    
+    
     </div>
   )
 }

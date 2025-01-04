@@ -34,7 +34,7 @@ const ImagesPreview = ({images, style={}}) => {
     const image_box_style = {
 
         position: "relative",
-
+        margin: "auto"
     }
 
     const combined_styles = { ...image_box_style, ...style};

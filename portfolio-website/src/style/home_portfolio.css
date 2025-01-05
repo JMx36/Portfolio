@@ -79,7 +79,6 @@
     align-items: center;
     height: 20px;
     width: 100px;
-    /* border: solid 2px blue; */
     gap: 4%;
     margin: auto auto;
     margin-top: 0;
@@ -96,15 +95,15 @@
 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: clamp(200px, 90vw, 500px);
+    /* width: 50%; */  
 }
 
 .home-portfolio-section-text
 {
-    /* border: black solid 1px; */
     text-align: justify;
     /* flex: 1; */
-    margin: 0% 3%;
+    /* margin: 0% 3%; */
 }
 
 .portfolio-bottom-header
@@ -182,7 +181,17 @@
 
     .home-portfolio-section-description
     {
-        width: 100%;
+        /* width: 100%; */
+    }
+
+    .home-portfolio-section-right, .home-portfolio-section-left
+    {
+        margin: 0% auto !important;
+    }
+
+    .home-portfolio-section-left
+    {
+        margin-bottom: 5% !important;
     }
 
     .slider-container .preview-container

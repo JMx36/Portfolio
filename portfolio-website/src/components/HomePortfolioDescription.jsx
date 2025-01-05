@@ -102,14 +102,14 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     const HandleClick = (index, side="none") =>
     {
         if (index === currentIndex) return;        
-
+-
         // console.log("Handle Click Index: ", index);
         SetDirection(index < currentIndex ? "left" : "right");
         setCurrentIndex(index);
 
         if (index < start_index)
         {
-            setStartIndex(Math.max(0, index - window_size - 1));
+            setStartIndex(Math.max(0, index - (window_size - 1)));
             setEndIndex(Math.max(index, window_size - 1));
         }
 
@@ -237,8 +237,15 @@ const Description = ({title="Title", description="Description Text", side="right
 const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link=""}) => {
   return (
     <div className="home-portfolio-section">
-        {!swap ? <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> : <Description title={title} description={description} link={link}/> }
-        {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> }
+        <div className='home-portfolio-section-left' style={{}}>
+            {!swap ? <Slider images_lists={images} side="left" render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> : <Description title={title} description={description} link={link}/> }
+
+        </div>
+
+        <div className='home-portfolio-section-right' style={{marginLeft: "3%"}}>
+            {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> }
+
+        </div>
     
     
     </div>

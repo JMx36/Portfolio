@@ -41,8 +41,8 @@
 {
     color: black;
     text-align: center;
-    margin: 0% 5%;
-    margin-top: max(30px, 5%);
+    margin: 0% auto;
+    margin-top: clamp(30px, 5%, 50px);
     margin-bottom: 0%;
     max-width: 2000px;
 }

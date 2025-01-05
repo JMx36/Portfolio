@@ -31,7 +31,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
 
     if (add_left_button) 
     {
-        console.log("Adding left button");
+        // console.log("Adding left button");
         buttons.push(<CircleButton width={8} height={45} index={low_index - 1} side="left" func={click_func} color="#D9D9D9"/>);
     }
 
@@ -43,7 +43,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
 
     if (add_right_button) 
     {
-        console.log("Adding right button");
+        // console.log("Adding right button");
         buttons.push(<CircleButton width={8} height={45} index={high_index + 1} side="right" func={click_func} color="#D9D9D9"/>);
     }
 
@@ -74,11 +74,10 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     const [end_index, setEndIndex] = useState(w_end_index);
     const [play_animation, PlayAnimation] = useState(false);
     const [direction, SetDirection] = useState("none");
-    const [preview_container_hovered, SetPreviewContainerHovered] = useState(false);
     const [selected_index, SetSelectedIndex] = useState(middle_index);
-    // console.log("Current index", currentIndex);
-    // console.log("Start index", start_index);
-    // console.log("End index", end_index);
+    console.log("Initial Current index", currentIndex);
+    console.log("Initial Start index", start_index);
+    console.log("Initial End index", end_index);
 
     const ResetAnimation = () =>
     {
@@ -104,20 +103,30 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     {
         if (index === currentIndex) return;        
 
+        // console.log("Handle Click Index: ", index);
         SetDirection(index < currentIndex ? "left" : "right");
         setCurrentIndex(index);
-        
-        if (side === "left")
+
+        if (index < start_index)
         {
-            setStartIndex(Math.max(0, start_index - window_size))
-            setEndIndex(index);
-        }
-        else if (side === "right")
-        {
-            setEndIndex(Math.min(images_lists.length - 1, end_index + window_size))
-            setStartIndex(index);
+            setStartIndex(Math.max(0, index - window_size - 1));
+            setEndIndex(Math.max(index, window_size - 1));
         }
 
+        if (index > end_index)
+        {
+            if (((images_lists.length - 1) - index) < window_size) 
+            {
+                setStartIndex(images_lists.length - window_size - 1);
+                setEndIndex(images_lists.length - 1);
+            }
+            else
+            {
+                setStartIndex(index);
+                setEndIndex(Math.max(0, index + window_size - 1));
+            }
+        }
+        
         if (play_animation)
             ResetAnimation();
         else
@@ -168,10 +177,7 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
 
     return (
         <div className="slider-container">
-            <div className='slider-image-container ' style={{}}
-                        onMouseEnter={() => SetPreviewContainerHovered(true)}
-                        onMouseLeave={() => SetPreviewContainerHovered(false)}
-                        >
+            <div className='slider-image-container ' style={{}}>
                 {
                     // currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
                     // <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>

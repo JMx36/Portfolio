@@ -47,7 +47,7 @@
             }               
         ],
 
-        "thoughts": "This was my first Unreal Project where I got to learn the basics of Unreal. I got experience using Unreal's blueprint system, as well as their UI system. Although I had a small part in this project, I believe I was able to come up with a very flexible dialogue system that helped out the writers a lot."
+        "thoughts": "Working on this project was my introduction to Unreal Engine, where I learned the basics of the platform. I explored Unreal’s Blueprint system and UI tools, gaining hands-on experience. Though my role was relatively small, I created a flexible and efficient dialogue system that greatly benefited the writers and improved the team's workflow."
     },
     {
         "title": "QuickShot",
@@ -106,7 +106,7 @@
                 },
                 {
                     "gif": "src/assets/Projects/Quickshot/LobbyPlayers.gif",
-                    "caption": "Players can create lobbies of their own that others can join"
+                    "caption": "Players hosting lobbies other players can join"
                 },
                 {
                     "gif": "src/assets/Projects/Quickshot/DashEffect.gif",
@@ -118,7 +118,7 @@
                 }               
             ],
 
-        "thoughts": "This was the first time I was working on a shooting game where I played a key role on its development. It was also in this project where I got to learn more about how networking in games work and how to tackle problems that come with it like latency and synchronization. I know there are still things left to do for this game, but I'm happy with what my team and I were able to accomplish with the time we were given to finish this project. I hope to be able to come back soon to this project and polish it enough to put up on steam for people to play (some people were asking for it ;) )."
+        "thoughts": "This was my first experience working on a shooting game, where I played a key role in its development. Through this project, I deepened my understanding of networking in games, tackling challenges like latency and synchronization. While there’s still more work to be done, I’m proud of what my team and I achieved within the time constraints. I look forward to revisiting this project to refine it further and potentially release it on Steam for others to enjoy—especially since we’ve already had people asking for it! 😉"
     },
     {
         "title": "DawnCore",
@@ -163,23 +163,23 @@
             [
                 {
                     "gif": "src/assets/Projects/Quickshot/JoiningLobby.gif",
-                    "caption": "Players joining lobbies already created/started"
+                    "caption": "Movement Showcase: Sliding and Wall Climbing"
                 },
                 {
                     "gif": "src/assets/Projects/Quickshot/LobbyPlayers.gif",
-                    "caption": "Players can create lobbies of their own that others can join"
+                    "caption": "Movement Showcase: Wall Running"
                 },
                 {
                     "gif": "src/assets/Projects/Quickshot/DashEffect.gif",
-                    "caption": "Dash Effect in first and third person view"
+                    "caption": "UML of the current architecture of our game"
                 },
                 {
                     "gif": "src/assets/Projects/Quickshot/HitScanProjectile.gif",
-                    "caption": "Hit-scan and Non-hit-scan modes showcase"
+                    "caption": "Health System"
                 }               
             ],
 
-        "thoughts": "Need to do this ahhhhh"
+        "thoughts": "This is my current capstone project, which is still in development, where I play a key role in both its development and software architecture. It marks my first experience working on a complex movement system, implementing advanced mechanics such as wall climbing, wall running, and sliding. Through this project, I’ve gained deeper knowledge of Unreal Engine, utilizing both C++ and Blueprints. I’ve learned to evaluate the strengths and weaknesses of each system and determine their best applications for various gameplay mechanics, particularly those focused on functionality rather than code structure or efficiency. Additionally, this project has strengthened my foundation in Linear Algebra, which has been essential for implementing many of the movement mechanics. Although there’s still much work ahead, I’m proud of what my team has achieved so far."
     }
     
 ]

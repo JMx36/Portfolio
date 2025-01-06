@@ -31,7 +31,8 @@
                 ] 
             }
         ],
-    "gifs-section": 
+        
+        "gifs-section": 
         [
             {
                 "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",

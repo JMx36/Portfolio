@@ -45,7 +45,7 @@
     margin: 0% auto;
     margin-top: clamp(30px, 5%, 50px);
     margin-bottom: 0%;
-    max-width: 2000px;
+    width: clamp(150px, 90vw, 2000px);
 }
 
 .skills-buttons-container
@@ -88,10 +88,14 @@
     display: flex;
     box-sizing: border-box;
     align-items: center;
-    gap: 1%;
-    transform: translateX(-6%); 
+    /* gap: 1%; */
+    --image-left--margin: 2.5%;
+    --image-size-1: clamp(70px, 10vw, 100px);
+    --image-size-2: clamp(55px, 9vw, 90px);
+    transform: translateX(calc(-1 * (10.5 * (var(--image-size-1) + var(--image-left--margin)) + 2 * (var(--image-size-2) + var(--image-left--margin))))); 
     animation: slide 10s linear infinite;
-    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 
@@ -99,12 +103,12 @@
     
     0% 
     {
-        transform: translateX(-6%);
+        transform: translateX(calc(-1 * (0.5 * (var(--image-size-1) + var(--image-left--margin)))));
     }
 
     100%
     {
-        transform: translateX(-115%);
+        transform: translateX(calc(-1 * (10.5 * (var(--image-size-1) + var(--image-left--margin)) + 2 * (var(--image-size-2) + var(--image-left--margin))))); 
     }
 }
 

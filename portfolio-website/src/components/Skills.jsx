@@ -30,7 +30,7 @@ const DropdownCategories = Object.freeze(
 
 class ImageInfo
 {
-    constructor({image, width="clamp(70px, 10vw, 100px)", height="auto", margin_left="2%"})
+    constructor({image, width="clamp(70px, 10vw, 100px)", height="auto", margin_left="2.5%"})
     {
         this.image = image;
         this.width = width;

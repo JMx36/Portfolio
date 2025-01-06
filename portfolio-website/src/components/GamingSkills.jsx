@@ -92,7 +92,7 @@ const GamingSkills = () => {
 
     return (
         <div className='skills-section'>
-            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "0% auto"}}>Technologies & Tools</h2>
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "0% auto", marginTop: "5%"}}>Technologies & Tools</h2>
             <p className="caption fs-36px fw-400 work-sans-family" style={{marginBottom: "2%"}}>As a game developer, I thrive on continuous learning and adaptability. I enjoy diving into diverse tools and technologies to bring creative visions to life. Below are some of the technologies I've worked with on my journey.
             </p>
             <CircularSelector buttons_text={buttons_text} logos={circle_logos} parent_index_func={SetIndex}/>

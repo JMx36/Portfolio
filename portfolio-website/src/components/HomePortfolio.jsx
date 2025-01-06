@@ -6,10 +6,10 @@ const HomePortfolio = () => {
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1080px)' });
 
     const info = [["Game Developer Projects", 
-                    "Throughout my time at UCI, I’ve worked on a variety of game projects that have sharpened both my programming and game development skills. My experience ranges from creating single-player platformers to full-scale first-person multiplayer games. I’m currently collaborating with a team to develop a game in Unreal Engine 5, which will be added to my portfolio soon.", 
+                    "Throughout my time at UCI, I’ve worked on a variety of game projects that have sharpened both my programming and game development skills. My experience ranges from creating single-player platformers to full-scale first-person multiplayer games in engines like Unity and Unreal 5", 
                         []],
                 ["Software Developer Projects",
-                    "Although my software portfolio isn’t as extensive as my game development work, it still features key projects I’m proud of. This includes a class project where I built a small-scale search engine for UCI documents, as well as other AI-based projects. More projects will be added as I continue to develop and complete them.",
+                    "Through UCI’s Computer Science program, I have refined my problem-solving skills by analyzing challenges and crafting effective plans to address them. One of my key projects involved developing a small-scale search engine for UCI documents, utilizing the foundational concepts and techniques behind search engine design.",
                     []
                 ]
     ]
@@ -27,10 +27,10 @@ const HomePortfolio = () => {
             </div>
         </div>
 
-        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 2, 3], [4, 5, 6], [7, 8, 9]]} 
-            title={info[0][0]} description={info[1][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
+        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} 
+            title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
         <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[1][0]} description={info[1][1]} swap={true}/>
-
+        <div style={{marginBottom: "5%"}}></div>
     </div>
   )
 }

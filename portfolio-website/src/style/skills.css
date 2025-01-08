@@ -171,9 +171,10 @@
     flex-wrap: wrap;
     gap: max(40px, 5%);
     margin: 5% 5%;
-    max-width: 100%;
+    /* max-width: 100%; */
     justify-content: center;
-    align-items: center;
+    /* margin: 0 auto; */
+    align-items: top;
     box-sizing: border-box;
 }
 

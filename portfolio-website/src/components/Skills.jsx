@@ -103,7 +103,7 @@ const Skills = () =>
         ["Collaboration",
             "I have worked in various groups of different sizes, learning how to collaborate effectively with others, whether within my own role or across departments. I’ve gained valuable experience in maintaining constant communication with my team, especially when updating them on completed tasks. Additionally, writing code alongside other programmers has taught me how to ensure my work integrates smoothly with theirs."
         ],
-        ["Agile Methodologies",
+        ["Agile",
             "I have been part of teams that utilized agile methodologies, such as Scrum, to manage product development. In these environments, I learned the importance of daily stand-ups and delivering work in a timely manner within sprints or other agile frameworks."
         ],
         ["Leading",

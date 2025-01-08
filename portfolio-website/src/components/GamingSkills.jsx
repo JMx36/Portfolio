@@ -79,14 +79,14 @@ const GamingSkills = () => {
 
     const descriptions = 
     [
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Game Dev.",
+            "Proficient in industry-standard game engines like Unreal Engine and Unity, with experience in developing gameplay mechanics and implementing editor scripting in Unity to streamline workflows and improve productivity. I’ve worked with Unreal’s C++ and Blueprints, as well as Unity’s scripting and Photon for multiplayer functionality. My experience includes integrating visual effects created by VFX team members into games, as well as implementing UI designs to enhance user experiences."
         ],
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Collaboration",
+            "Experience working in collaborative environments, using tools like Git, Perforce, Jira, and Trello to coordinate tasks and maintain project alignment. I’ve contributed to Agile workflows, participating in sprint planning, stand-ups, and retrospectives. My ability to communicate effectively across disciplines has been key in delivering high-quality projects."
         ],
-        ["Team Work",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        ["Leadership",
+            "As the programming team lead for several game projects, I was responsible for organizing team meetings, ensuring clear communication, and making sure everyone understood their roles and tasks. I created UML diagrams and control flow charts to clarify system designs and support my fellow programmers in implementing features effectively. By fostering collaboration and maintaining a clear project vision, I helped deliver projects on time while proactively addressing technical challenges to ensure smooth development."
         ]
     ]
 
@@ -98,7 +98,7 @@ const GamingSkills = () => {
             <CircularSelector buttons_text={buttons_text} logos={circle_logos} parent_index_func={SetIndex}/>
             <LogosDisplay logos={currentIndex >= 0 ? category_skills_logos[currentIndex] : all_skills_logos}/>
             <DescriptionBoxes 
-                title="Experience with ... " 
+                title="What I bring to the table " 
                 title_color='#FFDF00'
                 box_background='#574D01'
                 background='#A59004'

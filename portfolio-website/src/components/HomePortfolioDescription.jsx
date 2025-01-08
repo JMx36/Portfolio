@@ -66,6 +66,7 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     const middle_index = (Math.floor((last_index) / 2));
     const side_length = Math.floor(window_size / 2); // length of the sides from middle index to the edge of the window
     const w_starting_index = Math.max(0, middle_index - side_length);
+
     let w_end_index = w_starting_index + window_size - 1;
     w_end_index = Math.min(images_lists.length, w_end_index);
 

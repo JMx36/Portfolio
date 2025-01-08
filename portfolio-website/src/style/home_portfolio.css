@@ -113,12 +113,12 @@
 
 .move-images-out-right
 {
-    animation: move_images_out_right 0.6s linear 1;
+    animation: move_images_out_right 0.6s linear forwards;
 }
 
 .move-images-out-left
 {
-    animation: move_images_out_left 0.6s linear 1;
+    animation: move_images_out_left 0.6s linear forwards;
 }
 
 @keyframes move_images_out_left {

@@ -101,13 +101,13 @@ const Skills = () =>
     const descriptions = 
     [
         ["Collaboration",
-            "I have worked in various groups of different sizes, learning how to collaborate effectively with others, whether within my own role or across departments. I’ve gained valuable experience in maintaining constant communication with my team, especially when updating them on completed tasks. Additionally, writing code alongside other programmers has taught me how to ensure my work integrates smoothly with theirs."
+            "Worked in teams of various sizes, honing my ability to collaborate effectively both within my role and across departments. Through consistent communication, I’ve learned the importance of keeping my team informed, particularly when sharing updates on completed tasks. Working alongside other programmers has also taught me how to ensure seamless integration of my code with theirs."
         ],
         ["Agile",
-            "I have been part of teams that utilized agile methodologies, such as Scrum, to manage product development. In these environments, I learned the importance of daily stand-ups and delivering work in a timely manner within sprints or other agile frameworks."
+            "Been part of teams that employed agile methodologies like Scrum to guide product development. These experiences taught me the importance of daily stand-ups for alignment, timely delivery within sprints, and adaptability to changing requirements. This approach reinforced the importance of iterative progress and clear communication in achieving success."
         ],
         ["Leading",
-            "I’ve had the privilege of serving as a team lead for several group projects. In these leadership roles, I refined my abilities not only as a programmer but also as a leader. As the programming lead, I was responsible for writing code that my team could build upon, as well as guiding the team in approaching programming tasks. I focused on ensuring our code was maintainable and scalable for future needs"
+            "Within several group projects, I’ve had the privilege of leading the programming department. In this role, I honed my skills as both a programmer and a leader, taking responsibility for writing foundational code that the team could build upon and guiding the team in tackling programming tasks. My focus was on ensuring our code was maintainable and scalable to meet future needs."
         ]
     ]
 
@@ -149,10 +149,7 @@ const Skills = () =>
                 <div className="top-part">
                     <h2 className="dimmed-yellow-text italic work-sans-family fs-64px fw-700" style={{padding: "0%", margin: "0%"}}>Technologies & Tools</h2>
                 </div>
-                <p className="caption fs-36px fw-400 work-sans-family">As a developer, 
-                    I embrace the philosophy of continuous learning and versatility. 
-                    I find joy in exploring and mastering various technologies. 
-                    Here are some of the technologies I've had the pleasure of working with.</p>
+                <p className="caption fs-36px fw-400 work-sans-family">As a developer, I thrive on continuous learning and adaptability, finding excitement in exploring and mastering diverse technologies. Below are some of the tools and technologies I’ve enjoyed working with.</p>
                 <div className="carousel-container">
                     <div style={{position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#A59004", filter: "blur(20px)"}}></div>
                     <div className="carousel-movement-container">

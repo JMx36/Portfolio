@@ -223,7 +223,7 @@ const Description = ({title="Title", description="Description Text", side="right
                 <h1 className='italic work-sans-family fs-40px fw-600'>{title}</h1>
             </div>
             <div className="home-portfolio-section-text">
-                <p className='work-sans-family fs-24px fw-600'>{description}</p>
+                <p className='work-sans-family fs-20px fw-600'>{description}</p>
                 <Button text="Explore Now" color="none" style={{marginTop: "5%"}} hover_color="#28AAC1" text_color="black"
                 words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}} isLink={true} 
                 link_to={link} link_type={"Link"}

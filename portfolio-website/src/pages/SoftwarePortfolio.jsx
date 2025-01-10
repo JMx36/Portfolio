@@ -100,7 +100,7 @@ const GamingPortfolio = () => {
 
   return (
     <>
-        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons}/>
+        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons} background='url("src/assets/Images/Hero/SEHeroImage.jpg")'/>
         <PortfolioSkills title="Technologies & Tools" title_caption={caption} category_skills_logos={category_skills_logos}
               buttons_text={buttons_text} descriptions={descriptions} 
               circle_logos={circle_logos} all_skills_logos={all_skills_logos}

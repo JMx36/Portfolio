@@ -79,17 +79,11 @@ const TypewriterEffect = ({text, speed, text_className="work-sans-family fs-30px
 };
 
 
-const Hero = ({title_text="Josh Castillo", typewriter_text = [], buttons_info = []}) => {  
-
-  // typewriter_text.push("Game Engineer");
-  // typewriter_text.push("Software Engineer");
-
-  // buttons_info.push(new ButtonInfo({text: "Resume", isLink: true, link: "index.html", type: "aTag"}))
-  // buttons_info.push(new ButtonInfo({text: "Portfolio", isLink: true, link: "#Home-Portfolio", type: "aTag"}))
+const Hero = ({title_text="Josh Castillo", typewriter_text = [], buttons_info = [], background = ""}) => {  
 
   return (
-    <div className="hero">
-        <div className="hero-content to-front2 blur-background">
+    <div className="hero blur-background" style={{backgroundImage: background}}>
+        <div className="hero-content to-front2 ">
               <h1 className="pacifico-family fw-400 fs-70px to-front2" style={{lineHeight: "1.1", textAlign: "center"}}>{title_text}</h1>
               <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
                 textAlign: "center"

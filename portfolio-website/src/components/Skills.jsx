@@ -187,13 +187,16 @@ const Skills = () =>
                         words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
                         text_color="black"
                         style={{minWidth: "max-content", textAlign: "left", padding: "0", marginRight: "0"}}
+                        isLink={true} link_to={"/software-portfolio#tech-and-tools"} link_type="aTag"
+                        scroll_type="scroll"
                         />
                     <p className="work-sans-family fs-36px">and</p>
                     <Button logo_style={button_logo_style} text="Game Developer" text_style="pacifico-family fs-36px" 
                         hover_color="#A59004" color="none" text_color="black"
                         words_style={{...words_style, textShadow: "3px 3px 5px rgba(0, 0, 0, 40%)"}}
                         style={{minWidth: "max-content", textAlign: "left", padding: "0", margin: 0, marginRight: "auto"}}
-                        isLink={true} link_to={"/gaming-portfolio"} link_type="Link"
+                        isLink={true} link_to={"/gaming-portfolio#tech-and-tools"} link_type="aTag"
+                        scroll_type="scroll"
                         />
                 </div>
 

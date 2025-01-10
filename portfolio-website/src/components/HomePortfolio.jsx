@@ -31,7 +31,6 @@ const HomePortfolio = () => {
             title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
         <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[1][0]} 
             description={info[1][1]} swap={true} link="/software-portfolio"/>
-        <div style={{marginBottom: "5%"}}></div>
     </div>
   )
 }

@@ -8,8 +8,8 @@
         "description": "A small scale search engine for UCI documents",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
-        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "title-background-image": "url('../src/assets/Projects/SoftwareDev/Search Engine/title-background.png')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #B19306, #045488)",
         "jobs-section": [
             {
                 "title": "Search Engine Development",
@@ -69,44 +69,45 @@
         "description": "Personal Portfolio website showcasing all the projects I have worked on.",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
-        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "title-background-image": "url('../src/assets/Projects/SoftwareDev/Portfolio/title-background.jpg')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #BEA12F, #141515)",
         "jobs-section": [
             {
-                "title": "Search Engine Development",
+                "title": "Website Development with ReactJS",
                 "jobs": [
-                    "Designed and implemented a scalable search engine",
-                    "Built from the ground up to handle tens of thousands of documents.",
-                    "Achieved a query response time consistently under 300ms, even under harsh operational constraints."
+                    "Leveraged core React fundamentals such as functional and class components, states, props, lifecycle methods, and hooks like useEffect and useState.",
+                    "Implemented timeouts and intervals for dynamic interactions like animations, timed updates, and event handling.",
+                    "Followed React's component-based architecture to ensure modular, maintainable, and reusable code."
                 ]
             },
             {
-                "title": "Multithreaded File Processing and Indexing System",
+                "title": "Utilized React Libraries to Enhance Functionality",
                 "jobs": [
-                    "Leveraged multithreading to parse large volumes of files concurrently, adhering to threading best practices to ensure thread safety and prevent simultaneous memory access conflicts.",
-                    "Ensured efficient and concurrent creation of inverted indexes to improve scalability and performance."
+                    "Implemented react-router-dom to enable client-side routing, creating a seamless navigation experience with features like nested routes, dynamic parameters, and protected routes.",
+                    "Incorporated react-responsive for device-specific rendering and media query handling, ensuring an adaptive user experience across devices."
                 ]
             },
             {
-                "title": "Inverted Index Retrieval",
+                "title": "Responsive Website Layout Design",
                 "jobs": [
-                    "Implemented an Index-of-Index as a JSON-based metadata structure to store the byte offset of the beginning of the inverted index for each tokenized word.",
-                    "Enabled direct access to specific word data during query processing, significantly reducing lookup times.",
-                    "Optimized the storage format to ensure compactness and quick parsing of the JSON file."
+                    "Crafted visually appealing interfaces using semantic HTML and modern CSS methodologies like Flexbox and Grid.",
+                    "Ensured responsiveness by utilizing relative units (e.g., percentages, viewport width/height) and CSS math functions like calc().",
+                    "Applied media queries to adapt layouts for diverse screen sizes and orientations."
                 ]
             },
             {
-                "title": "Custom Text-Based Saving System",
+                "title": "Dynamic Content and Interactive Features",
                 "jobs": [
-                    "Optimized for efficiently storing inverted indexes with minimal overhead.",
-                    "Designed with a focus on supporting rapid merging of inverted indexes for distributed or incremental updates."
+                    "Created interactive components like image sliders, typing/writing animations, and hover-based transitions.",
+                    "Implemented real-time color-changing effects using state management and event listeners.",
+                    "Designed smooth user interactions using React's event-handling system."
                 ]
             },
             {
-                "title": "Document Scoring Algorithms",
+                "title": "Integration of Third-Party Libraries",
                 "jobs": [
-                    "Integrated PageRank, HITS, SimHashing, and tf-idf scoring methodologies.",
-                    "Enhanced relevance ranking by incorporating weighting for key HTML tags such as <title>, <h1>, and <meta> descriptions."
+                    "Utilized EmailJS to implement an automated email-sending feature, enabling users to send messages directly from the website without requiring a backend server.",
+                    "Incorporated form validation to ensure the accuracy and completeness of user inputs before sending emails."
                 ]
             }
         ],

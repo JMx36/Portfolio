@@ -129,7 +129,7 @@
         "task-section-title": "Gameplay Engineer",
         "job-title": "Gameplay Engineer | Programming Lead",
         "tools": "(Unreal | PC)",
-        "description": "Need to do this ahhh",
+        "description": "A fast-paced single-player shooter where you use advanced movement skills to survive and battle relentless hordes of invading creatures.",
         "game-link": "https://dtrmgiraffe.itch.io/quickshot",
 
         "title-background-image": "url('../src/assets/Projects/GameDev/DawnCore/title-background.jpg')",
@@ -166,19 +166,23 @@
         "gifs-section": 
             [
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/JoiningLobby.gif",
+                    "gif": "src/assets/Projects/GameDev/DawnCore/SlidingandClimbing.gif",
                     "caption": "Movement Showcase: Sliding and Wall Climbing"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/LobbyPlayers.gif",
+                    "gif": "src/assets/Projects/GameDev/DawnCore/WallRunning.gif",
                     "caption": "Movement Showcase: Wall Running"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/DashEffect.gif",
+                    "gif": "src/assets/Projects/GameDev/DawnCore/UML.gif",
                     "caption": "UML of the current architecture of our game"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/HitScanProjectile.gif",
+                    "gif": "src/assets/Projects/GameDev/DawnCore/ControlFlow.gif",
+                    "caption": "Control flow diagram of the AI Director"
+                },
+                {
+                    "gif": "src/assets/Projects/GameDev/DawnCore/DawnCoreHealth.gif",
                     "caption": "Health System"
                 }               
             ],

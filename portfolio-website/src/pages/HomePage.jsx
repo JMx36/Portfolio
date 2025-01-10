@@ -17,7 +17,7 @@ const HomePage = () => {
 
   return (
     <>
-        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons}/>
+        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons} background='url("src/assets/Images/Hero/HomeHeroImage.jpg")'/>
         <About />
         <Skills />
         <HomePortfolio />

@@ -130,8 +130,8 @@
         "description": "An automated program designed to schedule my university classes directly into my Google Calendar",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
-        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "title-background-image": "url('../src/assets/Projects/SoftwareDev/Automated Google Calendar/title-background1.jpg')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #4F5762, #043266)",
         "jobs-section": [
             {
                 "title": "Integrated Google APIs",

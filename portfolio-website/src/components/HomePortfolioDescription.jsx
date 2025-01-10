@@ -93,8 +93,11 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
         
         if (e.animationName === `move_images_out_${direction}`)
         {
-            PlayAnimation(false);
-            SetDirection("none");
+            setTimeout(() => {
+                PlayAnimation(false); 
+                SetDirection("none");
+              }, 15); // Delay of 0ms allows the browser to reflow and reset
+            
             SetSelectedIndex(currentIndex);
         }
 
@@ -239,12 +242,12 @@ const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", 
   return (
     <div className="home-portfolio-section">
         <div className='home-portfolio-section-left' style={{}}>
-            {!swap ? <Slider images_lists={images} side="left" render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> : <Description title={title} description={description} link={link}/> }
+            {!swap ? <Slider images_lists={images} side="left" render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> : <Description title={title} description={description} link={link}/> }
 
         </div>
 
         <div className='home-portfolio-section-right' style={{marginLeft: "3%"}}>
-            {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{minWidth: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}}/>}/> }
+            {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> }
 
         </div>
     

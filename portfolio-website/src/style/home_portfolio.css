@@ -179,11 +179,6 @@
         flex-direction: column;
     }
 
-    .home-portfolio-section-description
-    {
-        /* width: 100%; */
-    }
-
     .home-portfolio-section-right, .home-portfolio-section-left
     {
         margin: 0% auto !important;
@@ -201,6 +196,26 @@
         aspect-ratio: 16/10 !important;
         --images-gap: calc(clamp(300px, 80vw, 800px) + 10%) !important; /*this width comes from the width of the image right now but probably would have to be defined else where*/
         --starting-xOffset: calc((var(--images-gap)) * -1) !important;  
+    }
+
+    .image-preview-container
+    {
+        width: clamp(300px, 80vw, 800px) !important;
+    }
+
+    .preview-image-box-0
+    {
+        width: clamp(115px, 30vw, 250px) !important;
+    }
+
+    .preview-image-box-1
+    {
+        width: clamp(115px, 35vw, 320px) !important;
+    }
+
+    .preview-image-box-2
+    {
+        width: clamp(100px, 29vw, 230px) !important;
     }
 
 }

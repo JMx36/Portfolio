@@ -53,9 +53,21 @@
         "gifs-section": 
         [
             {
-                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
-                "caption": "Fade in and fade out effect"
-            }  
+                "gif": "src/assets/Projects/SoftwareDev/Search Engine/MSE.gif",
+                "caption": "Keyword: \"Master In Software Engineering\""
+            },    
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Search Engine/CyberSecurity.gif",
+                "caption": "Keyword: \"Cybersecurity\""
+            },   
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Search Engine/Professors.gif",
+                "caption": "Keyword: \"Professors at UCI\""
+            },   
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Search Engine/Code.gif",
+                "caption": "Keyword: \"Girls who code\""
+            }          
         ],
 
         "thoughts": "Developing this search engine was a valuable learning experience. It significantly enhanced my threading skills as I worked with multiple threads running concurrently and accessing shared data structures like dictionaries and queues. I also honed my ability to write efficient code, ensuring the system could process large volumes of data while maintaining a 300ms response time. Additionally, this project provided meaningful experience in collaborating with other programmers, focusing on writing clear, maintainable code that integrates seamlessly with others’ contributions."
@@ -115,9 +127,21 @@
         "gifs-section": 
         [
             {
-                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
-                "caption": "Fade in and fade out effect"
-            }           
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
+                "caption": "Type writing effect"
+            },
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
+                "caption": "Type writing effect"
+            },        
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
+                "caption": "Type writing effect"
+            },  
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
+                "caption": "Type writing effect"
+            }
         ],
 
         "thoughts": "For my first web development project, I’m proud of what I’ve accomplished. This experience taught me how HTML, CSS, and JavaScript work together to create functional and visually appealing websites. By using React, I discovered the power of frameworks in streamlining development, particularly through the creation of reusable code and web components. This project not only strengthened my technical skills but also deepened my appreciation for the creative and collaborative aspects of web development."
@@ -131,7 +155,7 @@
         "description": "An automated program designed to schedule my university classes directly into my Google Calendar",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('../src/assets/Projects/SoftwareDev/Automated Google Calendar/title-background1.jpg')",
+        "title-background-image": "url('../src/assets/Projects/SoftwareDev/Automated Google Calendar/title-background.jpg')",
         "task-section-background-color": "radial-gradient(circle farthest-side, #4F5762, #043266)",
         "jobs-section": [
             {
@@ -163,8 +187,8 @@
         "gifs-section": 
         [
             {
-                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
-                "caption": "Fade in and fade out effect"
+                "gif": "src/assets/Projects/SoftwareDev/Automated Google Calendar/AutomatedCalendar.gif",
+                "caption": "Demo"
             }
         ],
 

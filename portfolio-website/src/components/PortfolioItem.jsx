@@ -63,7 +63,7 @@ const PortfolioItem = ({project}) => {
                 <div className='task-container'>
                     <div className='container to-front2'>
                         <div className='left fw-600 fs-20px work-sans-family'>
-                            <h1>Gameplay Engineer</h1>
+                            <h1>{project['task-section-title']}</h1>
                             {project["jobs-section"].map((job, index) =>
                                 (<TaskDescription task_title={job.title} tasks={job.jobs}/>))
                             }

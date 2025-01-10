@@ -88,6 +88,8 @@ const NavBar = () => {
                                 ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]],
         "/gaming-portfolio": [["About", "/index.html#About", "Link"], ["Portfolios", "/index.html#Home-Portfolio", "aTag"], 
                                 ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]],
+        "/software-portfolio": [["About", "/index.html#About", "Link"], ["Portfolios", "/index.html#Home-Portfolio", "aTag"], 
+        ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]]
     };
     
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });

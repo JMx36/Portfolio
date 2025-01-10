@@ -27,7 +27,8 @@ import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
 import jira_logo from "../assets/Images/WhiteLogos/jira_small.png"
 
 // Tasks
-import projects from "../Information/game-portfolio-tasks.json"
+import projects from "../Information/software-portfolio-tasks.json"
+
 
 class ImageInfo
 {
@@ -41,11 +42,12 @@ class ImageInfo
 
 const GamingPortfolio = () => {
 
-  const hero_typewrite_text = ["Gameplay Engineer", "Unreal Developer", "Unity Developer"]
+  const hero_typewrite_text = ["Web Developer", "Software Engineer"]
   const hero_buttons = [
     new ButtonInfo({text: "Resume", isLink: true, link: "index.html", type: "aTag"}), 
     new ButtonInfo({text: "About", isLink: true, link: "/index.html#About", type: "aTag"})
   ]
+
 
   const CLogo = new ImageInfo({ image: c_logo});
   const CSharp = new ImageInfo({ image: cs_logo});
@@ -83,18 +85,18 @@ const GamingPortfolio = () => {
   
   const descriptions = 
   [
-      ["Game Dev.",
-          "Proficient in industry-standard game engines like Unreal Engine and Unity, with experience in developing gameplay mechanics and implementing editor scripting in Unity to streamline workflows and improve productivity. I’ve worked with Unreal’s C++ and Blueprints, as well as Unity’s scripting and Photon for multiplayer functionality. My experience includes integrating visual effects created by VFX team members into games, as well as implementing UI designs to enhance user experiences."
+      ["Software Dev.",
+          "Experienced in both Object-Oriented and functional programming, leveraging these paradigms to develop efficient software solutions that achieve specific goals. With a strong understanding of low-level programming, I focus on writing code that maximizes resource usage and ensures optimal performance. My experience extends to multithreading and network programming, allowing me to develop concurrent systems and handle network communication effectively. While working on my different projects, I have kept a strong emphasis on writing clean, maintainable, and self-documented code that is scalable and easy to extend."
       ],
       ["Collaboration",
-          "Experience working in collaborative environments, using tools like Git, Perforce, Jira, and Trello to coordinate tasks and maintain project alignment. I’ve contributed to Agile workflows, participating in sprint planning, stand-ups, and retrospectives. My ability to communicate effectively across disciplines (e.g. designers, artists, audio, etc.) has been key in delivering high-quality projects."
+          "Experience working in collaborative environments, using tools like Git, Perforce, Jira, and Trello to coordinate tasks and maintain project alignment. I’ve contributed to Agile workflows, participating in sprint planning, stand-ups, and retrospectives. My ability to communicate effectively across different disciplines has been key in delivering high-quality projects."
       ],
       ["Leadership",
-          "As the programming team lead for several game projects, I was responsible for organizing team meetings, ensuring clear communication, and making sure everyone understood their roles and tasks. I created UML diagrams and control flow charts to clarify system designs and support my fellow programmers in implementing features effectively. By fostering collaboration and maintaining a clear project vision, I helped deliver projects on time while proactively addressing technical challenges to ensure smooth development."
+          "As the programming team lead for several group projects, I was responsible for organizing team meetings, ensuring clear communication, and making sure everyone understood their roles and tasks. I created UML diagrams and control flow charts to clarify system designs and support my fellow programmers in implementing features effectively. By fostering collaboration and maintaining a clear project vision, I helped deliver projects on time while proactively addressing technical challenges to ensure smooth development."
       ]
   ]
 
-  const caption = "As a game developer, I thrive on continuous learning and adaptability. I enjoy diving into diverse tools and technologies to bring creative visions to life. Below are some of the tools and technologies I've worked with on my journey."
+  const caption = "As a software developer, I am passionate about problem-solving and crafting efficient, user-focused solutions. I embrace challenges as opportunities to grow and excel in a constantly evolving tech landscape. Below are some of the tools and technologies I have honed on my journey to build impactful software."
 
   return (
     <>

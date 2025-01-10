@@ -3,6 +3,7 @@
         "title": "Wartorn",
         "trailer": "https://www.youtube.com/embed/014IEmJHhLc",
         "job-title": "Gameplay Engineer | Programming Lead",
+        "task-section-title": "Gameplay Engineer",
         "tools": "(Unreal | PC)",
         "description": "A narrative-driven game where players control a child separated from their parents during a war, exploring a ruined city to gather supplies and search for clues about their parents' whereabouts.",
         "game-link": "https://dnajerab.itch.io/wartorn",
@@ -53,6 +54,7 @@
     {
         "title": "QuickShot",
         "trailer": "",
+        "task-section-title": "Gameplay Engineer",
         "job-title": "Gameplay Engineer | Programming Lead",
         "tools": "(Unity | PC)",
         "description": "A fast-paced multiplayer FPS where players use a sniper rifle, dash, and grapple hook to outmaneuver opponents and dominate the arena in free-for-all battles.",
@@ -124,6 +126,7 @@
     {
         "title": "DawnCore",
         "trailer": "",
+        "task-section-title": "Gameplay Engineer",
         "job-title": "Gameplay Engineer | Programming Lead",
         "tools": "(Unreal | PC)",
         "description": "Need to do this ahhh",

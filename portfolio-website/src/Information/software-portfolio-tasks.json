@@ -1,0 +1,172 @@
+[
+    {
+        "title": "UCI Search Engine",
+        "trailer": "",
+        "task-section-title": "Software Developer",
+        "job-title": "Software Developer | Search Engineer",
+        "tools": "(Python | Threads | Regex | Github | GitKraken)",
+        "description": "A small scale search engine for UCI documents",
+        "game-link": "https://github.com/JMx36/IR24W-A3-G36",
+
+        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "jobs-section": [
+            {
+                "title": "Search Engine Development",
+                "jobs": [
+                    "Designed and implemented a scalable search engine",
+                    "Built from the ground up to handle tens of thousands of documents.",
+                    "Achieved a query response time consistently under 300ms, even under harsh operational constraints."
+                ]
+            },
+            {
+                "title": "Multithreaded File Processing and Indexing System",
+                "jobs": [
+                    "Leveraged multithreading to parse large volumes of files concurrently, adhering to threading best practices to ensure thread safety and prevent simultaneous memory access conflicts.",
+                    "Ensured efficient and concurrent creation of inverted indexes to improve scalability and performance."
+                ]
+            },
+            {
+                "title": "Inverted Index Retrieval",
+                "jobs": [
+                    "Implemented an Index-of-Index as a JSON-based metadata structure to store the byte offset of the beginning of the inverted index for each tokenized word.",
+                    "Enabled direct access to specific word data during query processing, significantly reducing lookup times.",
+                    "Optimized the storage format to ensure compactness and quick parsing of the JSON file."
+                ]
+            },
+            {
+                "title": "Custom Text-Based Saving System",
+                "jobs": [
+                    "Optimized for efficiently storing inverted indexes with minimal overhead.",
+                    "Designed with a focus on supporting rapid merging of inverted indexes for distributed or incremental updates."
+                ]
+            },
+            {
+                "title": "Document Scoring Algorithms",
+                "jobs": [
+                    "Integrated PageRank, HITS, SimHashing, and tf-idf scoring methodologies.",
+                    "Enhanced relevance ranking by incorporating weighting for key HTML tags such as <title>, <h1>, and <meta> descriptions."
+                ]
+            }
+        ],
+        
+        "gifs-section": 
+        [
+            {
+                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
+                "caption": "Fade in and fade out effect"
+            }  
+        ],
+
+        "thoughts": "Developing this search engine was a valuable learning experience. It significantly enhanced my threading skills as I worked with multiple threads running concurrently and accessing shared data structures like dictionaries and queues. I also honed my ability to write efficient code, ensuring the system could process large volumes of data while maintaining a 300ms response time. Additionally, this project provided meaningful experience in collaborating with other programmers, focusing on writing clear, maintainable code that integrates seamlessly with others’ contributions."
+    }, 
+    {
+        "title": "Portfolio Website",
+        "trailer": "",
+        "task-section-title": "Web Developer",
+        "job-title": "Web Developer | Frontend Developer",
+        "tools": "(JavaScript | React | Html | Css | Github | GitKraken)",
+        "description": "Personal Portfolio website showcasing all the projects I have worked on.",
+        "game-link": "https://github.com/JMx36/IR24W-A3-G36",
+
+        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "jobs-section": [
+            {
+                "title": "Search Engine Development",
+                "jobs": [
+                    "Designed and implemented a scalable search engine",
+                    "Built from the ground up to handle tens of thousands of documents.",
+                    "Achieved a query response time consistently under 300ms, even under harsh operational constraints."
+                ]
+            },
+            {
+                "title": "Multithreaded File Processing and Indexing System",
+                "jobs": [
+                    "Leveraged multithreading to parse large volumes of files concurrently, adhering to threading best practices to ensure thread safety and prevent simultaneous memory access conflicts.",
+                    "Ensured efficient and concurrent creation of inverted indexes to improve scalability and performance."
+                ]
+            },
+            {
+                "title": "Inverted Index Retrieval",
+                "jobs": [
+                    "Implemented an Index-of-Index as a JSON-based metadata structure to store the byte offset of the beginning of the inverted index for each tokenized word.",
+                    "Enabled direct access to specific word data during query processing, significantly reducing lookup times.",
+                    "Optimized the storage format to ensure compactness and quick parsing of the JSON file."
+                ]
+            },
+            {
+                "title": "Custom Text-Based Saving System",
+                "jobs": [
+                    "Optimized for efficiently storing inverted indexes with minimal overhead.",
+                    "Designed with a focus on supporting rapid merging of inverted indexes for distributed or incremental updates."
+                ]
+            },
+            {
+                "title": "Document Scoring Algorithms",
+                "jobs": [
+                    "Integrated PageRank, HITS, SimHashing, and tf-idf scoring methodologies.",
+                    "Enhanced relevance ranking by incorporating weighting for key HTML tags such as <title>, <h1>, and <meta> descriptions."
+                ]
+            }
+        ],
+        
+        "gifs-section": 
+        [
+            {
+                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
+                "caption": "Fade in and fade out effect"
+            }           
+        ],
+
+        "thoughts": "For my first web development project, I’m proud of what I’ve accomplished. This experience taught me how HTML, CSS, and JavaScript work together to create functional and visually appealing websites. By using React, I discovered the power of frameworks in streamlining development, particularly through the creation of reusable code and web components. This project not only strengthened my technical skills but also deepened my appreciation for the creative and collaborative aspects of web development."
+    },
+    {
+        "title": "Automated School Calendar",
+        "trailer": "",
+        "task-section-title": "Software Developer",
+        "job-title": "Software Developer",
+        "tools": "(Python | Github | GitKraken | Google Calendar API)",
+        "description": "An automated program designed to schedule my university classes directly into my Google Calendar",
+        "game-link": "https://github.com/JMx36/IR24W-A3-G36",
+
+        "title-background-image": "url('../src/assets/Projects/Wartorn/WartornTitleBackground.png')",
+        "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
+        "jobs-section": [
+            {
+                "title": "Integrated Google APIs",
+                "jobs": [
+                    "Leveraged the Google Calendar API to automate the creation of events for all my classes during the academic quarter.",
+                    "Configured authentication using OAuth 2.0 to securely access and update the user's calendar.",
+                    "Customized event properties, such as start and end times, recurring schedules, and reminders, to align with class requirements."
+                ]
+            },
+            {
+                "title": "Data Parsing and Storage",
+                "jobs": [
+                    "Parsed data obtained from the school's website to extract class details such as course names, timings, locations, and instructors.",
+                    "Utilized Python's datetime library to parse and manipulate time information for classes. Converted raw text data into structured datetime objects for consistent formatting and easy comparison.",
+                    "Stored structured data in efficient data containers like namedtuple and dictionaries to enable easy manipulation and querying.",
+                    "Implemented error handling and data validation to ensure the accuracy and consistency of the parsed information."
+                ]
+            },
+            {
+                "title": "Web Scraping with Beautiful Soup",
+                "jobs": [
+                    "Utilized the Beautiful Soup library to scrape HTML content from the school's website, extracting class schedules, class names, and locations.",
+                    "Designed a simple yet effective scraping logic to navigate and parse dynamic or nested HTML structures effectively."
+                ]
+            }
+        ],
+ 
+        "gifs-section": 
+        [
+            {
+                "gif": "src/assets/Projects/Wartorn/DialogueTreeWartorn.gif",
+                "caption": "Fade in and fade out effect"
+            }
+        ],
+
+        "thoughts": "Developing this project was a rewarding experience, as it helped streamline a repetitive and time-consuming task, freeing up more time for other activities. It allowed me to deepen my understanding of the Google Calendar API, web scraping, and simulating user interactions, such as clicking buttons and entering text. While the project is functional, I plan to address areas for improvement, such as handling login failures and delayed website rendering, to achieve full automation."
+    }
+]

@@ -209,11 +209,15 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
                     // <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto auto" clickable={true} func={HandleRightClick}/>
                 }
             </div>
-            <div className="circle-buttons width-50%">
-                {CircleDisplayWindow({low_index: start_index, high_index: end_index, 
-                    current_index: currentIndex, container_length: images_lists.length,
-                    click_func: HandleClick})}
-            </div>
+            {
+                images_lists.length > 1 ? 
+                    <div className="circle-buttons width-50%">
+                        {CircleDisplayWindow({low_index: start_index, high_index: end_index, 
+                            current_index: currentIndex, container_length: images_lists.length,
+                            click_func: HandleClick})}
+                    </div>
+                    : ''
+            }
         </div>
     )
 }

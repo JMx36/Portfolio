@@ -27,11 +27,17 @@ const HomePortfolio = () => {
             </div>
         </div>
 
-        <HomePortfolioDescription images={[["src/assets/Images/Preview Images/Dawncore/left.jpg", "src/assets/Images/Preview Images/Dawncore/middle.jpg", "src/assets/Images/Preview Images/Dawncore/right.jpg"], 
-        [4, 5, 6], 
-        [7, 8, 9]]} 
+        <HomePortfolioDescription images={[
+                ["src/assets/Images/Preview Images/GameDev/Dawncore/left.jpg", "src/assets/Images/Preview Images/GameDev/Dawncore/middle.jpg", "src/assets/Images/Preview Images/GameDev/Dawncore/right.jpg"], 
+                ["src/assets/Images/Preview Images/GameDev/Quickshot/left.png", "src/assets/Images/Preview Images/GameDev/Quickshot/middle.png", "src/assets/Images/Preview Images/GameDev/Quickshot/right.png"], 
+                ["src/assets/Images/Preview Images/GameDev/UE/left.png", "src/assets/Images/Preview Images/GameDev/UE/middle.png", "src/assets/Images/Preview Images/GameDev/UE/right.png"]]
+            } 
             title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
-        <HomePortfolioDescription images={[[1, 2, 3], [4, 5, 6], [7, 8, 9]]} title={info[1][0]} 
+        <HomePortfolioDescription images={[
+                ["src/assets/Images/Preview Images/SoftwareDev/First Preview/left.png", "src/assets/Images/Preview Images/SoftwareDev/First Preview/middle.jpg", "src/assets/Images/Preview Images/SoftwareDev/First Preview/right.png"]
+                ]
+            } 
+            title={info[1][0]} 
             description={info[1][1]} swap={true} link="/software-portfolio"/>
     </div>
   )

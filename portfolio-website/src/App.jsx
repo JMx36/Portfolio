@@ -12,15 +12,29 @@ import MainLayout from './layouts/MainLayout';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
-      <Route path="index.html" element={<HomePage />} />
+      <Route index element={<HomePage />} />
       <Route path="gaming-portfolio" element={<GamingPortfolio />} />
       <Route path="software-portfolio" element={<SoftwarePortfolio />} />
     </Route>
   )
 );
 
+const deploy_router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path="gaming-portfolio" element={<GamingPortfolio />} />
+      <Route path="software-portfolio" element={<SoftwarePortfolio />} />
+    </Route>
+  ),
+  {
+    basename: "/Portfolio"
+  }
+);
+
+
 const App = () => {
-  return <RouterProvider router={router}/>;
+  return <RouterProvider router={deploy_router}/>;
 }
 
 export default App

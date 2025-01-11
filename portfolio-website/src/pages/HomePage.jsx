@@ -11,8 +11,8 @@ const HomePage = () => {
 
   const hero_typewrite_text = ["Game Engineer", "Software Engineer"]
   const hero_buttons = [
-    new ButtonInfo({text: "Resume", isLink: true, link: "index.html", type: "aTag"}), 
-    new ButtonInfo({text: "Portfolio", isLink: true, link: "#Home-Portfolio", type: "aTag", scroll_type: "scroll"})
+    new ButtonInfo({text: "Resume", isLink: true, link: "/", type: "aTag"}), 
+    new ButtonInfo({text: "Portfolio", isLink: true, link: "/#Home-Portfolio", type: "aTag", scroll_type: "scroll"})
   ]
 
   return (

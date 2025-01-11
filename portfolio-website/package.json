@@ -1,5 +1,5 @@
 {
-  "homepage": "https://JMx36.github.io/Portfolio",
+  "homepage": "http://JMx36.github.io/Portfolio",
   "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

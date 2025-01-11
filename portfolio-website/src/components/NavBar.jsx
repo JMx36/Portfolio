@@ -84,12 +84,12 @@ const NavBar = () => {
     const { pathname } = useLocation();
 
     const navBarOptions = {
-        "/index.html":  [["About", "#About", "aTag"], ["Portfolios", "#Home-Portfolio", "aTag"], 
-                                ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]],
-        "/gaming-portfolio": [["About", "/index.html#About", "Link"], ["Portfolios", "/index.html#Home-Portfolio", "aTag"], 
-                                ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]],
-        "/software-portfolio": [["About", "/index.html#About", "Link"], ["Portfolios", "/index.html#Home-Portfolio", "aTag"], 
-        ["Resume", "#About", "aTag"], ["Contact", "#Contact", "aTag"]]
+        "/":  [["About", "/#About", "aTag"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
+                                ["Resume", "/#About", "aTag"], ["Contact", "/#Contact", "aTag"]],
+        "/gaming-portfolio": [["About", "/#About", "Link"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
+                                ["Resume", "/#About", "aTag"], ["Contact", "#Contact", "aTag"]],
+        "/software-portfolio": [["About", "/#About", "Link"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
+        ["Resume", "/#About", "aTag"], ["Contact", "#Contact", "aTag"]]
     };
     
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });

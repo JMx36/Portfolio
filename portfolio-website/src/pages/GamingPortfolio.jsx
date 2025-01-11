@@ -25,6 +25,8 @@ import unreal_logo from "../assets/Images/WhiteLogos/unreal_small.png"
 import vs_logo from "../assets/Images/WhiteLogos/vs.png"
 import vscode_logo from "../assets/Images/WhiteLogos/vscode.png"
 import jira_logo from "../assets/Images/WhiteLogos/jira_small.png"
+import trello_logo from "../assets/Images/WhiteLogos/trello.svg"
+
 
 // Tasks
 import projects from "../Information/game-portfolio-tasks.json"
@@ -58,6 +60,7 @@ const GamingPortfolio = () => {
   const Unity = new ImageInfo({ image: unity_logo});
   const VisualStudio = new ImageInfo({ image: vs_logo});
   const VSCode = new ImageInfo({ image: vscode_logo});
+  const Trello = new ImageInfo({ image: trello_logo});
 
   const Game_Engine = new ImageInfo({ image: game_engine_icon, width: "clamp(20px, 20vw, 70px)"});
   const Dev_Tools = new ImageInfo({ image: dev_tools, width: "clamp(20px, 20vw, 70px)"});
@@ -67,7 +70,7 @@ const GamingPortfolio = () => {
 
   const buttons_text = ["Production", "Engines", "Version Control", "Software", "Languages"];
   const category_skills_logos = [
-      [Jira],
+      [Jira, Trello],
       [Unity, Unreal],
       [GitHub, Gitkraken],
       [VisualStudio, VSCode],
@@ -78,7 +81,7 @@ const GamingPortfolio = () => {
       Production, Game_Engine, Version_Ctrl, Dev_Tools, Prog_Languages
   ]
 
-  const all_skills_logos = [Jira, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]
+  const all_skills_logos = [Jira, Trello, Unreal, Unity, GitHub, Gitkraken, VisualStudio, VSCode, CLogo, CPP, CSharp, Python]
 
   
   const descriptions = 

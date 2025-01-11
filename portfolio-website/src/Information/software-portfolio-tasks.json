@@ -131,16 +131,20 @@
                 "caption": "Type writing effect"
             },
             {
-                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
-                "caption": "Type writing effect"
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/ReusableComponents.gif",
+                "caption": "Different kinds of reusable components (e.g. sliders)"
             },        
             {
-                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
-                "caption": "Type writing effect"
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/ContactEmail.gif",
+                "caption": "Demo of sending an email"
             },  
             {
-                "gif": "src/assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
-                "caption": "Type writing effect"
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/CircularEffect.gif",
+                "caption": "Circular responsive animation linked to logos categories"
+            },
+            {
+                "gif": "src/assets/Projects/SoftwareDev/Portfolio/Carousel.gif",
+                "caption": "Carousel animation made with react and css"
             }
         ],
 

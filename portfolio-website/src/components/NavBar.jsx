@@ -84,12 +84,12 @@ const NavBar = () => {
     const { pathname } = useLocation();
 
     const navBarOptions = {
-        "/":  [["About", "/#About", "aTag"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
-                                ["Resume", "/#About", "aTag"], ["Contact", "/#Contact", "aTag"]],
+        "/":  [["About", "/Portfolio/#About", "aTag"], ["Portfolios", "/Portfolio/#Home-Portfolio", "aTag"], 
+                                ["Resume", "/Portfolio/#About", "aTag"], ["Contact", "/Portfolio/#Contact", "aTag"]],
         "/gaming-portfolio": [["About", "/#About", "Link"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
                                 ["Resume", "/#About", "aTag"], ["Contact", "#Contact", "aTag"]],
-        "/software-portfolio": [["About", "/#About", "Link"], ["Portfolios", "/#Home-Portfolio", "aTag"], 
-        ["Resume", "/#About", "aTag"], ["Contact", "#Contact", "aTag"]]
+        "/software-portfolio": [["About", "/Portfolio/#About", "Link"], ["Portfolios", "/Portfolio/#Home-Portfolio", "aTag"], 
+        ["Resume", "/Portfolio/#About", "aTag"], ["Contact", "#Contact", "aTag"]]
     };
     
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
@@ -101,16 +101,16 @@ const NavBar = () => {
 
     return (
     <nav className="NavBar">
-        <div className="NavBarLogo"><NavigationLink link="index.html" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover" content="Josh Castillo"/></div>
+        <div className="NavBarLogo"><NavigationLink link="//" className="LogoButton pacifico-family fs-32px fw-400 yellow-hover" content="Josh Castillo"/></div>
         {
             isSmallerScreen ? <BurgerComponnet click_func={SetDropdownVisibility}/> :
                 <div className="NavBarOptions fs-20px fw-300 work-sans-family">
-                    {navBarOptions[pathname ? pathname : "/index.html"].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" content={option[0]} 
+                    {navBarOptions[pathname ? pathname : "//"].map((option) => (<NavigationLink link={option[1]} type={option[2]} className="navbar-button yellow-hover" content={option[0]} 
                     scroll_type="scroll"/>))}
                 </div>
         }
         {console.log(isDropdownOpen)}
-        {isSmallerScreen && isDropdownOpen ? <NavBarDropdown navBarOptions={navBarOptions[pathname ? pathname : "/index.html"]} closing_func={SetDropdownVisibility}/>: ''}
+        {isSmallerScreen && isDropdownOpen ? <NavBarDropdown navBarOptions={navBarOptions[pathname ? pathname : "//"]} closing_func={SetDropdownVisibility}/>: ''}
 
 
     </nav>

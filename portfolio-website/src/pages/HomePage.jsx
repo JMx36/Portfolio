@@ -11,17 +11,16 @@ const HomePage = () => {
 
   const hero_typewrite_text = ["Game Engineer", "Software Engineer"]
   const hero_buttons = [
-    new ButtonInfo({text: "Resume", isLink: true, link: "/", type: "aTag"}), 
-    new ButtonInfo({text: "Portfolio", isLink: true, link: "/#Home-Portfolio", type: "aTag", scroll_type: "scroll"})
+    new ButtonInfo({text: "Resume", isLink: true, link: "//", type: "Link"}), 
+    new ButtonInfo({text: "Portfolio", isLink: true, link: "#Home-Portfolio", type: "aTag", scroll_type: "scroll"})
   ]
 
   return (
     <>
-        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons} background='url("src/assets/Images/Hero/HomeHeroImage.jpg")'/>
+        <Hero typewriter_text={hero_typewrite_text} buttons_info={hero_buttons} background='url("assets/Images/Hero/HomeHeroImage.jpg")'/>
         <About />
         <Skills />
         <HomePortfolio />
-        {/* <Contact /> */}
     </>
   )
 }

@@ -8,7 +8,7 @@
         "description": "A narrative-driven game where players control a child separated from their parents during a war, exploring a ruined city to gather supplies and search for clues about their parents' whereabouts.",
         "game-link": "https://dnajerab.itch.io/wartorn",
 
-        "title-background-image": "url('../src/assets/Projects/GameDev/Wartorn/WartornTitleBackground.png')",
+        "title-background-image": "url('assets/Projects/GameDev/Wartorn/WartornTitleBackground.png')",
         "task-section-background-color": "radial-gradient(circle farthest-side, #db6836, #552713)",
         "jobs-section": [
             {
@@ -36,15 +36,15 @@
         "gifs-section": 
         [
             {
-                "gif": "src/assets/Projects/GameDev/Wartorn/DialogueTreeWartorn.gif",
+                "gif": "assets/Projects/GameDev/Wartorn/DialogueTreeWartorn.gif",
                 "caption": "Fade in and fade out effect"
             },
             {
-                "gif": "src/assets/Projects/GameDev/Wartorn/DialogueTreeWartorn2.gif",
+                "gif": "assets/Projects/GameDev/Wartorn/DialogueTreeWartorn2.gif",
                 "caption": "Dialogue Tree showcase"
             },
             {
-                "gif": "src/assets/Projects/GameDev/Wartorn/TypeWriterEffectWartorn.gif",
+                "gif": "assets/Projects/GameDev/Wartorn/TypeWriterEffectWartorn.gif",
                 "caption": "Type writing Effect"
             }               
         ],
@@ -60,7 +60,7 @@
         "description": "A fast-paced multiplayer FPS where players use a sniper rifle, dash, and grapple hook to outmaneuver opponents and dominate the arena in free-for-all battles.",
         "game-link": "https://dtrmgiraffe.itch.io/quickshot",
 
-        "title-background-image": "url('../src/assets/Projects/GameDev/Quickshot/title-background.png')",
+        "title-background-image": "url('assets/Projects/GameDev/Quickshot/title-background.png')",
         "task-section-background-color": "radial-gradient(circle closest-corner, #5A2C80, #35194B)",
         "jobs-section": [
             {
@@ -104,19 +104,19 @@
         "gifs-section": 
             [
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/JoiningLobby.gif",
+                    "gif": "assets/Projects/GameDev/Quickshot/JoiningLobby.gif",
                     "caption": "Players joining lobbies already created/started"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/LobbyPlayers.gif",
+                    "gif": "assets/Projects/GameDev/Quickshot/LobbyPlayers.gif",
                     "caption": "Players hosting lobbies other players can join"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/DashEffect.gif",
+                    "gif": "assets/Projects/GameDev/Quickshot/DashEffect.gif",
                     "caption": "Dash Effect in first and third person view"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/Quickshot/HitScanProjectile.gif",
+                    "gif": "assets/Projects/GameDev/Quickshot/HitScanProjectile.gif",
                     "caption": "Hit-scan and Non-hit-scan modes showcase"
                 }               
             ],
@@ -132,7 +132,7 @@
         "description": "A fast-paced single-player shooter where you use advanced movement skills to survive and battle relentless hordes of invading creatures.",
         "game-link": "https://dtrmgiraffe.itch.io/quickshot",
 
-        "title-background-image": "url('../src/assets/Projects/GameDev/DawnCore/title-background.jpg')",
+        "title-background-image": "url('assets/Projects/GameDev/DawnCore/title-background.jpg')",
         "task-section-background-color": "radial-gradient(circle closest-corner, #B09D74, #827455)",
         "jobs-section": [
             {
@@ -166,23 +166,23 @@
         "gifs-section": 
             [
                 {
-                    "gif": "src/assets/Projects/GameDev/DawnCore/SlidingandClimbing.gif",
+                    "gif": "assets/Projects/GameDev/DawnCore/SlidingandClimbing.gif",
                     "caption": "Movement Showcase: Sliding and Wall Climbing"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/DawnCore/WallRunning.gif",
+                    "gif": "assets/Projects/GameDev/DawnCore/WallRunning.gif",
                     "caption": "Movement Showcase: Wall Running"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/DawnCore/UML.gif",
+                    "gif": "assets/Projects/GameDev/DawnCore/UML.gif",
                     "caption": "UML of the current architecture of our game"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/DawnCore/ControlFlow.gif",
+                    "gif": "assets/Projects/GameDev/DawnCore/ControlFlow.gif",
                     "caption": "Control flow diagram of the AI Director"
                 },
                 {
-                    "gif": "src/assets/Projects/GameDev/DawnCore/DawnCoreHealth.gif",
+                    "gif": "assets/Projects/GameDev/DawnCore/DawnCoreHealth.gif",
                     "caption": "Health System"
                 }               
             ],

@@ -26,9 +26,9 @@ const deploy_router = createBrowserRouter(
       <Route path="gaming-portfolio" element={<GamingPortfolio />} />
       <Route path="software-portfolio" element={<SoftwarePortfolio />} />
     </Route>
-  ),
+  ), 
   {
-    basename: "/Portfolio"
+    basename: '/Portfolio/'
   }
 );
 

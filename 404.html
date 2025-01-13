@@ -1,0 +1,6 @@
+<script>
+    const redirectTo = window.location.pathname.replace('/Portfolio', '');
+    if (redirectTo) {
+      window.location.replace(`${window.location.origin}/Portfolio/#${redirectTo}`);
+    }
+</script>

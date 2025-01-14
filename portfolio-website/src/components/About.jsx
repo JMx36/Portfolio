@@ -1,24 +1,21 @@
 
 import { useMediaQuery } from 'react-responsive';
 import { Button, ButtonInfo } from '../components/utilities.jsx'
-
+import MePic from '../assets/Images/About/me.jpg'
 import React, { useState } from 'react';
 
 const About = () => {
 
-    const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
-    const [isReadingMore, SetIsReadingMore] = useState(true);
-    const maxSize = isSmallerScreen || !isReadingMore ? 600 : 2000;
+    // const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
+    // const [isReadingMore, SetIsReadingMore] = useState(true);
+    // const maxSize = isSmallerScreen || !isReadingMore ? 600 : 2000;
 
     const about_buttons = [
-        new ButtonInfo({text: "Resume", isLink: true, link:"/index.html", type: "Link"}), 
+        new ButtonInfo({text: "Resume", isLink: true, link:"#Home-Portfolio", type: "Link"}), 
         new ButtonInfo({text: "Portfolio", isLink: true, link:"#Home-Portfolio", type: "aTag"})
     ]
 
-    const about_text = `Hi, I’m Josh! I’m currently a senior at the University of California, Irvine, pursuing a double major in Computer Science and Game Development. I’m a dedicated individual with a passion for learning, programming, and creating solutions that make people’s lives easier and more enjoyable. Over the past three years, I’ve honed my programming skills, not only through practical experience but also by deepening my understanding of core concepts and theories.
-Through game jams and hackathons, I’ve learned the importance of teamwork and communication, collaborating with others to bring ideas to life. I value and strive to write clean, maintainable code that is easy to understand—a craft I find beautiful, like a piece of art
-Why did I choose to major in Game Development in addition to Computer Science? Because I’ve always loved playing games, and I wanted to learn how to create meaningful, impactful games like the ones I grew up playing. While I may not be a game designer, I love using my programming skills to bring game concepts to life and build tools for designers to shape their vision. Majoring in Game Development has given me a deeper understanding of the entire game development process, allowing me to create better tools and systems for the various teams involved.
-As I prepare to transition into the professional world, I’m excited to apply everything I’ve learned—whether it’s building an app that improves the lives of millions or developing a game that millions of people will enjoy.`
+    const about_text = ``;
 
     return (
         <div id="About" className="about-me">            
@@ -27,8 +24,12 @@ As I prepare to transition into the professional world, I’m excited to apply e
                 <div className="about-info-container">
                     <div className="about-left-section">
                         <div className="circle-container">
-                            <div className="circle-mask">
-                                <img src="" />
+                            <div className="circle-mask" style={{backgroundImage: `url(${MePic})`, backgroundSize: "cover", 
+                            backgroundPosition: "center", backgroundRepeat: "no-repeat"
+                        }}>
+
+
+                                {/* <img src={MePic} /> */}
                             </div>
                         </div>
                         <div className="about-info-buttons">
@@ -46,11 +47,18 @@ As I prepare to transition into the professional world, I’m excited to apply e
                     </div>
                     
                     <div className="about-right-section">
-                        <div className="about-text-section ">
-                            <p className="work-sans-family fw-300 fs-20px in-front" style={{padding: "2rem"}}>
-                                {about_text.slice(0, isReadingMore ? about_text.length : maxSize) + (isReadingMore ? "" : " ...")}
+                        <div className="about-text-section" style={{padding: "2rem"}}>
+                            <p className="work-sans-family fw-300 fs-20px in-front" style={{paddingBottom: "1rem"}}>
+                            Hi, I’m Josh, a passionate programmer and aspiring software and game developer. With experience in Computer Science and Game Development, I specialize in creating solutions that are not only functional but impactful. My work spans programming systems and tools that empower teams to bring their ideas to life.
                             </p>
-                            <Button text={isReadingMore ? "...read less" : "read more..."} 
+                            <p className="work-sans-family fw-300 fs-20px in-front" style={{paddingBottom: "1rem"}}>
+                            Over the past three years, I’ve built a strong foundation in programming through hands-on experience in game jams, hackathons, and collaborative projects. I take pride in writing clean, maintainable code and thrive in environments where teamwork and innovation intersect.
+                            </p>
+                            <p className="work-sans-family fw-300 fs-20px in-front" >
+                            Whether developing intuitive apps or immersive games, I’m driven by the desire to create meaningful experiences that resonate with people. As I transition into the professional world, I’m eager to bring my skills to projects that inspire and connect others.
+
+                            </p>
+                            {/* <Button text={isReadingMore ? "...read less" : "read more..."} 
                                 text_style="italic work-sans-family fw-400 fs-20px to-front2" text_color="white" color="none" style={{
                                         padding: "1rem 2rem",
                                         marginLeft: "auto",
@@ -64,7 +72,7 @@ As I prepare to transition into the professional world, I’m excited to apply e
                                         console.log("read more");
                                         SetIsReadingMore(!isReadingMore)
                                     }}
-                                    />
+                                    /> */}
                         </div>
                     </div>
                 </div>

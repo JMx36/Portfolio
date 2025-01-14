@@ -95,7 +95,7 @@
             {
                 "title": "Utilized React Libraries to Enhance Functionality",
                 "jobs": [
-                    "Implemented react-router-dom to enable client-side routing, creating a seamless navigation experience with features like nested routes, dynamic parameters, and protected routes.",
+                    "Implemented react-router-dom to enable client-side routing, creating a seamless navigation experience with features like nested routes.",
                     "Incorporated react-responsive for device-specific rendering and media query handling, ensuring an adaptive user experience across devices."
                 ]
             },
@@ -148,7 +148,7 @@
             }
         ],
 
-        "thoughts": "For my first web development project, I’m proud of what I’ve accomplished. This experience taught me how HTML, CSS, and JavaScript work together to create functional and visually appealing websites. By using React, I discovered the power of frameworks in streamlining development, particularly through the creation of reusable code and web components. This project not only strengthened my technical skills but also deepened my appreciation for the creative and collaborative aspects of web development."
+        "thoughts": "For my first web development project, I’m proud of what I’ve accomplished. This experience taught me how HTML, CSS, and JavaScript work together to create functional and visually appealing websites. By using React, I discovered the power of frameworks in streamlining development, particularly through the creation of reusable code and web components. This project not only strengthened my technical skills but also deepened my appreciation for the creative and collaborative aspects of web development. I plan on working more on this portfolio as time goes by to continue improving and updating it with my latest projects."
     },
     {
         "title": "Automated School Calendar",

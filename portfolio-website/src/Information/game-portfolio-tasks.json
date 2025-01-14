@@ -121,16 +121,16 @@
                 }               
             ],
 
-        "thoughts": "This was my first experience working on a shooting game, where I played a key role in its development. Through this project, I deepened my understanding of networking in games, tackling challenges like latency and synchronization. While there’s still more work to be done, I’m proud of what my team and I achieved within the time constraints. I look forward to revisiting this project to refine it further and potentially release it on Steam for others to enjoy—especially since we’ve already had people asking for it! 😉"
+        "thoughts": "This was my first experience working on a shooting game, where I played a key role in its development. Through this project, I deepened my understanding of networking in games, tackling challenges like latency and synchronization. While there’s still more work to be done, I’m proud of what my team and I achieved within the time constraints. I look forward to revisiting this project to refine it further and potentially release it on Steam for others to enjoy—especially since we’ve already had people asking for it!"
     },
     {
-        "title": "DawnCore",
+        "title": "DawnCore (Coming Soon)",
         "trailer": "",
         "task-section-title": "Gameplay Engineer",
         "job-title": "Gameplay Engineer | Programming Lead",
         "tools": "(Unreal | PC)",
         "description": "A fast-paced single-player shooter where you use advanced movement skills to survive and battle relentless hordes of invading creatures.",
-        "game-link": "https://dtrmgiraffe.itch.io/quickshot",
+        "game-link": "https://jm36.itch.io/",
 
         "title-background-image": "url('assets/Projects/GameDev/DawnCore/title-background.jpg')",
         "task-section-background-color": "radial-gradient(circle closest-corner, #B09D74, #827455)",

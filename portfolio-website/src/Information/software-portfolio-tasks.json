@@ -126,26 +126,27 @@
         
         "gifs-section": 
         [
+
             {
                 "gif": "assets/Projects/SoftwareDev/Portfolio/TypeWritingEffect.gif",
                 "caption": "Type writing effect"
             },
             {
                 "gif": "assets/Projects/SoftwareDev/Portfolio/ReusableComponents.gif",
-                "caption": "Different kinds of reusable components (e.g. sliders)"
+                "caption": "Reusable components (e.g. sliders)"
             },        
             {
                 "gif": "assets/Projects/SoftwareDev/Portfolio/ContactEmail.gif",
                 "caption": "Demo of sending an email"
             },  
             {
-                "gif": "assets/Projects/SoftwareDev/Portfolio/CircularEffect.gif",
-                "caption": "Circular responsive animation linked to logos categories"
+                "gif": "assets/Projects/SoftwareDev/Portfolio/CircleAnimation.gif",
+                "caption": "Animations and Responsive Interactions"
             },
             {
                 "gif": "assets/Projects/SoftwareDev/Portfolio/Carousel.gif",
-                "caption": "Carousel animation made with react and css"
-            }
+                "caption": "Carousel made with react and css"
+            } 
         ],
 
         "thoughts": "For my first web development project, I’m proud of what I’ve accomplished. This experience taught me how HTML, CSS, and JavaScript work together to create functional and visually appealing websites. By using React, I discovered the power of frameworks in streamlining development, particularly through the creation of reusable code and web components. This project not only strengthened my technical skills but also deepened my appreciation for the creative and collaborative aspects of web development. I plan on working more on this portfolio as time goes by to continue improving and updating it with my latest projects."

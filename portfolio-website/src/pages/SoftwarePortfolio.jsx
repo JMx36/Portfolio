@@ -48,7 +48,7 @@ const GamingPortfolio = () => {
 
     const hero_typewrite_text = ["Web Developer", "Software Engineer"]
     const hero_buttons = [
-    new ButtonInfo({text: "Resume", isLink: true, link: "/", type: "aTag"}), 
+    new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/Software Dev Resume.pdf", type: "download", downloadName: "SoftwareDevResume.pdf"}), 
     new ButtonInfo({text: "About", isLink: true, link: "/#About", type: "Link"})
     ]
 

@@ -17,13 +17,14 @@ export class LinkInfo
 
 export class ButtonInfo
 {
-  constructor({text, isLink = false, link = "", type = "none", scroll_type="auto"})
+  constructor({text, isLink = false, link = "", type = "none", scroll_type="auto", downloadName="filename"})
   {
     this.text = text;
     this.isLink = isLink;
     this.link = link;
     this.type = type;
     this.scroll_type = scroll_type;
+    this.downloadName = downloadName;
   }
 }
 
@@ -153,7 +154,7 @@ export const Rectangle = ({height, width, color="white", clickable=false,
 export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="20px", text_color="black", 
                         color="black", logo=null, logo_style={}, words_style={}, style={}, textShadow="3px 2px 4px rgba(255, 255, 255, 70%)",
                         hover_color="white", click_func=null, type="button", 
-                        isLink=false, link_to="", link_type="", scroll_type="auto"}) => 
+                        isLink=false, link_to="", link_type="", scroll_type="auto", downloadName="filename"}) => 
 {
 
     const [isHovered, SetIsHovered] = useState(false);
@@ -195,7 +196,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
             {logo === null ? '' : <img src={logo} style={logo_style}/>}
             {
                 isLink? <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
-                    className={text_style} style={{...p_style, ...words_style}}/> :
+                    className={text_style} style={{...p_style, ...words_style}} downloadName={downloadName} /> :
                 <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
             }
         </button>
@@ -203,7 +204,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
 }
 
 
-export const NavigationLink = ({content, link, type="Link", scroll_type="auto", className='', style={}}) => 
+export const NavigationLink = ({content, link, type="Link", scroll_type="auto", className='', downloadName='filename', style={}}) => 
 {
     const HandleScroll = () => 
     {
@@ -227,6 +228,8 @@ export const NavigationLink = ({content, link, type="Link", scroll_type="auto", 
             <a href={link} style={{...style, textDecoration: "none"}} className={className} onClick={HandleScroll}>{content}</a> 
             : type === "external" ? 
             <a href={link} style={{...style, textDecoration: "none"}} className={className} target='_blank'>{content}</a> 
+            : type === "download" ?
+            <a href={link} style={{...style, textDecoration: "none"}} className={className} download={downloadName}>{content}</a> 
             : ''
     )
 }

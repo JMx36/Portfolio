@@ -32,13 +32,17 @@ const HomePortfolio = () => {
                 ["assets/Images/Preview Images/GameDev/Quickshot/left.png", "assets/Images/Preview Images/GameDev/Quickshot/middle.png", "assets/Images/Preview Images/GameDev/Quickshot/right.png"], 
                 ["assets/Images/Preview Images/GameDev/UE/left.png", "assets/Images/Preview Images/GameDev/UE/middle.png", "assets/Images/Preview Images/GameDev/UE/right.png"]]
             } 
-            title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"/>
+            title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"
+            downloadLink='Resumes/Game Dev Resume.pdf' downloadName='GameDevResume.pdf'
+            />
         <HomePortfolioDescription images={[
                 ["assets/Images/Preview Images/SoftwareDev/First Preview/left.png", "assets/Images/Preview Images/SoftwareDev/First Preview/middle.jpg", "assets/Images/Preview Images/SoftwareDev/First Preview/right.png"]
                 ]
             } 
             title={info[1][0]} 
-            description={info[1][1]} swap={true} link="/software-portfolio"/>
+            description={info[1][1]} swap={true} link="/software-portfolio"
+            downloadLink='Resumes/Software Dev Resume.pdf' downloadName='SoftwareDevResume.pdf'
+            />
     </div>
   )
 }

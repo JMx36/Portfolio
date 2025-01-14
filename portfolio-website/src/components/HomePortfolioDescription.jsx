@@ -222,7 +222,7 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     )
 }
 
-const Description = ({title="Title", description="Description Text", side="right", link="/index.html"}) =>
+const Description = ({title="Title", description="Description Text", side="right", link="/", downloadName="", downloadLink=""}) =>
 {
     return (
         <div className={`home-portfolio-section-description`}>
@@ -235,6 +235,11 @@ const Description = ({title="Title", description="Description Text", side="right
                 words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}} isLink={true} 
                 link_to={link} link_type={"Link"}
                 />
+                <Button text="Resume" color="none" style={{marginTop: "5%"}} hover_color="#28AAC1" text_color="black"
+                words_style={{textShadow: "3px 3px 4px rgba(40, 170, 193, 0.5)"}} isLink={true} 
+                link_to={downloadLink} link_type={"download"} downloadName={downloadName}
+                />
+
             </div>
             
         </div>
@@ -242,16 +247,18 @@ const Description = ({title="Title", description="Description Text", side="right
 }
 
 
-const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link=""}) => {
+const HomePortfolioDescription = ({images=[0, 1, 2, 3, 4, 5, 6], title="Title", description="Description Text", swap=false, link="", downloadLink="", downloadName=""}) => {
   return (
     <div className="home-portfolio-section">
         <div className='home-portfolio-section-left' style={{}}>
-            {!swap ? <Slider images_lists={images} side="left" render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> : <Description title={title} description={description} link={link}/> }
+            {!swap ? <Slider images_lists={images} side="left" render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> 
+            : <Description title={title} description={description} link={link} downloadLink={downloadLink} downloadName={downloadName}/> }
 
         </div>
 
         <div className='home-portfolio-section-right' style={{marginLeft: "3%"}}>
-            {!swap ? <Description title={title} description={description} side='left' link={link}/> : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> }
+            {!swap ? <Description title={title} description={description} side='left' link={link} downloadLink={downloadLink} downloadName={downloadName}/>
+             : <Slider images_lists={images} render={(index, image_list) => <ImagesPreview images={image_list[index]} style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9"}}/>}/> }
 
         </div>
     

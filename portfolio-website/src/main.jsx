@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
 import App from './App.jsx'
 import './style/index.css'
 import './style/navbar.css'
@@ -14,7 +15,9 @@ import './style/footer.css'
 import './style/gaming_portfolio.css'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <App />
-  </StrictMode>,
+
+  
+  // </StrictMode>,
 )

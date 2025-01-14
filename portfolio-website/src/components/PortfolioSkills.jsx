@@ -13,7 +13,7 @@ const PortfolioSkills = ({title, title_caption, category_skills_logos, buttons_t
 
     return (
         <div id="tech-and-tools" className='skills-section'>
-            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "0% auto", marginTop: "5%"}}>{title}</h2>
+            <h2 className="lighter-blue-text italic work-sans-family fs-64px fw-700" style={{margin: "0% auto", marginTop: "max(50px, 5%)"}}>{title}</h2>
             <p className="caption fs-36px fw-400 work-sans-family" style={{marginBottom: "2%"}}>
                 {title_caption}
             </p>

@@ -33,7 +33,7 @@ const LogosDisplay = ({logos}) => {
 
   return (
     <div className='row-container' style={{display: "flex", flexWrap: "wrap", gap: "20px", margin: "5% 5%", 
-      marginBottom: "3%", justifyContent: 'center', alignItems: "center"}}>
+      marginBottom: "max(50px, 5%)", justifyContent: 'center', alignItems: "center"}}>
         {
             logos.map((image, index) => (
               <Box image_info={image} index={index}/>

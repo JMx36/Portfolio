@@ -6,7 +6,7 @@ const DescriptionBoxes = ({title, descriptions, title_color="#DAC21C", text_colo
     const main_title = {
         margin: 0,
         padding: 0,
-        marginTop: "3%",
+        marginTop: "max(30px, 3%)",
         marginLeft: "3%",
         color: title_color,
         ...main_title_style,

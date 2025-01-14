@@ -10,8 +10,6 @@ const MainLayout = () => {
 
   const navigate = useNavigate();
 
-
-  console.log("Navigate to the work");
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const redirectPath = searchParams.get('redirect');

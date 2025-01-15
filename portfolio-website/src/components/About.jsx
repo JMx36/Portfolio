@@ -52,7 +52,7 @@ const About = () => {
                             Hi, I’m Josh, a passionate programmer and aspiring software and game developer. With experience in Computer Science and Game Development, I specialize in creating solutions that are not only functional but impactful. My work spans programming systems and tools that empower teams to bring their ideas to life.
                             </p>
                             <p className="work-sans-family fw-300 fs-20px in-front" style={{paddingBottom: "1rem"}}>
-                            Over the past three years, I’ve built a strong foundation in programming through hands-on experience in game jams, hackathons, and collaborative projects. I take pride in writing clean, maintainable code and thrive in environments where teamwork and innovation intersect.
+                            Over the past three years, I’ve built a strong foundation in programming through hands-on experience by working on multiple game projects and software applications in both individual and collaborative settings. I take pride in writing clean, maintainable code and thrive in environments where teamwork and innovation intersect.
                             </p>
                             <p className="work-sans-family fw-300 fs-20px in-front" >
                             Whether developing intuitive apps or immersive games, I’m driven by the desire to create meaningful experiences that resonate with people. As I transition into the professional world, I’m eager to bring my skills to projects that inspire and connect others.

@@ -46,7 +46,7 @@ const GamingPortfolio = () => {
   const hero_typewrite_text = ["Gameplay Engineer", "Unreal Developer", "Unity Developer"]
   const hero_buttons = [
     new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/GameDevResume.pdf", type: "download", downloadName: "GameDevResume.pdf"}), 
-    new ButtonInfo({text: "About", isLink: true, link: `${import.meta.env.BASE_URL}#About`, type: "aTag"})
+    new ButtonInfo({text: "About", isLink: true, link: `/#About`, type: "Link"})
   ]
 
   const CLogo = new ImageInfo({ image: c_logo});

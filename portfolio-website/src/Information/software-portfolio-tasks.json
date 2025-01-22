@@ -8,7 +8,7 @@
         "description": "A small scale search engine for UCI documents",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('assets/Projects/SoftwareDev/Search Engine/title-background.png')",
+        "title-background-image": "url('assets/Projects/SoftwareDev/Search-Engine/title-background.png')",
         "task-section-background-color": "radial-gradient(circle farthest-side, #B19306, #045488)",
         "jobs-section": [
             {
@@ -53,19 +53,19 @@
         "gifs-section": 
         [
             {
-                "gif": "assets/Projects/SoftwareDev/Search Engine/MSE.gif",
+                "gif": "assets/Projects/SoftwareDev/Search-Engine/MSE.gif",
                 "caption": "Keyword: \"Master In Software Engineering\""
             },    
             {
-                "gif": "assets/Projects/SoftwareDev/Search Engine/CyberSecurity.gif",
+                "gif": "assets/Projects/SoftwareDev/Search-Engine/CyberSecurity.gif",
                 "caption": "Keyword: \"Cybersecurity\""
             },   
             {
-                "gif": "assets/Projects/SoftwareDev/Search Engine/Professors.gif",
+                "gif": "assets/Projects/SoftwareDev/Search-Engine/Professors.gif",
                 "caption": "Keyword: \"Professors at UCI\""
             },   
             {
-                "gif": "assets/Projects/SoftwareDev/Search Engine/Code.gif",
+                "gif": "assets/Projects/SoftwareDev/Search-Engine/Code.gif",
                 "caption": "Keyword: \"Girls who code\""
             }          
         ],
@@ -160,7 +160,7 @@
         "description": "An automated program designed to schedule my university classes directly into my Google Calendar",
         "game-link": "https://github.com/JMx36/IR24W-A3-G36",
 
-        "title-background-image": "url('assets/Projects/SoftwareDev/Automated Google Calendar/title-background.jpg')",
+        "title-background-image": "url('assets/Projects/SoftwareDev/Automated-Google-Calendar/title-background.jpg')",
         "task-section-background-color": "radial-gradient(circle farthest-side, #4F5762, #043266)",
         "jobs-section": [
             {
@@ -192,7 +192,7 @@
         "gifs-section": 
         [
             {
-                "gif": "assets/Projects/SoftwareDev/Automated Google Calendar/AutomatedCalendar.gif",
+                "gif": "assets/Projects/SoftwareDev/Automated-Google-Calendar/AutomatedCalendar.gif",
                 "caption": "Demo"
             }
         ],

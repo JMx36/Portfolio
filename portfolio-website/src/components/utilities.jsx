@@ -72,7 +72,7 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 
 
 export const LogoImage = ({image, index, setIsHovered=undefined, width="", height="", 
-        margin_left="", margin_right="", margin_bottom= "", margin_top=""}) => {
+        margin_left="", margin_right="", margin_bottom= "", margin_top="", alt_text=""}) => {
 
     const image_style = {};
     // console.log(image, width, height);
@@ -89,7 +89,7 @@ export const LogoImage = ({image, index, setIsHovered=undefined, width="", heigh
             onMouseEnter={setIsHovered === undefined ? undefined : () => setIsHovered(true)}
             onMouseLeave={setIsHovered === undefined ? undefined : () => setIsHovered(false)}
             style={image_style}
-            alt=""
+            alt={alt_text}
             />
     )
 }
@@ -184,10 +184,6 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         color: "inherit"
     }
 
-
-
-
-    
     return(
         <>
             { isLink ? 
@@ -222,11 +218,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
                         <span className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</span>
                     }
                 </button>
-            
-                
-                }
-        
-        
+            }    
         </>
     )
 }

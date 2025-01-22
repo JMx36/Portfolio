@@ -17,10 +17,10 @@ export const FooterLogos = () => {
     
     return (
         <div className="footer-logo-container">
-            <NavigationLink link="https://www.linkedin.com/in/joshcastillo36/" type="external" content={<LogoImage image={linked_in} width={image_width}/>}/>
-            <NavigationLink link="https://github.com/JMx36" type="external" content={<LogoImage image={github} width={image_width}/>}/>
-            <NavigationLink link="https://jm36.itch.io/" type="external" content={<LogoImage image={itch_io} width={image_width}/>}/>
-            <NavigationLink link="#Contact" type="aTag" scroll_type='scroll' content={<LogoImage image={email} width={image_width}/>}/>
+            <NavigationLink link="https://www.linkedin.com/in/joshcastillo36/" type="external" content={<LogoImage image={linked_in} width={image_width} alt_text="LinkedIn Logo"/>}/>
+            <NavigationLink link="https://github.com/JMx36" type="external" content={<LogoImage image={github} width={image_width} alt_text="Github Logo"/>}/>
+            <NavigationLink link="https://jm36.itch.io/" type="external" content={<LogoImage image={itch_io} width={image_width} alt_text="Itch.io Logo"/>}/>
+            <NavigationLink link="#Contact" type="aTag" scroll_type='scroll' content={<LogoImage image={email} width={image_width} alt_text="Email Logo"/>}/>
         </div>
     )
 }

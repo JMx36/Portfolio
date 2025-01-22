@@ -101,7 +101,6 @@
 
 .navbar-dropdown-options
 {
-    align-self: right;
     margin: auto;
     display: flex;
     flex-direction: column;

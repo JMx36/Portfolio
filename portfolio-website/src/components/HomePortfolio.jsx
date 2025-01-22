@@ -28,20 +28,20 @@ const HomePortfolio = () => {
         </div>
 
         <HomePortfolioDescription images={[
-                ["assets/Images/Preview Images/GameDev/Dawncore/left.jpg", "assets/Images/Preview Images/GameDev/Dawncore/middle.jpg", "assets/Images/Preview Images/GameDev/Dawncore/right.jpg"], 
-                ["assets/Images/Preview Images/GameDev/Quickshot/left.png", "assets/Images/Preview Images/GameDev/Quickshot/middle.png", "assets/Images/Preview Images/GameDev/Quickshot/right.png"], 
-                ["assets/Images/Preview Images/GameDev/UE/left.png", "assets/Images/Preview Images/GameDev/UE/middle.png", "assets/Images/Preview Images/GameDev/UE/right.png"]]
+                ["assets/Images/Preview-Images/GameDev/Dawncore/left.jpg", "assets/Images/Preview-Images/GameDev/Dawncore/middle.jpg", "assets/Images/Preview-Images/GameDev/Dawncore/right.jpg"], 
+                ["assets/Images/Preview-Images/GameDev/Quickshot/left.png", "assets/Images/Preview-Images/GameDev/Quickshot/middle.png", "assets/Images/Preview-Images/GameDev/Quickshot/right.png"], 
+                ["assets/Images/Preview-Images/GameDev/UE/left.png", "assets/Images/Preview-Images/GameDev/UE/middle.png", "assets/Images/Preview-Images/GameDev/UE/right.png"]]
             } 
             title={info[0][0]} description={info[0][1]} swap={isSmallerScreen} link="/gaming-portfolio"
-            downloadLink='Resumes/Game Dev Resume.pdf' downloadName='GameDevResume.pdf'
+            downloadLink='Resumes/GameDevResume.pdf' downloadName='GameDevResume.pdf'
             />
         <HomePortfolioDescription images={[
-                ["assets/Images/Preview Images/SoftwareDev/First Preview/left.png", "assets/Images/Preview Images/SoftwareDev/First Preview/middle.jpg", "assets/Images/Preview Images/SoftwareDev/First Preview/right.png"]
+                ["assets/Images/Preview-Images/SoftwareDev/left.png", "assets/Images/Preview-Images/SoftwareDev/middle.jpg", "assets/Images/Preview-Images/SoftwareDev/right.png"]
                 ]
             } 
             title={info[1][0]} 
             description={info[1][1]} swap={true} link="/software-portfolio"
-            downloadLink='Resumes/Software Dev Resume.pdf' downloadName='SoftwareDevResume.pdf'
+            downloadLink='Resumes/SoftwareDevResume.pdf' downloadName='SoftwareDevResume.pdf'
             />
     </div>
   )

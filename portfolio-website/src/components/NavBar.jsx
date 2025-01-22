@@ -86,8 +86,8 @@ const NavBar = () => {
     const AboutLink = new ButtonInfo({text: "About", isLink: true, link: "/#About", type: "Link"});
     const HomePortfolioLink = new ButtonInfo({text: "Portfolios", isLink: true, link: "/#Home-Portfolio", type: "Link"});
     const HomeResumeLink = new ButtonInfo({text: "Resume", isLink: true, link: "/#Home-Portfolio", type: "Link"});
-    const SoftwareDevResume = new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/Software Dev Resume.pdf", type: "download", downloadName: "SoftwareDevResume.pdf"});
-    const GameDevResume = new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/Game Dev Resume.pdf", type: "download", downloadName: "GameDevResume.pdf"});
+    const SoftwareDevResume = new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/SoftwareDevResume.pdf", type: "download", downloadName: "SoftwareDevResume.pdf"});
+    const GameDevResume = new ButtonInfo({text: "Resume", isLink: true, link: "Resumes/GameDevResume.pdf", type: "download", downloadName: "GameDevResume.pdf"});
     const ContactLink = new ButtonInfo({text: "Contact", isLink: true, link: "#Contact", type: "aTag"});
 
     const [isDropdownOpen, SetDropdownVisibility] = useState(false);

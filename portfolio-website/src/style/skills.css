@@ -91,7 +91,7 @@
     --image-left--margin: 2.5%;
     --image-size-1: clamp(70px, 10vw, 100px);
     --image-size-2: clamp(55px, 9vw, 90px);
-    transform: translateX(calc(-1 * (10.5 * (var(--image-size-1) + var(--image-left--margin)) + 2 * (var(--image-size-2) + var(--image-left--margin))))); 
+    /* transform: translateX(calc(-1 * (10.5 * (var(--image-size-1) + var(--image-left--margin)) + 2 * (var(--image-size-2) + var(--image-left--margin)))));  */ 
     animation: slide 10s linear infinite;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -158,7 +158,6 @@
     /* max-width: 100%; */
     justify-content: center;
     /* margin: 0 auto; */
-    align-items: top;
     box-sizing: border-box;
 }
 

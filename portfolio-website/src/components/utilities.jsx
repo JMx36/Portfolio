@@ -89,6 +89,7 @@ export const LogoImage = ({image, index, setIsHovered=undefined, width="", heigh
             onMouseEnter={setIsHovered === undefined ? undefined : () => setIsHovered(true)}
             onMouseLeave={setIsHovered === undefined ? undefined : () => setIsHovered(false)}
             style={image_style}
+            alt=""
             />
     )
 }
@@ -174,6 +175,7 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
     }
 
     const p_style = {
+        display: "block",
         padding: "0", 
         margin: "0%",
         lineHeight: "1",
@@ -182,24 +184,50 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         color: "inherit"
     }
 
+
+
+
+    
     return(
-        <button type={type} className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
-            onMouseEnter={() => SetIsHovered(true)} 
-            onMouseLeave={() => SetIsHovered(false)} 
-            onMouseDown={(e) => 
-                {
-                    e.preventDefault();
-                    click_func != null ? click_func() : ''
+        <>
+            { isLink ? 
+            
+                <div className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
+                    onMouseEnter={() => SetIsHovered(true)} 
+                    onMouseLeave={() => SetIsHovered(false)} 
+                    onMouseDown={(e) => 
+                        {
+                            e.preventDefault();
+                            click_func != null ? click_func() : ''
+                        }
+                        }   
+                >
+                    {logo === null ? '' : <img src={logo} style={logo_style}/>}
+                    <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
+                            className={text_style} style={{...p_style, ...words_style}} downloadName={downloadName} />
+                </div> :
+        
+                <button type={type} className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
+                    onMouseEnter={() => SetIsHovered(true)} 
+                    onMouseLeave={() => SetIsHovered(false)} 
+                    onMouseDown={(e) => 
+                        {
+                            e.preventDefault();
+                            click_func != null ? click_func() : ''
+                        }
+                        }   
+                >
+                    {logo === null ? '' : <img src={logo} style={logo_style}/>}
+                    {
+                        <span className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</span>
+                    }
+                </button>
+            
+                
                 }
-                }   
-        >
-            {logo === null ? '' : <img src={logo} style={logo_style}/>}
-            {
-                isLink? <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
-                    className={text_style} style={{...p_style, ...words_style}} downloadName={downloadName} /> :
-                <p className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</p>
-            }
-        </button>
+        
+        
+        </>
     )
 }
 

@@ -32,10 +32,10 @@ const ContactInputField = ({label, placeholder, background_color, change_func, v
 
   return(
     <div className='contact-input-field'>
-      <label className="work-sans-family fw-600 fs-24px" htmlFor="name" style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
+      <label className="work-sans-family fw-600 fs-24px" htmlFor={label} style={label_style}>{label}<span style={{color: "red"}}>*</span></label>
       {
         useTextArea ? 
-        <textarea required className="work-sans-family fw-400 fs-24px" type={type} id={label} value={value_state}
+        <textarea required className="work-sans-family fw-400 fs-24px" id={label} value={value_state}
                     name={label} placeholder={placeholder} style={input_style} onChange={change_func}>
         </textarea>
          : 
@@ -48,12 +48,12 @@ const ContactInputField = ({label, placeholder, background_color, change_func, v
 }
 
 
-const ContactLogoImage = ({image, title, info}) =>
+const ContactLogoImage = ({image, title, info, alt_text}) =>
 {
   return(
     <div className="contact-logo-image">
           <div style={{display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "black", borderRadius: "50%", padding: "1rem"}}>
-            <img src={image}/> 
+            <img src={image} alt={alt_text}/> 
           </div>
           <div className="contact-logo-image-info fs-24px">
               <h2 className="work-sans-family fw-700 italic" style={{margin: "0"}}>{title}</h2>
@@ -131,9 +131,9 @@ const Contact = () => {
         </div>  
         <div className="contact-info-container">
           <div className="contact-logos-container">
-            <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com"/>
-            <ContactLogoImage image={phone} title="PHONE" info="(714)-276-7492"/>
-            <ContactLogoImage image={location} title="LOCATION" info="CA, United States"/>
+            <ContactLogoImage image={mail} title="EMAIL" info="jcpm2603@gmail.com" alt_text="White Email logo in the style of an envelope."/>
+            <ContactLogoImage image={phone} title="PHONE" info="(714)-276-7492" alt_text="White Phone logo in the style of an old phone."/>
+            <ContactLogoImage image={location} title="LOCATION" info="CA, United States" alt_text="White Location logo in the style of a map pin."/>
           </div>
           <div className='contact-input'>
             <form className="contact-input-container" onSubmit={SendEmail}>

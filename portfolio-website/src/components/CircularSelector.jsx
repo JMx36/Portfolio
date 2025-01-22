@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// Button used by the CircularSelector component
 const Button = ({text, index, isOn, setIndex}) => 
 {
 
@@ -45,7 +46,7 @@ const Button = ({text, index, isOn, setIndex}) =>
     )
 }
 
-
+// Creates the component with the expanding and contracting animation
 const BlurCircleContent = ({isExpanded, content}) => 
 {
     return(

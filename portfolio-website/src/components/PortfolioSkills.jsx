@@ -4,7 +4,7 @@ import DescriptionBoxes from './DescriptionBoxes.jsx';
 import PortfolioItem from './PortfolioItem.jsx';
 import LogosDisplay from './LogosDisplay.jsx';
 
-
+// Component for the Skills section of each portfolio page
 const PortfolioSkills = ({title, title_caption, category_skills_logos, buttons_text, 
     descriptions, circle_logos, all_skills_logos, projects}) => {
 

@@ -27,9 +27,6 @@ const About = () => {
                             <div className="circle-mask" style={{backgroundImage: `url(${MePic})`, backgroundSize: "cover", 
                             backgroundPosition: "center", backgroundRepeat: "no-repeat"
                         }}>
-
-
-                                {/* <img src={MePic} /> */}
                             </div>
                         </div>
                         <div className="about-info-buttons">

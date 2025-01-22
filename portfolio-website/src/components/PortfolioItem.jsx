@@ -4,7 +4,7 @@ import {Slider} from "../components/HomePortfolioDescription.jsx"
 import { useMediaQuery } from 'react-responsive';
 import VideoPreview from '../components/VideoPreview.jsx'
 
-
+// Creates the task description section of each project item component
 const TaskDescription = ({task_title, tasks}) =>
 {
     return (
@@ -12,14 +12,14 @@ const TaskDescription = ({task_title, tasks}) =>
             <h2 className='fs-24px'>{task_title}</h2>
             <ul className="custom-list work-sans-family fs-20px fw-300">
                 {tasks.map((task, index) => (
-                    <li key={index}>{task}</li>  /* Use the index as a unique key */
+                    <li key={index}>{task}</li> 
                 ))}
             </ul>
         </div>
     )
 }
 
-
+// Creates the title and project info of the project item component
 const GameTitleInfo = ({title, subTitle, game_info, description, btn_link}) => {
     return (
         <div className='text-container fs-40px work-sans-family fw-600'>
@@ -42,9 +42,8 @@ const GameTitleInfo = ({title, subTitle, game_info, description, btn_link}) => {
     )
 }
 
+// Creates the section for a project's info and tasks 
 const PortfolioItem = ({project}) => {
-       
-    // images.push(jira)
     return (
         <div className="portfolio-item">
             <div className='title-section dark-overlay' style={{backgroundImage: project["title-background-image"]}}>

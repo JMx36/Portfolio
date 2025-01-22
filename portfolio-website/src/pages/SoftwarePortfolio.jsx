@@ -5,7 +5,7 @@ import PortfolioSkills from '../components/PortfolioSkills.jsx';
 import { ButtonInfo } from '../components/utilities.jsx';
 
 
-// Category Logos //
+/// Category Logos ///
 import web_dev_icon from "../assets/Images/Categories/web-development.svg"
 import dev_tools from "../assets/Images/Categories/dev-tools.svg"
 import production from "../assets/Images/Categories/production.svg"
@@ -13,7 +13,7 @@ import prog_languages from "../assets/Images/Categories/prog-languages.svg"
 import version_control from "../assets/Images/Categories/version-control.svg"
 
 
-// Logos ///
+/// Logos ///
 import c_logo from "../assets/Images/WhiteLogos/c.png"
 import cpp_logo from "../assets/Images/WhiteLogos/cpp.png"
 import cs_logo from "../assets/Images/WhiteLogos/cs.png"
@@ -30,7 +30,7 @@ import html_logo from "../assets/Images/WhiteLogos/html.svg"
 import css_logo from "../assets/Images/WhiteLogos/css.svg"
 
 
-// Tasks
+/// Tasks ///
 import projects from "../Information/software-portfolio-tasks.json"
 
 

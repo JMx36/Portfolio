@@ -9,6 +9,7 @@ import GamingPortfolio from './pages/GamingPortfolio.jsx';
 import SoftwarePortfolio from './pages/SoftwarePortfolio.jsx';
 import MainLayout from './layouts/MainLayout';
 
+// BrowserRouter for local development
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
   )
 );
 
+// BrowserRouter for deploy development
 const deploy_router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>

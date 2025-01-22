@@ -63,6 +63,7 @@ const TypewriterEffect = ({text, speed, text_className="work-sans-family fs-30px
           , delete_delay);
       }
 
+      // Clean up return functino
       return () => {
         if (typeTimer) clearInterval(typeTimer);
         if (deleteTimer) clearInterval(deleteTimer);

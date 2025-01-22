@@ -49,9 +49,6 @@ const NavBarDropdown = ({navBarOptions, closing_func}) =>
                 </div>
                 <Triangle width={"15px"} height={"30px"} rotation="right" clickable={true} style={triangle_style} 
                         func={() => SetClicked(true)} color={isTriagHoverered ? "#FFDF00" : "white"} hover_func={SetIsHovered}/> 
-                {/* <Circle height={"60px"} width={"60px"} color="#28AAC1" style={circle_style}>
-                    
-                </Circle> */}
                 <Rectangle color="#DAC21C" style={{padding: rectangle_padding, marginBottom: rectangle_margin}}/>
             </div>
         </div>
@@ -93,12 +90,14 @@ const NavBar = () => {
     const [isDropdownOpen, SetDropdownVisibility] = useState(false);
     const { pathname } = useLocation();
 
+    // Dictionary to define the different navbar buttons for each page
     const navBarOptions = {
         "/": [AboutLink, HomePortfolioLink, HomeResumeLink, ContactLink],
         "/gaming-portfolio": [AboutLink, HomePortfolioLink, GameDevResume, ContactLink],
         "/software-portfolio": [AboutLink, HomePortfolioLink, SoftwareDevResume, ContactLink],
     };
     
+    // Query for checking when it becomes a small screen
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1000px)' });
 
     useEffect(() => {

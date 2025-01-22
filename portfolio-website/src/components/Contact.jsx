@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Button } from '../components/utilities.jsx'
 import emailjs from 'emailjs-com';
 
+// Component used for creating a Contact Input Field for either a textare or input
 const ContactInputField = ({label, placeholder, background_color, change_func, value_state,
   type="text", useTextArea=false, style={}}) =>
 {
@@ -77,6 +78,7 @@ const Contact = () => {
   });
   
   const HandleChange = (e) => {
+    // Limits the size of the text for the email and subject boxes
     if (e.target.name === "Email" && e.target.value.length > email_max_length)
       return;
     if (e.target.name === "Subject" && e.target.value.length > subject_max_length)

@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const HomePortfolio = () => {
 
+    // Used to swap the order of the elements in the page when in small scree
     const isSmallerScreen = useMediaQuery({ query: '(max-width: 1080px)' });
 
     const info = [["Game Developer Projects", 

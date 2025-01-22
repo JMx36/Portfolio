@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 
+// Class like struct useful for defining Link attributes for NavigationLink Component
 export class LinkInfo
 {
     constructor({text, link, type="Link", className='', style={}}) 
@@ -14,7 +15,7 @@ export class LinkInfo
     }
 }
 
-
+// Class like struct useful for defining button attributes used by the Button Component
 export class ButtonInfo
 {
   constructor({text, isLink = false, link = "", type = "none", scroll_type="auto", downloadName="filename"})
@@ -28,10 +29,12 @@ export class ButtonInfo
   }
 }
 
-
+// Creates a triangle in page with the specified style and hover functionality. 
+// If clickable is set to true, it will call the defined func when clicked.
 export const Triangle = ({height, width, color="white", rotation="right", margin="",
     hover_func=undefined,  clickable=false, func=null, style={}}) => {
 
+    // Define the polygon for different triangles
     const right_triangle = "polygon(0 0, 0 100%, 100% 50%)";
     const left_triangle = "polygon(100% 0, 100% 100%, 0% 50%)";
     const up_triangle = "polygon(0 100%, 100% 100%, 50% 0%)";
@@ -39,6 +42,7 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
 
     let selected_triangle = right_triangle;
 
+    // Select the triangle specified 
     if (rotation == "left") selected_triangle = left_triangle;
     else if (rotation == "up") selected_triangle = up_triangle;
     else if (rotation == "down") selected_triangle = down_triangle; 
@@ -70,12 +74,12 @@ export const Triangle = ({height, width, color="white", rotation="right", margin
     )
 }
 
-
+// Creates an image with hover functionality
 export const LogoImage = ({image, index, setIsHovered=undefined, width="", height="", 
         margin_left="", margin_right="", margin_bottom= "", margin_top="", alt_text=""}) => {
 
     const image_style = {};
-    // console.log(image, width, height);
+    
     if (width != "") image_style["width"] = width;
     if (height != "") image_style["height"] = height;
     if (margin_left != "") image_style["marginLeft"] = margin_left;
@@ -94,6 +98,8 @@ export const LogoImage = ({image, index, setIsHovered=undefined, width="", heigh
     )
 }
 
+// Creates a Circle in page with the specified style and hover functionality. 
+// If clickable is set to true, it will call the defined func when clicked.
 export const Circle = ({height, width, color="white", radius="50%", margin="", 
                         hover_func=undefined,  clickable=false, func=null, style={}, children=null}) => {
 
@@ -125,6 +131,8 @@ export const Circle = ({height, width, color="white", radius="50%", margin="",
     )
 }
 
+// Creates a Rectangle in page with the specified style and hover functionality. 
+// If clickable is set to true, it will call the defined func when clicked.
 export const Rectangle = ({height, width, color="white", clickable=false, 
                                 hover_func=undefined, func=undefined, style={}}) => {
 
@@ -151,7 +159,8 @@ export const Rectangle = ({height, width, color="white", clickable=false,
     )
 }
 
-
+// Button wrapper class that can create different kinds of buttons depending on parameters passed to it
+// Usefulf for keeping consistent styling and reusablity across different buttons
 export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radius="20px", text_color="black", 
                         color="black", logo=null, logo_style={}, words_style={}, style={}, textShadow="3px 2px 4px rgba(255, 255, 255, 70%)",
                         hover_color="white", click_func=null, type="button", 
@@ -184,48 +193,50 @@ export const Button = ({text, text_style="pacifico-family fw-400 fs-36px", radiu
         color: "inherit"
     }
 
+    // Selects which Component to return depending on the condition
     return(
         <>
             { isLink ? 
             
-                <div className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
-                    onMouseEnter={() => SetIsHovered(true)} 
-                    onMouseLeave={() => SetIsHovered(false)} 
-                    onMouseDown={(e) => 
+                    <div className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
+                        onMouseEnter={() => SetIsHovered(true)} 
+                        onMouseLeave={() => SetIsHovered(false)} 
+                        onMouseDown={(e) => 
+                            {
+                                e.preventDefault();
+                                click_func != null ? click_func() : ''
+                            }
+                            }   
+                    >
+                        {logo === null ? '' : <img src={logo} style={logo_style}/>}
+                        <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
+                                className={text_style} style={{...p_style, ...words_style}} downloadName={downloadName} />
+                    </div> 
+                :
+                    <button type={type} className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
+                        onMouseEnter={() => SetIsHovered(true)} 
+                        onMouseLeave={() => SetIsHovered(false)} 
+                        onMouseDown={(e) => 
+                            {
+                                e.preventDefault();
+                                click_func != null ? click_func() : ''
+                            }
+                            }   
+                    >
+                        {logo === null ? '' : <img src={logo} style={logo_style}/>}
                         {
-                            e.preventDefault();
-                            click_func != null ? click_func() : ''
+                            <span className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</span>
                         }
-                        }   
-                >
-                    {logo === null ? '' : <img src={logo} style={logo_style}/>}
-                    <NavigationLink link={link_to} type={link_type} content={text} scroll_type={scroll_type}
-                            className={text_style} style={{...p_style, ...words_style}} downloadName={downloadName} />
-                </div> :
-        
-                <button type={type} className={`button-util cursor-pointer`} style= {{...button_style, ...style}} 
-                    onMouseEnter={() => SetIsHovered(true)} 
-                    onMouseLeave={() => SetIsHovered(false)} 
-                    onMouseDown={(e) => 
-                        {
-                            e.preventDefault();
-                            click_func != null ? click_func() : ''
-                        }
-                        }   
-                >
-                    {logo === null ? '' : <img src={logo} style={logo_style}/>}
-                    {
-                        <span className={` ${text_style}`} style={{...p_style, ...words_style}}>{text}</span>
-                    }
-                </button>
+                    </button>
             }    
         </>
     )
 }
 
-
+// Component used for returning different kinds of navigation links depending on the parameters passed
 export const NavigationLink = ({content, link, type="Link", scroll_type="auto", className='', downloadName='filename', style={}}) => 
 {
+    // Function used for changing the scroll behavior of the website 
     const HandleScroll = () => 
     {
         // console.log("HANDLING SCROLL")

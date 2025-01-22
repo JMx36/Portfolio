@@ -19,15 +19,7 @@ import DescriptionBoxes from "../components/DescriptionBoxes.jsx"
 import React, { useState } from 'react';
 
 
-const DropdownCategories = Object.freeze(
-    {
-     GameEngine: "Game Engines", 
-     DeveloperTools: "Developer Tools", 
-     Production: "Production",
-     Languages: "Languages"
-    }
-)
-
+// Class like struct that contains useful attributes for LogoImage
 class ImageInfo
 {
     constructor({image, width="clamp(70px, 10vw, 100px)", height="auto", margin_left="2.5%"})
@@ -79,21 +71,6 @@ const SkillsDropdown = ({title, index, category, logos}) => {
         </div>
     )
 }
-
-
-const SearchDropdownImages = ({images_list, category}) => {
-
-    let category_images = [];
-    // console.log("Image list", images_list);
-    // console.log("Category", category);
-    for (const image of images_list) 
-    {
-        if (image.category === category) category_images.push(image);
-    }
-    // console.log(category_images);
-    return category_images;
-}
-
 
 const Skills = () => 
 {

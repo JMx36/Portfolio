@@ -3,7 +3,7 @@ import ImagesPreview from '../components/ImagesPreview.jsx'
 import { Triangle, Circle, Button } from '../components/utilities.jsx'
 
 
-
+// Used by the CircleDispalyWindow component to create its circles
 const CircleButton = ({index, func, color, side="none", width=15, height=70, hover_width=20, hover_height=100}) =>
 {
     const [isHovered, setIsHovered] = useState(false);
@@ -22,6 +22,7 @@ const CircleButton = ({index, func, color, side="none", width=15, height=70, hov
     )
 }
 
+// Creates the buttons for the slider window
 const CircleDisplayWindow = ({low_index, high_index, current_index, container_length, click_func}) =>
 {    
     const add_left_button = low_index > 0;
@@ -52,7 +53,7 @@ const CircleDisplayWindow = ({low_index, high_index, current_index, container_le
     )
 }
 
-
+// Creates a Slider that can take a list of components to slide through. The delay is in milliseconds.
 export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10000}) =>
 {
 
@@ -76,9 +77,9 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     const [play_animation, PlayAnimation] = useState(false);
     const [direction, SetDirection] = useState("none");
     const [selected_index, SetSelectedIndex] = useState(middle_index);
-    console.log("Initial Current index", currentIndex);
-    console.log("Initial Start index", start_index);
-    console.log("Initial End index", end_index);
+    // console.log("Initial Current index", currentIndex);
+    // console.log("Initial Start index", start_index);
+    // console.log("Initial End index", end_index);
 
     const ResetAnimation = () =>
     {
@@ -137,9 +138,9 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
             PlayAnimation(true);
 
 
-        console.log("Current index", currentIndex);
-        console.log("Start index", start_index);
-        console.log("End index", end_index);
+        // console.log("Current index", currentIndex);
+        // console.log("Start index", start_index);
+        // console.log("End index", end_index);
         // play the animation if it is a new circle
     }
 
@@ -166,8 +167,6 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
         HandleSideClick("left");
     }
 
-    // delay is in milliseconds
-
     useEffect(() => 
         {
             const interval = setInterval(() => {
@@ -182,10 +181,6 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
     return (
         <div className="slider-container">
             <div className='slider-image-container ' style={{}}>
-                {
-                    // currentIndex === 0 || !preview_container_hovered ? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> :
-                    // <Triangle width="5%" height="20%" color="#119DA4" rotation="left" margin="auto auto" clickable={true} func={HandleLeftClick}/>
-                }
                 <div className='preview-container' style={{width: "clamp(300px, 50vw, 800px)", aspectRatio: "16/9.8"}} onAnimationEnd={EndAnimation} >
                     {/* {console.log("Current Index", currentIndex)}
                     {console.log("Selected Index", selected_index)} */}
@@ -204,10 +199,6 @@ export const Slider = ({images_lists, window_size=4, render=(() => {}), delay=10
                         }
                     </div>
                 </div>
-                {
-                    // currentIndex === images_lists.length - 1 || !preview_container_hovered? <div style={{width: "5%", height:"20%", margin: "auto auto"}}></div> : 
-                    // <Triangle width="5%" height="20%" color="#119DA4" rotation="right" margin="auto auto" clickable={true} func={HandleRightClick}/>
-                }
             </div>
             {
                 images_lists.length > 1 ? 

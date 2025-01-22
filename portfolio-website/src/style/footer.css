@@ -2,7 +2,7 @@
 {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #79BCC9 0%, #046578 70%, #000000 100%);
+    background: linear-gradient(180deg, var(--footer-initial-color) 0%, var(--footer-second-color) 70%, var(--footer-last-color) 100%);
 }
 
 .footer-container
@@ -22,7 +22,7 @@
 {
     margin: auto;
     padding: 0;
-    color: white;
+    color: var(--light-white);
 }
 
 

@@ -7,9 +7,13 @@
     --dark-yellow: #A59004;
     --title-blue: #119DA4;
     --text-blue: #119DA4;
+    --footer-initial-color: #79BCC9;
+    --footer-second-color: #046578;
+    --footer-last-color: #000000;
     --background-blue: #13505B;
     --lighter-background-blue: #039099;
     --light-blue-edge: #90E0EF;
+    --light-white: #FFFFFF;
     --blue_gradient_color: linear-gradient(to right, #0C7489, #0C7489 20%, #00B4D8 50%,  #02AACB 53%, #0C7489 70%);
     --side_margin: 0.5%;
     --title-side-margin: 3%;

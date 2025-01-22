@@ -11,7 +11,7 @@ const About = () => {
     // const maxSize = isSmallerScreen || !isReadingMore ? 600 : 2000;
 
     const about_buttons = [
-        new ButtonInfo({text: "Resume", isLink: true, link:"#Home-Portfolio", type: "Link"}), 
+        new ButtonInfo({text: "Resume", isLink: true, link:"#Home-Portfolio", type: "aTag"}), 
         new ButtonInfo({text: "Portfolio", isLink: true, link:"#Home-Portfolio", type: "aTag"})
     ]
 
@@ -20,7 +20,7 @@ const About = () => {
     return (
         <div id="About" className="about-me">            
             <div className="about-container in-front">
-                <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front">About Me</h1>
+                <h1 className="about-title work-sans-family fw-700 italic fs-64px in-front" style={{color: "#DAC21C"}}>About Me</h1>
                 <div className="about-info-container">
                     <div className="about-left-section">
                         <div className="circle-container">

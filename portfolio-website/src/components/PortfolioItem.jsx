@@ -9,7 +9,7 @@ const TaskDescription = ({task_title, tasks}) =>
 {
     return (
         <div className='task-description'>
-            <h3>{task_title}</h3>
+            <h2 className='fs-24px'>{task_title}</h2>
             <ul className="custom-list work-sans-family fs-20px fw-300">
                 {tasks.map((task, index) => (
                     <li key={index}>{task}</li>  /* Use the index as a unique key */
